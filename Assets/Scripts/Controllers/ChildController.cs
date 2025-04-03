@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 
 using UnityEngine;
 
 public class ChildController : MonoBehaviour, IInteractable
 {
-    public ChildItemScriptableObject RequestedItem => itemQueue[queueIndex];
+    private Vector2 startPosition;
 
     /// <summary>
     /// Queue of items which will be one by one requested by the child.
@@ -18,6 +19,10 @@ public class ChildController : MonoBehaviour, IInteractable
     /// Index of currently requested item form <see cref="itemQueue"/>.
     /// </summary>
     private int queueIndex = 0;
+
+    public ChildItemScriptableObject RequestedItem => itemQueue[queueIndex];
+
+    public event EventHandler OnAllTasksDone;
 
     public void Interact(PlayerController player)
     {
@@ -36,11 +41,31 @@ public class ChildController : MonoBehaviour, IInteractable
     {
         queueIndex++;
         if (queueIndex >= itemQueue.Count)
+        {
             queueIndex = 0;
+            OnAllTasksDone?.Invoke(this, EventArgs.Empty);
+        }
     }
 
     private void Awake()
     {
+        GameManager.Instance.OnDayBegin += GameManager_OnDayBegin;
+        GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
+        startPosition = transform.position;
+
         Debug.Log($"Child requests new item \"{RequestedItem.Name}\".");
+    }
+
+    private void GameManager_OnDayBegin(object sender, EventArgs e)
+    {
+        enabled = true;
+        // TODO: change sprite
+        GetComponentInChildren<SpriteRenderer>().color = Color.blue;
+        transform.position = startPosition;
+    }
+
+    private void Instance_OnNightBegin(object sender, EventArgs e)
+    {
+        enabled = false;
     }
 }
