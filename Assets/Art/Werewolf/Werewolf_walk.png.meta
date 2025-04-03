@@ -1,97 +1,100 @@
 fileFormatVersion: 2
-guid: 5c5ca2001e35e1f4ea66d11500722563
+guid: 534124373790d604c8a7dd3b0a21bf06
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4723107735738678597
-    second: Idle_0
+      213: 4542249082004012509
+    second: Werewolf_walk_0
   - first:
-      213: -7385789195546760866
-    second: Idle_1
+      213: 6996829417602111102
+    second: Werewolf_walk_1
   - first:
-      213: 3234629978573100161
-    second: Idle_2
+      213: 3266870662670412055
+    second: Werewolf_walk_2
   - first:
-      213: 6373048116405451881
-    second: Idle_3
+      213: 7310932869468240914
+    second: Werewolf_walk_3
   - first:
-      213: 7264182050183361747
-    second: Idle_4
+      213: -942192205920248166
+    second: Werewolf_walk_4
   - first:
-      213: -2834552850196481573
-    second: Idle_5
+      213: 3835617977918998849
+    second: Werewolf_walk_5
   - first:
-      213: 3278449094680734212
-    second: Idle_6
+      213: -7726772067839261309
+    second: Werewolf_walk_6
   - first:
-      213: 3384493420599841878
-    second: Idle_7
+      213: -781851706947057217
+    second: Werewolf_walk_7
   - first:
-      213: -2331352242086191015
-    second: Idle_8
+      213: 1040115411679091843
+    second: Werewolf_walk_8
   - first:
-      213: -3914248031228685145
-    second: Idle_9
+      213: 401853124738611504
+    second: Werewolf_walk_9
   - first:
-      213: 7132915409514813599
-    second: Idle_10
+      213: -8035675713065133649
+    second: Werewolf_walk_10
   - first:
-      213: -2055793278435719954
-    second: Idle_11
+      213: -192272871032485173
+    second: Werewolf_walk_11
   - first:
-      213: -1133706752296058015
-    second: Idle_12
+      213: 7714612445929640915
+    second: Werewolf_walk_12
   - first:
-      213: -7873313509577613512
-    second: Idle_13
+      213: 8889942866083781067
+    second: Werewolf_walk_13
   - first:
-      213: 719741960001666856
-    second: Idle_14
+      213: -3648279057352432861
+    second: Werewolf_walk_14
   - first:
-      213: -2017107389029466533
-    second: Idle_15
+      213: -2692596645793871439
+    second: Werewolf_walk_15
   - first:
-      213: -7851968663669621680
-    second: Idle_16
+      213: 455054579851547140
+    second: Werewolf_walk_16
   - first:
-      213: -216799431487514718
-    second: Idle_17
+      213: 3116838764764291626
+    second: Werewolf_walk_17
   - first:
-      213: 3610992343889596186
-    second: Idle_18
+      213: -5307316099676459152
+    second: Werewolf_walk_18
   - first:
-      213: 6538181465538999060
-    second: Idle_19
+      213: -8959387407425826296
+    second: Werewolf_walk_19
   - first:
-      213: 6239617922696411994
-    second: Idle_20
+      213: -1487997387191812867
+    second: Werewolf_walk_20
   - first:
-      213: 3604202040009161566
-    second: Idle_21
+      213: -3728804058122480659
+    second: Werewolf_walk_21
   - first:
-      213: 7714808819881066536
-    second: Idle_22
+      213: 5657635987381816484
+    second: Werewolf_walk_22
   - first:
-      213: 4839914909742284145
-    second: Idle_23
+      213: -2983369478164471593
+    second: Werewolf_walk_23
   - first:
-      213: 5540120679197756244
-    second: Idle_24
+      213: -2655372611263760705
+    second: Werewolf_walk_24
   - first:
-      213: 3244912566212535839
-    second: Idle_25
+      213: -4123962742486168388
+    second: Werewolf_walk_25
   - first:
-      213: 6059227464253780763
-    second: Idle_26
+      213: 7717227747109356854
+    second: Werewolf_walk_26
   - first:
-      213: 7058787313458793172
-    second: Idle_27
+      213: 3229247696307087174
+    second: Werewolf_walk_27
   - first:
-      213: 3195378521950649799
-    second: Idle_28
+      213: 316602025140871562
+    second: Werewolf_walk_28
   - first:
-      213: -4270365825416692982
-    second: Idle_29
+      213: -3429896576185116725
+    second: Werewolf_walk_29
+  - first:
+      213: 664768166556074245
+    second: Werewolf_walk_30
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -124,7 +127,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -138,7 +141,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -162,7 +165,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -187,13 +190,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: Werewolf_walk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 80
+        x: 27
+        y: 574
+        width: 46
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54d7a982679db8140800000000000000
-      internalID: 4723107735738678597
+      spriteID: ddd7136697f490f30800000000000000
+      internalID: 4542249082004012509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: Werewolf_walk_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 96
-        height: 80
+        x: 123
+        y: 574
+        width: 46
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e596485bbd7608990800000000000000
-      internalID: -7385789195546760866
+      spriteID: e765d26d84bb91160800000000000000
+      internalID: 6996829417602111102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_2
+      name: Werewolf_walk_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 96
-        height: 80
+        x: 219
+        y: 574
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 184dda4e3d6b3ec20800000000000000
-      internalID: 3234629978573100161
+      spriteID: 7196d9f1f81465d20800000000000000
+      internalID: 3266870662670412055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_3
+      name: Werewolf_walk_3
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
-        width: 96
-        height: 80
+        x: 315
+        y: 574
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96cb1dafe7d917850800000000000000
-      internalID: 6373048116405451881
+      spriteID: 21cb165b5b6a57560800000000000000
+      internalID: 7310932869468240914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_4
+      name: Werewolf_walk_4
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 96
-        height: 80
+        x: 27
+        y: 494
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,20 +293,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d4b2fc561f8fc460800000000000000
-      internalID: 7264182050183361747
+      spriteID: a9e5bff3e29ace2f0800000000000000
+      internalID: -942192205920248166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_5
+      name: Werewolf_walk_5
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
-        width: 96
-        height: 80
+        x: 123
+        y: 494
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,20 +315,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd9b7fa6335a9a8d0800000000000000
-      internalID: -2834552850196481573
+      spriteID: 149c6fb9a3ada3530800000000000000
+      internalID: 3835617977918998849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_6
+      name: Werewolf_walk_6
       rect:
         serializedVersion: 2
-        x: 576
-        y: 0
-        width: 96
-        height: 80
+        x: 219
+        y: 494
+        width: 45
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +337,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40a65a6e4146f7d20800000000000000
-      internalID: 3278449094680734212
+      spriteID: 385c7041ebdf4c490800000000000000
+      internalID: -7726772067839261309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_7
+      name: Werewolf_walk_7
       rect:
         serializedVersion: 2
-        x: 672
-        y: 0
-        width: 96
-        height: 80
+        x: 314
+        y: 494
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,20 +359,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 654108f85d228fe20800000000000000
-      internalID: 3384493420599841878
+      spriteID: fb94364d30e4625f0800000000000000
+      internalID: -781851706947057217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_8
+      name: Werewolf_walk_8
       rect:
         serializedVersion: 2
-        x: 768
-        y: 0
-        width: 96
-        height: 80
+        x: 26
+        y: 414
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,20 +381,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9506424ec7f55afd0800000000000000
-      internalID: -2331352242086191015
+      spriteID: 38c9a86c47b3f6e00800000000000000
+      internalID: 1040115411679091843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_9
+      name: Werewolf_walk_9
       rect:
         serializedVersion: 2
-        x: 864
-        y: 0
-        width: 96
-        height: 80
+        x: 122
+        y: 414
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,20 +403,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a497d7772ccda9c0800000000000000
-      internalID: -3914248031228685145
+      spriteID: 039fcefa94ba39500800000000000000
+      internalID: 401853124738611504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_10
+      name: Werewolf_walk_10
       rect:
         serializedVersion: 2
-        x: 960
-        y: 0
-        width: 96
-        height: 80
+        x: 218
+        y: 414
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -422,20 +425,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f985a0de5c43df260800000000000000
-      internalID: 7132915409514813599
+      spriteID: fa9d488838b8b7090800000000000000
+      internalID: -8035675713065133649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_11
+      name: Werewolf_walk_11
       rect:
         serializedVersion: 2
-        x: 1056
-        y: 0
-        width: 96
-        height: 80
+        x: 314
+        y: 414
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,20 +447,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee40433c7ea5873e0800000000000000
-      internalID: -2055793278435719954
+      spriteID: bca0a2ea7d8e45df0800000000000000
+      internalID: -192272871032485173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_12
+      name: Werewolf_walk_12
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 96
-        height: 80
+        x: 26
+        y: 334
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,20 +469,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1638ee527b34440f0800000000000000
-      internalID: -1133706752296058015
+      spriteID: 3d39173552fcf0b60800000000000000
+      internalID: 7714612445929640915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_13
+      name: Werewolf_walk_13
       rect:
         serializedVersion: 2
-        x: 1248
-        y: 0
-        width: 96
-        height: 80
+        x: 122
+        y: 334
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,20 +491,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83f9750e31f5cb290800000000000000
-      internalID: -7873313509577613512
+      spriteID: bc9117e8feb6f5b70800000000000000
+      internalID: 8889942866083781067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_14
+      name: Werewolf_walk_14
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 0
-        width: 96
-        height: 80
+        x: 218
+        y: 334
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -510,20 +513,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 82fb7dfcf790df900800000000000000
-      internalID: 719741960001666856
+      spriteID: 323e209d685be5dc0800000000000000
+      internalID: -3648279057352432861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_15
+      name: Werewolf_walk_15
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 96
-        height: 80
+        x: 314
+        y: 334
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -532,20 +535,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5e351b448bc104e0800000000000000
-      internalID: -2017107389029466533
+      spriteID: 1b94c0cdd99f1aad0800000000000000
+      internalID: -2692596645793871439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_16
+      name: Werewolf_walk_16
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 96
-        height: 80
+        x: 26
+        y: 254
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -554,20 +557,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05c39761a14380390800000000000000
-      internalID: -7851968663669621680
+      spriteID: 4025779babda05600800000000000000
+      internalID: 455054579851547140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_17
+      name: Werewolf_walk_17
       rect:
         serializedVersion: 2
-        x: 1632
-        y: 0
-        width: 96
-        height: 80
+        x: 122
+        y: 254
+        width: 44
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -576,20 +579,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a71ea2d016cdfcf0800000000000000
-      internalID: -216799431487514718
+      spriteID: a2261f3c75c314b20800000000000000
+      internalID: 3116838764764291626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_18
+      name: Werewolf_walk_18
       rect:
         serializedVersion: 2
-        x: 1728
-        y: 0
-        width: 96
-        height: 80
+        x: 218
+        y: 254
+        width: 44
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,20 +601,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1fc138a762dc1230800000000000000
-      internalID: 3610992343889596186
+      spriteID: 07fa2107020a856b0800000000000000
+      internalID: -5307316099676459152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_19
+      name: Werewolf_walk_19
       rect:
         serializedVersion: 2
-        x: 1824
-        y: 0
-        width: 96
-        height: 80
+        x: 315
+        y: 254
+        width: 45
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -620,20 +623,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 413be72f6694cba50800000000000000
-      internalID: 6538181465538999060
+      spriteID: 802964f2f9cd9a380800000000000000
+      internalID: -8959387407425826296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_20
+      name: Werewolf_walk_20
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 96
-        height: 80
+        x: 27
+        y: 174
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -642,20 +645,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5bfa781173979650800000000000000
-      internalID: 6239617922696411994
+      spriteID: dfcf8b59242995be0800000000000000
+      internalID: -1487997387191812867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_21
+      name: Werewolf_walk_21
       rect:
         serializedVersion: 2
-        x: 2016
-        y: 0
-        width: 96
-        height: 80
+        x: 123
+        y: 174
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,20 +667,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5bfb75d8a2b40230800000000000000
-      internalID: 3604202040009161566
+      spriteID: de313961770a04cc0800000000000000
+      internalID: -3728804058122480659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_22
+      name: Werewolf_walk_22
       rect:
         serializedVersion: 2
-        x: 2112
-        y: 0
-        width: 96
-        height: 80
+        x: 219
+        y: 174
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -686,20 +689,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 820cf033fb1801b60800000000000000
-      internalID: 7714808819881066536
+      spriteID: 4ac0c5084f5f38e40800000000000000
+      internalID: 5657635987381816484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_23
+      name: Werewolf_walk_23
       rect:
         serializedVersion: 2
-        x: 2208
-        y: 0
-        width: 96
-        height: 80
+        x: 315
+        y: 174
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -708,20 +711,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17d3e4aa7f4da2340800000000000000
-      internalID: 4839914909742284145
+      spriteID: 7d0a3442441f896d0800000000000000
+      internalID: -2983369478164471593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_24
+      name: Werewolf_walk_24
       rect:
         serializedVersion: 2
-        x: 2304
-        y: 0
-        width: 96
-        height: 80
+        x: 27
+        y: 94
+        width: 46
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,20 +733,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45bc068a76672ec40800000000000000
-      internalID: 5540120679197756244
+      spriteID: fb67257cda8362bd0800000000000000
+      internalID: -2655372611263760705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_25
+      name: Werewolf_walk_25
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 0
-        width: 96
-        height: 80
+        x: 123
+        y: 94
+        width: 46
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -752,20 +755,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f16ac4469ce380d20800000000000000
-      internalID: 3244912566212535839
+      spriteID: cbc8a234cbdb4c6c0800000000000000
+      internalID: -4123962742486168388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_26
+      name: Werewolf_walk_26
       rect:
         serializedVersion: 2
-        x: 2496
-        y: 0
-        width: 96
-        height: 80
+        x: 219
+        y: 94
+        width: 46
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -774,20 +777,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b13332c8643b61450800000000000000
-      internalID: 6059227464253780763
+      spriteID: 635cd359fb9191b60800000000000000
+      internalID: 7717227747109356854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_27
+      name: Werewolf_walk_27
       rect:
         serializedVersion: 2
-        x: 2592
-        y: 0
-        width: 96
-        height: 80
+        x: 315
+        y: 94
+        width: 46
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -796,20 +799,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4dacebb99a9d5f160800000000000000
-      internalID: 7058787313458793172
+      spriteID: 647e126aba790dc20800000000000000
+      internalID: 3229247696307087174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_28
+      name: Werewolf_walk_28
       rect:
         serializedVersion: 2
-        x: 2688
-        y: 0
-        width: 96
-        height: 80
+        x: 27
+        y: 14
+        width: 46
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -818,20 +821,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7cdf7cbf5d3485c20800000000000000
-      internalID: 3195378521950649799
+      spriteID: a81e0bb4ddbc46400800000000000000
+      internalID: 316602025140871562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_29
+      name: Werewolf_walk_29
       rect:
         serializedVersion: 2
-        x: 2784
-        y: 0
-        width: 96
-        height: 80
+        x: 123
+        y: 14
+        width: 46
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -840,8 +843,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0bf11b38ec9cb4c0800000000000000
-      internalID: -4270365825416692982
+      spriteID: bc758208c3f8660d0800000000000000
+      internalID: -3429896576185116725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_walk_30
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 14
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5010099102bb93900800000000000000
+      internalID: 664768166556074245
       vertices: []
       indices: 
       edges: []
@@ -850,7 +875,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 24a8caf44f7952549bc82de18284de7b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -859,37 +884,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Idle_0: 4723107735738678597
-      Idle_1: -7385789195546760866
-      Idle_10: 7132915409514813599
-      Idle_11: -2055793278435719954
-      Idle_12: -1133706752296058015
-      Idle_13: -7873313509577613512
-      Idle_14: 719741960001666856
-      Idle_15: -2017107389029466533
-      Idle_16: -7851968663669621680
-      Idle_17: -216799431487514718
-      Idle_18: 3610992343889596186
-      Idle_19: 6538181465538999060
-      Idle_2: 3234629978573100161
-      Idle_20: 6239617922696411994
-      Idle_21: 3604202040009161566
-      Idle_22: 7714808819881066536
-      Idle_23: 4839914909742284145
-      Idle_24: 5540120679197756244
-      Idle_25: 3244912566212535839
-      Idle_26: 6059227464253780763
-      Idle_27: 7058787313458793172
-      Idle_28: 3195378521950649799
-      Idle_29: -4270365825416692982
-      Idle_3: 6373048116405451881
-      Idle_4: 7264182050183361747
-      Idle_5: -2834552850196481573
-      Idle_6: 3278449094680734212
-      Idle_7: 3384493420599841878
-      Idle_8: -2331352242086191015
-      Idle_9: -3914248031228685145
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
