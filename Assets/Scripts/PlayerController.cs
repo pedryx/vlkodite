@@ -26,21 +26,23 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Time in second which it takes player to reach <see cref="MovementSpeed"/>.
     /// 
-    /// When player starts moving, there is a small acceleration window. This determines duration (in seconds) of that window.
+    /// When player starts moving, there is a small acceleration window. This determines duration (in seconds) of that
+    /// window.
     /// </summary>
     [field: SerializeField]
-    [Tooltip("Time in second which it takes player to reach its maximum movement speed.\n\n" +
-        "When player starts moving, there is a small acceleration window. This determines duration (in seconds) of that window.")]
+    [Tooltip("Time in second which it takes player to reach its maximum movement speed.\n\nWhen player starts" +
+        " moving, there is a small acceleration window. This determines duration (in seconds) of that window.")]
     public float MovementStartTime { get; private set; } = 0.3f;
 
     /// <summary>
     /// Time in second which it takes player to stop moving.
     /// 
-    /// When player stops moving, there is a small de-acceleration window. This determines duration (in seconds) of that window.
+    /// When player stops moving, there is a small de-acceleration window. This determines duration (in seconds) of
+    /// that window.
     /// </summary>
     [field: SerializeField]
-    [Tooltip("Time in second which it takes player to stop moving.\n\n" +
-        "When player stops moving, there is a small de-acceleration window. This determines duration (in seconds) of that window.")]
+    [Tooltip("Time in second which it takes player to stop moving.\n\nWhen player stops moving, there is a small" +
+        " de-acceleration window. This determines duration (in seconds) of that window.")]
     public float MovementEndTime { get; private set; } = 0.1f;
 
     /// <summary>
