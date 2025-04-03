@@ -683,6 +683,10 @@ PrefabInstance:
       propertyPath: <MovementStartTime>k__BackingField
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6894993836738388932, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
+      propertyPath: <SuperMovementSpeed>k__BackingField
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8489756782962909198, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

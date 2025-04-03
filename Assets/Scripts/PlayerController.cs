@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+    private bool debugMode = false;
+
     private Rigidbody2D rigidBody;
-    private PlayerInputActions input;
+    private GameInputActions input;
 
     /// <summary>
     /// Interactable object in player interaction area. If null there is no target in player area.
@@ -41,6 +44,13 @@ public class PlayerController : MonoBehaviour
     public float MovementEndTime { get; private set; } = 0.1f;
 
     /// <summary>
+    /// Maximum movement speed of player in pixels per second during super speed mode.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Maximum movement speed of player in pixels per second during super speed mode.")]
+    public float SuperMovementSpeed { get; private set; } = 10.0f;
+
+    /// <summary>
     /// Maximum movement speed of player in pixels per second.
     /// </summary>
     [field: SerializeField]
@@ -50,14 +60,18 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        input = new PlayerInputActions();
+        input = new GameInputActions();
 
         input.Player.Enable();
+
+        input.Debug.ToggleDebug.Enable();
+        input.Debug.ToggleDebug.performed += ToggleDebug_performed;
     }
 
     private void Update()
     {
-        targetVelocity = input.Player.Move.ReadValue<Vector2>().normalized * MovementSpeed;
+        float speed = input.Debug.SuperSpeed.IsPressed() ? SuperMovementSpeed : MovementSpeed;
+        targetVelocity = input.Player.Move.ReadValue<Vector2>().normalized * speed;
 
         if (input.Player.Interact.WasPressedThisFrame() && interactableTarget != null)
             interactableTarget.Interact(this);
@@ -65,7 +79,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float rate = (targetVelocity.magnitude > 0 ? MovementSpeed / MovementStartTime : MovementSpeed / MovementEndTime);
+        float rate = targetVelocity.magnitude > 0
+            ? MovementSpeed / MovementStartTime
+            : MovementSpeed / MovementEndTime;
 
         Vector2 force = Vector2.ClampMagnitude(targetVelocity - rigidBody.linearVelocity, rate * Time.fixedDeltaTime);
         rigidBody.AddForce(force, ForceMode2D.Impulse);
@@ -89,5 +105,22 @@ public class PlayerController : MonoBehaviour
             return;
 
         interactableTarget = null;
+    }
+
+    private void ToggleDebug_performed(InputAction.CallbackContext obj)
+    {
+        if (debugMode)
+        {
+            input.Debug.Disable();
+            input.Debug.ToggleDebug.Enable();
+            debugMode = false;
+            Debug.Log("Debug mode off.");
+        }
+        else
+        {
+            input.Debug.Enable();
+            debugMode = true;
+            Debug.Log("Debug mode on.");
+        }
     }
 }
