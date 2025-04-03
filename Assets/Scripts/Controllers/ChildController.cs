@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
+// TODO: make disabled on night
+
 public class ChildController : MonoBehaviour, IInteractable
 {
     private Vector2 startPosition;
@@ -26,6 +28,9 @@ public class ChildController : MonoBehaviour, IInteractable
 
     public void Interact(PlayerController player)
     {
+        if (GameManager.Instance.IsNight)
+            return;
+
         if (player.Item != RequestedItem)
         {
             Debug.Log("Invalid item.");
@@ -50,7 +55,6 @@ public class ChildController : MonoBehaviour, IInteractable
     private void Awake()
     {
         GameManager.Instance.OnDayBegin += GameManager_OnDayBegin;
-        GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
         startPosition = transform.position;
 
         Debug.Log($"Child requests new item \"{RequestedItem.Name}\".");
@@ -58,14 +62,8 @@ public class ChildController : MonoBehaviour, IInteractable
 
     private void GameManager_OnDayBegin(object sender, EventArgs e)
     {
-        enabled = true;
         // TODO: change sprite
         GetComponentInChildren<SpriteRenderer>().color = Color.blue;
         transform.position = startPosition;
-    }
-
-    private void Instance_OnNightBegin(object sender, EventArgs e)
-    {
-        enabled = false;
     }
 }

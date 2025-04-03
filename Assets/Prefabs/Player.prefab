@@ -48,10 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0be30737bab34b47ae320e472ecd192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MovementStartTime>k__BackingField: 0.1
-  <MovementEndTime>k__BackingField: 0.1
-  <SuperMovementSpeed>k__BackingField: 40
-  <MovementSpeed>k__BackingField: 8
+  <SuperMovementSpeed>k__BackingField: 1
+  <MovementSpeed>k__BackingField: 0.3
 --- !u!50 &979413955148246111
 Rigidbody2D:
   serializedVersion: 5

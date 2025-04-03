@@ -144,20 +144,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7862014536598589987, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: itemQueue.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -7862014536598589987, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
-      propertyPath: 'itemQueue.Array.data[0]'
+    - target: {fileID: 4074327944774414583, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
+      propertyPath: playerTransform
       value: 
-      objectReference: {fileID: 11400000, guid: 75c01ac37d2afe24ea7df296dc7ded21, type: 2}
-    - target: {fileID: -7862014536598589987, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
-      propertyPath: 'itemQueue.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: bb8af4f70e8e58a4db58a63e09dec591, type: 2}
-    - target: {fileID: -7862014536598589987, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
-      propertyPath: 'itemQueue.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 90c7cad5163117345bd8c5e0cb8da379, type: 2}
+      objectReference: {fileID: 1911557179}
     - target: {fileID: 4382285839199678873, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.3
@@ -315,15 +307,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
---- !u!114 &555201406 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -7862014536598589987, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
+--- !u!1 &555201403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8722358687054884800, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
   m_PrefabInstance: {fileID: 282596641}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &555201407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4074327944774414583, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
+  m_PrefabInstance: {fileID: 282596641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555201403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ed053c57ae617419dd8bf883e0172a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ebd4036934c5fc47800ef059e6861d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &714490352
@@ -565,7 +562,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c1b3ecbe47625459ba8887d5f329f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 555201406}
+  child: {fileID: 555201403}
+  <NightDuration>k__BackingField: 20
 --- !u!4 &1290921254
 Transform:
   m_ObjectHideFlags: 0
@@ -731,6 +729,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6894993836738388932, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
+      propertyPath: werewolf
+      value: 
+      objectReference: {fileID: 555201407}
     - target: {fileID: 8489756782962909198, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

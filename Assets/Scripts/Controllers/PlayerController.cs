@@ -5,9 +5,13 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private bool debugMode = false;
+    private Vector2 startPosition;
 
     private Rigidbody2D rigidBody;
     private GameInputActions input;
+
+    [SerializeField]
+    private WerewolfController werewolf;
 
     /// <summary>
     /// Interactable object in player interaction area. If null there is no target in player area.
@@ -16,7 +20,7 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Target movement velocity.
     /// </summary>
-    private Vector2 targetVelocity;
+    private Vector2 velocity;
 
     /// <summary>
     /// Item in player's inventory.
@@ -24,33 +28,11 @@ public class PlayerController : MonoBehaviour
     public ChildItemScriptableObject Item { get; set; }
 
     /// <summary>
-    /// Time in second which it takes player to reach <see cref="MovementSpeed"/>.
-    /// 
-    /// When player starts moving, there is a small acceleration window. This determines duration (in seconds) of that
-    /// window.
-    /// </summary>
-    [field: SerializeField]
-    [Tooltip("Time in second which it takes player to reach its maximum movement speed.\n\nWhen player starts" +
-        " moving, there is a small acceleration window. This determines duration (in seconds) of that window.")]
-    public float MovementStartTime { get; private set; } = 0.3f;
-
-    /// <summary>
-    /// Time in second which it takes player to stop moving.
-    /// 
-    /// When player stops moving, there is a small de-acceleration window. This determines duration (in seconds) of
-    /// that window.
-    /// </summary>
-    [field: SerializeField]
-    [Tooltip("Time in second which it takes player to stop moving.\n\nWhen player stops moving, there is a small" +
-        " de-acceleration window. This determines duration (in seconds) of that window.")]
-    public float MovementEndTime { get; private set; } = 0.1f;
-
-    /// <summary>
     /// Maximum movement speed of player in pixels per second during super speed mode.
     /// </summary>
     [field: SerializeField]
     [Tooltip("Maximum movement speed of player in pixels per second during super speed mode.")]
-    public float SuperMovementSpeed { get; private set; } = 10.0f;
+    public float SuperMovementSpeed { get; private set; } = 1.0f;
 
     /// <summary>
     /// Maximum movement speed of player in pixels per second.
@@ -67,13 +49,45 @@ public class PlayerController : MonoBehaviour
         input.Player.Enable();
 
         input.Debug.ToggleDebug.Enable();
-        input.Debug.ToggleDebug.performed += ToggleDebug_performed;
+        input.Debug.ToggleDebug.performed += ToggleDebug_Performed;
+
+        werewolf.OnPlayerCaught += Werewolf_OnPlayerCaught;
+        GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
+
+        startPosition = rigidBody.position;
+    }
+
+    private void ToggleDebug_Performed(InputAction.CallbackContext obj)
+    {
+        if (debugMode)
+        {
+            input.Debug.Disable();
+            input.Debug.ToggleDebug.Enable();
+            debugMode = false;
+            Debug.Log("Debug mode off.");
+        }
+        else
+        {
+            input.Debug.Enable();
+            debugMode = true;
+            Debug.Log("Debug mode on.");
+        }
+    }
+
+    private void Werewolf_OnPlayerCaught(object sender, System.EventArgs e)
+    {
+        rigidBody.position = startPosition;
+    }
+
+    private void Instance_OnNightBegin(object sender, System.EventArgs e)
+    {
+        rigidBody.position = startPosition;
     }
 
     private void Update()
     {
         float speed = input.Debug.SuperSpeed.IsPressed() ? SuperMovementSpeed : MovementSpeed;
-        targetVelocity = input.Player.Move.ReadValue<Vector2>().normalized * speed;
+        velocity = input.Player.Move.ReadValue<Vector2>().normalized * speed;
 
         if (input.Player.Interact.WasPressedThisFrame() && interactableTarget != null)
             interactableTarget.Interact(this);
@@ -81,12 +95,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float rate = targetVelocity.magnitude > 0
-            ? MovementSpeed / MovementStartTime
-            : MovementSpeed / MovementEndTime;
-
-        Vector2 force = Vector2.ClampMagnitude(targetVelocity - rigidBody.linearVelocity, rate * Time.fixedDeltaTime);
-        rigidBody.AddForce(force, ForceMode2D.Impulse);
+        rigidBody.position += velocity;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -107,22 +116,5 @@ public class PlayerController : MonoBehaviour
             return;
 
         interactableTarget = null;
-    }
-
-    private void ToggleDebug_performed(InputAction.CallbackContext obj)
-    {
-        if (debugMode)
-        {
-            input.Debug.Disable();
-            input.Debug.ToggleDebug.Enable();
-            debugMode = false;
-            Debug.Log("Debug mode off.");
-        }
-        else
-        {
-            input.Debug.Enable();
-            debugMode = true;
-            Debug.Log("Debug mode on.");
-        }
     }
 }
