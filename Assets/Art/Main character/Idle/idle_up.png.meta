@@ -1,49 +1,49 @@
 fileFormatVersion: 2
-guid: e2aa6d7309911f64cab070774e6babbf
+guid: 6ae63bf2365c7674b87c28d9c9af9a75
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2670100242169240431
-    second: Up_0
+      213: -639016909152822417
+    second: idle_up_0
   - first:
-      213: -6690175258641898058
-    second: Up_1
+      213: -7660712862888677055
+    second: idle_up_1
   - first:
-      213: 4091235918760648666
-    second: Up_2
+      213: -2801625992821860700
+    second: idle_up_2
   - first:
-      213: -2605162699692701695
-    second: Up_3
+      213: -7262585456254638847
+    second: idle_up_3
   - first:
-      213: 5657010497173298339
-    second: Up_4
+      213: -1862283806931543833
+    second: idle_up_4
   - first:
-      213: -9094157908607221786
-    second: Up_5
+      213: 8023497310580783721
+    second: idle_up_5
   - first:
-      213: -3551056945580125587
-    second: Up_6
+      213: -1666585021586401484
+    second: idle_up_6
   - first:
-      213: -1489845509110937265
-    second: Up_7
+      213: 3678552267812631876
+    second: idle_up_7
   - first:
-      213: 1395371096053093854
-    second: Up_8
+      213: -2981743305693656665
+    second: idle_up_8
   - first:
-      213: -1574023246038785368
-    second: Up_9
+      213: -1345158140628582911
+    second: idle_up_9
   - first:
-      213: 584546994909621395
-    second: Up_10
+      213: 2267750740368982791
+    second: idle_up_10
   - first:
-      213: -8348089078506706872
-    second: Up_11
+      213: 2077969045910530515
+    second: idle_up_11
   - first:
-      213: 8722122807868785972
-    second: Up_12
+      213: 1901533746269356687
+    second: idle_up_12
   - first:
-      213: 6500555040119582003
-    second: Up_13
+      213: -8113018813564552403
+    second: idle_up_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Up_0
+      name: idle_up_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 15
-        width: 15
-        height: 39
+        x: 0
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19461def9f5e1fad0800000000000000
-      internalID: -2670100242169240431
+      spriteID: f6b5a7cb181c127f0800000000000000
+      internalID: -639016909152822417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_1
+      name: idle_up_1
       rect:
         serializedVersion: 2
-        x: 89
-        y: 15
-        width: 15
-        height: 38
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b5ea8f5c09b723a0800000000000000
-      internalID: -6690175258641898058
+      spriteID: 14131494d3eafa590800000000000000
+      internalID: -7660712862888677055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_2
+      name: idle_up_2
       rect:
         serializedVersion: 2
-        x: 153
-        y: 15
-        width: 15
-        height: 38
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: adf1c0e446df6c830800000000000000
-      internalID: 4091235918760648666
+      spriteID: 4a61a50d000ae19d0800000000000000
+      internalID: -2801625992821860700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_3
+      name: idle_up_3
       rect:
         serializedVersion: 2
-        x: 217
-        y: 15
-        width: 15
-        height: 38
+        x: 192
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10808bec35a98dbd0800000000000000
-      internalID: -2605162699692701695
+      spriteID: 1052601a10d163b90800000000000000
+      internalID: -7262585456254638847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_4
+      name: idle_up_4
       rect:
         serializedVersion: 2
-        x: 281
-        y: 15
-        width: 15
-        height: 38
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ac9ba6331db18e40800000000000000
-      internalID: 5657010497173298339
+      spriteID: 7e812e09eb6d726e0800000000000000
+      internalID: -1862283806931543833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_5
+      name: idle_up_5
       rect:
         serializedVersion: 2
-        x: 345
-        y: 15
-        width: 15
-        height: 38
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,20 +264,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ef3826a09f0bc180800000000000000
-      internalID: -9094157908607221786
+      spriteID: 96a387d2b40395f60800000000000000
+      internalID: 8023497310580783721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_6
+      name: idle_up_6
       rect:
         serializedVersion: 2
-        x: 409
-        y: 15
-        width: 15
-        height: 38
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d625385b58c18bec0800000000000000
-      internalID: -3551056945580125587
+      spriteID: 4371b58b0c91fd8e0800000000000000
+      internalID: -1666585021586401484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_7
+      name: idle_up_7
       rect:
         serializedVersion: 2
-        x: 473
-        y: 15
-        width: 15
-        height: 39
+        x: 192
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f494b3b2761035be0800000000000000
-      internalID: -1489845509110937265
+      spriteID: 445fdaa3cc7dc0330800000000000000
+      internalID: 3678552267812631876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_8
+      name: idle_up_8
       rect:
         serializedVersion: 2
-        x: 537
-        y: 15
-        width: 15
-        height: 39
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,20 +330,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed5971e6e9a5d5310800000000000000
-      internalID: 1395371096053093854
+      spriteID: 7a90bbce248be96d0800000000000000
+      internalID: -2981743305693656665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_9
+      name: idle_up_9
       rect:
         serializedVersion: 2
-        x: 601
-        y: 15
-        width: 15
-        height: 39
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,20 +352,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a2a6af7232f72ae0800000000000000
-      internalID: -1574023246038785368
+      spriteID: 10ebb1d4cc9055de0800000000000000
+      internalID: -1345158140628582911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_10
+      name: idle_up_10
       rect:
         serializedVersion: 2
-        x: 665
-        y: 15
-        width: 15
-        height: 39
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,20 +374,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39c2c12156abc1800800000000000000
-      internalID: 584546994909621395
+      spriteID: 70382d6884ba87f10800000000000000
+      internalID: 2267750740368982791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_11
+      name: idle_up_11
       rect:
         serializedVersion: 2
-        x: 729
-        y: 15
-        width: 15
-        height: 39
+        x: 192
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,20 +396,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8482a429631a52c80800000000000000
-      internalID: -8348089078506706872
+      spriteID: 3d921c376dd66dc10800000000000000
+      internalID: 2077969045910530515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_12
+      name: idle_up_12
       rect:
         serializedVersion: 2
-        x: 793
-        y: 15
-        width: 15
-        height: 39
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +418,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4350a526b743b0970800000000000000
-      internalID: 8722122807868785972
+      spriteID: f828dc21eda936a10800000000000000
+      internalID: 1901533746269356687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up_13
+      name: idle_up_13
       rect:
         serializedVersion: 2
-        x: 857
-        y: 15
-        width: 15
-        height: 39
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,8 +440,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 33de3391e5c963a50800000000000000
-      internalID: 6500555040119582003
+      spriteID: d2b7c69af54c86f80800000000000000
+      internalID: -8113018813564552403
       vertices: []
       indices: 
       edges: []
@@ -450,7 +450,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a79d7168ce3c51a4ba84d1f2d9606852
     internalID: 0
     vertices: []
     indices: 
@@ -460,20 +460,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Up_0: -2670100242169240431
-      Up_1: -6690175258641898058
-      Up_10: 584546994909621395
-      Up_11: -8348089078506706872
-      Up_12: 8722122807868785972
-      Up_13: 6500555040119582003
-      Up_2: 4091235918760648666
-      Up_3: -2605162699692701695
-      Up_4: 5657010497173298339
-      Up_5: -9094157908607221786
-      Up_6: -3551056945580125587
-      Up_7: -1489845509110937265
-      Up_8: 1395371096053093854
-      Up_9: -1574023246038785368
+      idle_up_0: -639016909152822417
+      idle_up_1: -7660712862888677055
+      idle_up_10: 2267750740368982791
+      idle_up_11: 2077969045910530515
+      idle_up_12: 1901533746269356687
+      idle_up_13: -8113018813564552403
+      idle_up_2: -2801625992821860700
+      idle_up_3: -7262585456254638847
+      idle_up_4: -1862283806931543833
+      idle_up_5: 8023497310580783721
+      idle_up_6: -1666585021586401484
+      idle_up_7: 3678552267812631876
+      idle_up_8: -2981743305693656665
+      idle_up_9: -1345158140628582911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
