@@ -884,7 +884,38 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Werewolf_walk_0: 4542249082004012509
+      Werewolf_walk_1: 6996829417602111102
+      Werewolf_walk_10: -8035675713065133649
+      Werewolf_walk_11: -192272871032485173
+      Werewolf_walk_12: 7714612445929640915
+      Werewolf_walk_13: 8889942866083781067
+      Werewolf_walk_14: -3648279057352432861
+      Werewolf_walk_15: -2692596645793871439
+      Werewolf_walk_16: 455054579851547140
+      Werewolf_walk_17: 3116838764764291626
+      Werewolf_walk_18: -5307316099676459152
+      Werewolf_walk_19: -8959387407425826296
+      Werewolf_walk_2: 3266870662670412055
+      Werewolf_walk_20: -1487997387191812867
+      Werewolf_walk_21: -3728804058122480659
+      Werewolf_walk_22: 5657635987381816484
+      Werewolf_walk_23: -2983369478164471593
+      Werewolf_walk_24: -2655372611263760705
+      Werewolf_walk_25: -4123962742486168388
+      Werewolf_walk_26: 7717227747109356854
+      Werewolf_walk_27: 3229247696307087174
+      Werewolf_walk_28: 316602025140871562
+      Werewolf_walk_29: -3429896576185116725
+      Werewolf_walk_3: 7310932869468240914
+      Werewolf_walk_30: 664768166556074245
+      Werewolf_walk_4: -942192205920248166
+      Werewolf_walk_5: 3835617977918998849
+      Werewolf_walk_6: -7726772067839261309
+      Werewolf_walk_7: -781851706947057217
+      Werewolf_walk_8: 1040115411679091843
+      Werewolf_walk_9: 401853124738611504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
