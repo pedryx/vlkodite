@@ -26,24 +26,6 @@ TextureImporter:
   - first:
       213: 6735734629355433481
     second: walk_down_7
-  - first:
-      213: 7781687242332718214
-    second: walk_down_8
-  - first:
-      213: 1471427168740516745
-    second: walk_down_9
-  - first:
-      213: -6429012072267391643
-    second: walk_down_10
-  - first:
-      213: 6095442066781333894
-    second: walk_down_11
-  - first:
-      213: 6946690977548384636
-    second: walk_down_12
-  - first:
-      213: -1564690760246226607
-    second: walk_down_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -143,7 +125,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -165,7 +147,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 192
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -187,7 +169,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 192
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -209,7 +191,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 192
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -231,7 +213,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -253,7 +235,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -275,7 +257,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -297,7 +279,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 128
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -314,143 +296,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: walk_down_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6844e68515b1efb60800000000000000
-      internalID: 7781687242332718214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_down_9
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98323a9c63f8b6410800000000000000
-      internalID: 1471427168740516745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_down_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 56dddc7259f87c6a0800000000000000
-      internalID: -6429012072267391643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_down_11
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6896973c34c579450800000000000000
-      internalID: 6095442066781333894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_down_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c79be2193aa976060800000000000000
-      internalID: 6946690977548384636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_down_13
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 151103c2b0a194ae0800000000000000
-      internalID: -1564690760246226607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 12f1dcc7cdd8ee44398144b981b123a4
+    spriteID: 275f36cae2053da43aad812b9994cf84
     internalID: 0
     vertices: []
     indices: 
@@ -462,18 +312,12 @@ TextureImporter:
     nameFileIdTable:
       walk_down_0: -2934438944226731720
       walk_down_1: 2601514537129177563
-      walk_down_10: -6429012072267391643
-      walk_down_11: 6095442066781333894
-      walk_down_12: 6946690977548384636
-      walk_down_13: -1564690760246226607
       walk_down_2: -6021245859881801256
       walk_down_3: 6933450678567269769
       walk_down_4: 6611497878597077051
       walk_down_5: -7717474246031703851
       walk_down_6: -4035409334605507318
       walk_down_7: 6735734629355433481
-      walk_down_8: 7781687242332718214
-      walk_down_9: 1471427168740516745
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -26,24 +26,6 @@ TextureImporter:
   - first:
       213: -3889763168057555790
     second: walk_up_7
-  - first:
-      213: -6035056537535761228
-    second: walk_up_8
-  - first:
-      213: 8146538600141167253
-    second: walk_up_9
-  - first:
-      213: -7474896907065578391
-    second: walk_up_10
-  - first:
-      213: 7358128993887781349
-    second: walk_up_11
-  - first:
-      213: -6968711567038559079
-    second: walk_up_12
-  - first:
-      213: -3420278305275972237
-    second: walk_up_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -143,7 +125,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -165,7 +147,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 192
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -187,7 +169,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 192
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -209,7 +191,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 192
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -231,7 +213,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -253,7 +235,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -275,7 +257,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -297,7 +279,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 128
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -314,143 +296,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: walk_up_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b438c0ed0c2f3ca0800000000000000
-      internalID: -6035056537535761228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_up_9
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59a1c62d1b15e0170800000000000000
-      internalID: 8146538600141167253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_up_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96ca0b1edd4d34890800000000000000
-      internalID: -7474896907065578391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_up_11
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e10f2cb5535d1660800000000000000
-      internalID: 7358128993887781349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_up_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99cc28860c92a4f90800000000000000
-      internalID: -6968711567038559079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_up_13
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 375fc05b00bb880d0800000000000000
-      internalID: -3420278305275972237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 77447ca4008dae846bfbe06f15f5e83f
+    spriteID: 0828c5ab05708a742aa2d521a1947578
     internalID: 0
     vertices: []
     indices: 
@@ -462,18 +312,12 @@ TextureImporter:
     nameFileIdTable:
       walk_up_0: -4778624461764053770
       walk_up_1: -9096989396093648339
-      walk_up_10: -7474896907065578391
-      walk_up_11: 7358128993887781349
-      walk_up_12: -6968711567038559079
-      walk_up_13: -3420278305275972237
       walk_up_2: -8467170227996590455
       walk_up_3: -8745426631189603992
       walk_up_4: 4428644091572420888
       walk_up_5: -7119738755306937642
       walk_up_6: 2370903508304181667
       walk_up_7: -3889763168057555790
-      walk_up_8: -6035056537535761228
-      walk_up_9: 8146538600141167253
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
