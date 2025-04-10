@@ -6,8 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     private bool debugMode = false;
     private Vector2 startPosition;
+    private FacingDirection faceDirection;
 
     private Rigidbody2D rigidBody;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private GameInputActions input;
 
     [SerializeField]
@@ -55,6 +58,11 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
 
         startPosition = rigidBody.position;
+
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
+        animator.Play("Idle");
+        animator.SetFloat("FaceDirection", (float)faceDirection);
     }
 
     private void ToggleDebug_Performed(InputAction.CallbackContext obj)
@@ -88,6 +96,21 @@ public class PlayerController : MonoBehaviour
     {
         float speed = input.Debug.SuperSpeed.IsPressed() ? SuperMovementSpeed : MovementSpeed;
         velocity = input.Player.Move.ReadValue<Vector2>().normalized * speed;
+        
+        if (velocity.magnitude > 1e-2f)
+        {
+            if (Mathf.Abs(velocity.x) > 1e-2f)
+                faceDirection = FacingDirection.Side;
+            else if (velocity.y > 0.0f)
+                faceDirection = FacingDirection.Up;
+            else
+                faceDirection = FacingDirection.Down;
+
+            spriteRenderer.flipX = faceDirection == FacingDirection.Side && velocity.x < 0.0f;
+            animator.SetFloat("FaceDirection", (float)faceDirection);
+        }
+
+        animator.Play(velocity.magnitude > 1e-2f ? "Walk" : "Idle");
 
         if (input.Player.Interact.WasPressedThisFrame() && interactableTarget != null)
             interactableTarget.Interact(this);
@@ -116,5 +139,12 @@ public class PlayerController : MonoBehaviour
             return;
 
         interactableTarget = null;
+    }
+
+    private enum FacingDirection
+    {
+        Down,
+        Up,
+        Side,
     }
 }
