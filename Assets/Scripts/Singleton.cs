@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+
+using UnityEngine;
 
 public class Singleton<T> : MonoBehaviour
     where T : MonoBehaviour, new()
@@ -15,7 +17,7 @@ public class Singleton<T> : MonoBehaviour
         get
         {
             if (instance == null)
-                instance = new();
+                instance = FindObjectsByType<T>(FindObjectsSortMode.None).First();
 
             return instance;
         }
