@@ -142,10 +142,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 443257608}
     m_Modifications:
-    - target: {fileID: -7862014536598589987, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
-      propertyPath: itemQueue.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4074327944774414583, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: playerTransform
       value: 
@@ -396,33 +392,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
---- !u!1 &817968372 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1951390820603998412, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-  m_PrefabInstance: {fileID: 1911557178}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &817968375
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817968372}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 76c36d236ee0f474e8b0005a9de062c8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1070535515
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,26 +661,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 252540740666260891, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 5691741724741407780, guid: e1e176f4223e452488de161cac6f2512, type: 3}
-    - target: {fileID: 252540740666260891, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 252540740666260891, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 252540740666260891, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 252540740666260891, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: m_SortingOrder
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 1912023341480572137, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
       propertyPath: m_Name
       value: Player
@@ -760,32 +709,13 @@ PrefabInstance:
       propertyPath: werewolf
       value: 
       objectReference: {fileID: 555201407}
-    - target: {fileID: 8489756782962909198, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8489756782962909198, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8489756782962909198, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8489756782962909198, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3421451709765926785, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1070535518}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1951390820603998412, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 817968375}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
 --- !u!4 &1911557179 stripped
 Transform:
