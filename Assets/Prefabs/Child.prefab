@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 4382285839199678873}
   - component: {fileID: -7862014536598589987}
   - component: {fileID: 4074327944774414583}
+  - component: {fileID: 5480185089262635087}
   - component: {fileID: 8468488518648650699}
   - component: {fileID: 8460258489547781858}
   - component: {fileID: 344769054508173824}
@@ -117,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 8722358687054884800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -151,7 +152,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
-  <MovementSpeed>k__BackingField: 0.2
+--- !u!114 &5480185089262635087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722358687054884800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e57421d5dd2e834a957f2c7a5ba247e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Speed>k__BackingField: 9
 --- !u!50 &8468488518648650699
 Rigidbody2D:
   serializedVersion: 5

@@ -129,18 +129,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2114242991272407687, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
   m_PrefabInstance: {fileID: 1469706103}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &215837855 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4382285839199678873, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
-  m_PrefabInstance: {fileID: 282596641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &282596641
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 443257608}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4074327944774414583, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: playerTransform
@@ -148,15 +143,15 @@ PrefabInstance:
       objectReference: {fileID: 1911557179}
     - target: {fileID: 4382285839199678873, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4382285839199678873, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.4
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 4382285839199678873, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.38516277
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4382285839199678873, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -224,7 +219,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 215837855}
   - {fileID: 1619191477}
   - {fileID: 96272219}
   - {fileID: 118368762}
@@ -675,7 +669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3421451709765926785, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3421451709765926785, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
       propertyPath: m_LocalRotation.w
@@ -709,6 +703,14 @@ PrefabInstance:
       propertyPath: werewolf
       value: 
       objectReference: {fileID: 555201407}
+    - target: {fileID: 6894993836738388932, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
+      propertyPath: <MovementEndWindow>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894993836738388932, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
+      propertyPath: <MovementStartWindow>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -799,4 +801,5 @@ SceneRoots:
   - {fileID: 1290921254}
   - {fileID: 825885120940546525}
   - {fileID: 1911557178}
+  - {fileID: 282596641}
   - {fileID: 443257608}

@@ -3,11 +3,9 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-// TODO: make disabled on night
-
 public class ChildController : MonoBehaviour, IInteractable
 {
-    private Vector2 startPosition;
+    private Vector3 spawnPosition;
 
     /// <summary>
     /// Queue of items which will be one by one requested by the child.
@@ -22,15 +20,24 @@ public class ChildController : MonoBehaviour, IInteractable
     /// </summary>
     private int queueIndex = 0;
 
+    /// <summary>
+    /// Item requested by current child task.
+    /// </summary>
     public ChildItemScriptableObject RequestedItem => itemQueue[queueIndex];
 
     public event EventHandler OnAllTasksDone;
 
+    private void Awake()
+    {
+        GameManager.Instance.OnDayBegin += GameManager_OnDayBegin;
+        GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
+        spawnPosition = transform.position;
+
+        Debug.Log($"Child requests new item \"{RequestedItem.Name}\".");
+    }
+
     public void Interact(PlayerController player)
     {
-        if (GameManager.Instance.IsNight)
-            return;
-
         if (player.Item != RequestedItem)
         {
             Debug.Log("Invalid item.");
@@ -52,18 +59,14 @@ public class ChildController : MonoBehaviour, IInteractable
         }
     }
 
-    private void Awake()
-    {
-        GameManager.Instance.OnDayBegin += GameManager_OnDayBegin;
-        startPosition = transform.position;
-
-        Debug.Log($"Child requests new item \"{RequestedItem.Name}\".");
-    }
-
     private void GameManager_OnDayBegin(object sender, EventArgs e)
     {
-        // TODO: change sprite
-        GetComponentInChildren<SpriteRenderer>().color = Color.blue;
-        transform.position = startPosition;
+        transform.position = spawnPosition;
+        enabled = true;
+    }
+
+    private void Instance_OnNightBegin(object sender, EventArgs e)
+    {
+        enabled = false;
     }
 }
