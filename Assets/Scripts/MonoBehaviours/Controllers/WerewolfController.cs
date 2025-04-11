@@ -6,9 +6,13 @@ using UnityEngine;
 public class WerewolfController : MonoBehaviour
 {
     [SerializeField]
+    private GameObject werewolfSprite;
+    [SerializeField]
     private Transform playerTransform;
 
     private CharacterMovement characterMovement;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     public event EventHandler OnPlayerCaught;
 
@@ -20,11 +24,28 @@ public class WerewolfController : MonoBehaviour
 
         characterMovement = GetComponent<CharacterMovement>();
         enabled = false;
+    
+        animator = werewolfSprite.GetComponent<Animator>();
+        spriteRenderer = werewolfSprite.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
         characterMovement.Move(playerTransform.position - transform.position);
+
+        // TODO: thi s should happen only when werewolf is moving
+        spriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
+        animator.SetBool("IsMoving", !characterMovement.IsVelocityZero());
+    }
+
+    private void OnEnable()
+    {
+        werewolfSprite.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        werewolfSprite.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class ChildController : MonoBehaviour, IInteractable
 {
+    [SerializeField]
+    private GameObject childSprite;
+
     private Vector3 spawnPosition;
 
     /// <summary>
@@ -34,6 +37,16 @@ public class ChildController : MonoBehaviour, IInteractable
         spawnPosition = transform.position;
 
         Debug.Log($"Child requests new item \"{RequestedItem.Name}\".");
+    }
+
+    private void OnEnable()
+    {
+        childSprite.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        childSprite.SetActive(false);
     }
 
     public void Interact(PlayerController player)
