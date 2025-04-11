@@ -4,9 +4,13 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+    /// <summary>
+    /// Determine if debug mode is toggled on. In debug mode player have useful debugging capabilities, like
+    /// super-speed, task skip, etc.
+    /// </summary>
     private bool debugMode = false;
-    private Vector2 startPosition;
-    private FacingDirection faceDirection;
+    private Vector2 spawnPosition;
+    private FacingDirection facingDirection;
 
     private Rigidbody2D rigidBody;
     private Animator animator;
@@ -31,7 +35,7 @@ public class PlayerController : MonoBehaviour
     public ChildItemScriptableObject Item { get; set; }
 
     /// <summary>
-    /// Maximum movement speed of player in pixels per second during super speed mode.
+    /// Maximum movement speed of player in pixels per second during super-speed mode.
     /// </summary>
     [field: SerializeField]
     [Tooltip("Maximum movement speed of player in pixels per second during super speed mode.")]
@@ -47,22 +51,71 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
         input = new GameInputActions();
 
-        input.Player.Enable();
+        spawnPosition = rigidBody.position;
 
+        input.Player.Enable();
         input.Debug.ToggleDebug.Enable();
         input.Debug.ToggleDebug.performed += ToggleDebug_Performed;
 
         werewolf.OnPlayerCaught += Werewolf_OnPlayerCaught;
         GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
 
-        startPosition = rigidBody.position;
-
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        animator = GetComponentInChildren<Animator>();
         animator.Play("Idle");
-        animator.SetFloat("FaceDirection", (float)faceDirection);
+        animator.SetFloat("FaceDirection", (float)facingDirection);
+    }
+
+    private void Update()
+    {
+        // update velocity
+        float speed = input.Debug.SuperSpeed.IsPressed() ? SuperMovementSpeed : MovementSpeed;
+        velocity = input.Player.Move.ReadValue<Vector2>().normalized * speed;
+        
+        // update animator
+        if (velocity.magnitude > 1e-2f)
+        {
+            if (Mathf.Abs(velocity.x) > 1e-2f)
+                facingDirection = FacingDirection.Side;
+            else if (velocity.y > 0.0f)
+                facingDirection = FacingDirection.Up;
+            else
+                facingDirection = FacingDirection.Down;
+
+            spriteRenderer.flipX = facingDirection == FacingDirection.Side && velocity.x < 0.0f;
+            animator.SetFloat("FaceDirection", (float)facingDirection);
+        }
+
+        animator.Play(velocity.magnitude > 1e-2f ? "Walk" : "Idle");
+
+        // update interactions
+        if (input.Player.Interact.WasPressedThisFrame() && interactableTarget != null)
+            interactableTarget.Interact(this);
+    }
+
+    private void FixedUpdate()
+    {
+        rigidBody.position += velocity;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.TryGetComponent<IInteractable>(out var interactable))
+            return;
+
+        interactableTarget = interactable;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        IInteractable interactable = collision.GetComponent<IInteractable>();
+
+        if (interactableTarget != interactable)
+            return;
+
+        interactableTarget = null;
     }
 
     private void ToggleDebug_Performed(InputAction.CallbackContext obj)
@@ -84,61 +137,12 @@ public class PlayerController : MonoBehaviour
 
     private void Werewolf_OnPlayerCaught(object sender, System.EventArgs e)
     {
-        rigidBody.position = startPosition;
+        rigidBody.position = spawnPosition;
     }
 
     private void Instance_OnNightBegin(object sender, System.EventArgs e)
     {
-        rigidBody.position = startPosition;
-    }
-
-    private void Update()
-    {
-        float speed = input.Debug.SuperSpeed.IsPressed() ? SuperMovementSpeed : MovementSpeed;
-        velocity = input.Player.Move.ReadValue<Vector2>().normalized * speed;
-        
-        if (velocity.magnitude > 1e-2f)
-        {
-            if (Mathf.Abs(velocity.x) > 1e-2f)
-                faceDirection = FacingDirection.Side;
-            else if (velocity.y > 0.0f)
-                faceDirection = FacingDirection.Up;
-            else
-                faceDirection = FacingDirection.Down;
-
-            spriteRenderer.flipX = faceDirection == FacingDirection.Side && velocity.x < 0.0f;
-            animator.SetFloat("FaceDirection", (float)faceDirection);
-        }
-
-        animator.Play(velocity.magnitude > 1e-2f ? "Walk" : "Idle");
-
-        if (input.Player.Interact.WasPressedThisFrame() && interactableTarget != null)
-            interactableTarget.Interact(this);
-    }
-
-    private void FixedUpdate()
-    {
-        rigidBody.position += velocity;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        IInteractable interactable = collision.GetComponent<IInteractable>();
-
-        if (interactable == null)
-            return;
-
-        interactableTarget = interactable;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        IInteractable interactable = collision.GetComponent<IInteractable>();
-
-        if (interactableTarget != interactable)
-            return;
-
-        interactableTarget = null;
+        rigidBody.position = spawnPosition;
     }
 
     private enum FacingDirection
