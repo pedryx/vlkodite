@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4cdabb32b6af23947a49a947b223a111
+guid: 89836b5887fd5194cbe873bbba95aac9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 18122855134605921
-    second: sticky_note_0
+      213: -7764931523020801489
+    second: tapeta_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,10 +48,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 164
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sticky_note_0
+      name: tapeta_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 49
-        width: 42
-        height: 62
+        x: 0
+        y: 0
+        width: 80
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1623d9604a2604000800000000000000
-      internalID: 18122855134605921
+      spriteID: f2abc119beb6d3490800000000000000
+      internalID: -7764931523020801489
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sticky_note_0: 18122855134605921
+      tapeta_0: -7764931523020801489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

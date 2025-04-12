@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e92604ec78aa2aa45a4cedab5bf0c6f8
+guid: 8bf0e904cf7fcc443a2a2e258e52b8e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7849948554545140298
-    second: "poli\u010Dka_kuchyn_0"
+      213: -7405816905314849828
+    second: obazek1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 164
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "poli\u010Dka_kuchyn_0"
+      name: obazek1_0
       rect:
         serializedVersion: 2
-        x: 69
+        x: 2
         y: 0
-        width: 352
-        height: 181
+        width: 12
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6bdee3561616f0390800000000000000
-      internalID: -7849948554545140298
+      spriteID: cdb202723c0493990800000000000000
+      internalID: -7405816905314849828
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "poli\u010Dka_kuchyn_0": -7849948554545140298
+      obazek1_0: -7405816905314849828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
