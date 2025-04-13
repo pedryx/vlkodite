@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b235c20f0748c6d48ba22e956519b4a6
+guid: 91272bd6b08e27c42b27d7f4afa62338
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5192037460920974773
-    second: obraz.kuch_0
+      213: -6143343708057527556
+    second: konvice_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: obraz.kuch_0
+      name: konvice_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 1
         y: 0
-        width: 27
-        height: 19
+        width: 24
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bd37b6ef82dd0840800000000000000
-      internalID: 5192037460920974773
+      spriteID: cfa991442757ebaa0800000000000000
+      internalID: -6143343708057527556
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      obraz.kuch_0: 5192037460920974773
+      konvice_0: -6143343708057527556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
