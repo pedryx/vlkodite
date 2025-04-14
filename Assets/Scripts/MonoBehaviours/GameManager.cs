@@ -1,19 +1,19 @@
 ﻿using System;
 
 using UnityEngine;
-// -60 -10
-// 60 80
+
 public class GameManager : Singleton<GameManager>
 {
-    private PathFinder pathfinder;
     private bool isDay = true;
     private float nightTimeElapsed = 0.0f;
 
     [SerializeField]
     private GameObject child;
 
-    [SerializeField, Header("PathFinder")]
-    private bool showPathFindingGrid = false;
+    [field: SerializeField, Header("PathFinder")]
+    public bool ShowPathFindingGrid { get; set; }
+    [field: SerializeField]
+    public bool ShowPathFindingPatches { get; set; }
     [SerializeField]
     private Rect pathFinderArea;
     [SerializeField]
@@ -27,6 +27,8 @@ public class GameManager : Singleton<GameManager>
 
     [field: SerializeField, Header("")]
     public float NightDuration { get; private set; } = 1000.0f;
+
+    public PathFinder PathFinder { get; private set; }
 
     public event EventHandler OnDayBegin;
     public event EventHandler OnNightBegin;
@@ -47,7 +49,7 @@ public class GameManager : Singleton<GameManager>
         child.GetComponent<ChildController>().OnAllTasksDone += Child_OnAllTasksDone;
         child.GetComponent<WerewolfController>().OnPlayerCaught += GameManager_OnPlayerCaught;
 
-        pathfinder = new PathFinder(pathFinderArea, pathFinderCellSize, pathFinderRadius);
+        PathFinder = new PathFinder(pathFinderArea, pathFinderCellSize, pathFinderRadius);
     }
 
     private void GameManager_OnDayBegin(object sender, EventArgs e)
@@ -82,9 +84,9 @@ public class GameManager : Singleton<GameManager>
 
     private void OnDrawGizmos()
     {
-        if (!showPathFindingGrid)
+        if (PathFinder == null || !ShowPathFindingGrid)
             return;
 
-        pathfinder.DrawGizmos();
+        PathFinder.DrawGizmos();
     }
 }

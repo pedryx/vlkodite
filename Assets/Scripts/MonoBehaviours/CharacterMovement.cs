@@ -53,6 +53,14 @@ public class CharacterMovement : MonoBehaviour
     }
 
     /// <summary>
+    /// Move character towards a specified position.
+    /// </summary>
+    public void MoveTo(Vector2 position)
+    {
+        movementDirection = (position - (Vector2)transform.localPosition).normalized;
+    }
+
+    /// <summary>
     /// Determine if velocity is zero.
     /// </summary>
     public bool IsVelocityZero()

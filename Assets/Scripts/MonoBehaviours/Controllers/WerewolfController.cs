@@ -3,6 +3,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterMovement))]
+[RequireComponent(typeof(PathFollow))]
 public class WerewolfController : MonoBehaviour
 {
     [SerializeField]
@@ -13,6 +14,7 @@ public class WerewolfController : MonoBehaviour
     private CharacterMovement characterMovement;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private PathFollow pathFollow;
 
     public event EventHandler OnPlayerCaught;
 
@@ -23,16 +25,16 @@ public class WerewolfController : MonoBehaviour
         OnPlayerCaught += WerewolfController_OnPlayerCaught;
 
         characterMovement = GetComponent<CharacterMovement>();
-        enabled = false;
-    
+        pathFollow = GetComponent<PathFollow>();
+
         animator = werewolfSprite.GetComponent<Animator>();
         spriteRenderer = werewolfSprite.GetComponent<SpriteRenderer>();
+
+        enabled = false;
     }
 
     private void Update()
     {
-        characterMovement.Move(playerTransform.position - transform.position);
-
         // TODO: thi s should happen only when werewolf is moving
         spriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
         animator.SetBool("IsMoving", !characterMovement.IsVelocityZero());
@@ -41,11 +43,13 @@ public class WerewolfController : MonoBehaviour
     private void OnEnable()
     {
         werewolfSprite.SetActive(true);
+        pathFollow.enabled = true;
     }
 
     private void OnDisable()
     {
         werewolfSprite.SetActive(false);
+        pathFollow.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

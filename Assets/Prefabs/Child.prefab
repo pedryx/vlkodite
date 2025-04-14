@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3202188379876281482}
   - component: {fileID: 7498198892068690555}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ChildSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1668537504554514187}
   - component: {fileID: 4465662469925585516}
   - component: {fileID: 1329507245927352280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WerewolfSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,10 +209,11 @@ GameObject:
   - component: {fileID: -7862014536598589987}
   - component: {fileID: 4074327944774414583}
   - component: {fileID: 5480185089262635087}
+  - component: {fileID: 4375273635702686500}
   - component: {fileID: 8468488518648650699}
   - component: {fileID: 8460258489547781858}
   - component: {fileID: 344769054508173824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Child
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,6 +279,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 9
+--- !u!114 &4375273635702686500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722358687054884800}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28daed55444f96438cc5b4968905460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Target>k__BackingField: {fileID: 0}
 --- !u!50 &8468488518648650699
 Rigidbody2D:
   serializedVersion: 5
