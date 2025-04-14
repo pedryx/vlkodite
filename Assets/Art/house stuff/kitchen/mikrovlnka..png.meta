@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b235c20f0748c6d48ba22e956519b4a6
+guid: 3e09e6c51c4e5714593668db5273be10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5192037460920974773
-    second: obraz.kuch_0
+      213: 5451705329977367607
+    second: mikrovlnka._0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: obraz.kuch_0
+      name: mikrovlnka._0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 6
         y: 0
-        width: 27
-        height: 19
+        width: 21
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bd37b6ef82dd0840800000000000000
-      internalID: 5192037460920974773
+      spriteID: 73c976dfc1958ab40800000000000000
+      internalID: 5451705329977367607
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      obraz.kuch_0: 5192037460920974773
+      mikrovlnka._0: 5451705329977367607
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
