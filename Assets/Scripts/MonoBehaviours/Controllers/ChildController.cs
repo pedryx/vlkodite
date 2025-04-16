@@ -3,73 +3,120 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-public class ChildController : MonoBehaviour, IInteractable
+public class ChildController : Singleton<ChildController>, IInteractable
 {
     [SerializeField]
     private GameObject childSprite;
 
+    /// <summary>
+    /// Spawn position of the child.
+    /// </summary>
     private Vector3 spawnPosition;
 
-    /// <summary>
-    /// Queue of items which will be one by one requested by the child.
-    /// </summary>
     [SerializeField]
-    [Tooltip("Queue of items which will be one by one requested by the child.")]
-    [InspectorName("ItemQueue")]
-    private List<ChildItemScriptableObject> itemQueue = new();
+    private List<Quest> questQueue = new();
+    /// <summary>
+    /// Index of current quest within the quest queue.
+    /// </summary>
+    private int questIndex = 0;
+    /// <summary>
+    /// Determine if first quest within the quest queue was accepted. When new day starts player needs to interact with
+    /// the child in ordr to receive the first quest.
+    /// </summary>
+    private bool questQueueStarted = false;
+
+    private Quest CurrentQuest => questQueue[questIndex];
+    private SubQuest CurrentSubQuest => CurrentQuest.CurrentSubQuest;
 
     /// <summary>
-    /// Index of currently requested item form <see cref="itemQueue"/>.
+    /// Occur when all quests are completed.
     /// </summary>
-    private int queueIndex = 0;
-
+    public event EventHandler OnAllQuestsDone;
     /// <summary>
-    /// Item requested by current child task.
+    /// Occur when quest starts.
     /// </summary>
-    public ChildItemScriptableObject RequestedItem => itemQueue[queueIndex];
+    public event EventHandler<QuestEventArgs> OnQuestStart;
+    /// <summary>
+    /// Occur when quest is completed.
+    /// </summary>
+    public event EventHandler<QuestEventArgs> OnQuestDone;
+    /// <summary>
+    /// Occur when sub quest starts.
+    /// </summary>
+    public event EventHandler<SubQuestEventArgs> OnSubQuestStart;
+    /// <summary>
+    /// Occur when sub quest is completed.
+    /// </summary>
+    public event EventHandler<SubQuestEventArgs> OnSubQuestDone;
 
-    public event EventHandler OnAllTasksDone;
-
-    private void Awake()
+    protected override void Awake()
     {
-        GameManager.Instance.OnDayBegin += GameManager_OnDayBegin;
-        GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
+        base.Awake();
+
         spawnPosition = transform.position;
+        GameManager.Instance.OnDayBegin += GameManager_OnDayBegin;
+        GameManager.Instance.OnNightBegin += GameManager_OnNightBegin;
 
-        Debug.Log($"Child requests new item \"{RequestedItem.Name}\".");
+        OnSubQuestStart += Child_OnSubQuestStart;
     }
 
-    private void OnEnable()
-    {
-        childSprite.SetActive(true);
-    }
+    private void OnEnable() => childSprite.SetActive(true);
 
-    private void OnDisable()
-    {
-        childSprite.SetActive(false);
-    }
+    private void OnDisable() => childSprite.SetActive(false);
 
     public void Interact(PlayerController player)
     {
-        if (player.Item != RequestedItem)
+        if (!questQueueStarted)
         {
-            Debug.Log("Invalid item.");
+            questQueueStarted = true;
+            CurrentSubQuest.QuestAdvancer.enabled = true;
+            OnQuestStart?.Invoke(this, new QuestEventArgs(CurrentQuest));
+            OnSubQuestStart?.Invoke(this, new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
             return;
         }
 
-        player.Item = null;
-        RequestNewItem();
-        Debug.Log($"Item used on child. Child requests new item \"{RequestedItem.Name}\".");
+        if (CurrentQuest.AllSubQuestsFinished)
+        {
+            Debug.Assert(questQueueStarted);
+
+            OnQuestDone?.Invoke(this, new QuestEventArgs(CurrentQuest));
+            CurrentQuest.Reset();
+
+            questIndex++;
+            if (questIndex >= questQueue.Count)
+            {
+                questQueueStarted = false;
+                questIndex = 0;
+                OnAllQuestsDone?.Invoke(this, new EventArgs());
+                return;
+            }
+
+            CurrentSubQuest.QuestAdvancer.enabled = true;
+            OnQuestStart?.Invoke(this, new QuestEventArgs(CurrentQuest));
+            OnSubQuestStart?.Invoke(this, new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
+            return;
+        }
     }
 
-    private void RequestNewItem()
+    /// <summary>
+    /// Finish current sub quest.
+    /// </summary>
+    public void FinishSubQuest()
     {
-        queueIndex++;
-        if (queueIndex >= itemQueue.Count)
+        Debug.Assert(!CurrentQuest.AllSubQuestsFinished && questQueueStarted);
+
+        CurrentSubQuest.QuestAdvancer.enabled = false;
+        OnSubQuestDone?.Invoke(this, new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
+
+        CurrentQuest.FinishSubQuest();
+        if (CurrentQuest.AllSubQuestsFinished)
         {
-            queueIndex = 0;
-            OnAllTasksDone?.Invoke(this, EventArgs.Empty);
+            Debug.Log("All sub quest finished.");
+            return;
         }
+
+        CurrentSubQuest.QuestAdvancer.enabled = true;
+        OnSubQuestStart?.Invoke(this, new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
     }
 
     private void GameManager_OnDayBegin(object sender, EventArgs e)
@@ -78,8 +125,26 @@ public class ChildController : MonoBehaviour, IInteractable
         enabled = true;
     }
 
-    private void Instance_OnNightBegin(object sender, EventArgs e)
+    private void GameManager_OnNightBegin(object sender, EventArgs e)
     {
         enabled = false;
     }
+
+    private void Child_OnSubQuestStart(object sender, SubQuestEventArgs e)
+    {
+        Debug.Log($"New sub quest: \"{e.SubQuest.Description}\"");
+    }
 }
+
+/// <summary>
+/// Quest related event arguments.
+/// </summary>
+/// <param name="Quest">Related quest.</param>
+public record QuestEventArgs(Quest Quest);
+
+/// <summary>
+/// Sub quest related event arguments.
+/// </summary>
+/// <param name="Quest">Related quest.</param>
+/// <param name="SubQuest">Related sub quest.</param>
+public record SubQuestEventArgs(Quest Quest, SubQuest SubQuest);

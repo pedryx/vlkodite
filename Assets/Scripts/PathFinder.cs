@@ -16,14 +16,14 @@ public class PathFinder
     private readonly (Vector2Int, float)[] neighborsRelative = new (Vector2Int, float)[]
     {
         // cardinal neighbors
-        (new Vector2Int(0, 1), 1.0f),
-        (new Vector2Int(-1, 0), 1.0f),
-        (new Vector2Int(0, -1), 1.0f),
-        (new Vector2Int(1, 0), 1.0f),
+        (new Vector2Int( 0,  1), 1.0f),
+        (new Vector2Int(-1,  0), 1.0f),
+        (new Vector2Int( 0, -1), 1.0f),
+        (new Vector2Int( 1,  0), 1.0f),
         // diagonal neighbors
-        (new Vector2Int(1, 1), sqrtOf2),
-        (new Vector2Int(-1, 1), sqrtOf2),
-        (new Vector2Int(1, -1), sqrtOf2),
+        (new Vector2Int( 1,  1), sqrtOf2),
+        (new Vector2Int(-1,  1), sqrtOf2),
+        (new Vector2Int( 1, -1), sqrtOf2),
         (new Vector2Int(-1, -1), sqrtOf2),
     };
 

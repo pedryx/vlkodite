@@ -5,39 +5,61 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     private bool isDay = true;
+    /// <summary>
+    /// Time elapsed since start of the night.
+    /// </summary>
     private float nightTimeElapsed = 0.0f;
 
-    [SerializeField]
-    private GameObject child;
-
-    [field: SerializeField, Header("PathFinder")]
-    public bool ShowPathFindingGrid { get; set; }
+    /// <summary>
+    /// Determine if the path finding grid should be visualized.
+    /// </summary>
+    [Header("PathFinder")]
     [field: SerializeField]
+    [Tooltip("Determine if path finding grid should be visualized.")]
+    public bool ShowPathFindingGrid { get; set; }
+
+    /// <summary>
+    /// Determine if current patches should be visualized.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Determine if current patches should be visualized.")]
     public bool ShowPathFindingPatches { get; set; }
+
+    /// <summary>
+    /// Bounds of the path finding grid.
+    /// </summary>
     [SerializeField]
-    private Rect pathFinderArea;
+    [Tooltip("Bounds of the path finding grid.")]
+    private Rect pathFinderBounds;
+    /// <summary>
+    /// Size of cells in the path finding grid.
+    /// </summary>
     [SerializeField]
+    [Tooltip("Size of cells in path finding grid.")]
     private float pathFinderCellSize = 0.2f;
+    /// <summary>
+    /// Radius used for physics overlap checks during creation of the path finding grid.
+    /// </summary>
     [SerializeField]
+    [Tooltip("Radius used for physics overlap checks during creation of the path finding grid.")]
     private float pathFinderRadius = 0.1f;
 
     public bool IsDay => isDay;
 
     public bool IsNight => !isDay;
 
-    [field: SerializeField, Header("")]
-    public float NightDuration { get; private set; } = 1000.0f;
+    /// <summary>
+    /// Night duration in seconds.
+    /// </summary>
+    [Header("")]
+    [field: SerializeField]
+    [Tooltip("Night duration in seconds.")]
+    public float NightDuration { get; private set; } = 10.0f * 60.0f;
 
     public PathFinder PathFinder { get; private set; }
 
     public event EventHandler OnDayBegin;
     public event EventHandler OnNightBegin;
-
-    private void Child_OnAllTasksDone(object sender, EventArgs e)
-    {
-        isDay = false;
-        OnNightBegin?.Invoke(this, EventArgs.Empty);
-    }
 
     protected override void Awake()
     {
@@ -46,26 +68,10 @@ public class GameManager : Singleton<GameManager>
         OnDayBegin += GameManager_OnDayBegin;
         OnNightBegin += GameManager_OnNightBegin;
 
-        child.GetComponent<ChildController>().OnAllTasksDone += Child_OnAllTasksDone;
-        child.GetComponent<WerewolfController>().OnPlayerCaught += GameManager_OnPlayerCaught;
+        ChildController.Instance.OnAllQuestsDone += Child_OnAllQuestsDone;
+        WerewolfController.Instance.OnPlayerCaught += Werewolf_OnPlayerCaught;
 
-        PathFinder = new PathFinder(pathFinderArea, pathFinderCellSize, pathFinderRadius);
-    }
-
-    private void GameManager_OnDayBegin(object sender, EventArgs e)
-    {
-        Debug.Log("Day started.");
-    }
-
-    private void GameManager_OnNightBegin(object sender, EventArgs e)
-    {
-        Debug.Log("Night started.");
-    }
-
-    private void GameManager_OnPlayerCaught(object sender, EventArgs e)
-    {
-        isDay = true;
-        OnDayBegin?.Invoke(this, EventArgs.Empty);
+        PathFinder = new PathFinder(pathFinderBounds, pathFinderCellSize, pathFinderRadius);
     }
 
     private void Update()
@@ -88,5 +94,27 @@ public class GameManager : Singleton<GameManager>
             return;
 
         PathFinder.DrawGizmos();
+    }
+
+    private void GameManager_OnDayBegin(object sender, EventArgs e)
+    {
+        Debug.Log("Day started.");
+    }
+
+    private void GameManager_OnNightBegin(object sender, EventArgs e)
+    {
+        Debug.Log("Night started.");
+    }
+
+    private void Werewolf_OnPlayerCaught(object sender, EventArgs e)
+    {
+        isDay = true;
+        OnDayBegin?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void Child_OnAllQuestsDone(object sender, EventArgs e)
+    {
+        isDay = false;
+        OnNightBegin?.Invoke(this, EventArgs.Empty);
     }
 }

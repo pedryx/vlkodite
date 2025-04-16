@@ -4,22 +4,25 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterMovement))]
 [RequireComponent(typeof(PathFollow))]
-public class WerewolfController : MonoBehaviour
+public class WerewolfController : Singleton<WerewolfController>
 {
     [SerializeField]
     private GameObject werewolfSprite;
-    [SerializeField]
-    private Transform playerTransform;
 
     private CharacterMovement characterMovement;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private PathFollow pathFollow;
 
+    /// <summary>
+    /// Occur when player is caught by the werewolf.
+    /// </summary>
     public event EventHandler OnPlayerCaught;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         GameManager.Instance.OnDayBegin += Instance_OnDayBegin;
         GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
         OnPlayerCaught += WerewolfController_OnPlayerCaught;
@@ -35,21 +38,21 @@ public class WerewolfController : MonoBehaviour
 
     private void Update()
     {
-        // TODO: thi s should happen only when werewolf is moving
-        spriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
-        animator.SetBool("IsMoving", !characterMovement.IsVelocityZero());
+        if (!characterMovement.IsMoving())
+            spriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
+        animator.SetBool("IsMoving", !characterMovement.IsMoving());
     }
 
     private void OnEnable()
     {
         werewolfSprite.SetActive(true);
-        pathFollow.enabled = true;
+        pathFollow.Target = PlayerController.Instance.gameObject.transform;
     }
 
     private void OnDisable()
     {
         werewolfSprite.SetActive(false);
-        pathFollow.enabled = false;
+        pathFollow.Target = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

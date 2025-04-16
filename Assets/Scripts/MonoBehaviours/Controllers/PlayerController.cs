@@ -2,11 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterMovement))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
-    [SerializeField]
-    private WerewolfController werewolf;
-
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private CharacterMovement characterMovement;
@@ -32,13 +29,10 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Maximum movement speed of player in pixels per second during super speed mode.")]
     public float SuperMovementSpeed { get; private set; } = 1.0f;
 
-    /// <summary>
-    /// Item in player's inventory.
-    /// </summary>
-    public ChildItemScriptableObject Item { get; set; }
-
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         characterMovement = GetComponent<CharacterMovement>();
         characterSpeed = characterMovement.Speed;
 
@@ -48,7 +42,7 @@ public class PlayerController : MonoBehaviour
         input.Debug.ToggleDebug.performed += ToggleDebug_Performed;
 
         spawnPosition = transform.position;
-        werewolf.OnPlayerCaught += Werewolf_OnPlayerCaught;
+        WerewolfController.Instance.OnPlayerCaught += Werewolf_OnPlayerCaught;
         GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
 
         animator = GetComponentInChildren<Animator>();
@@ -65,7 +59,7 @@ public class PlayerController : MonoBehaviour
             characterMovement.Speed = characterSpeed;
 
         // update animation
-        if (!characterMovement.IsVelocityZero())
+        if (!characterMovement.IsMoving())
         {
             Direction facingDirection = characterMovement.GetFacingDirection();
             Debug.Assert(facingDirection != Direction.None);
@@ -73,11 +67,16 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = facingDirection == Direction.Left;
             animator.SetFloat("Direction", (float)facingDirection);
         }
-        animator.SetBool("IsMoving", !characterMovement.IsVelocityZero());
+        animator.SetBool("IsMoving", !characterMovement.IsMoving());
 
         // update interactions
-        if (input.Player.Interact.WasPressedThisFrame() && interactableTarget != null)
-            interactableTarget.Interact(this);
+        if (interactableTarget != null)
+        {
+            if (interactableTarget.IsContinuous && input.Player.Interact.IsPressed())
+                interactableTarget.Interact(this);
+            else if (!interactableTarget.IsContinuous && input.Player.Interact.WasPressedThisFrame())
+                interactableTarget.Interact(this);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

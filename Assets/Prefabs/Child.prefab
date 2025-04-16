@@ -250,8 +250,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childSprite: {fileID: 2903355421897021110}
-  itemQueue:
-  - {fileID: 11400000, guid: 75c01ac37d2afe24ea7df296dc7ded21, type: 2}
+  questQueue:
+  - subQuestsQueue:
+    - <Description>k__BackingField: Get food from light yellow.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+    - <Description>k__BackingField: Cut it on yellow.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+    - <Description>k__BackingField: Bake it in dark yellow.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+  - subQuestsQueue:
+    - <Description>k__BackingField: Get carton of milk at white.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+    - <Description>k__BackingField: Pour it into bottle at gray.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+  - subQuestsQueue:
+    - <Description>k__BackingField: Get toy at red.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
 --- !u!114 &4074327944774414583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +279,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   werewolfSprite: {fileID: 7426402479104244258}
-  playerTransform: {fileID: 0}
 --- !u!114 &5480185089262635087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +299,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8722358687054884800}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f28daed55444f96438cc5b4968905460, type: 3}
   m_Name: 
