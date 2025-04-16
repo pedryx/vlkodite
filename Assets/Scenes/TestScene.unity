@@ -284,7 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443257608}
   m_Layer: 0
-  m_Name: Temporary
+  m_Name: Quest Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,6 +536,14 @@ PrefabInstance:
       propertyPath: <Item>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: bb8af4f70e8e58a4db58a63e09dec591, type: 2}
+    - target: {fileID: 7484608818421122393, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
+      propertyPath: <Value>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484608818421122393, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
+      propertyPath: <InteractionMode>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7983970688054625075, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
       propertyPath: m_Name
       value: MilkContainer2
@@ -750,6 +758,14 @@ PrefabInstance:
       propertyPath: <Item>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 75c01ac37d2afe24ea7df296dc7ded21, type: 2}
+    - target: {fileID: 7484608818421122393, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
+      propertyPath: <Value>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484608818421122393, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
+      propertyPath: <InteractionMode>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7983970688054625075, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
       propertyPath: m_Name
       value: FoodContainer2
@@ -878,6 +894,14 @@ PrefabInstance:
       propertyPath: <Item>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 90c7cad5163117345bd8c5e0cb8da379, type: 2}
+    - target: {fileID: 7484608818421122393, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
+      propertyPath: <Value>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484608818421122393, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
+      propertyPath: <InteractionMode>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7983970688054625075, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
       propertyPath: m_Name
       value: ToysContainer
@@ -1009,6 +1033,10 @@ PrefabInstance:
       propertyPath: <Item>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 75c01ac37d2afe24ea7df296dc7ded21, type: 2}
+    - target: {fileID: 7484608818421122393, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
+      propertyPath: <InteractionMode>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7983970688054625075, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
       propertyPath: m_Name
       value: FoodContainer3
