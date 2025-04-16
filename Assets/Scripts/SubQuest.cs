@@ -22,4 +22,18 @@ public class SubQuest
     [field: SerializeField]
     [Tooltip("When player finished his interaction with this quest advancer, sub quest will be completed.")]
     public QuestAdvancer QuestAdvancer { get; private set; }
+
+    /// <summary>
+    /// New position of the child after sub quest starts.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("New position of the child after sub quest starts.")]
+    public Transform ChildPosition { get; private set; } = null;
+
+    /// <summary>
+    /// Determine if child should teleport to this position, otherwise it will walk to it.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Determine if child should teleport to this position, otherwise it will walk to it.")]
+    public bool Teleport { get; private set; } = false;
 }

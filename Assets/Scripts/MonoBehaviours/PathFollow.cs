@@ -44,11 +44,12 @@ public class PathFollow : MonoBehaviour
 
     private void Update()
     {
-        if (Target == null)
+        if (Target == null || (Target.transform.localPosition - transform.localPosition).IsZero())
         {
             characterMovement.Move(Vector2.zero);
             return;
         }
+
         if (IsTargetVisible())
         {
             elapsed = 0.0f;

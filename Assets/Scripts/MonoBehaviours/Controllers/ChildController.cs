@@ -8,11 +8,12 @@ public class ChildController : Singleton<ChildController>, IInteractable
     [SerializeField]
     private GameObject childSprite;
 
+    private PathFollow pathFollow;
+
     /// <summary>
     /// Spawn position of the child.
     /// </summary>
     private Vector3 spawnPosition;
-
     [SerializeField]
     private List<Quest> questQueue = new();
     /// <summary>
@@ -54,10 +55,13 @@ public class ChildController : Singleton<ChildController>, IInteractable
         base.Awake();
 
         spawnPosition = transform.position;
+
+        pathFollow = GetComponent<PathFollow>();
+
         GameManager.Instance.OnDayBegin += GameManager_OnDayBegin;
         GameManager.Instance.OnNightBegin += GameManager_OnNightBegin;
-
         OnSubQuestStart += Child_OnSubQuestStart;
+        OnSubQuestDone += Child_OnSubQuestDone;
     }
 
     private void OnEnable() => childSprite.SetActive(true);
@@ -133,6 +137,19 @@ public class ChildController : Singleton<ChildController>, IInteractable
     private void Child_OnSubQuestStart(object sender, SubQuestEventArgs e)
     {
         Debug.Log($"New sub quest: \"{e.SubQuest.Description}\"");
+
+        if (e.SubQuest.ChildPosition == null)
+            return;
+
+        if (e.SubQuest.Teleport)
+            transform.position = e.SubQuest.ChildPosition.localPosition;
+        else
+            pathFollow.Target = e.SubQuest.ChildPosition;
+    }
+
+    private void Child_OnSubQuestDone(object sender, SubQuestEventArgs e)
+    {
+        pathFollow.Target = null;
     }
 }
 
