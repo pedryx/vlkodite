@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 33c19cad229138c4583454117d1317f0
+guid: e391353dbfec808498e56243bd22bf14
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4214023054613483918
-    second: obraz.kuch 1_0
+      213: 6948387602099458922
+    second: gramofon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: obraz.kuch 1_0
+      name: gramofon_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 6
         y: 0
-        width: 24
-        height: 30
+        width: 22
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27ee472db58c485c0800000000000000
-      internalID: -4214023054613483918
+      spriteID: a63ddd0c5b1ad6060800000000000000
+      internalID: 6948387602099458922
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      obraz.kuch 1_0: -4214023054613483918
+      gramofon_0: 6948387602099458922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
