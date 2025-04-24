@@ -9,7 +9,7 @@ public class PathFollow : MonoBehaviour
     /// <summary>
     /// How often (in seconds) to refresh the path
     /// </summary>
-    private const float refreshPeriod = 1.0f;
+    private const float refreshPeriod = 0.5f;
 
     private CharacterMovement characterMovement;
 
@@ -52,10 +52,11 @@ public class PathFollow : MonoBehaviour
 
         if (IsTargetVisible())
         {
-            elapsed = 0.0f;
             characterMovement.MoveTo(Target.localPosition);
+            path = null;
             return;
         }
+
         if (path == null || pathIndex == path.Count || path.Count == 0)
         {
             elapsed = 0.0f;

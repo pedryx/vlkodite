@@ -6,6 +6,13 @@ using UnityEngine;
 [Serializable]
 public class Quest
 {
+    /// <summary>
+    /// Description of the quest.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Description of the quest.")]
+    public string Description { get; private set; }
+
     [SerializeField]
     private List<SubQuest> subQuestsQueue;
 
