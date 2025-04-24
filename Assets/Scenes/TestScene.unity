@@ -947,16 +947,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c1b3ecbe47625459ba8887d5f329f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ShowPathFindingGrid>k__BackingField: 1
-  <ShowPathFindingPatches>k__BackingField: 0
+  <ShowPathFindingGrid>k__BackingField: 0
+  <ShowPathFindingPatches>k__BackingField: 1
   pathFinderBounds:
     serializedVersion: 2
     x: -60
     y: -10
     width: 120
     height: 90
-  pathFinderCellSize: 0.5
-  pathFinderRadius: 0.3
+  pathFinderCellSize: 0.1
+  pathFinderRadius: 0.05
   <NightDuration>k__BackingField: 30
 --- !u!4 &1290921254
 Transform:
@@ -1314,25 +1314,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1013696107494866993, guid: 25163cab0f2ccdf4b933c327ab9fe15c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.0625
-      objectReference: {fileID: 0}
-    - target: {fileID: 1104851474956662767, guid: 25163cab0f2ccdf4b933c327ab9fe15c, type: 3}
-      propertyPath: m_SortingOrder
-      value: -9
-      objectReference: {fileID: 0}
     - target: {fileID: 1523197828147662140, guid: 25163cab0f2ccdf4b933c327ab9fe15c, type: 3}
       propertyPath: m_Name
       value: Blockout
       objectReference: {fileID: 0}
-    - target: {fileID: 9143475183015004444, guid: 25163cab0f2ccdf4b933c327ab9fe15c, type: 3}
-      propertyPath: m_SortingOrder
-      value: -6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2054899702734551776, guid: 25163cab0f2ccdf4b933c327ab9fe15c, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25163cab0f2ccdf4b933c327ab9fe15c, type: 3}
@@ -1341,8 +1328,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1290921254}
-  - {fileID: 825885120940546525}
   - {fileID: 1911557178}
   - {fileID: 282596641}
+  - {fileID: 825885120940546525}
   - {fileID: 443257608}
   - {fileID: 496109731}
