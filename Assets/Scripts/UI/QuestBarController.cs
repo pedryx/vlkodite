@@ -4,11 +4,11 @@ using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
 
-public class QuestBar : MonoBehaviour
+public class QuestBarController : MonoBehaviour
 {
     [SerializeField] private GameObject questEntryPrefab;
     [SerializeField] private Transform questListParent;
-    [SerializeField] private float fadeDuration = 0.5f;
+    // [SerializeField] private float fadeDuration = 0.5f;
 
     private List<QuestEntry> activeQuests = new();
 

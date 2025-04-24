@@ -1,7 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class roomDarkness : MonoBehaviour
+public class RoomDarkness : MonoBehaviour
 {
     [SerializeField] private string targetTag = "Player";
     [SerializeField] private float fadeDuration = 0.3f;
