@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c43907698a121004e9636d2602afb1c7
+guid: 72f87ec8dc010dd4f8b79e941964c647
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5698423596406079392
-    second: stena 1_0
+      213: 6153955574255300580
+    second: wallpaper_hall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stena 1_0
+      name: wallpaper_hall_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 14
         y: 0
-        width: 256
-        height: 318
+        width: 226
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0affc73c11ed41f40800000000000000
-      internalID: 5698423596406079392
+      spriteID: 4efa50f5dfd376550800000000000000
+      internalID: 6153955574255300580
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      stena 1_0: 5698423596406079392
+      wallpaper_hall_0: 6153955574255300580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
