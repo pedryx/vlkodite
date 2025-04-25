@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c59e420c9eec08940bbcd76b8b78bed0
+guid: 2af7f3505ac2ef04bbf36759d92390c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2793566821712520915
-    second: dvere_musicr_0
+      213: 9129294366108137796
+    second: wardrobe_front_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dvere_musicr_0
+      name: wardrobe_front_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 48
+        x: 33
+        y: 15
+        width: 61
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d29128fc6c14b39d0800000000000000
-      internalID: -2793566821712520915
+      spriteID: 449b9dd5bd4c1be70800000000000000
+      internalID: 9129294366108137796
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dvere_musicr_0: -2793566821712520915
+      wardrobe_front_0: 9129294366108137796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
