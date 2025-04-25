@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8071056688370697386}
   - component: {fileID: 3103262043602936595}
+  - component: {fileID: 2321789526551861321}
   m_Layer: 0
   m_Name: SubQuestPanel
   m_TagString: Untagged
@@ -64,6 +65,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!225 &2321789526551861321
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797503388541588478}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3993965469884022925
 GameObject:
   m_ObjectHideFlags: 0

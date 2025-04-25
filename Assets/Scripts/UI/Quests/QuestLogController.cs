@@ -26,20 +26,23 @@ public class QuestLogController : MonoBehaviour
         questItems.Add(quest, gameObject);
 
         var textMeshPro = gameObject.GetComponentInChildren<TextMeshProUGUI>();
-        textMeshPro.text = quest.Description;
+        if (textMeshPro != null)
+            textMeshPro.text = quest.Description;
 
-        var questItem = gameObject.GetComponent<QuestItemController>();
-        foreach (var subQuest in quest.SubQuestsQueue)
-            questItem.AddSubQuest(subQuest);
+        var questItemController = gameObject.GetComponent<QuestItemController>();
+        questItemController.Quest = quest;
     }
 
     private void RemoveQuest(Quest quest)
     {
-        Destroy(questItems[quest]);
-        questItems.Remove(quest);
+        questItems[quest].GetComponent<QuestItemController>().SafeDestroy(() =>
+        {
+            questItems.Remove(quest);
 
-        if (!questItems.Any())
-            gameObject.SetActive(false);
+            if (!questItems.Any())
+                gameObject.SetActive(false);
+
+        });
     }
 
     private void Child_OnQuestStart(QuestEventArgs e) => AddQuest(e.Quest);

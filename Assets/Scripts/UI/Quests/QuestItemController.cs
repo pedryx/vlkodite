@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 using TMPro;
@@ -7,22 +12,70 @@ using UnityEngine;
 
 public class QuestItemController : MonoBehaviour
 {
+    private readonly Queue<Action> actionQueue = new();
+
+    [SerializeField]
+    private TextMeshProUGUI textMeshPro;
+    [SerializeField]
+    private CanvasGroup canvasGroup;
     [SerializeField]
     private GameObject subQuestPanelPrefab;
 
-    [field: SerializeField]
-    public float Duration { get; private set; } = 1.0f;
+    private bool fadeInProgress = false;
+    private bool crossInProgress = false;
 
-    public void AddSubQuest(SubQuest subQuest)
+    [field: SerializeField]
+    public float Duration { get; private set; } = 3.0f;
+
+    public Quest Quest { get; set; }
+
+    private void Awake()
     {
-        GameObject subQuestItem = Instantiate(subQuestPanelPrefab, transform);
-        var textMeshPro = subQuestItem.GetComponentInChildren<TextMeshProUGUI>();
+        ChildController.Instance.OnSubQuestStart.AddListener(Child_OnSubQuestStart);
+        ChildController.Instance.OnSubQuestDone.AddListener(Child_OnSubQuestDone);
+    }
+
+    public void SafeDestroy(Action onDestroy)
+    {
+        EnqueueAction(() =>
+        {
+            onDestroy.Invoke();
+            Destroy(gameObject);
+        });
+    }
+
+    private void EnqueueAction(Action action)
+    {
+        if (fadeInProgress || crossInProgress)
+            actionQueue.Enqueue(action);
+        else
+            action.Invoke();
+    }
+
+    private void AddSubQuest(SubQuest subQuest)
+    {
         textMeshPro.text = subQuest.Description;
 
-        ChildController.Instance.OnSubQuestDone.AddListener(e =>
+        fadeInProgress = true;
+        canvasGroup.DOFade(1.0f, Duration).OnComplete(() =>
         {
-            if (e.SubQuest == subQuest)
-                StartCoroutine(DoCross(textMeshPro));
+            fadeInProgress = false;
+            if (!crossInProgress && actionQueue.Any())
+                actionQueue.Dequeue().Invoke();
+        });
+    }
+
+    private void RemoveSubQuest()
+    {
+        crossInProgress = true;
+        StartCoroutine(DoCross(textMeshPro));
+
+        fadeInProgress = true;
+        canvasGroup.DOFade(0.0f, Duration).OnComplete(() =>
+        {
+            fadeInProgress = false;
+            if (!crossInProgress && actionQueue.Any())
+                actionQueue.Dequeue().Invoke();
         });
     }
 
@@ -30,13 +83,18 @@ public class QuestItemController : MonoBehaviour
     {
         string originalText = string.Copy(textMeshPro.text);
         int length = CountLength(originalText);
-        float timePerCharacter = Duration / length;
+        // When fade is really low, the cross in no longer visible, so we make the croos two times faster.
+        float timePerCharacter = (Duration / 2.0f) / length;
 
         for (int i = 0; i <= length; i++)
         {
             textMeshPro.text = Cross(originalText, i);
             yield return new WaitForSeconds(timePerCharacter);
         }
+
+        crossInProgress = false;
+        if (!fadeInProgress && actionQueue.Any())
+            actionQueue.Dequeue().Invoke();
     }
 
     private int CountLength(string str)
@@ -112,5 +170,21 @@ public class QuestItemController : MonoBehaviour
             builder.Append(str[crossEndIndex..]);
 
         return builder.ToString();
+    }
+
+    private void Child_OnSubQuestStart(SubQuestEventArgs e)
+    {
+        if (e.Quest != Quest)
+            return;
+
+        EnqueueAction(() => AddSubQuest(e.SubQuest));
+    }
+
+    private void Child_OnSubQuestDone(SubQuestEventArgs e)
+    {
+        if (e.Quest != Quest)
+            return;
+
+        EnqueueAction(() => RemoveSubQuest());
     }
 }
