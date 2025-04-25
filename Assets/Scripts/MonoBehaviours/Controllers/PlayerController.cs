@@ -1,9 +1,16 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterMovement))]
 public class PlayerController : Singleton<PlayerController>
 {
+    /// <summary>
+    /// Interactable objects in player interaction area.
+    /// </summary>
+    private readonly HashSet<Interactable> interactableTargets = new();
+
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private CharacterMovement characterMovement;
@@ -16,11 +23,6 @@ public class PlayerController : Singleton<PlayerController>
     private bool debugMode = false;
     private Vector3 spawnPosition;
     private float characterSpeed;
-
-    /// <summary>
-    /// Interactable object in player interaction area. If null there is no target in player area.
-    /// </summary>
-    private IInteractable interactableTarget;
 
     /// <summary>
     /// Maximum movement speed of player in pixels per second during super-speed mode.
@@ -42,8 +44,8 @@ public class PlayerController : Singleton<PlayerController>
         input.Debug.ToggleDebug.performed += ToggleDebug_Performed;
 
         spawnPosition = transform.position;
-        WerewolfController.Instance.OnPlayerCaught += Werewolf_OnPlayerCaught;
-        GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
+        WerewolfController.Instance.OnPlayerCaught.AddListener(Werewolf_OnPlayerCaught);
+        GameManager.Instance.OnNightBegin.AddListener(GameManager_OnNightBegin);
 
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -70,34 +72,40 @@ public class PlayerController : Singleton<PlayerController>
         animator.SetBool("IsMoving", !characterMovement.IsMoving());
 
         // update interactions
-        if (interactableTarget != null)
+        foreach (var interactible in interactableTargets)
         {
-            if (interactableTarget.IsContinuous && input.Player.Interact.IsPressed())
-                interactableTarget.Interact(this);
-            else if (!interactableTarget.IsContinuous && input.Player.Interact.WasPressedThisFrame())
-                interactableTarget.Interact(this);
+            if (interactible.IsContinuous && input.Player.Interact.IsPressed())
+                interactible.Interact();
+            else if (!interactible.IsContinuous && input.Player.Interact.WasPressedThisFrame())
+                interactible.Interact();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.TryGetComponent<IInteractable>(out var interactable))
+        if (!collision.TryGetComponent<Interactable>(out var interactable))
             return;
 
-        interactableTarget = interactable;
+        if (interactableTargets.Add(interactable) && interactable.InteractionEnabled)
+            interactable.OnInteractionEnabled.Invoke(interactable);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        IInteractable interactable = collision.GetComponent<IInteractable>();
-
-        if (interactableTarget != interactable)
+        if (!collision.TryGetComponent<Interactable>(out var interactable))
             return;
-
-        interactableTarget = null;
+        
+        if (interactableTargets.Remove(interactable) && interactable.InteractionEnabled)
+            interactable.OnInteractionDisabled.Invoke(interactable);
     }
 
-    private void ToggleDebug_Performed(InputAction.CallbackContext obj)
+    /// <summary>
+    /// Determine if player is currently near the interactiible game object.
+    /// </summary>
+    public bool IsNear(Interactable interactable)
+        => interactableTargets.Contains(interactable);
+
+    private void ToggleDebug_Performed(InputAction.CallbackContext context)
     {
         if (debugMode)
         {
@@ -114,12 +122,12 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
-    private void Werewolf_OnPlayerCaught(object sender, System.EventArgs e)
+    private void Werewolf_OnPlayerCaught()
     {
         transform.localPosition = spawnPosition;
     }
 
-    private void Instance_OnNightBegin(object sender, System.EventArgs e)
+    private void GameManager_OnNightBegin()
     {
         transform.localPosition = spawnPosition;
     }

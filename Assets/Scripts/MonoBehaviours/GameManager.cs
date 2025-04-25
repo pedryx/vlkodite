@@ -1,33 +1,15 @@
-﻿using System;
-
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : Singleton<GameManager>
 {
-    private bool isDay = true;
-    /// <summary>
-    /// Time elapsed since start of the night.
-    /// </summary>
-    private float nightTimeElapsed = 0.0f;
-
-    /// <summary>
-    /// Determine if the path finding grid should be visualized.
-    /// </summary>
-    [Header("PathFinder")]
-    [field: SerializeField]
-    [Tooltip("Determine if path finding grid should be visualized.")]
-    public bool ShowPathFindingGrid { get; set; }
-
-    /// <summary>
-    /// Determine if current patches should be visualized.
-    /// </summary>
-    [field: SerializeField]
-    [Tooltip("Determine if current patches should be visualized.")]
-    public bool ShowPathFindingPatches { get; set; }
-
+    [Header("UI")]
+    [SerializeField]
+    private TextPromptUI contextPromptUI;
     /// <summary>
     /// Bounds of the path finding grid.
     /// </summary>
+    [Header("PathFinder")]
     [SerializeField]
     [Tooltip("Bounds of the path finding grid.")]
     private Rect pathFinderBounds;
@@ -44,32 +26,60 @@ public class GameManager : Singleton<GameManager>
     [Tooltip("Radius used for physics overlap checks during creation of the path finding grid.")]
     private float pathFinderRadius = 0.1f;
 
-    public bool IsDay => isDay;
+    /// <summary>
+    /// Determine if day is active.
+    /// </summary>
+    private bool isDay = true;
+    /// <summary>
+    /// Time elapsed since start of the night.
+    /// </summary>
+    private float nightTimeElapsed = 0.0f;
 
-    public bool IsNight => !isDay;
+    /// <summary>
+    /// Determine if the path finding grid should be visualized.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Determine if path finding grid should be visualized.")]
+    public bool ShowPathFindingGrid { get; set; } = false;
+    /// <summary>
+    /// Determine if current patches should be visualized.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Determine if current patches should be visualized.")]
+    public bool ShowPathFindingPatches { get; set; } = false;
 
     /// <summary>
     /// Night duration in seconds.
     /// </summary>
-    [Header("")]
+    [Header("Day/Night cycle")]
     [field: SerializeField]
     [Tooltip("Night duration in seconds.")]
-    public float NightDuration { get; private set; } = 10.0f * 60.0f;
+    public float NightDuration { get; private set; } = 5.0f * 60.0f;
+
+    /// <summary>
+    /// Determine if day is active.
+    /// </summary>
+    public bool IsDay => isDay;
+
+    /// <summary>
+    /// Determine if night is active.
+    /// </summary>
+    public bool IsNight => !isDay;
 
     public PathFinder PathFinder { get; private set; }
 
-    public event EventHandler OnDayBegin;
-    public event EventHandler OnNightBegin;
+    public UnityEvent OnDayBegin = new();
+    public UnityEvent OnNightBegin = new();
 
     protected override void Awake()
     {
         base.Awake();
 
-        OnDayBegin += GameManager_OnDayBegin;
-        OnNightBegin += GameManager_OnNightBegin;
+        OnDayBegin.AddListener(GameManager_OnDayBegin);
+        OnNightBegin.AddListener(GameManager_OnNightBegin);
 
-        ChildController.Instance.OnAllQuestsDone += Child_OnAllQuestsDone;
-        WerewolfController.Instance.OnPlayerCaught += Werewolf_OnPlayerCaught;
+        ChildController.Instance.OnAllQuestsDone.AddListener(Child_OnAllQuestsDone);
+        WerewolfController.Instance.OnPlayerCaught.AddListener(Werewolf_OnPlayerCaught);
 
         PathFinder = new PathFinder(pathFinderBounds, pathFinderCellSize, pathFinderRadius);
     }
@@ -84,7 +94,7 @@ public class GameManager : Singleton<GameManager>
         if (nightTimeElapsed >= NightDuration)
         {
             isDay = true;
-            OnDayBegin?.Invoke(this, EventArgs.Empty);
+            OnDayBegin?.Invoke();
         }
     }
 
@@ -96,25 +106,29 @@ public class GameManager : Singleton<GameManager>
         PathFinder.DrawGizmos();
     }
 
-    private void GameManager_OnDayBegin(object sender, EventArgs e)
+    public void ShowContextPrompt(string promptText) => contextPromptUI.Show(promptText);
+
+    public void HideContextPrimpt() => contextPromptUI.Hide();
+
+    private void GameManager_OnDayBegin()
     {
         Debug.Log("Day started.");
     }
 
-    private void GameManager_OnNightBegin(object sender, EventArgs e)
+    private void GameManager_OnNightBegin()
     {
         Debug.Log("Night started.");
     }
 
-    private void Werewolf_OnPlayerCaught(object sender, EventArgs e)
+    private void Werewolf_OnPlayerCaught()
     {
         isDay = true;
-        OnDayBegin?.Invoke(this, EventArgs.Empty);
+        OnDayBegin.Invoke();
     }
 
-    private void Child_OnAllQuestsDone(object sender, EventArgs e)
+    private void Child_OnAllQuestsDone()
     {
         isDay = false;
-        OnNightBegin?.Invoke(this, EventArgs.Empty);
+        OnNightBegin.Invoke();
     }
 }

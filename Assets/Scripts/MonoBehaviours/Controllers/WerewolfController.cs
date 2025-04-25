@@ -1,6 +1,5 @@
-﻿using System;
-
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterMovement))]
 [RequireComponent(typeof(PathFollow))]
@@ -13,22 +12,25 @@ public class WerewolfController : Singleton<WerewolfController>
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private PathFollow pathFollow;
+    private CircleCollider2D circleCollider;
 
     /// <summary>
     /// Occur when player is caught by the werewolf.
     /// </summary>
-    public event EventHandler OnPlayerCaught;
+    [Tooltip("Occur when player is caught by the werewolf.")]
+    public UnityEvent OnPlayerCaught = new();
 
     protected override void Awake()
     {
         base.Awake();
 
-        GameManager.Instance.OnDayBegin += Instance_OnDayBegin;
-        GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
-        OnPlayerCaught += WerewolfController_OnPlayerCaught;
+        GameManager.Instance.OnDayBegin.AddListener(Instance_OnDayBegin);
+        GameManager.Instance.OnNightBegin.AddListener(Instance_OnNightBegin);
+        OnPlayerCaught.AddListener(WerewolfController_OnPlayerCaught);
 
         characterMovement = GetComponent<CharacterMovement>();
         pathFollow = GetComponent<PathFollow>();
+        circleCollider = GetComponent<CircleCollider2D>();
 
         animator = werewolfSprite.GetComponent<Animator>();
         spriteRenderer = werewolfSprite.GetComponent<SpriteRenderer>();
@@ -46,12 +48,14 @@ public class WerewolfController : Singleton<WerewolfController>
     private void OnEnable()
     {
         werewolfSprite.SetActive(true);
+        circleCollider.enabled = true;
         pathFollow.Target = PlayerController.Instance.gameObject.transform;
     }
 
     private void OnDisable()
     {
         werewolfSprite.SetActive(false);
+        circleCollider .enabled = false;
         pathFollow.Target = null;
     }
 
@@ -60,21 +64,21 @@ public class WerewolfController : Singleton<WerewolfController>
         if (!enabled || !collision.TryGetComponent<PlayerController>(out _))
             return;
 
-        OnPlayerCaught?.Invoke(this, new EventArgs());
+        OnPlayerCaught.Invoke();
     }
 
-    private void WerewolfController_OnPlayerCaught(object sender, EventArgs e)
+    private void WerewolfController_OnPlayerCaught()
     {
         Debug.Log("Player caught");
     }
 
-    private void Instance_OnDayBegin(object sender, EventArgs e)
+    private void Instance_OnDayBegin()
     {
         characterMovement.Move(Vector2.zero);
         enabled = false;
     }
 
-    private void Instance_OnNightBegin(object sender, EventArgs e)
+    private void Instance_OnNightBegin()
     {
         enabled = true;
     }

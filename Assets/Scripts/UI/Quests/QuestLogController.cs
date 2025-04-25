@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+
 using TMPro;
 
 using UnityEngine;
@@ -13,8 +14,8 @@ public class QuestLogController : MonoBehaviour
 
     private void Awake()
     {
-        ChildController.Instance.OnQuestStart += Child_OnQuestStart;
-        ChildController.Instance.OnQuestDone += Child_OnQuestDone;
+        ChildController.Instance.OnQuestStart.AddListener(Child_OnQuestStart);
+        ChildController.Instance.OnQuestDone.AddListener(Child_OnQuestDone);
         gameObject.SetActive(false);
     }
 
@@ -41,7 +42,7 @@ public class QuestLogController : MonoBehaviour
             gameObject.SetActive(false);
     }
 
-    private void Child_OnQuestStart(object sender, QuestEventArgs e) => AddQuest(e.Quest);
+    private void Child_OnQuestStart(QuestEventArgs e) => AddQuest(e.Quest);
 
-    private void Child_OnQuestDone(object sender, QuestEventArgs e) => RemoveQuest(e.Quest);
+    private void Child_OnQuestDone(QuestEventArgs e) => RemoveQuest(e.Quest);
 }

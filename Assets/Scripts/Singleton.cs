@@ -17,7 +17,14 @@ public class Singleton<T> : MonoBehaviour
         get
         {
             if (instance == null)
-                instance = FindObjectsByType<T>(FindObjectsSortMode.None).First();
+            {
+                var query = FindObjectsByType<T>(FindObjectsSortMode.None);
+
+                if (!query.Any())
+                    return null;
+
+                return query.First();
+            }
 
             return instance;
         }

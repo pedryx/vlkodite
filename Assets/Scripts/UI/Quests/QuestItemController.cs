@@ -19,11 +19,11 @@ public class QuestItemController : MonoBehaviour
         var textMeshPro = subQuestItem.GetComponentInChildren<TextMeshProUGUI>();
         textMeshPro.text = subQuest.Description;
 
-        ChildController.Instance.OnSubQuestDone += (sender, e) =>
+        ChildController.Instance.OnSubQuestDone.AddListener(e =>
         {
             if (e.SubQuest == subQuest)
                 StartCoroutine(DoCross(textMeshPro));
-        };
+        });
     }
 
     private IEnumerator DoCross(TextMeshProUGUI textMeshPro)

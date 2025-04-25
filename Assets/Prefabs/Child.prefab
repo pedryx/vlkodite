@@ -210,6 +210,8 @@ GameObject:
   - component: {fileID: 4074327944774414583}
   - component: {fileID: 5480185089262635087}
   - component: {fileID: 4375273635702686500}
+  - component: {fileID: 4205895607212941080}
+  - component: {fileID: 8196344047849384638}
   - component: {fileID: 8468488518648650699}
   - component: {fileID: 8460258489547781858}
   - component: {fileID: 344769054508173824}
@@ -251,21 +253,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childSprite: {fileID: 2903355421897021110}
   questQueue:
-  - subQuestsQueue:
-    - <Description>k__BackingField: Get food from light yellow.
+  - <Description>k__BackingField: Give <color=#FFFF00>child</color> a lunch.
+    subQuestsQueue:
+    - <Description>k__BackingField: Get ingredients from the <color=#FFFF00>fridge</color>.
       <QuestAdvancer>k__BackingField: {fileID: 0}
-    - <Description>k__BackingField: Cut it on yellow.
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 1
+    - <Description>k__BackingField: Cut them down at <color=#FFFF00>cupboard</color>.
       <QuestAdvancer>k__BackingField: {fileID: 0}
-    - <Description>k__BackingField: Bake it in dark yellow.
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+    - <Description>k__BackingField: Cook them up at the <color=#FFFF00>stove</color>.
       <QuestAdvancer>k__BackingField: {fileID: 0}
-  - subQuestsQueue:
-    - <Description>k__BackingField: Get carton of milk at white.
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+  - <Description>k__BackingField: Clean the mansion.
+    subQuestsQueue:
+    - <Description>k__BackingField: Clean the <color=#FFFF00>wall scratches</color>
+        in the hallway.
       <QuestAdvancer>k__BackingField: {fileID: 0}
-    - <Description>k__BackingField: Pour it into bottle at gray.
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+    - <Description>k__BackingField: Remove dust from <color=#FFFF00>bookshelves</color>
+        in the library.
       <QuestAdvancer>k__BackingField: {fileID: 0}
-  - subQuestsQueue:
-    - <Description>k__BackingField: Get toy at red.
-      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+  OnAllQuestsDone:
+    m_PersistentCalls:
+      m_Calls: []
+  OnQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnQuestDone:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSubQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSubQuestDone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4074327944774414583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   werewolfSprite: {fileID: 7426402479104244258}
+  OnPlayerCaught:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5480185089262635087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +336,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Target>k__BackingField: {fileID: 0}
+--- !u!114 &4205895607212941080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722358687054884800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4986ad6b52286a24699d6a3b63a0de72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionEnabled: 1
+  <InteractionMode>k__BackingField: 0
+  <Value>k__BackingField: 3
+  OnInteractionEnabled:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInteractionDisabled:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8196344047849384638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722358687054884800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b611b00165538e4ea6b6699c617a305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Speak with child (E)
+  outlineSpriteRenderer: {fileID: 0}
+  fadeDuration: 0.2
+  visibleOpacity: 1
+  opacityProperty: Opacity
 --- !u!50 &8468488518648650699
 Rigidbody2D:
   serializedVersion: 5
@@ -376,7 +448,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8722358687054884800}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

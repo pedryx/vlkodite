@@ -1,14 +1,16 @@
-using System;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Events;
 
-public class ChildController : Singleton<ChildController>, IInteractable
+[RequireComponent(typeof(Interactable))]
+public class ChildController : Singleton<ChildController>
 {
     [SerializeField]
     private GameObject childSprite;
 
     private PathFollow pathFollow;
+    private Interactable interactable;
 
     /// <summary>
     /// Spawn position of the child.
@@ -32,75 +34,48 @@ public class ChildController : Singleton<ChildController>, IInteractable
     /// <summary>
     /// Occur when all quests are completed.
     /// </summary>
-    public event EventHandler OnAllQuestsDone;
+    [Tooltip("Occur when all quests are completed.")]
+    public UnityEvent OnAllQuestsDone = new();
     /// <summary>
     /// Occur when quest starts.
     /// </summary>
-    public event EventHandler<QuestEventArgs> OnQuestStart;
+    [Tooltip("Occur when quest starts.")]
+    public UnityEvent<QuestEventArgs> OnQuestStart = new();
     /// <summary>
     /// Occur when quest is completed.
     /// </summary>
-    public event EventHandler<QuestEventArgs> OnQuestDone;
+    [Tooltip("Occur when quest is completed.")]
+    public UnityEvent<QuestEventArgs> OnQuestDone = new();
     /// <summary>
     /// Occur when sub quest starts.
     /// </summary>
-    public event EventHandler<SubQuestEventArgs> OnSubQuestStart;
+    [Tooltip("Occur when sub quest starts.")]
+    public UnityEvent<SubQuestEventArgs> OnSubQuestStart = new();
     /// <summary>
     /// Occur when sub quest is completed.
     /// </summary>
-    public event EventHandler<SubQuestEventArgs> OnSubQuestDone;
+    [Tooltip("Occur when sub quest is completed.")]
+    public UnityEvent<SubQuestEventArgs> OnSubQuestDone = new();
 
     protected override void Awake()
     {
         base.Awake();
 
         spawnPosition = transform.position;
-
         pathFollow = GetComponent<PathFollow>();
 
-        GameManager.Instance.OnDayBegin += GameManager_OnDayBegin;
-        GameManager.Instance.OnNightBegin += GameManager_OnNightBegin;
-        OnSubQuestStart += Child_OnSubQuestStart;
-        OnSubQuestDone += Child_OnSubQuestDone;
+        GameManager.Instance.OnDayBegin.AddListener(GameManager_OnDayBegin);
+        GameManager.Instance.OnNightBegin.AddListener(GameManager_OnNightBegin);
+        OnSubQuestStart.AddListener(Child_OnSubQuestStart);
+        OnSubQuestDone.AddListener(Child_OnSubQuestDone);
+
+        interactable = GetComponent<Interactable>();
+        interactable.OnInteract.AddListener(Interactable_OnInteract);
     }
 
     private void OnEnable() => childSprite.SetActive(true);
 
     private void OnDisable() => childSprite.SetActive(false);
-
-    public void Interact(PlayerController player)
-    {
-        if (!questQueueStarted)
-        {
-            questQueueStarted = true;
-            CurrentSubQuest.QuestAdvancer.enabled = true;
-            OnQuestStart?.Invoke(this, new QuestEventArgs(CurrentQuest));
-            OnSubQuestStart?.Invoke(this, new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
-            return;
-        }
-
-        if (CurrentQuest.AllSubQuestsFinished)
-        {
-            Debug.Assert(questQueueStarted);
-
-            OnQuestDone?.Invoke(this, new QuestEventArgs(CurrentQuest));
-            CurrentQuest.Reset();
-
-            questIndex++;
-            if (questIndex >= questQueue.Count)
-            {
-                questQueueStarted = false;
-                questIndex = 0;
-                OnAllQuestsDone?.Invoke(this, new EventArgs());
-                return;
-            }
-
-            CurrentSubQuest.QuestAdvancer.enabled = true;
-            OnQuestStart?.Invoke(this, new QuestEventArgs(CurrentQuest));
-            OnSubQuestStart?.Invoke(this, new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
-            return;
-        }
-    }
 
     /// <summary>
     /// Finish current sub quest.
@@ -109,32 +84,66 @@ public class ChildController : Singleton<ChildController>, IInteractable
     {
         Debug.Assert(!CurrentQuest.AllSubQuestsFinished && questQueueStarted);
 
-        CurrentSubQuest.QuestAdvancer.enabled = false;
-        OnSubQuestDone?.Invoke(this, new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
+        OnSubQuestDone.Invoke(new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
 
         CurrentQuest.FinishSubQuest();
         if (CurrentQuest.AllSubQuestsFinished)
         {
+            interactable.InteractionEnabled = true;
             Debug.Log("All sub quest finished.");
             return;
         }
 
-        CurrentSubQuest.QuestAdvancer.enabled = true;
-        OnSubQuestStart?.Invoke(this, new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
+        OnSubQuestStart.Invoke(new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
     }
 
-    private void GameManager_OnDayBegin(object sender, EventArgs e)
+    public void Interactable_OnInteract(Interactable interactable)
+    {
+        interactable.InteractionEnabled = false;
+
+        if (!questQueueStarted)
+        {
+            questQueueStarted = true;
+            OnQuestStart.Invoke(new QuestEventArgs(CurrentQuest));
+            OnSubQuestStart.Invoke(new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
+            return;
+        }
+
+        if (CurrentQuest.AllSubQuestsFinished)
+        {
+            Debug.Assert(questQueueStarted);
+
+            OnQuestDone.Invoke(new QuestEventArgs(CurrentQuest));
+            CurrentQuest.Reset();
+
+            questIndex++;
+            if (questIndex >= questQueue.Count)
+            {
+                questQueueStarted = false;
+                questIndex = 0;
+                OnAllQuestsDone.Invoke();
+                return;
+            }
+
+            OnQuestStart.Invoke(new QuestEventArgs(CurrentQuest));
+            OnSubQuestStart.Invoke(new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
+            return;
+        }
+    }
+
+    private void GameManager_OnDayBegin()
     {
         transform.position = spawnPosition;
         enabled = true;
+        interactable.InteractionEnabled = true;
     }
 
-    private void GameManager_OnNightBegin(object sender, EventArgs e)
+    private void GameManager_OnNightBegin()
     {
         enabled = false;
     }
 
-    private void Child_OnSubQuestStart(object sender, SubQuestEventArgs e)
+    private void Child_OnSubQuestStart(SubQuestEventArgs e)
     {
         Debug.Log($"New sub quest: \"{e.SubQuest.Description}\"");
 
@@ -147,7 +156,7 @@ public class ChildController : Singleton<ChildController>, IInteractable
             pathFollow.Target = e.SubQuest.ChildPosition;
     }
 
-    private void Child_OnSubQuestDone(object sender, SubQuestEventArgs e)
+    private void Child_OnSubQuestDone(SubQuestEventArgs e)
     {
         pathFollow.Target = null;
     }

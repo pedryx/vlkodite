@@ -1,15 +1,12 @@
 using UnityEngine;
+
 using DG.Tweening;
 
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Interactable))]
 public class PromptTrigger2D : MonoBehaviour
 {
-    [Header("UI Reference")]
-    [SerializeField] private TextPromptUI promptUI;
-
     [Header("Prompt Settings")]
-    [SerializeField] private string promptMessage = "Interact";
-    [SerializeField] private string playerTag = "Player";
+    [SerializeField] private string promptMessage = "Interact (E)";
 
     [Header("Outline Settings")]
     [Tooltip("Child object that has the sprite with outline material")]
@@ -24,14 +21,8 @@ public class PromptTrigger2D : MonoBehaviour
     [Tooltip("Name of the float property controlling the outline opacity")]
     [SerializeField] private string opacityProperty = "Opacity";
 
-    private bool _playerInside = false;
     private Material _runtimeMaterial;
-
-    private void Reset()
-    {
-        var col2d = GetComponent<Collider2D>();
-        col2d.isTrigger = true;
-    }
+    private MaterialPropertyBlock _mpb;
 
     private void Awake()
     {
@@ -42,6 +33,10 @@ public class PromptTrigger2D : MonoBehaviour
             _mpb.SetFloat("Opacity", 0f);
             outlineSpriteRenderer.SetPropertyBlock(_mpb);
         }
+
+        var interactable = GetComponent<Interactable>();
+        interactable.OnInteractionEnabled.AddListener(Interactable_OnInteractionEnabled);
+        interactable.OnInteractionDisabled.AddListener(Interactable_OnInteractionDisabled);
     }
 
     private void Start()
@@ -55,7 +50,6 @@ public class PromptTrigger2D : MonoBehaviour
         }
     }
 
-
     private void ForceInitialOpacity()
     {
         if (outlineSpriteRenderer != null)
@@ -66,10 +60,6 @@ public class PromptTrigger2D : MonoBehaviour
             Debug.Log("Opacity forced to 0 at start.");
         }
     }
-
-
-
-    private MaterialPropertyBlock _mpb;
 
     private void FadeOutline(float targetOpacity)
     {
@@ -89,31 +79,18 @@ public class PromptTrigger2D : MonoBehaviour
         }, targetOpacity, fadeDuration);
     }
 
-
-    private void Update()
+    private void Interactable_OnInteractionEnabled(Interactable interactable)
     {
-        if (_playerInside && Input.GetKeyDown(KeyCode.E))
-        {
-            promptUI.Hide();
-            FadeOutline(0f);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!other.CompareTag(playerTag)) return;
-
-        _playerInside = true;
-        promptUI.Show(promptMessage);
+        GameManager.Instance.ShowContextPrompt(promptMessage);
         FadeOutline(visibleOpacity);
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void Interactable_OnInteractionDisabled(Interactable interactable)
     {
-        if (!other.CompareTag(playerTag)) return;
-
-        _playerInside = false;
-        promptUI.Hide();
+        // when player have visible context hint and game xits, returned game manager is null and this gets called
+        GameManager.Instance?.HideContextPrimpt();
         FadeOutline(0f);
     }
+
+
 }
