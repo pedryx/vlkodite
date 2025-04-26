@@ -63,7 +63,7 @@ public class CharacterMovement : MonoBehaviour
     /// <summary>
     /// Determine if velocity is zero.
     /// </summary>
-    public bool IsVelocityZero()
+    public bool IsMoving()
     {
         return Velocity.sqrMagnitude < ZeroSpeedThresholdSquared;
     }

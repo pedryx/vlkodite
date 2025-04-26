@@ -1,11 +1,15 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterMovement))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
-    [SerializeField]
-    private WerewolfController werewolf;
+    /// <summary>
+    /// Interactable objects in player interaction area.
+    /// </summary>
+    private readonly HashSet<Interactable> interactableTargets = new();
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -21,24 +25,16 @@ public class PlayerController : MonoBehaviour
     private float characterSpeed;
 
     /// <summary>
-    /// Interactable object in player interaction area. If null there is no target in player area.
-    /// </summary>
-    private IInteractable interactableTarget;
-
-    /// <summary>
     /// Maximum movement speed of player in pixels per second during super-speed mode.
     /// </summary>
     [field: SerializeField]
     [Tooltip("Maximum movement speed of player in pixels per second during super speed mode.")]
     public float SuperMovementSpeed { get; private set; } = 1.0f;
 
-    /// <summary>
-    /// Item in player's inventory.
-    /// </summary>
-    public ChildItemScriptableObject Item { get; set; }
-
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         characterMovement = GetComponent<CharacterMovement>();
         characterSpeed = characterMovement.Speed;
 
@@ -48,8 +44,8 @@ public class PlayerController : MonoBehaviour
         input.Debug.ToggleDebug.performed += ToggleDebug_Performed;
 
         spawnPosition = transform.position;
-        werewolf.OnPlayerCaught += Werewolf_OnPlayerCaught;
-        GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
+        WerewolfController.Instance.OnPlayerCaught.AddListener(Werewolf_OnPlayerCaught);
+        GameManager.Instance.OnNightBegin.AddListener(GameManager_OnNightBegin);
 
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -65,7 +61,7 @@ public class PlayerController : MonoBehaviour
             characterMovement.Speed = characterSpeed;
 
         // update animation
-        if (!characterMovement.IsVelocityZero())
+        if (!characterMovement.IsMoving())
         {
             Direction facingDirection = characterMovement.GetFacingDirection();
             Debug.Assert(facingDirection != Direction.None);
@@ -73,32 +69,43 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = facingDirection == Direction.Left;
             animator.SetFloat("Direction", (float)facingDirection);
         }
-        animator.SetBool("IsMoving", !characterMovement.IsVelocityZero());
+        animator.SetBool("IsMoving", !characterMovement.IsMoving());
 
         // update interactions
-        if (input.Player.Interact.WasPressedThisFrame() && interactableTarget != null)
-            interactableTarget.Interact(this);
+        foreach (var interactible in interactableTargets)
+        {
+            if (interactible.IsContinuous && input.Player.Interact.IsPressed())
+                interactible.Interact();
+            else if (!interactible.IsContinuous && input.Player.Interact.WasPressedThisFrame())
+                interactible.Interact();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.TryGetComponent<IInteractable>(out var interactable))
+        if (!collision.TryGetComponent<Interactable>(out var interactable))
             return;
 
-        interactableTarget = interactable;
+        if (interactableTargets.Add(interactable) && interactable.InteractionEnabled)
+            interactable.OnInteractionEnabled.Invoke(interactable);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        IInteractable interactable = collision.GetComponent<IInteractable>();
-
-        if (interactableTarget != interactable)
+        if (!collision.TryGetComponent<Interactable>(out var interactable))
             return;
-
-        interactableTarget = null;
+        
+        if (interactableTargets.Remove(interactable) && interactable.InteractionEnabled)
+            interactable.OnInteractionDisabled.Invoke(interactable);
     }
 
-    private void ToggleDebug_Performed(InputAction.CallbackContext obj)
+    /// <summary>
+    /// Determine if player is currently near the interactiible game object.
+    /// </summary>
+    public bool IsNear(Interactable interactable)
+        => interactableTargets.Contains(interactable);
+
+    private void ToggleDebug_Performed(InputAction.CallbackContext context)
     {
         if (debugMode)
         {
@@ -115,12 +122,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Werewolf_OnPlayerCaught(object sender, System.EventArgs e)
+    private void Werewolf_OnPlayerCaught()
     {
         transform.localPosition = spawnPosition;
     }
 
-    private void Instance_OnNightBegin(object sender, System.EventArgs e)
+    private void GameManager_OnNightBegin()
     {
         transform.localPosition = spawnPosition;
     }

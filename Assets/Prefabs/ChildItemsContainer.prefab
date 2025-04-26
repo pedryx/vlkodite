@@ -99,6 +99,8 @@ GameObject:
   - component: {fileID: 8444034566890951845}
   - component: {fileID: 6101904819507542417}
   - component: {fileID: 7484608818421122393}
+  - component: {fileID: -948285828414356963}
+  - component: {fileID: 2554509703230577350}
   m_Layer: 0
   m_Name: ChildItemsContainer
   m_TagString: Untagged
@@ -207,4 +209,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c19d981a4bfcc24a9c34a2fc0d036f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Item>k__BackingField: {fileID: 0}
+--- !u!114 &-948285828414356963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983970688054625075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b611b00165538e4ea6b6699c617a305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Interact (E)
+  outlineSpriteRenderer: {fileID: 0}
+  fadeDuration: 0.2
+  visibleOpacity: 1
+  opacityProperty: _Opacity
+--- !u!114 &2554509703230577350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983970688054625075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4986ad6b52286a24699d6a3b63a0de72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionEnabled: 1
+  <PromptMessage>k__BackingField: Interact (E)
+  <InteractionMode>k__BackingField: 0
+  <Value>k__BackingField: 3
+  OnInteractionEnabled:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInteractionDisabled:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []

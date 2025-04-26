@@ -1,31 +1,36 @@
-﻿using System;
-
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterMovement))]
 [RequireComponent(typeof(PathFollow))]
-public class WerewolfController : MonoBehaviour
+public class WerewolfController : Singleton<WerewolfController>
 {
     [SerializeField]
     private GameObject werewolfSprite;
-    [SerializeField]
-    private Transform playerTransform;
 
     private CharacterMovement characterMovement;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private PathFollow pathFollow;
+    private CircleCollider2D circleCollider;
 
-    public event EventHandler OnPlayerCaught;
+    /// <summary>
+    /// Occur when player is caught by the werewolf.
+    /// </summary>
+    [Tooltip("Occur when player is caught by the werewolf.")]
+    public UnityEvent OnPlayerCaught = new();
 
-    private void Awake()
+    protected override void Awake()
     {
-        GameManager.Instance.OnDayBegin += Instance_OnDayBegin;
-        GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
-        OnPlayerCaught += WerewolfController_OnPlayerCaught;
+        base.Awake();
+
+        GameManager.Instance.OnDayBegin.AddListener(Instance_OnDayBegin);
+        GameManager.Instance.OnNightBegin.AddListener(Instance_OnNightBegin);
+        OnPlayerCaught.AddListener(WerewolfController_OnPlayerCaught);
 
         characterMovement = GetComponent<CharacterMovement>();
         pathFollow = GetComponent<PathFollow>();
+        circleCollider = GetComponent<CircleCollider2D>();
 
         animator = werewolfSprite.GetComponent<Animator>();
         spriteRenderer = werewolfSprite.GetComponent<SpriteRenderer>();
@@ -35,21 +40,23 @@ public class WerewolfController : MonoBehaviour
 
     private void Update()
     {
-        // TODO: thi s should happen only when werewolf is moving
-        spriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
-        animator.SetBool("IsMoving", !characterMovement.IsVelocityZero());
+        if (!characterMovement.IsMoving())
+            spriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
+        animator.SetBool("IsMoving", !characterMovement.IsMoving());
     }
 
     private void OnEnable()
     {
         werewolfSprite.SetActive(true);
-        pathFollow.enabled = true;
+        circleCollider.enabled = true;
+        pathFollow.Target = PlayerController.Instance.gameObject.transform;
     }
 
     private void OnDisable()
     {
         werewolfSprite.SetActive(false);
-        pathFollow.enabled = false;
+        circleCollider .enabled = false;
+        pathFollow.Target = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,21 +64,21 @@ public class WerewolfController : MonoBehaviour
         if (!enabled || !collision.TryGetComponent<PlayerController>(out _))
             return;
 
-        OnPlayerCaught?.Invoke(this, new EventArgs());
+        OnPlayerCaught.Invoke();
     }
 
-    private void WerewolfController_OnPlayerCaught(object sender, EventArgs e)
+    private void WerewolfController_OnPlayerCaught()
     {
         Debug.Log("Player caught");
     }
 
-    private void Instance_OnDayBegin(object sender, EventArgs e)
+    private void Instance_OnDayBegin()
     {
         characterMovement.Move(Vector2.zero);
         enabled = false;
     }
 
-    private void Instance_OnNightBegin(object sender, EventArgs e)
+    private void Instance_OnNightBegin()
     {
         enabled = true;
     }

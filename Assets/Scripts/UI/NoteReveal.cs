@@ -5,8 +5,11 @@ public class LetterReveal : MonoBehaviour
 {
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private float fadeDuration = 0.3f;
-    [SerializeField] private GameObject letterObject; // The parent GameObject holding the UI
+    [SerializeField] private GameObject letterObject;
     [SerializeField] private CanvasGroup letterCanvasGroup;
+
+    [Header("Other UI to hide when showing the letter")]
+    [SerializeField] private CanvasGroup[] canvasesToHide;
 
     private bool isPlayerNearby = false;
     private bool isLetterVisible = false;
@@ -45,6 +48,18 @@ public class LetterReveal : MonoBehaviour
         letterCanvasGroup.blocksRaycasts = true;
         letterCanvasGroup.DOFade(1f, fadeDuration);
         isLetterVisible = true;
+
+        // Hide other canvases
+        foreach (var cg in canvasesToHide)
+        {
+            if (cg != null)
+            {
+                cg.DOKill();
+                cg.DOFade(0f, fadeDuration);
+                cg.interactable = false;
+                cg.blocksRaycasts = false;
+            }
+        }
     }
 
     private void HideLetter()
@@ -60,6 +75,18 @@ public class LetterReveal : MonoBehaviour
         letterCanvasGroup.interactable = false;
         letterCanvasGroup.blocksRaycasts = false;
         isLetterVisible = false;
+
+        // Show other canvases again
+        foreach (var cg in canvasesToHide)
+        {
+            if (cg != null)
+            {
+                cg.DOKill();
+                cg.DOFade(1f, fadeDuration);
+                cg.interactable = true;
+                cg.blocksRaycasts = true;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

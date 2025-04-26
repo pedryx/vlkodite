@@ -1,85 +1,176 @@
-using System;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Events;
 
-public class ChildController : MonoBehaviour, IInteractable
+[RequireComponent(typeof(Interactable))]
+public class ChildController : Singleton<ChildController>
 {
     [SerializeField]
     private GameObject childSprite;
 
+    private PathFollow pathFollow;
+    private Interactable interactable;
+
+    /// <summary>
+    /// Spawn position of the child.
+    /// </summary>
     private Vector3 spawnPosition;
-
-    /// <summary>
-    /// Queue of items which will be one by one requested by the child.
-    /// </summary>
     [SerializeField]
-    [Tooltip("Queue of items which will be one by one requested by the child.")]
-    [InspectorName("ItemQueue")]
-    private List<ChildItemScriptableObject> itemQueue = new();
+    private List<Quest> questQueue = new();
+    /// <summary>
+    /// Index of current quest within the quest queue.
+    /// </summary>
+    private int questIndex = 0;
+    /// <summary>
+    /// Determine if first quest within the quest queue was accepted. When new day starts player needs to interact with
+    /// the child in ordr to receive the first quest.
+    /// </summary>
+    private bool questQueueStarted = false;
+
+    private Quest CurrentQuest => questQueue[questIndex];
+    private SubQuest CurrentSubQuest => CurrentQuest.CurrentSubQuest;
 
     /// <summary>
-    /// Index of currently requested item form <see cref="itemQueue"/>.
+    /// Occur when all quests are completed.
     /// </summary>
-    private int queueIndex = 0;
-
+    [Tooltip("Occur when all quests are completed.")]
+    public UnityEvent OnAllQuestsDone = new();
     /// <summary>
-    /// Item requested by current child task.
+    /// Occur when quest starts.
     /// </summary>
-    public ChildItemScriptableObject RequestedItem => itemQueue[queueIndex];
+    [Tooltip("Occur when quest starts.")]
+    public UnityEvent<QuestEventArgs> OnQuestStart = new();
+    /// <summary>
+    /// Occur when quest is completed.
+    /// </summary>
+    [Tooltip("Occur when quest is completed.")]
+    public UnityEvent<QuestEventArgs> OnQuestDone = new();
+    /// <summary>
+    /// Occur when sub quest starts.
+    /// </summary>
+    [Tooltip("Occur when sub quest starts.")]
+    public UnityEvent<SubQuestEventArgs> OnSubQuestStart = new();
+    /// <summary>
+    /// Occur when sub quest is completed.
+    /// </summary>
+    [Tooltip("Occur when sub quest is completed.")]
+    public UnityEvent<SubQuestEventArgs> OnSubQuestDone = new();
 
-    public event EventHandler OnAllTasksDone;
-
-    private void Awake()
+    protected override void Awake()
     {
-        GameManager.Instance.OnDayBegin += GameManager_OnDayBegin;
-        GameManager.Instance.OnNightBegin += Instance_OnNightBegin;
+        base.Awake();
+
         spawnPosition = transform.position;
+        pathFollow = GetComponent<PathFollow>();
 
-        Debug.Log($"Child requests new item \"{RequestedItem.Name}\".");
+        GameManager.Instance.OnDayBegin.AddListener(GameManager_OnDayBegin);
+        GameManager.Instance.OnNightBegin.AddListener(GameManager_OnNightBegin);
+        OnSubQuestStart.AddListener(Child_OnSubQuestStart);
+        OnSubQuestDone.AddListener(Child_OnSubQuestDone);
+
+        interactable = GetComponent<Interactable>();
+        interactable.OnInteract.AddListener(Interactable_OnInteract);
     }
 
-    private void OnEnable()
-    {
-        childSprite.SetActive(true);
-    }
+    private void OnEnable() => childSprite.SetActive(true);
 
-    private void OnDisable()
-    {
-        childSprite.SetActive(false);
-    }
+    private void OnDisable() => childSprite.SetActive(false);
 
-    public void Interact(PlayerController player)
+    /// <summary>
+    /// Finish current sub quest.
+    /// </summary>
+    public void FinishSubQuest()
     {
-        if (player.Item != RequestedItem)
+        Debug.Assert(!CurrentQuest.AllSubQuestsFinished && questQueueStarted);
+
+        OnSubQuestDone.Invoke(new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
+
+        CurrentQuest.FinishSubQuest();
+        if (CurrentQuest.AllSubQuestsFinished)
         {
-            Debug.Log("Invalid item.");
+            interactable.InteractionEnabled = true;
+            Debug.Log("All sub quest finished.");
             return;
         }
 
-        player.Item = null;
-        RequestNewItem();
-        Debug.Log($"Item used on child. Child requests new item \"{RequestedItem.Name}\".");
+        OnSubQuestStart.Invoke(new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
     }
 
-    private void RequestNewItem()
+    public void Interactable_OnInteract(Interactable interactable)
     {
-        queueIndex++;
-        if (queueIndex >= itemQueue.Count)
+        interactable.InteractionEnabled = false;
+
+        if (!questQueueStarted)
         {
-            queueIndex = 0;
-            OnAllTasksDone?.Invoke(this, EventArgs.Empty);
+            questQueueStarted = true;
+            OnQuestStart.Invoke(new QuestEventArgs(CurrentQuest));
+            OnSubQuestStart.Invoke(new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
+            return;
+        }
+
+        if (CurrentQuest.AllSubQuestsFinished)
+        {
+            Debug.Assert(questQueueStarted);
+
+            OnQuestDone.Invoke(new QuestEventArgs(CurrentQuest));
+            CurrentQuest.Reset();
+
+            questIndex++;
+            if (questIndex >= questQueue.Count)
+            {
+                questQueueStarted = false;
+                questIndex = 0;
+                OnAllQuestsDone.Invoke();
+                return;
+            }
+
+            OnQuestStart.Invoke(new QuestEventArgs(CurrentQuest));
+            OnSubQuestStart.Invoke(new SubQuestEventArgs(CurrentQuest, CurrentSubQuest));
+            return;
         }
     }
 
-    private void GameManager_OnDayBegin(object sender, EventArgs e)
+    private void GameManager_OnDayBegin()
     {
         transform.position = spawnPosition;
         enabled = true;
+        interactable.InteractionEnabled = true;
     }
 
-    private void Instance_OnNightBegin(object sender, EventArgs e)
+    private void GameManager_OnNightBegin()
     {
         enabled = false;
     }
+
+    private void Child_OnSubQuestStart(SubQuestEventArgs e)
+    {
+        Debug.Log($"New sub quest: \"{e.SubQuest.Description}\"");
+
+        if (e.SubQuest.ChildPosition == null)
+            return;
+
+        if (e.SubQuest.Teleport)
+            transform.position = e.SubQuest.ChildPosition.localPosition;
+        else
+            pathFollow.Target = e.SubQuest.ChildPosition;
+    }
+
+    private void Child_OnSubQuestDone(SubQuestEventArgs e)
+    {
+        pathFollow.Target = null;
+    }
 }
+
+/// <summary>
+/// Quest related event arguments.
+/// </summary>
+/// <param name="Quest">Related quest.</param>
+public record QuestEventArgs(Quest Quest);
+
+/// <summary>
+/// Sub quest related event arguments.
+/// </summary>
+/// <param name="Quest">Related quest.</param>
+/// <param name="SubQuest">Related sub quest.</param>
+public record SubQuestEventArgs(Quest Quest, SubQuest SubQuest);
