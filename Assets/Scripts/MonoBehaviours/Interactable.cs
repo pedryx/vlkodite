@@ -99,7 +99,7 @@ public class Interactable : MonoBehaviour
     /// </summary>
     public void Interact()
     {
-        if (interactionEnabled && !PlayerController.Instance.IsNear(this))
+        if (!interactionEnabled || !PlayerController.Instance.IsNear(this))
             return;
 
         switch (InteractionMode)
