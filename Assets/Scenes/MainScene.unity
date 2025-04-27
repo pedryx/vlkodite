@@ -1445,14 +1445,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7949838239588443808, guid: cfd68d5d30604304b9f2c7489e737083, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7949838239588443808, guid: cfd68d5d30604304b9f2c7489e737083, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7949838239588443808, guid: cfd68d5d30604304b9f2c7489e737083, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -6894,14 +6886,14 @@ MonoBehaviour:
   contextPromptUI: {fileID: 8188020459588161447}
   pathFinderBounds:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: -100
+    y: -20
+    width: 200
+    height: 150
   pathFinderCellSize: 0.2
   pathFinderRadius: 0.1
   <ShowPathFindingGrid>k__BackingField: 0
-  <ShowPathFindingPatches>k__BackingField: 0
+  <ShowPathFindingPatches>k__BackingField: 1
   <NightDuration>k__BackingField: 20
   OnDayBegin:
     m_PersistentCalls:
@@ -34230,6 +34222,7 @@ GameObject:
   - component: {fileID: 2044527703}
   - component: {fileID: 2044527702}
   - component: {fileID: 2044527701}
+  - component: {fileID: 2044527704}
   m_Layer: 0
   m_Name: statue_hall
   m_TagString: Untagged
@@ -34360,6 +34353,42 @@ MonoBehaviour:
   OnInteract:
     m_PersistentCalls:
       m_Calls: []
+--- !u!58 &2044527704
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044527698}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -2.6}
+  m_Radius: 1
 --- !u!1001 &2062132495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35270,15 +35299,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4382285839199678873, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.960001
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 4382285839199678873, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 100.816
+      value: 100.5
       objectReference: {fileID: 0}
     - target: {fileID: 4382285839199678873, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4382285839199678873, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalRotation.w
