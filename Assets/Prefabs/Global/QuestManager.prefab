@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5862723154126322643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952266276907994203}
+  - component: {fileID: 7198771488392635787}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1952266276907994203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862723154126322643}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 257.1042, y: 662.89075, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7198771488392635787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862723154126322643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186bcb56a5e114c499dfe7b235076eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests:
+  - <Description>k__BackingField: Clean up the <color=#FFFF00>statue</color> in the
+      hallway.
+    <QuestAdvancer>k__BackingField: {fileID: 0}
+    <ChildPosition>k__BackingField: {fileID: 0}
+    <Teleport>k__BackingField: 0
+    <OnStart>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  <ChildQuestQueue>k__BackingField:
+    quests:
+    - <Description>k__BackingField: Make lunch in the <color=#FFFF00>kitchen</color>.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Bring the lunch to the <color=#FFFF00>child</color>.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Get the <color=#FFFF00>dog food</color> from
+        the music room.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Put the dog food in the <color=#FFFF00>bowl</color>
+        (living room).
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Find the <color=#FFFF00>toy</color> in the living
+        room.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Bring the toy to the <color=#FFFF00>child</color>.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Retrieve the <color=#FFFF00>good night story
+        book</color> from the study.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Tell the <color=#FFFF00>child</color> a good
+        night story.
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <OnQuestStart>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnQuestDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnAllQuestsDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  <OnQuestStart>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnQuestDone>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnAllQuestsDone>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []

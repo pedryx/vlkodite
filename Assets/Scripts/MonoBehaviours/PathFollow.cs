@@ -29,6 +29,10 @@ public class PathFollow : MonoBehaviour
     /// Index to the next position in the path the character should move towards.
     /// </summary>
     private int pathIndex;
+    /// <summary>
+    /// Determine if path-finding is in progress.
+    /// </summary>
+    private bool isPathfinding = false;
 
     /// <summary>
     /// The target transform that the character is moving towards.
@@ -112,12 +116,16 @@ public class PathFollow : MonoBehaviour
     {
         if ((Vector2)Target.localPosition == currentTargetPosition)
             return;
+        if (isPathfinding)
+            return;
 
+        isPathfinding = true;
         Vector2 position = transform.localPosition;
         Vector2 targetPosition = Target.localPosition;
 
         path = await Task.Run(() => GameManager.Instance.PathFinder.FindPath(position, targetPosition));
         pathIndex = 0;
         currentTargetPosition = Target.localPosition;
+        isPathfinding = false;
     }
 }
