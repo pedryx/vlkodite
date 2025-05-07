@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 46868cf4675cc5e4abf1e9876af76290
+guid: 9b0e161273d21a9478ba0404390e0c3a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6288179971597629913
-    second: Sofa_0
+      213: -3373613091113208570
+    second: Props1_0
+  - first:
+      213: 5373326891260496823
+    second: Props1_1
+  - first:
+      213: 3882937435375514427
+    second: Props1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sofa_0
+      name: Props1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 62
-        height: 30
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 726823dc1a5ebb8a0800000000000000
-      internalID: -6288179971597629913
+      spriteID: 605f69e84c48e21d0800000000000000
+      internalID: -3373613091113208570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props1_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bbc2a7a654e19a40800000000000000
+      internalID: 5373326891260496823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props1_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33bf985607f2e530800000000000000
+      internalID: 3882937435375514427
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sofa_0: -6288179971597629913
+      Props1_0: -3373613091113208570
+      Props1_1: 5373326891260496823
+      Props1_2: 3882937435375514427
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

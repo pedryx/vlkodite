@@ -1,0 +1,1042 @@
+fileFormatVersion: 2
+guid: 1785ad59abda88043a4edede288f8b5d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4701532403081420210
+    second: warewolf_idle_updated_0
+  - first:
+      213: 4871811727203595223
+    second: warewolf_idle_updated_1
+  - first:
+      213: 3584419464404519289
+    second: warewolf_idle_updated_2
+  - first:
+      213: 3403551696097330067
+    second: warewolf_idle_updated_3
+  - first:
+      213: 23437445372536125
+    second: warewolf_idle_updated_4
+  - first:
+      213: -367127424893260461
+    second: warewolf_idle_updated_5
+  - first:
+      213: 6229157039231646596
+    second: warewolf_idle_updated_6
+  - first:
+      213: 5213022669893578753
+    second: warewolf_idle_updated_7
+  - first:
+      213: 6622640544500655297
+    second: warewolf_idle_updated_8
+  - first:
+      213: 7223442895878225069
+    second: warewolf_idle_updated_9
+  - first:
+      213: 4099830301023951148
+    second: warewolf_idle_updated_10
+  - first:
+      213: -3045112977178057641
+    second: warewolf_idle_updated_11
+  - first:
+      213: -7192093021740554126
+    second: warewolf_idle_updated_12
+  - first:
+      213: -8168230377027426339
+    second: warewolf_idle_updated_13
+  - first:
+      213: -7405368081280714342
+    second: warewolf_idle_updated_14
+  - first:
+      213: 1871625568618841801
+    second: warewolf_idle_updated_15
+  - first:
+      213: 4345283844041737879
+    second: warewolf_idle_updated_16
+  - first:
+      213: -1979438390033499642
+    second: warewolf_idle_updated_17
+  - first:
+      213: 7431841925121158552
+    second: warewolf_idle_updated_18
+  - first:
+      213: -8038637532746946845
+    second: warewolf_idle_updated_19
+  - first:
+      213: 3207858415228320592
+    second: warewolf_idle_updated_20
+  - first:
+      213: 6413614065470857998
+    second: warewolf_idle_updated_21
+  - first:
+      213: 2168480893345358852
+    second: warewolf_idle_updated_22
+  - first:
+      213: -3196317854757443269
+    second: warewolf_idle_updated_23
+  - first:
+      213: -1584473328898171904
+    second: warewolf_idle_updated_24
+  - first:
+      213: 8408936765865998465
+    second: warewolf_idle_updated_25
+  - first:
+      213: -4834625564282608137
+    second: warewolf_idle_updated_26
+  - first:
+      213: -2237183091134438101
+    second: warewolf_idle_updated_27
+  - first:
+      213: -885601619452295266
+    second: warewolf_idle_updated_28
+  - first:
+      213: 909679154596367478
+    second: warewolf_idle_updated_29
+  - first:
+      213: -4809537442947049537
+    second: warewolf_idle_updated_30
+  - first:
+      213: 5958838649005280966
+    second: warewolf_idle_updated_31
+  - first:
+      213: 3811398072232720516
+    second: warewolf_idle_updated_32
+  - first:
+      213: 1409428454619756061
+    second: warewolf_idle_updated_33
+  - first:
+      213: 1814979421648927698
+    second: warewolf_idle_updated_34
+  - first:
+      213: 8011593000306741812
+    second: warewolf_idle_updated_35
+  - first:
+      213: -4180045721911324186
+    second: warewolf_idle_updated_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: warewolf_idle_updated_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 734
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd18a19fc23f3140800000000000000
+      internalID: 4701532403081420210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 734
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d37d8434f62c9340800000000000000
+      internalID: 4871811727203595223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 734
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979c3d5038a6eb130800000000000000
+      internalID: 3584419464404519289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_3
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 734
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3934f8c1c38db3f20800000000000000
+      internalID: 3403551696097330067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 654
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d356fdd7b34435000800000000000000
+      internalID: 23437445372536125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_5
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 654
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35deeeb5d83b7eaf0800000000000000
+      internalID: -367127424893260461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_6
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 654
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48bb68dd259627650800000000000000
+      internalID: 6229157039231646596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 654
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 100b01d9f70685840800000000000000
+      internalID: 5213022669893578753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_8
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4af0aac7858eb50800000000000000
+      internalID: 6622640544500655297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_9
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 574
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dacf328da03de3460800000000000000
+      internalID: 7223442895878225069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_10
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 574
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c295aebdfe585e830800000000000000
+      internalID: 4099830301023951148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_11
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 574
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 754ae5681e59db5d0800000000000000
+      internalID: -3045112977178057641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_12
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 494
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 278a697808d803c90800000000000000
+      internalID: -7192093021740554126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_13
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 494
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7a9bdcfbd94ae80800000000000000
+      internalID: -8168230377027426339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_14
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 494
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a993f3427f8da3990800000000000000
+      internalID: -7405368081280714342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_15
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 494
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c68012d98959f910800000000000000
+      internalID: 1871625568618841801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_16
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 414
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7960a5442ac8d4c30800000000000000
+      internalID: 4345283844041737879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_17
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 414
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a3843954f9784e0800000000000000
+      internalID: -1979438390033499642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_18
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 414
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89da3b5fad4332760800000000000000
+      internalID: 7431841925121158552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_19
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 414
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6ee7621c5017090800000000000000
+      internalID: -8038637532746946845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_20
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 334
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b7e619b3a948c20800000000000000
+      internalID: 3207858415228320592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_21
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 334
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03e6d2030cb10950800000000000000
+      internalID: 6413614065470857998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_22
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 334
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 404621622edf71e10800000000000000
+      internalID: 2168480893345358852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_23
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 334
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39a1fd88d564a3d0800000000000000
+      internalID: -3196317854757443269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_24
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 254
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c91faf6e1d20ae0800000000000000
+      internalID: -1584473328898171904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_25
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 254
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1883a24af6b82b470800000000000000
+      internalID: 8408936765865998465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_26
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 254
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f5a9ea0aa5f7ecb0800000000000000
+      internalID: -4834625564282608137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_27
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 254
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25eb6be4dde3f0e0800000000000000
+      internalID: -2237183091134438101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_28
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 174
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97090ce406b5b3f0800000000000000
+      internalID: -885601619452295266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_29
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 174
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c4b451f54df9c00800000000000000
+      internalID: 909679154596367478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_30
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 174
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7533b7d27114db0800000000000000
+      internalID: -4809537442947049537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_31
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 174
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce04d31e2c02b250800000000000000
+      internalID: 5958838649005280966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_32
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 94
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4883a016a5ec4e430800000000000000
+      internalID: 3811398072232720516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_33
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 94
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1630f546bb4f8310800000000000000
+      internalID: 1409428454619756061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_34
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 94
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db3706fa2a103910800000000000000
+      internalID: 1814979421648927698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_35
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 94
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4321a44f265ee2f60800000000000000
+      internalID: 8011593000306741812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warewolf_idle_updated_36
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 14
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e19590109e7df5c0800000000000000
+      internalID: -4180045721911324186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

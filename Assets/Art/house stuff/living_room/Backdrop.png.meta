@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 46868cf4675cc5e4abf1e9876af76290
+guid: e888ebfddd5c80e4db5f2881051dc6c7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6288179971597629913
-    second: Sofa_0
+      213: 109013552707271033
+    second: Backdrop_0
+  - first:
+      213: -8458602251002848920
+    second: Backdrop_1
+  - first:
+      213: -5050149929292006811
+    second: Backdrop_2
+  - first:
+      213: 4692383030383928659
+    second: Backdrop_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sofa_0
+      name: Backdrop_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 62
-        height: 30
+        y: 15
+        width: 294
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 726823dc1a5ebb8a0800000000000000
-      internalID: -6288179971597629913
+      spriteID: 979f1d4af3b438100800000000000000
+      internalID: 109013552707271033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Backdrop_1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 159
+        width: 80
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869d7ac71120d9a80800000000000000
+      internalID: -8458602251002848920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Backdrop_2
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 159
+        width: 80
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56af51a65634ae9b0800000000000000
+      internalID: -5050149929292006811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Backdrop_3
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 0
+        width: 58
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 355ea1c3181be1140800000000000000
+      internalID: 4692383030383928659
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sofa_0: -6288179971597629913
+      Backdrop_0: 109013552707271033
+      Backdrop_1: -8458602251002848920
+      Backdrop_2: -5050149929292006811
+      Backdrop_3: 4692383030383928659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
