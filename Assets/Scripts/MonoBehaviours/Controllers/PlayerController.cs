@@ -1,9 +1,11 @@
+using System.Linq;
 using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterMovement))]
+[RequireComponent(typeof(CapsuleCollider2D))]
 public class PlayerController : Singleton<PlayerController>
 {
     /// <summary>
@@ -15,6 +17,7 @@ public class PlayerController : Singleton<PlayerController>
     private SpriteRenderer spriteRenderer;
     private CharacterMovement characterMovement;
     private GameInputActions input;
+    private CapsuleCollider2D capsuleCollider;
 
     /// <summary>
     /// Determine if debug mode is toggled on. In debug mode player have useful debugging capabilities, like
@@ -31,6 +34,11 @@ public class PlayerController : Singleton<PlayerController>
     [Tooltip("Maximum movement speed of player in pixels per second during super speed mode.")]
     public float SuperMovementSpeed { get; private set; } = 1.0f;
 
+    /// <summary>
+    /// Determine if god mode is active.
+    /// </summary>
+    public bool GodModeActive { get; private set; } = false;
+
     protected override void Awake()
     {
         base.Awake();
@@ -40,8 +48,13 @@ public class PlayerController : Singleton<PlayerController>
 
         input = new GameInputActions();
         input.Player.Enable();
+        #region Debug input
         input.Debug.ToggleDebug.Enable();
         input.Debug.ToggleDebug.performed += ToggleDebug_Performed;
+        input.Debug.ToggleGodMode.performed += ToggleGodMode_Performed;
+        input.Debug.FinishQuest.performed += FinishQuest_Performed;
+        input.Debug.SwitchDayNight.performed += SwitchDayNight_Performed;
+        #endregion
 
         spawnPosition = transform.position;
         WerewolfController.Instance.OnPlayerCaught.AddListener(Werewolf_OnPlayerCaught);
@@ -49,6 +62,7 @@ public class PlayerController : Singleton<PlayerController>
 
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
     private void Update()
@@ -105,6 +119,17 @@ public class PlayerController : Singleton<PlayerController>
     public bool IsNear(Interactable interactable)
         => interactableTargets.Contains(interactable);
 
+    private void Werewolf_OnPlayerCaught()
+    {
+        transform.localPosition = spawnPosition;
+    }
+
+    private void GameManager_OnNightBegin()
+    {
+        transform.localPosition = spawnPosition;
+    }
+
+    #region Debug events
     private void ToggleDebug_Performed(InputAction.CallbackContext context)
     {
         if (debugMode)
@@ -122,13 +147,30 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
-    private void Werewolf_OnPlayerCaught()
+    private void ToggleGodMode_Performed(InputAction.CallbackContext context)
     {
-        transform.localPosition = spawnPosition;
+        GodModeActive = !GodModeActive;
+        capsuleCollider.enabled = !GodModeActive;
+        Debug.Log($"GodMode {(GodModeActive ? "on" : "off")}");
     }
 
-    private void GameManager_OnNightBegin()
+    private void FinishQuest_Performed(InputAction.CallbackContext context)
     {
-        transform.localPosition = spawnPosition;
+        foreach (var quest in QuestManager.Instance.AllQuests)
+        {
+            if (!quest.IsCompleted)
+            {
+                quest.Complete();
+                return;
+            }
+        }
+
+        Debug.LogWarning("All quests are complete.");
     }
+
+    private void SwitchDayNight_Performed(InputAction.CallbackContext context)
+    {
+        GameManager.Instance.SwitchDayNight();
+    }
+    #endregion
 }

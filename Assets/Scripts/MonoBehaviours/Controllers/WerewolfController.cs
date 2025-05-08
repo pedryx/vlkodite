@@ -61,7 +61,7 @@ public class WerewolfController : Singleton<WerewolfController>
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!enabled || !collision.TryGetComponent<PlayerController>(out _))
+        if (!enabled || !collision.TryGetComponent(out PlayerController player) || player.GodModeActive)
             return;
 
         OnPlayerCaught.Invoke();

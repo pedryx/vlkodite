@@ -14,6 +14,11 @@ public class QuestQueue
     public Quest ActiveQuest => quests[questQueueIndex];
 
     /// <summary>
+    /// Contains active quests.
+    /// </summary>
+    public IReadOnlyList<Quest> Quests => quests;
+
+    /// <summary>
     /// Occur when any quest in quest queue starts.
     /// </summary>
     [field: SerializeField]

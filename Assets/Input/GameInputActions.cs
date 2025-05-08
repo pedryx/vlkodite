@@ -288,6 +288,33 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleGodMode"",
+                    ""type"": ""Button"",
+                    ""id"": ""86675dbd-9667-4f71-938f-7df9b59acc5c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FinishQuest"",
+                    ""type"": ""Button"",
+                    ""id"": ""183e97a9-c676-4448-8f7b-eced218ead06"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchDayNight"",
+                    ""type"": ""Button"",
+                    ""id"": ""38f49629-16f5-4c61-8821-1c3d5681a4e0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -310,6 +337,39 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""ToggleDebug"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ff31065-d75b-46fb-a33b-3b5fa7367b2d"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""FinishQuest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1eaa8b31-7121-4e83-addc-631b16b6404e"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""SwitchDayNight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b957c6eb-3f04-445f-8a30-1c9d3ba9fb4e"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""ToggleGodMode"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -387,6 +447,9 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
         m_Debug = asset.FindActionMap("Debug", throwIfNotFound: true);
         m_Debug_ToggleDebug = m_Debug.FindAction("ToggleDebug", throwIfNotFound: true);
         m_Debug_SuperSpeed = m_Debug.FindAction("SuperSpeed", throwIfNotFound: true);
+        m_Debug_ToggleGodMode = m_Debug.FindAction("ToggleGodMode", throwIfNotFound: true);
+        m_Debug_FinishQuest = m_Debug.FindAction("FinishQuest", throwIfNotFound: true);
+        m_Debug_SwitchDayNight = m_Debug.FindAction("SwitchDayNight", throwIfNotFound: true);
     }
 
     ~@GameInputActions()
@@ -577,6 +640,9 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
     private List<IDebugActions> m_DebugActionsCallbackInterfaces = new List<IDebugActions>();
     private readonly InputAction m_Debug_ToggleDebug;
     private readonly InputAction m_Debug_SuperSpeed;
+    private readonly InputAction m_Debug_ToggleGodMode;
+    private readonly InputAction m_Debug_FinishQuest;
+    private readonly InputAction m_Debug_SwitchDayNight;
     /// <summary>
     /// Provides access to input actions defined in input action map "Debug".
     /// </summary>
@@ -596,6 +662,18 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Debug/SuperSpeed".
         /// </summary>
         public InputAction @SuperSpeed => m_Wrapper.m_Debug_SuperSpeed;
+        /// <summary>
+        /// Provides access to the underlying input action "Debug/ToggleGodMode".
+        /// </summary>
+        public InputAction @ToggleGodMode => m_Wrapper.m_Debug_ToggleGodMode;
+        /// <summary>
+        /// Provides access to the underlying input action "Debug/FinishQuest".
+        /// </summary>
+        public InputAction @FinishQuest => m_Wrapper.m_Debug_FinishQuest;
+        /// <summary>
+        /// Provides access to the underlying input action "Debug/SwitchDayNight".
+        /// </summary>
+        public InputAction @SwitchDayNight => m_Wrapper.m_Debug_SwitchDayNight;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -628,6 +706,15 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
             @SuperSpeed.started += instance.OnSuperSpeed;
             @SuperSpeed.performed += instance.OnSuperSpeed;
             @SuperSpeed.canceled += instance.OnSuperSpeed;
+            @ToggleGodMode.started += instance.OnToggleGodMode;
+            @ToggleGodMode.performed += instance.OnToggleGodMode;
+            @ToggleGodMode.canceled += instance.OnToggleGodMode;
+            @FinishQuest.started += instance.OnFinishQuest;
+            @FinishQuest.performed += instance.OnFinishQuest;
+            @FinishQuest.canceled += instance.OnFinishQuest;
+            @SwitchDayNight.started += instance.OnSwitchDayNight;
+            @SwitchDayNight.performed += instance.OnSwitchDayNight;
+            @SwitchDayNight.canceled += instance.OnSwitchDayNight;
         }
 
         /// <summary>
@@ -645,6 +732,15 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
             @SuperSpeed.started -= instance.OnSuperSpeed;
             @SuperSpeed.performed -= instance.OnSuperSpeed;
             @SuperSpeed.canceled -= instance.OnSuperSpeed;
+            @ToggleGodMode.started -= instance.OnToggleGodMode;
+            @ToggleGodMode.performed -= instance.OnToggleGodMode;
+            @ToggleGodMode.canceled -= instance.OnToggleGodMode;
+            @FinishQuest.started -= instance.OnFinishQuest;
+            @FinishQuest.performed -= instance.OnFinishQuest;
+            @FinishQuest.canceled -= instance.OnFinishQuest;
+            @SwitchDayNight.started -= instance.OnSwitchDayNight;
+            @SwitchDayNight.performed -= instance.OnSwitchDayNight;
+            @SwitchDayNight.canceled -= instance.OnSwitchDayNight;
         }
 
         /// <summary>
@@ -786,5 +882,26 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSuperSpeed(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ToggleGodMode" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnToggleGodMode(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "FinishQuest" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFinishQuest(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchDayNight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchDayNight(InputAction.CallbackContext context);
     }
 }

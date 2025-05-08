@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,6 +26,11 @@ public class QuestManager : Singleton<QuestManager>
     /// Contains active quests.
     /// </summary>
     public IReadOnlyList<Quest> Quests => quests;
+
+    /// <summary>
+    /// Contains all quests from child quest queue and all active quests (in this order).
+    /// </summary>
+    public IEnumerable<Quest> AllQuests => ChildQuestQueue.Quests.Concat(Quests);
 
     /// <summary>
     /// Occur when any quest is started.
@@ -90,7 +96,7 @@ public class QuestManager : Singleton<QuestManager>
             quest.Reset();
         }
 
-        Debug.Assert(questNotDoneCounter == 0);
+        questNotDoneCounter = 0;
         ChildQuestQueue.Start();
         questNotDoneCounter++;
         foreach (var quest in quests)

@@ -109,6 +109,22 @@ public class GameManager : Singleton<GameManager>
 
     public void HideContextPrimpt() => contextPromptUI.Hide();
 
+    /// <summary>
+    /// Toggle between day and night.
+    /// </summary>
+    /// <returns>True if switched to day otherwise false.</returns>
+    public bool SwitchDayNight()
+    {
+        isDay = !isDay;
+
+        if (isDay)
+            OnDayBegin.Invoke();
+        else
+            OnNightBegin.Invoke();
+
+        return isDay;
+    }
+
     private void GameManager_OnDayBegin()
     {
         Debug.Log("Day started.");
@@ -117,6 +133,7 @@ public class GameManager : Singleton<GameManager>
     private void GameManager_OnNightBegin()
     {
         Debug.Log("Night started.");
+        nightTimeElapsed = 0.0f;
     }
 
     private void Werewolf_OnPlayerCaught()
