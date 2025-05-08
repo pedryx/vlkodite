@@ -100,13 +100,16 @@ public class PathFollow : MonoBehaviour
     /// </summary>
     private bool IsTargetVisible()
     {
-        RaycastHit2D hit = Physics2D.Linecast(
-            transform.localPosition,
-            Target.localPosition,
-            LayerMask.GetMask("Default")
-        );
+        var contactFilter = new ContactFilter2D()
+        {
+            useTriggers = false,
+        };
 
-        return hit.collider == null;
+        // We only need to know if cast hit anything.
+        var results = new RaycastHit2D[1];
+        int count = Physics2D.Linecast(transform.localPosition, Target.localPosition, contactFilter, results);
+
+        return count == 0;
     }
 
     /// <summary>
@@ -123,9 +126,15 @@ public class PathFollow : MonoBehaviour
         Vector2 position = transform.localPosition;
         Vector2 targetPosition = Target.localPosition;
 
-        path = await Task.Run(() => GameManager.Instance.PathFinder.FindPath(position, targetPosition));
-        pathIndex = 0;
-        currentTargetPosition = Target.localPosition;
-        isPathfinding = false;
+        try
+        {
+            path = await Task.Run(() => GameManager.Instance.PathFinder.FindPath(position, targetPosition));
+        }
+        finally
+        {
+            pathIndex = 1;
+            currentTargetPosition = Target.localPosition;
+            isPathfinding = false;
+        }
     }
 }

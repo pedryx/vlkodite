@@ -207,6 +207,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1059,7 +1072,45 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cooking_task_0: 5462863274114418810
+      Cooking_task_1: -2644177029851212553
+      Cooking_task_10: 2038404306744872104
+      Cooking_task_11: -636779294213614524
+      Cooking_task_12: 9115856181739879502
+      Cooking_task_13: 92904414503348074
+      Cooking_task_14: -929834422347789458
+      Cooking_task_15: -2987508093275866275
+      Cooking_task_16: 1672907346527136107
+      Cooking_task_17: -363010376289813544
+      Cooking_task_18: 2005010756163317881
+      Cooking_task_19: 4410342263433719485
+      Cooking_task_2: -3165085729191269258
+      Cooking_task_20: 7887192589557221487
+      Cooking_task_21: -4709173723786067186
+      Cooking_task_22: -6874298410458470799
+      Cooking_task_23: 3889140756928572995
+      Cooking_task_24: 241333121875715580
+      Cooking_task_25: -1033066164130371169
+      Cooking_task_26: -3035173274321271726
+      Cooking_task_27: -7991832846465762299
+      Cooking_task_28: -1497173639863728916
+      Cooking_task_29: -2187445574870826936
+      Cooking_task_3: -4621810257886039635
+      Cooking_task_30: -9039914600073060093
+      Cooking_task_31: -3897445293051661172
+      Cooking_task_32: -863208823470638279
+      Cooking_task_33: -3519417987898393193
+      Cooking_task_34: 1896110561056972955
+      Cooking_task_35: 8948924039799382158
+      Cooking_task_36: -9144746504732771676
+      Cooking_task_37: -2957583323936188851
+      Cooking_task_4: 2521356783635878832
+      Cooking_task_5: -5305962281969297710
+      Cooking_task_6: 8013053118341294028
+      Cooking_task_7: -7951729714674729936
+      Cooking_task_8: -5651057153617778743
+      Cooking_task_9: -3262890012131508211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

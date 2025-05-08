@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using ThirdParty.Utils;
 
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class PathFinder
 {
@@ -91,6 +92,10 @@ public class PathFinder
         Vector2Int goalCell = GetNearestCell(goal);
 
         List<Vector2Int> gridPath = FindPath(startCell, goalCell);
+
+        if (gridPath == null)
+            return null;
+
         List<Vector2> path = ToWorldPositions(gridPath);
         List<Vector2> simplifiedPath = SimplifyPath(path, start, goal);
 
@@ -210,11 +215,15 @@ public class PathFinder
         }
 
         if (!pathFound)
-            throw new InvalidOperationException("No valid path exists between the specified points.");
+        {
+            Debug.LogError("No valid path exists between the specified points.");
+            return null;
+        }
 
         var path = new List<Vector2Int>() { goal };
         while (cameFrom.ContainsKey(path.Last()))
             path.Add(cameFrom[path.Last()]);
+        // Pathfinding is running on different thread so game object's position is now past the first part point.
         path.Reverse();
 
         return path;
@@ -225,12 +234,20 @@ public class PathFinder
     /// </summary>
     private void CreateGrid()
     {
-        int layerMask = LayerMask.GetMask("Default");
+        var contactFilter = new ContactFilter2D()
+        {
+            useTriggers = false,
+            useLayerMask = true,
+            layerMask = LayerMask.GetMask("Default"),
+        };
+
+        // We only need to know if ANY collision exists (not the specific colliders).
+        var results = new Collider2D[1];
 
         foreach (var cell in GetCells())
         {
-            bool isWalkable = Physics2D.OverlapCircle(GetWorldPosition(cell), Radius, layerMask) == null;
-            SetCellWalkable(cell, isWalkable);
+            int count = Physics2D.OverlapCircle(GetWorldPosition(cell), Radius, contactFilter, results);
+            SetCellWalkable(cell, count == 0);
         }
     }
 
