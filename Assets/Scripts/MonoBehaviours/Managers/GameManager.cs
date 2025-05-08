@@ -107,7 +107,7 @@ public class GameManager : Singleton<GameManager>
 
     public void ShowContextPrompt(string promptText) => contextPromptUI.Show(promptText);
 
-    public void HideContextPrimpt() => contextPromptUI.Hide();
+    public void HideContextPrompt() => contextPromptUI.Hide();
 
     /// <summary>
     /// Toggle between day and night.

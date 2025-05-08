@@ -88,7 +88,7 @@ public class PromptTrigger2D : MonoBehaviour
     private void Interactable_OnInteractionDisabled(Interactable interactable)
     {
         // when player have visible context hint and game xits, returned game manager is null and this gets called
-        GameManager.Instance?.HideContextPrimpt();
+        GameManager.Instance?.HideContextPrompt();
         FadeOutline(0f);
     }
 
