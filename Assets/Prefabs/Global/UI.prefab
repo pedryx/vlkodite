@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2610290193507065434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8256912707317634469}
+  m_Layer: 0
+  m_Name: Notes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8256912707317634469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2610290193507065434}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.410001, y: 12.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4497331738728026966}
+  - {fileID: 8329392579843225074}
+  m_Father: {fileID: 7605650407808047720}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7408107009783049763
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,8 +63,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3522922101381819893}
-  - {fileID: 4497331738728026966}
-  - {fileID: 8329392579843225074}
+  - {fileID: 8256912707317634469}
   - {fileID: 8957122693885787497}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41,7 +73,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7605650407808047720}
+    m_TransformParent: {fileID: 8256912707317634469}
     m_Modifications:
     - target: {fileID: 3208608210855407448, guid: 7865d0ead925884419e1bfa33de48d5b, type: 3}
       propertyPath: m_Name
@@ -109,11 +141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4783507935517353673, guid: 7865d0ead925884419e1bfa33de48d5b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 11.56
+      value: 6.1499996
       objectReference: {fileID: 0}
     - target: {fileID: 4783507935517353673, guid: 7865d0ead925884419e1bfa33de48d5b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.61
+      value: -15.86
       objectReference: {fileID: 0}
     - target: {fileID: 4783507935517353673, guid: 7865d0ead925884419e1bfa33de48d5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -364,7 +396,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7605650407808047720}
+    m_TransformParent: {fileID: 8256912707317634469}
     m_Modifications:
     - target: {fileID: 1475225656737028911, guid: 7865d0ead925884419e1bfa33de48d5b, type: 3}
       propertyPath: canvasesToHide.Array.size
@@ -448,11 +480,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4783507935517353673, guid: 7865d0ead925884419e1bfa33de48d5b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.11
+      value: -5.520001
       objectReference: {fileID: 0}
     - target: {fileID: 4783507935517353673, guid: 7865d0ead925884419e1bfa33de48d5b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.6969
+      value: -7.5531
       objectReference: {fileID: 0}
     - target: {fileID: 4783507935517353673, guid: 7865d0ead925884419e1bfa33de48d5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

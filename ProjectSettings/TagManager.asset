@@ -44,5 +44,8 @@ TagManager:
   - name: UI
     uniqueID: 2243991365
     locked: 0
+  - name: Wolf Night
+    uniqueID: 620936223
+    locked: 0
   m_RenderingLayers:
   - Default

@@ -12,7 +12,9 @@ public class RoomDarkness : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float originalAlpha;
 
-    void Start()
+   
+
+    private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalAlpha = spriteRenderer.color.a;

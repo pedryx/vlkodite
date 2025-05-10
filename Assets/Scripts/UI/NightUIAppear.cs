@@ -26,10 +26,9 @@ public class NightUIAppear : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-            ShowUI();
+        ShowUI(); // Automatically show when object becomes active
     }
 
     private void ShowUI()
