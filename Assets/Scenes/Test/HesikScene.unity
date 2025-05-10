@@ -22870,6 +22870,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1174453079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7182660831977884692, guid: ee6e40c30de78f34a951f7dd4f7c4929, type: 3}
+  m_PrefabInstance: {fileID: 4261233200813675456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1175848381
 GameObject:
   m_ObjectHideFlags: 0
@@ -29188,6 +29193,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 297557280676492818, guid: ee6e40c30de78f34a951f7dd4f7c4929, type: 3}
   m_PrefabInstance: {fileID: 4261233200813675456}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1521315920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174453079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &1530584666
 GameObject:
   m_ObjectHideFlags: 0
@@ -44435,6 +44471,9 @@ PrefabInstance:
       insertIndex: 0
       addedObject: {fileID: 1374454359}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7182660831977884692, guid: ee6e40c30de78f34a951f7dd4f7c4929, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1521315920}
     - targetCorrespondingSourceObject: {fileID: 2581492930909233574, guid: ee6e40c30de78f34a951f7dd4f7c4929, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1683694264}
