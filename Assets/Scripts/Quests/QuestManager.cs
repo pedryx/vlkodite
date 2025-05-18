@@ -23,6 +23,14 @@ public class QuestManager : Singleton<QuestManager>
     public QuestQueue ChildQuestQueue { get; private set; }
 
     /// <summary>
+    /// Quest which will start when all quests of day or night are done. When this quest is completed transition to
+    /// day or night will happen.
+    /// </summary>
+    [field:SerializeField]
+    [Tooltip("Quest which will start when all quests of day or night are done. When this quest is completed transition to day or night will happen.")]
+    public Quest TransitionQuest { get; private set; }
+
+    /// <summary>
     /// Contains active quests.
     /// </summary>
     public IReadOnlyList<Quest> Quests => quests;
@@ -46,10 +54,10 @@ public class QuestManager : Singleton<QuestManager>
     public UnityEvent<QuestEventArgs> OnQuestDone { get; private set; } = new();
 
     /// <summary>
-    /// Occur when all quest and quest queues are done.
+    /// Occur when all quest and quest queues are done. Transition quest will begin after this event.
     /// </summary>
     [field: SerializeField]
-    [Tooltip("Occur when all quest and quest queues are done.")]
+    [Tooltip("Occur when all quest and quest queues are done. Transition quest will begin after this event.")]
     public UnityEvent OnAllQuestsDone { get; private set; } = new();
 
     protected  override void Awake()
@@ -65,6 +73,9 @@ public class QuestManager : Singleton<QuestManager>
             quest.OnStart.AddListener(Quest_OnStart);
             quest.OnDone.AddListener(Quest_OnDone);
         }
+        TransitionQuest.OnStart.AddListener(Quest_OnStart);
+        TransitionQuest.OnDone.AddListener(Quest_OnDone);
+        OnAllQuestsDone.AddListener(QuestManager_OnAllQuestsDone);
     }
 
     private void Start()
@@ -138,5 +149,10 @@ public class QuestManager : Singleton<QuestManager>
         questNotDoneCounter--;
         if (questNotDoneCounter == 0)
             OnAllQuestsDone.Invoke();
+    }
+
+    private void QuestManager_OnAllQuestsDone()
+    {
+        TransitionQuest.Start();
     }
 }

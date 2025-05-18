@@ -124,7 +124,7 @@ public class PathFollow : MonoBehaviour
 
         isPathfinding = true;
         Vector2 position = transform.localPosition;
-        Vector2 targetPosition = Target.localPosition;
+        Vector2 targetPosition = Target.position;
 
         try
         {
@@ -132,6 +132,7 @@ public class PathFollow : MonoBehaviour
         }
         finally
         {
+            // Pathfinding is running on different thread so game object's position is now past the first part point.
             pathIndex = 1;
             currentTargetPosition = Target.localPosition;
             isPathfinding = false;

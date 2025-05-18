@@ -77,7 +77,7 @@ public class GameManager : Singleton<GameManager>
 
         OnDayBegin.AddListener(GameManager_OnDayBegin);
         OnNightBegin.AddListener(GameManager_OnNightBegin);
-        QuestManager.Instance.OnAllQuestsDone.AddListener(QuestManager_OnAllQuestsDone);
+        QuestManager.Instance.TransitionQuest.OnDone.AddListener(DayEndQuest_OnDone);
         WerewolfController.Instance.OnPlayerCaught.AddListener(Werewolf_OnPlayerCaught);
 
         PathFinder = new PathFinder(pathFinderBounds, pathFinderCellSize, pathFinderRadius);
@@ -142,7 +142,7 @@ public class GameManager : Singleton<GameManager>
         OnDayBegin.Invoke();
     }
 
-    private void QuestManager_OnAllQuestsDone()
+    private void DayEndQuest_OnDone(QuestEventArgs e)
     {
         isDay = false;
         OnNightBegin.Invoke();

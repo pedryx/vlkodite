@@ -11,6 +11,7 @@ public class QuestLogController : MonoBehaviour
         gameObject.SetActive(false);
         CreateQuestPanels();
         GameManager.Instance.OnDayBegin.AddListener(GameManager_OnDayBegin);
+        //QuestManager.Instance.TransitionQuest.OnStart.AddListener(TransitionQuest_OnStart);
     }
 
     private void CreateQuestPanels()
@@ -20,6 +21,7 @@ public class QuestLogController : MonoBehaviour
         {
             CreateQuestPanel(quest);
         }
+        CreateQuestPanel(QuestManager.Instance.TransitionQuest);
     }
 
     private void CreateQuestPanel(Quest quest)
@@ -59,4 +61,9 @@ public class QuestLogController : MonoBehaviour
     {
         CreateQuestPanels();
     }
+
+    //private void TransitionQuest_OnStart(QuestEventArgs e)
+    //{
+    //    CreateQuestPanel(e.Quest);
+    //}
 }
