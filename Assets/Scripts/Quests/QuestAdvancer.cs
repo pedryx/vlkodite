@@ -20,8 +20,8 @@ public class QuestAdvancer : MonoBehaviour
         interactable.InteractionEnabled = false;
         interactable.OnInteract.AddListener(Interactable_OnInteract);
 
-        QuestManager.Instance.OnQuestStart.AddListener(QuestManager_OnQuestStart);
-        QuestManager.Instance.OnQuestDone.AddListener(QuestManager_OnQuestDone);
+        QuestManager.Instance.Current.OnQuestStart.AddListener(QuestManager_OnQuestStart);
+        QuestManager.Instance.Current.OnQuestDone.AddListener(QuestManager_OnQuestDone);
     }
 
     private void Interactable_OnInteract(Interactable interactable)

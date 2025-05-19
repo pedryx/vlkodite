@@ -44,66 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186bcb56a5e114c499dfe7b235076eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quests:
-  - <Description>k__BackingField: Clean up the <color=#FFFF00>statue</color> in the
-      hallway.
-    <QuestAdvancer>k__BackingField: {fileID: 0}
-    <ChildPosition>k__BackingField: {fileID: 0}
-    <Teleport>k__BackingField: 0
-    <OnStart>k__BackingField:
-      m_PersistentCalls:
-        m_Calls: []
-    <OnDone>k__BackingField:
-      m_PersistentCalls:
-        m_Calls: []
-  - <Description>k__BackingField: Get rid of pawprints in the<color=#FFFF00> living
-      room</color>
-    <QuestAdvancer>k__BackingField: {fileID: 0}
-    <ChildPosition>k__BackingField: {fileID: 0}
-    <Teleport>k__BackingField: 0
-    <OnStart>k__BackingField:
-      m_PersistentCalls:
-        m_Calls: []
-    <OnDone>k__BackingField:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
-  <ChildQuestQueue>k__BackingField:
+  <Day1>k__BackingField:
     quests:
-    - <Description>k__BackingField: Go meet <color=#FFFF00>the child</color>
-      <QuestAdvancer>k__BackingField: {fileID: 0}
-      <ChildPosition>k__BackingField: {fileID: 0}
-      <Teleport>k__BackingField: 0
-      <OnStart>k__BackingField:
-        m_PersistentCalls:
-          m_Calls: []
-      <OnDone>k__BackingField:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-            m_MethodName: Emit
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 15
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-    - <Description>k__BackingField: Make lunch in the <color=#FFFF00>kitchen</color>.
+    - <Description>k__BackingField: Cleanup dog paw prints in the living room.
       <QuestAdvancer>k__BackingField: {fileID: 0}
       <ChildPosition>k__BackingField: {fileID: 0}
       <Teleport>k__BackingField: 0
@@ -113,87 +56,69 @@ MonoBehaviour:
       <OnDone>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    - <Description>k__BackingField: Bring the lunch to the <color=#FFFF00>child</color>
-      <QuestAdvancer>k__BackingField: {fileID: 0}
-      <ChildPosition>k__BackingField: {fileID: 0}
-      <Teleport>k__BackingField: 0
-      <OnStart>k__BackingField:
+    <ChildQuestQueue>k__BackingField:
+      quests:
+      - <Description>k__BackingField: Go meet the child.
+        <QuestAdvancer>k__BackingField: {fileID: 0}
+        <ChildPosition>k__BackingField: {fileID: 0}
+        <Teleport>k__BackingField: 0
+        <OnStart>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+        <OnDone>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+      - <Description>k__BackingField: Cook lunch for the child.
+        <QuestAdvancer>k__BackingField: {fileID: 0}
+        <ChildPosition>k__BackingField: {fileID: 0}
+        <Teleport>k__BackingField: 0
+        <OnStart>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+        <OnDone>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+      - <Description>k__BackingField: Give the lunch to the child.
+        <QuestAdvancer>k__BackingField: {fileID: 0}
+        <ChildPosition>k__BackingField: {fileID: 0}
+        <Teleport>k__BackingField: 0
+        <OnStart>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+        <OnDone>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+      - <Description>k__BackingField: Fetch fairy tale book in library.
+        <QuestAdvancer>k__BackingField: {fileID: 0}
+        <ChildPosition>k__BackingField: {fileID: 0}
+        <Teleport>k__BackingField: 0
+        <OnStart>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+        <OnDone>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+      - <Description>k__BackingField: Put child to bed.
+        <QuestAdvancer>k__BackingField: {fileID: 0}
+        <ChildPosition>k__BackingField: {fileID: 0}
+        <Teleport>k__BackingField: 0
+        <OnStart>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+        <OnDone>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+      <OnQuestStart>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-      <OnDone>k__BackingField:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-            m_MethodName: Play
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-    - <Description>k__BackingField: Get the <color=#FFFF00>dog food</color> from
-        the music room.
-      <QuestAdvancer>k__BackingField: {fileID: 0}
-      <ChildPosition>k__BackingField: {fileID: 0}
-      <Teleport>k__BackingField: 0
-      <OnStart>k__BackingField:
+      <OnQuestDone>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-      <OnDone>k__BackingField:
+      <OnAllQuestsDone>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    - <Description>k__BackingField: Put the dog food in the <color=#FFFF00>bowl</color>
-        (living room)
-      <QuestAdvancer>k__BackingField: {fileID: 0}
-      <ChildPosition>k__BackingField: {fileID: 0}
-      <Teleport>k__BackingField: 0
-      <OnStart>k__BackingField:
-        m_PersistentCalls:
-          m_Calls: []
-      <OnDone>k__BackingField:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 1
-    - <Description>k__BackingField: Check why the <color=#FFFF00>child</color> is
-        sad
-      <QuestAdvancer>k__BackingField: {fileID: 0}
-      <ChildPosition>k__BackingField: {fileID: 0}
-      <Teleport>k__BackingField: 0
-      <OnStart>k__BackingField:
-        m_PersistentCalls:
-          m_Calls: []
-      <OnDone>k__BackingField:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-            m_MethodName: Emit
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 15
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-    - <Description>k__BackingField: Find the <color=#FFFF00>toy</color> in the living
-        room
+    <TransitionQuest>k__BackingField:
+      <Description>k__BackingField: Go to sleep in the storage room.
       <QuestAdvancer>k__BackingField: {fileID: 0}
       <ChildPosition>k__BackingField: {fileID: 0}
       <Teleport>k__BackingField: 0
@@ -203,62 +128,6 @@ MonoBehaviour:
       <OnDone>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    - <Description>k__BackingField: Bring the toy to the <color=#FFFF00>child</color>
-      <QuestAdvancer>k__BackingField: {fileID: 0}
-      <ChildPosition>k__BackingField: {fileID: 0}
-      <Teleport>k__BackingField: 0
-      <OnStart>k__BackingField:
-        m_PersistentCalls:
-          m_Calls: []
-      <OnDone>k__BackingField:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-            m_MethodName: Emit
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 15
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-    - <Description>k__BackingField: Retrieve the <color=#FFFF00>story book</color>
-        from the study
-      <QuestAdvancer>k__BackingField: {fileID: 0}
-      <ChildPosition>k__BackingField: {fileID: 0}
-      <Teleport>k__BackingField: 0
-      <OnStart>k__BackingField:
-        m_PersistentCalls:
-          m_Calls: []
-      <OnDone>k__BackingField:
-        m_PersistentCalls:
-          m_Calls: []
-    - <Description>k__BackingField: Tell the <color=#FFFF00>child</color> a good
-        night story.
-      <QuestAdvancer>k__BackingField: {fileID: 0}
-      <ChildPosition>k__BackingField: {fileID: 0}
-      <Teleport>k__BackingField: 0
-      <OnStart>k__BackingField:
-        m_PersistentCalls:
-          m_Calls: []
-      <OnDone>k__BackingField:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-            m_MethodName: Emit
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 15
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
     <OnQuestStart>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
@@ -268,35 +137,3 @@ MonoBehaviour:
     <OnAllQuestsDone>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
-  <TransitionQuest>k__BackingField:
-    <Description>k__BackingField: Go to sleep in the <color=#FFFF00>storage room</color>
-    <QuestAdvancer>k__BackingField: {fileID: 0}
-    <ChildPosition>k__BackingField: {fileID: 0}
-    <Teleport>k__BackingField: 0
-    <OnStart>k__BackingField:
-      m_PersistentCalls:
-        m_Calls: []
-    <OnDone>k__BackingField:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-          m_MethodName: Emit
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 15
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  <OnQuestStart>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
-  <OnQuestDone>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
-  <OnAllQuestsDone>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []

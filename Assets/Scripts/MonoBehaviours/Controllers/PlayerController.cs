@@ -154,7 +154,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void FinishQuest_Performed(InputAction.CallbackContext context)
     {
-        foreach (var quest in QuestManager.Instance.AllQuests)
+        foreach (var quest in QuestManager.Instance.Current.AllQuests)
         {
             if (!quest.IsCompleted)
             {

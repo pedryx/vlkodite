@@ -16,12 +16,12 @@ public class QuestLogController : MonoBehaviour
 
     private void CreateQuestPanels()
     {
-        CreateQuestPanel(QuestManager.Instance.ChildQuestQueue);
-        foreach (var quest in QuestManager.Instance.Quests)
+        CreateQuestPanel(QuestManager.Instance.Current.ChildQuestQueue);
+        foreach (var quest in QuestManager.Instance.Current.ActiveQuests)
         {
             CreateQuestPanel(quest);
         }
-        CreateQuestPanel(QuestManager.Instance.TransitionQuest);
+        CreateQuestPanel(QuestManager.Instance.Current.TransitionQuest);
     }
 
     private void CreateQuestPanel(Quest quest)

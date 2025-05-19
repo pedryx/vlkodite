@@ -16,6 +16,13 @@ public static class VectorExtensions
     public static Vector3 Extend(this Vector2 vector, float z) => new(vector.x, vector.y, z);
 
     /// <summary>
+    /// Drop the Z dimension from the vector 
+    /// </summary>
+    /// <param name="vector"></param>
+    /// <returns></returns>
+    public static Vector2 Truncate(this Vector3 vector) => (Vector2)vector;
+
+    /// <summary>
     /// Determine if vector is zero.
     /// </summary>
     public static bool IsZero(this Vector3 vector) => vector.sqrMagnitude < zeroThreshold;

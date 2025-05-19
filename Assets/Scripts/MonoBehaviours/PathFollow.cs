@@ -48,7 +48,7 @@ public class PathFollow : MonoBehaviour
 
     private void Update()
     {
-        if (Target == null || (Target.transform.localPosition - transform.localPosition).IsZero())
+        if (Target == null || (Target.position.Truncate() - transform.localPosition.Truncate()).IsZero())
         {
             characterMovement.Move(Vector2.zero);
             return;
@@ -56,7 +56,7 @@ public class PathFollow : MonoBehaviour
 
         if (IsTargetVisible())
         {
-            characterMovement.MoveTo(Target.localPosition);
+            characterMovement.MoveTo(Target.position);
             path = null;
             return;
         }
@@ -107,7 +107,7 @@ public class PathFollow : MonoBehaviour
 
         // We only need to know if cast hit anything.
         var results = new RaycastHit2D[1];
-        int count = Physics2D.Linecast(transform.localPosition, Target.localPosition, contactFilter, results);
+        int count = Physics2D.Linecast(transform.localPosition, Target.position, contactFilter, results);
 
         return count == 0;
     }
@@ -117,7 +117,7 @@ public class PathFollow : MonoBehaviour
     /// </summary>
     private async void FindNewPathAsync()
     {
-        if ((Vector2)Target.localPosition == currentTargetPosition)
+        if ((Vector2)Target.position == currentTargetPosition)
             return;
         if (isPathfinding)
             return;
@@ -134,7 +134,7 @@ public class PathFollow : MonoBehaviour
         {
             // Pathfinding is running on different thread so game object's position is now past the first part point.
             pathIndex = 1;
-            currentTargetPosition = Target.localPosition;
+            currentTargetPosition = Target.position;
             isPathfinding = false;
         }
     }
