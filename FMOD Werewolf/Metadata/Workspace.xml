@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Workspace" id="{a7d1a05f-90a3-4b34-9f7b-14c2133abbc9}">
 		<property name="builtBanksOutputDirectory">
-			<value>../../../Dokumenty/GitHub/My project/werewolve/Assets/StreamingAssets</value>
+			<value>Build</value>
 		</property>
 		<relationship name="masterEventFolder">
 			<destination>{90febb8f-8138-4004-81ec-996b689979c0}</destination>

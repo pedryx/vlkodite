@@ -59362,575 +59362,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7324725114072406200}
   m_SourcePrefab: {fileID: 100100000, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
---- !u!1001 &266367207116679469
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1952266276907994203, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 257.1042
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952266276907994203, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 662.89075
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952266276907994203, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952266276907994203, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952266276907994203, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952266276907994203, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952266276907994203, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952266276907994203, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952266276907994203, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952266276907994203, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5862723154126322643, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: m_Name
-      value: QuestManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[0].<Description>k__BackingField
-      value: Clean up the <color=#FFFF00>statue</color> in the hallway.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[1].<Description>k__BackingField
-      value: Get rid of pawprints in the<color=#FFFF00> living room</color>
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[0].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 2044527702}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[1].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 133036678}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[1].<Teleport>k__BackingField
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[1].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<Description>k__BackingField
-      value: Go meet <color=#FFFF00>the child</color>
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[1].<Description>k__BackingField
-      value: Make lunch in the <color=#FFFF00>kitchen</color>.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<Description>k__BackingField
-      value: Bring the lunch to the <color=#FFFF00>child</color>
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[3].<Description>k__BackingField
-      value: Get the <color=#FFFF00>dog food</color> from the music room.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[4].<Description>k__BackingField
-      value: Put the dog food in the <color=#FFFF00>bowl</color> (living room)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[5].<Description>k__BackingField
-      value: Check why the <color=#FFFF00>child</color> is sad
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[6].<Description>k__BackingField
-      value: Find the <color=#FFFF00>toy</color> in the living room
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[7].<Description>k__BackingField
-      value: Bring the toy to the <color=#FFFF00>child</color>
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[8].<Description>k__BackingField
-      value: Retrieve the <color=#FFFF00>story book</color> from the study
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<Description>k__BackingField
-      value: Tell the <color=#FFFF00>child</color> a good night story.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[10].<Description>k__BackingField
-      value: Go to sleep in the <color=#FFFF00>storage room</color>
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 2838147339248065662}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[1].<ChildPosition>k__BackingField
-      value: 
-      objectReference: {fileID: 276534343}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[1].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 1187096122}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<ChildPosition>k__BackingField
-      value: 
-      objectReference: {fileID: 917488192}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 2838147339248065662}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[3].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 2062132499}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[4].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 1665259218}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[5].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 2838147339248065662}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[6].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 1393499729}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[7].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 2838147339248065662}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[8].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 1453888641}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<ChildPosition>k__BackingField
-      value: 
-      objectReference: {fileID: 583159019}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 2838147339248065662}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[10].<QuestAdvancer>k__BackingField
-      value: 
-      objectReference: {fileID: 435368662}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[1].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 645626523}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[1].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 133036673}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[1].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[1].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[1].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[3].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[4].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[5].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[7].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[10].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[1].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[3].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[3].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[4].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[5].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[7].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[10].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 645626525}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 645626525}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[3].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 645626525}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[4].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1575141614}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[5].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 645626525}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[7].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 645626525}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 645626525}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 645626525}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 645626525}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[10].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 645626525}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[3].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[4].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[5].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[7].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: quests.Array.data[1].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Emit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[10].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[1].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[3].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[4].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[5].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Emit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[7].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Emit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Emit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Emit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Emit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[10].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Emit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[3].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[4].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[5].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[7].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[10].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[5].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[7].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[10].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[4].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[3].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[4].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[5].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[7].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[9].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[0].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
-      propertyPath: <ChildQuestQueue>k__BackingField.quests.Array.data[10].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
 --- !u!1001 &961155931812090463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60014,11 +59445,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4596229389978309524, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0320005
+      value: -2.0000005
       objectReference: {fileID: 0}
     - target: {fileID: 4596229389978309524, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 74.128006
+      value: 74.01601
       objectReference: {fileID: 0}
     - target: {fileID: 4596229389978309524, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -60115,6 +59546,21 @@ PrefabInstance:
       addedObject: {fileID: 1356402727}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
+--- !u!4 &1775971062607242614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975925092690465534}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 257.1042, y: 662.89075, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2414494013268748105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62659,11 +62105,11 @@ PrefabInstance:
       objectReference: {fileID: 4382285840355411926}
     - target: {fileID: 4594980696432856826, guid: ee6e40c30de78f34a951f7dd4f7c4929, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.522863
+      value: -4.490863
       objectReference: {fileID: 0}
     - target: {fileID: 4594980696432856826, guid: ee6e40c30de78f34a951f7dd4f7c4929, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 76.15242
+      value: 76.05642
       objectReference: {fileID: 0}
     - target: {fileID: 4594980696432856826, guid: ee6e40c30de78f34a951f7dd4f7c4929, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62740,6 +62186,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4596229389978309524, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
   m_PrefabInstance: {fileID: 1658711384725847471}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5975925092690465534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1775971062607242614}
+  - component: {fileID: 6941594139047414950}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &6393090719381769794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62854,6 +62317,273 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3127437918082667581, guid: 5eb389e1031b2134d805248f0f3955e4, type: 3}
   m_PrefabInstance: {fileID: 6393090719381769794}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6941594139047414950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975925092690465534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186bcb56a5e114c499dfe7b235076eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests:
+  - <Description>k__BackingField: Clean up the <color=#FFFF00>statue</color> in the
+      hallway.
+    <QuestAdvancer>k__BackingField: {fileID: 2044527702}
+    <ChildPosition>k__BackingField: {fileID: 0}
+    <Teleport>k__BackingField: 0
+    <OnStart>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  - <Description>k__BackingField: Get rid of pawprints in the<color=#FFFF00> living
+      room</color>
+    <QuestAdvancer>k__BackingField: {fileID: 133036678}
+    <ChildPosition>k__BackingField: {fileID: 0}
+    <Teleport>k__BackingField: 0
+    <OnStart>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 133036673}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  <ChildQuestQueue>k__BackingField:
+    quests:
+    - <Description>k__BackingField: Go meet <color=#FFFF00>the child</color>
+      <QuestAdvancer>k__BackingField: {fileID: 2838147339248065662}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 645626525}
+            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+            m_MethodName: Emit
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 15
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - <Description>k__BackingField: Make lunch in the <color=#FFFF00>kitchen</color>.
+      <QuestAdvancer>k__BackingField: {fileID: 1187096122}
+      <ChildPosition>k__BackingField: {fileID: 276534343}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Bring the lunch to the <color=#FFFF00>child</color>
+      <QuestAdvancer>k__BackingField: {fileID: 2838147339248065662}
+      <ChildPosition>k__BackingField: {fileID: 917488192}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 645626525}
+            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - <Description>k__BackingField: Get the <color=#FFFF00>dog food</color> from
+        the music room.
+      <QuestAdvancer>k__BackingField: {fileID: 2062132499}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Put the dog food in the <color=#FFFF00>bowl</color>
+        (living room)
+      <QuestAdvancer>k__BackingField: {fileID: 1665259218}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1575141614}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 1
+    - <Description>k__BackingField: Check why the <color=#FFFF00>child</color> is
+        sad
+      <QuestAdvancer>k__BackingField: {fileID: 2838147339248065662}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 645626525}
+            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+            m_MethodName: Emit
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 15
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - <Description>k__BackingField: Find the <color=#FFFF00>toy</color> in the living
+        room
+      <QuestAdvancer>k__BackingField: {fileID: 1393499729}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Bring the toy to the <color=#FFFF00>child</color>
+      <QuestAdvancer>k__BackingField: {fileID: 2838147339248065662}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 645626525}
+            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+            m_MethodName: Emit
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 15
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - <Description>k__BackingField: Retrieve the <color=#FFFF00>story book</color>
+        from the study
+      <QuestAdvancer>k__BackingField: {fileID: 1453888641}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <Description>k__BackingField: Tell the <color=#FFFF00>child</color> a good
+        night story.
+      <QuestAdvancer>k__BackingField: {fileID: 2838147339248065662}
+      <ChildPosition>k__BackingField: {fileID: 583159019}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 645626525}
+            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+            m_MethodName: Emit
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 15
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - <Description>k__BackingField: Go to sleep in the <color=#FFFF00>storage room</color>
+      <QuestAdvancer>k__BackingField: {fileID: 435368662}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 645626525}
+            m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+            m_MethodName: Emit
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 15
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    <OnQuestStart>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnQuestDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnAllQuestsDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  <OnQuestStart>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnQuestDone>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnAllQuestsDone>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &7324725114072406194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3738289343952251570, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
@@ -62896,7 +62626,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 250032271531526162}
   - {fileID: 961155931812090463}
-  - {fileID: 266367207116679469}
+  - {fileID: 1775971062607242614}
   - {fileID: 4261233200813675456}
   - {fileID: 3138147647551272297}
   - {fileID: 2414494013268748105}
