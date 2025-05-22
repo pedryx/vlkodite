@@ -10,8 +10,12 @@ public class QuestLogController : MonoBehaviour
     {
         gameObject.SetActive(false);
         CreateQuestPanels();
-        GameManager.Instance.OnDayBegin.AddListener(GameManager_OnDayBegin);
-        //QuestManager.Instance.TransitionQuest.OnStart.AddListener(TransitionQuest_OnStart);
+        QuestManager.Instance.OnQuestsInitialized.AddListener(QuestManager_OnQuestsInitialized);
+    }
+
+    public void AppendCurrentQuests()
+    {
+        CreateQuestPanels();
     }
 
     private void CreateQuestPanels()
@@ -57,13 +61,8 @@ public class QuestLogController : MonoBehaviour
             gameObject.SetActive(false);
     }
 
-    private void GameManager_OnDayBegin()
+    private void QuestManager_OnQuestsInitialized()
     {
         CreateQuestPanels();
     }
-
-    //private void TransitionQuest_OnStart(QuestEventArgs e)
-    //{
-    //    CreateQuestPanel(e.Quest);
-    //}
 }

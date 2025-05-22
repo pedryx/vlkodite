@@ -573,6 +573,10 @@ PrefabInstance:
       propertyPath: <Day1>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[4].<QuestAdvancer>k__BackingField
       value: 
       objectReference: {fileID: 2838147339248065662}
+    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
+      propertyPath: <Night1>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[0].<QuestAdvancer>k__BackingField
+      value: 
+      objectReference: {fileID: 2838147339248065662}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

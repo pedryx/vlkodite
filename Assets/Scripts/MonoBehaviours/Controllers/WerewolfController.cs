@@ -49,7 +49,6 @@ public class WerewolfController : Singleton<WerewolfController>
     {
         werewolfSprite.SetActive(true);
         circleCollider.enabled = true;
-        pathFollow.Target = PlayerController.Instance.gameObject.transform;
     }
 
     private void OnDisable()

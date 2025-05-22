@@ -7,26 +7,117 @@ using UnityEngine.Events;
 
 public class QuestManager : Singleton<QuestManager>
 {
+    private readonly Dictionary<(int, bool), Quests> questsMap;
+    private readonly (int, bool) lastTimeBlock = (2, true);
+
+    private int currentDayNumber = 1;
+    private bool isDay = true;
+
     [field: SerializeField]
     public Quests Day1 { get; private set; } = new();
 
-    public Quests Current { get; private set; }
+    [field: SerializeField]
+    public Quests Night1 { get; private set; } = new();
+
+    public Quests Current => questsMap[(currentDayNumber, isDay)];
+
+    /// <summary>
+    /// Occur when any quest is started. This occur for all quests from any day and night.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Occur when any quest is started. This occur for all quests from any day and night.")]
+    public UnityEvent<QuestEventArgs> OnQuestStart { get; private set; } = new();
+    /// <summary>
+    /// Occur when any quest is finished. This occur for all quests from any day and night.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Occur when any quest is finished. This occur for all quests from any day and night.")]
+    public UnityEvent<QuestEventArgs> OnQuestDone { get; private set; } = new();
+
+    /// <summary>
+    /// Occur when all quest and quest queues are done. Transition quest will begin after this event. This occur for
+    /// all quests from any day and night.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Occur when all quest and quest queues are done. Transition quest will begin after this event. This " +
+        "occur for all quests from any day and night.")]
+    public UnityEvent OnAllQuestsDone { get; private set; } = new();
+
+    /// <summary>
+    /// Occur after new day/night starts and quests of that day/night are initialized.
+    /// </summary>
+    [Tooltip("Occur after new day/night starts and quests of that day/night are initialized.")]
+    public UnityEvent OnQuestsInitialized { get; private set; } = new();
 
     public QuestManager()
     {
-        Current = Day1;
+        questsMap = new Dictionary<(int, bool), Quests>()
+        {
+            { (1, true), Day1 },
+            { (1, false), Night1 },
+        };
     }
 
     protected  override void Awake()
     {
         base.Awake();
 
-        Day1.Init();
+        Activate(Current);
+        GameManager.Instance.OnDayNightSwitch.AddListener(GameManager_OnDayNightSwitch);
     }
 
     private void Start()
     {
-        Day1.Start();
+        Current.Start();
+    }
+
+    private void Activate(Quests quests)
+    {
+        quests.OnQuestStart.AddListener(Quests_OnQuestStart);
+        quests.OnQuestDone.AddListener(Quests_OnQuestDone);
+        quests.OnAllQuestsDone.AddListener(Quests_OnAllQuestsDone);
+        quests.Activate();
+    }
+
+    private void Deactivate(Quests quests)
+    {
+        quests.OnQuestStart.RemoveListener(Quests_OnQuestStart);
+        quests.OnQuestDone.RemoveListener(Quests_OnQuestDone);
+        quests.OnAllQuestsDone.RemoveListener(Quests_OnAllQuestsDone);
+        quests.Deactivate();
+    }
+
+    private void GameManager_OnDayNightSwitch()
+    {
+        Deactivate(Current);
+
+        currentDayNumber = GameManager.Instance.DayNumber;
+        isDay = GameManager.Instance.IsDay;
+
+        if ((currentDayNumber, isDay) == lastTimeBlock)
+        {
+            Debug.Log("Game Over.");
+            return;
+        }
+
+        Activate(Current);
+        OnQuestsInitialized.Invoke();
+        Current.Start();
+    }
+
+    private void Quests_OnQuestStart(QuestEventArgs e)
+    {
+        OnQuestStart.Invoke(e);
+    }
+
+    private void Quests_OnQuestDone(QuestEventArgs e)
+    {
+        OnQuestDone.Invoke(e);
+    }
+
+    private void Quests_OnAllQuestsDone()
+    {
+        OnAllQuestsDone.Invoke();
     }
 
     [Serializable]
@@ -86,7 +177,7 @@ public class QuestManager : Singleton<QuestManager>
         [Tooltip("Occur when all quest and quest queues are done. Transition quest will begin after this event.")]
         public UnityEvent OnAllQuestsDone { get; private set; } = new();
 
-        public void Init()
+        public void Activate()
         {
             GameManager.Instance.OnDayBegin.AddListener(GameManager_OnDayBegin);
 
@@ -101,6 +192,23 @@ public class QuestManager : Singleton<QuestManager>
             TransitionQuest.OnStart.AddListener(Quest_OnStart);
             TransitionQuest.OnDone.AddListener(TransitionQuest_OnDone);
             OnAllQuestsDone.AddListener(QuestManager_OnAllQuestsDone);
+        }
+
+        public void Deactivate()
+        {
+            GameManager.Instance.OnDayBegin.RemoveListener(GameManager_OnDayBegin);
+
+            ChildQuestQueue.OnQuestStart.RemoveListener(QuestQueue_OnQuestStart);
+            ChildQuestQueue.OnQuestDone.RemoveListener(QuestQueue_OnQuestDone);
+            ChildQuestQueue.OnAllQuestsDone.RemoveListener(QuestQueue_OnAllQuestDone);
+            foreach (var quest in quests)
+            {
+                quest.OnStart.RemoveListener(Quest_OnStart);
+                quest.OnDone.RemoveListener(Quest_OnDone);
+            }
+            TransitionQuest.OnStart.RemoveListener(Quest_OnStart);
+            TransitionQuest.OnDone.RemoveListener(TransitionQuest_OnDone);
+            OnAllQuestsDone.RemoveListener(QuestManager_OnAllQuestsDone);
         }
 
         public void Start()

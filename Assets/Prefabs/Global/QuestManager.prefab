@@ -137,3 +137,55 @@ MonoBehaviour:
     <OnAllQuestsDone>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
+  <Night1>k__BackingField:
+    quests: []
+    <ChildQuestQueue>k__BackingField:
+      quests:
+      - <Description>k__BackingField: Something is happening. Go check the child.
+        <QuestAdvancer>k__BackingField: {fileID: 0}
+        <ChildPosition>k__BackingField: {fileID: 0}
+        <Teleport>k__BackingField: 0
+        <OnStart>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+        <OnDone>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+      <OnQuestStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnQuestDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnAllQuestsDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <TransitionQuest>k__BackingField:
+      <Description>k__BackingField: 
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <OnQuestStart>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnQuestDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnAllQuestsDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  <OnQuestStart>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnQuestDone>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnAllQuestsDone>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []

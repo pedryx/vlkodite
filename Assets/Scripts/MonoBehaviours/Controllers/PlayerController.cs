@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMOD.Studio;
 
 [RequireComponent(typeof(CharacterMovement))]
 [RequireComponent(typeof(CapsuleCollider2D))]
@@ -163,12 +164,25 @@ public class PlayerController : Singleton<PlayerController>
             }
         }
 
+        if (!QuestManager.Instance.Current.TransitionQuest.IsCompleted)
+        {
+            QuestManager.Instance.Current.TransitionQuest.Complete();
+            return;
+        }
+
         Debug.LogWarning("All quests are complete.");
     }
 
     private void SwitchDayNight_Performed(InputAction.CallbackContext context)
     {
-        GameManager.Instance.SwitchDayNight();
+        foreach (var quest in QuestManager.Instance.Current.AllQuests)
+        {
+            if (!quest.IsCompleted)
+                quest.Complete();
+        }
+
+        if (!QuestManager.Instance.Current.TransitionQuest.IsCompleted)
+            QuestManager.Instance.Current.TransitionQuest.Complete();
     }
     #endregion
 }

@@ -66,10 +66,13 @@ public class GameManager : Singleton<GameManager>
     /// </summary>
     public bool IsNight => !isDay;
 
+    public int DayNumber { get; private set; } = 1;
+
     public PathFinder PathFinder { get; private set; }
 
     public UnityEvent OnDayBegin = new();
     public UnityEvent OnNightBegin = new();
+    public UnityEvent OnDayNightSwitch = new();
 
     protected override void Awake()
     {
@@ -128,12 +131,17 @@ public class GameManager : Singleton<GameManager>
     private void GameManager_OnDayBegin()
     {
         Debug.Log("Day started.");
+        DayNumber++;
+
+        OnDayNightSwitch.Invoke();
     }
 
     private void GameManager_OnNightBegin()
     {
         Debug.Log("Night started.");
         nightTimeElapsed = 0.0f;
+
+        OnDayNightSwitch.Invoke();
     }
 
     private void Werewolf_OnPlayerCaught()
