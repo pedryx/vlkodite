@@ -49636,7 +49636,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1530584667}
   - component: {fileID: 1530584668}
-  - component: {fileID: 1530584669}
   m_Layer: 0
   m_Name: Table1 (1)
   m_TagString: Untagged
@@ -49714,21 +49713,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1530584669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530584666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73934f12a37691f41a0aafe7a7056d0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 7324725114072406194}
-  offset: -0.9
-  baseSortingOrder: 115
 --- !u!1 &1533130051
 GameObject:
   m_ObjectHideFlags: 0
@@ -62697,7 +62681,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2132835483}
   - component: {fileID: 2132835484}
-  - component: {fileID: 2132835485}
   m_Layer: 0
   m_Name: Shelve3_trimmed_2 (1)
   m_TagString: Untagged
@@ -62775,21 +62758,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2132835485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2132835482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73934f12a37691f41a0aafe7a7056d0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 7324725114072406194}
-  offset: -1.97
-  baseSortingOrder: 115
 --- !u!1 &2142245101
 GameObject:
   m_ObjectHideFlags: 0
@@ -66119,7 +66087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2185825476905767741, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
       propertyPath: m_SortingOrder
-      value: 198
+      value: 106
       objectReference: {fileID: 0}
     - target: {fileID: 2221472395793132284, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
       propertyPath: m_LocalPosition.x
