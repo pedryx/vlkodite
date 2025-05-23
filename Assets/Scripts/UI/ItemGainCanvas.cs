@@ -24,17 +24,16 @@ public class ItemGainCanvas : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
     }
 
-    private void Update()
+
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.I) && !isVisible)
+        if (!isVisible)
         {
             ShowCanvas();
         }
-        else if (Input.GetKeyDown(KeyCode.E) && isVisible)
-        {
-            HideCanvas();
-        }
     }
+
+
 
     private void ShowCanvas()
     {
@@ -62,7 +61,15 @@ public class ItemGainCanvas : MonoBehaviour
                 cg.blocksRaycasts = false;
             }
         }
+
+        // Auto-hide after delay
+        float autoHideDelay = 5f; // Change this to how long you want it to stay visible
+        DOVirtual.DelayedCall(autoHideDelay, () =>
+        {
+            if (isVisible) HideCanvas();
+        });
     }
+
 
 
 
