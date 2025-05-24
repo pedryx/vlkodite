@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using FMODUnity;
 
 public class LetterReveal : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class LetterReveal : MonoBehaviour
     [SerializeField] private float fadeDuration = 0.3f;
     [SerializeField] private GameObject letterObject;
     [SerializeField] private CanvasGroup letterCanvasGroup;
+
+    [Header("FMOD")]
+    [SerializeField] private EventReference letterOpenSound;
 
     [Header("Other UI to hide when showing the letter")]
     [SerializeField] private CanvasGroup[] canvasesToHide;
@@ -49,7 +53,8 @@ public class LetterReveal : MonoBehaviour
         letterCanvasGroup.DOFade(1f, fadeDuration);
         isLetterVisible = true;
 
-        // Hide other canvases
+        RuntimeManager.PlayOneShot(letterOpenSound, transform.position);
+
         foreach (var cg in canvasesToHide)
         {
             if (cg != null)
@@ -76,7 +81,6 @@ public class LetterReveal : MonoBehaviour
         letterCanvasGroup.blocksRaycasts = false;
         isLetterVisible = false;
 
-        // Show other canvases again
         foreach (var cg in canvasesToHide)
         {
             if (cg != null)
