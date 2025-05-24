@@ -190,7 +190,6 @@ public class PathFinder
 
         bool pathFound = false;
 
-
         while (frontier.Count > 0)
         {
             Vector2Int current = frontier.Dequeue();
@@ -223,7 +222,6 @@ public class PathFinder
         var path = new List<Vector2Int>() { goal };
         while (cameFrom.ContainsKey(path.Last()))
             path.Add(cameFrom[path.Last()]);
-        // Pathfinding is running on different thread so game object's position is now past the first part point.
         path.Reverse();
 
         return path;

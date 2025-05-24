@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMOD.Studio;
 
 [RequireComponent(typeof(CharacterMovement))]
 [RequireComponent(typeof(CapsuleCollider2D))]
@@ -58,7 +59,6 @@ public class PlayerController : Singleton<PlayerController>
 
         spawnPosition = transform.position;
         WerewolfController.Instance.OnPlayerCaught.AddListener(Werewolf_OnPlayerCaught);
-        GameManager.Instance.OnNightBegin.AddListener(GameManager_OnNightBegin);
 
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -85,8 +85,12 @@ public class PlayerController : Singleton<PlayerController>
         }
         animator.SetBool("IsMoving", !characterMovement.IsMoving());
 
+
         // update interactions
-        foreach (var interactible in interactableTargets)
+        // We are making shallow copy, because from interactibles from the interactableTargets could be erased during
+        // iteration of following loop which could lead to collection modified exception.
+        var currentInteractibleTargets = new HashSet<Interactable>(interactableTargets);
+        foreach (var interactible in currentInteractibleTargets)
         {
             if (interactible.IsContinuous && input.Player.Interact.IsPressed())
                 interactible.Interact();
@@ -124,11 +128,6 @@ public class PlayerController : Singleton<PlayerController>
         transform.localPosition = spawnPosition;
     }
 
-    private void GameManager_OnNightBegin()
-    {
-        transform.localPosition = spawnPosition;
-    }
-
     #region Debug events
     private void ToggleDebug_Performed(InputAction.CallbackContext context)
     {
@@ -156,7 +155,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void FinishQuest_Performed(InputAction.CallbackContext context)
     {
-        foreach (var quest in QuestManager.Instance.AllQuests)
+        foreach (var quest in QuestManager.Instance.Current.AllQuests)
         {
             if (!quest.IsCompleted)
             {
@@ -165,12 +164,25 @@ public class PlayerController : Singleton<PlayerController>
             }
         }
 
+        if (!QuestManager.Instance.Current.TransitionQuest.IsCompleted)
+        {
+            QuestManager.Instance.Current.TransitionQuest.Complete();
+            return;
+        }
+
         Debug.LogWarning("All quests are complete.");
     }
 
     private void SwitchDayNight_Performed(InputAction.CallbackContext context)
     {
-        GameManager.Instance.SwitchDayNight();
+        foreach (var quest in QuestManager.Instance.Current.AllQuests)
+        {
+            if (!quest.IsCompleted)
+                quest.Complete();
+        }
+
+        if (!QuestManager.Instance.Current.TransitionQuest.IsCompleted)
+            QuestManager.Instance.Current.TransitionQuest.Complete();
     }
     #endregion
 }

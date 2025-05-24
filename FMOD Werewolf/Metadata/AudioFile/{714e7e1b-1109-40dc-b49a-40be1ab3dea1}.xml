@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{714e7e1b-1109-40dc-b49a-40be1ab3dea1}">
+		<property name="assetPath">
+			<value>572018__isakizzy__papercrackle2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2740362811791384</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5e149c61-505c-4f63-986e-d71134de9cc5}</destination>
+		</relationship>
+	</object>
+</objects>

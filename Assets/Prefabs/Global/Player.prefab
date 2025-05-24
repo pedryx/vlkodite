@@ -52,7 +52,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 500
+      - m_Value: 400
         m_Name: FogAmount
         m_Overridden: 1
       - m_Value: 31.9
@@ -70,7 +70,7 @@ VisualEffect:
         m_Overridden: 1
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 0, y: 0, z: 0, w: 1}
+      - m_Value: {x: 0, y: 0, z: 0, w: 0.84313726}
         m_Name: FogSeconderyColor
         m_Overridden: 1
       - m_Value: {x: 0, y: 0, z: 0, w: 0}
@@ -196,7 +196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2055325022353089571
 Transform:
   m_ObjectHideFlags: 0
@@ -340,7 +340,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 46
+  m_SortingOrder: 115
   m_Sprite: {fileID: 5691741724741407780, guid: e1e176f4223e452488de161cac6f2512, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 1057953082368293135}
   - component: {fileID: 8136306846268032007}
   - component: {fileID: 100119880188624034}
+  - component: {fileID: 1674576341813764567}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -539,3 +540,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1674576341813764567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680609594394999634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2734b946320a0e54e83e8d2c432498de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 0}
+  activePriority: 20
+  defaultPriority: 10

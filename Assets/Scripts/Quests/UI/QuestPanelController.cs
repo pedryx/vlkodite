@@ -41,6 +41,7 @@ public class QuestPanelController : MonoBehaviour
 
         quest.OnStart.AddListener(Quest_OnStart);
         quest.OnDone.AddListener(Quest_OnDone);
+        gameObject.SetActive(false);
     }
 
     public void Init(QuestQueue questQueue)
@@ -51,6 +52,7 @@ public class QuestPanelController : MonoBehaviour
         questQueue.OnQuestStart.AddListener(QuestQueue_OnQuestStart);
         questQueue.OnQuestDone.AddListener(QuestQueue_OnQuestDone);
         questQueue.OnAllQuestsDone.AddListener(QuestQueue_OnAllQuestsDone);
+        gameObject.SetActive(false);
     }
 
     private void SetQuest(Quest quest)
@@ -189,6 +191,7 @@ public class QuestPanelController : MonoBehaviour
     private void Quest_OnStart(QuestEventArgs e)
     {
         EnqueueAction(() => SetQuest(e.Quest));
+        gameObject.SetActive(true);
     }
 
     private void Quest_OnDone(QuestEventArgs e)
@@ -200,6 +203,7 @@ public class QuestPanelController : MonoBehaviour
     private void QuestQueue_OnQuestStart(QuestQueueEventArgs e)
     {
         EnqueueAction(() => SetQuest(e.Quest));
+        gameObject.SetActive(true);
     }
 
     private void QuestQueue_OnQuestDone(QuestQueueEventArgs e)
