@@ -151,6 +151,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9207043101545941091, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
   m_PrefabInstance: {fileID: 3737778276499577133}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1088510546 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 916960765053337117, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
+  m_PrefabInstance: {fileID: 3737778276499577133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1187096122 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2354436546574742319, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
@@ -687,6 +692,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6288659076910429651, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
+      propertyPath: werewolfNight1Spawn
+      value: 
+      objectReference: {fileID: 1088510546}
+    - target: {fileID: 6288659076910429651, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
+      propertyPath: werewolfNight2Spawn
+      value: 
+      objectReference: {fileID: 1088510546}
+    - target: {fileID: 6288659076910429651, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
+      propertyPath: werewolfNight3Spawn
+      value: 
+      objectReference: {fileID: 1088510546}
     - target: {fileID: 7208781993731178455, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_Name
       value: Child

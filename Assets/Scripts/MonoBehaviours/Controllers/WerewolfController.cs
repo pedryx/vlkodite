@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterMovement))]
@@ -11,6 +12,12 @@ public class WerewolfController : Singleton<WerewolfController>
     private PlayerTrigger visionTrigger;
     [SerializeField]
     private PlayerTrigger catchTrigger;
+    [SerializeField]
+    private Transform werewolfNight1Spawn;
+    [SerializeField]
+    private Transform werewolfNight2Spawn;
+    [SerializeField]
+    private Transform werewolfNight3Spawn;
 
     private CharacterMovement characterMovement;
     private Animator animator;
@@ -42,6 +49,10 @@ public class WerewolfController : Singleton<WerewolfController>
         visionTrigger.OnEnter.AddListener(VisionTrigger_OnEnter);
         catchTrigger.OnEnter.AddListener(CatchTrigger_OnEnter);
 
+        Debug.Assert(werewolfNight1Spawn != null);
+        Debug.Assert(werewolfNight2Spawn != null);
+        Debug.Assert(werewolfNight3Spawn != null);
+
         enabled = false;
     }
 
@@ -55,6 +66,16 @@ public class WerewolfController : Singleton<WerewolfController>
     private void OnEnable()
     {
         werewolfForm.SetActive(true);
+
+        transform.localPosition = GameManager.Instance.DayNumber switch
+        {
+            1 => werewolfNight1Spawn.position,
+            2 => werewolfNight2Spawn.position,
+            3 => werewolfNight3Spawn.position,
+            _ => throw new InvalidOperationException(
+                $"Spawn position for day {GameManager.Instance.DayNumber} not specified"
+            ),
+        };
     }
 
     private void OnDisable()
