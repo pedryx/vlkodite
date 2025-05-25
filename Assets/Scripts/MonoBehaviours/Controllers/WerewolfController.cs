@@ -25,6 +25,11 @@ public class WerewolfController : Singleton<WerewolfController>
     private PathFollow pathFollow;
 
     /// <summary>
+    /// Determine if player entered werewolf's vision trigger during current night.
+    /// </summary>
+    private bool visionTriggered = false;
+
+    /// <summary>
     /// Occur when player is caught by the werewolf.
     /// </summary>
     [Tooltip("Occur when player is caught by the werewolf.")]
@@ -66,7 +71,6 @@ public class WerewolfController : Singleton<WerewolfController>
     private void OnEnable()
     {
         werewolfForm.SetActive(true);
-
         transform.localPosition = GameManager.Instance.DayNumber switch
         {
             1 => werewolfNight1Spawn.position,
@@ -76,6 +80,7 @@ public class WerewolfController : Singleton<WerewolfController>
                 $"Spawn position for day {GameManager.Instance.DayNumber} not specified"
             ),
         };
+        visionTriggered = false;
     }
 
     private void OnDisable()
@@ -102,7 +107,12 @@ public class WerewolfController : Singleton<WerewolfController>
 
     private void VisionTrigger_OnEnter()
     {
+        if (visionTriggered)
+            return;
+
         pathFollow.Target = PlayerController.Instance.transform;
+        QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
+        visionTriggered = true;
     }
 
     private void CatchTrigger_OnEnter()
@@ -110,6 +120,7 @@ public class WerewolfController : Singleton<WerewolfController>
         if (PlayerController.Instance.GodModeActive)
             return;
 
+        QuestManager.Instance.Current.TransitionQuest.Complete();
         OnPlayerCaught.Invoke();
     }
 }

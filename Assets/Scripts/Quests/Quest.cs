@@ -54,10 +54,13 @@ public class Quest
         Debug.Assert(!IsCompleted);
 
         IsStarted = true;
-        if (Teleport)
-            ChildController.Instance.GetComponent<Transform>().localPosition = ChildPosition.localPosition;
-        else
-            ChildController.Instance.GetComponent<PathFollow>().Target = ChildPosition;
+        if (GameManager.Instance.IsDay)
+        {
+            if (Teleport)
+                ChildController.Instance.GetComponent<Transform>().localPosition = ChildPosition.localPosition;
+            else
+                ChildController.Instance.GetComponent<PathFollow>().Target = ChildPosition;
+        }
         OnStart.Invoke(new QuestEventArgs(this));
     }
 
@@ -67,7 +70,8 @@ public class Quest
         Debug.Assert(!IsCompleted);
 
         IsCompleted = true;
-        ChildController.Instance.GetComponent<PathFollow>().Target = null;
+        if (GameManager.Instance.IsDay)
+            ChildController.Instance.GetComponent<PathFollow>().Target = null;
         OnDone.Invoke(new QuestEventArgs(this));
     }
 

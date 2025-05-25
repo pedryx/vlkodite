@@ -88,7 +88,8 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        if (isDay)
+        // First day is not bounded by time.
+        if (isDay || DayNumber == 1)
             return;
 
         nightTimeElapsed += Time.deltaTime;

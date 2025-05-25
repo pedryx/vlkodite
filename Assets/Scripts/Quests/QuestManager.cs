@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class QuestManager : Singleton<QuestManager>
 {
     private readonly Dictionary<(int, bool), Quests> questsMap;
-    private readonly (int, bool) lastTimeBlock = (2, true);
+    private readonly (int, bool) lastTimeBlock = (4, true);
 
     private int currentDayNumber = 1;
     private bool isDay = true;
