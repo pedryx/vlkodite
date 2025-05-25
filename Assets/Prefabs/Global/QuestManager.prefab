@@ -56,6 +56,28 @@ MonoBehaviour:
       <OnDone>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
+    - <Description>k__BackingField: Dust off the statue
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 0
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
     <ChildQuestQueue>k__BackingField:
       quests:
       - <Description>k__BackingField: Go meet the child.
@@ -67,7 +89,31 @@ MonoBehaviour:
             m_Calls: []
         <OnDone>k__BackingField:
           m_PersistentCalls:
-            m_Calls: []
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+              m_MethodName: Emit
+              m_Mode: 3
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 14
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+              m_MethodName: Play
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 14
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
       - <Description>k__BackingField: Cook lunch for the child.
         <QuestAdvancer>k__BackingField: {fileID: 0}
         <ChildPosition>k__BackingField: {fileID: 0}
@@ -77,7 +123,31 @@ MonoBehaviour:
             m_Calls: []
         <OnDone>k__BackingField:
           m_PersistentCalls:
-            m_Calls: []
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
       - <Description>k__BackingField: Give the lunch to the child.
         <QuestAdvancer>k__BackingField: {fileID: 0}
         <ChildPosition>k__BackingField: {fileID: 0}
@@ -87,7 +157,31 @@ MonoBehaviour:
             m_Calls: []
         <OnDone>k__BackingField:
           m_PersistentCalls:
-            m_Calls: []
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+              m_MethodName: Emit
+              m_Mode: 3
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 14
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+              m_MethodName: Play
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
       - <Description>k__BackingField: Fetch fairy tale book in library.
         <QuestAdvancer>k__BackingField: {fileID: 0}
         <ChildPosition>k__BackingField: {fileID: 0}
@@ -97,7 +191,43 @@ MonoBehaviour:
             m_Calls: []
         <OnDone>k__BackingField:
           m_PersistentCalls:
-            m_Calls: []
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
       - <Description>k__BackingField: Put child to bed.
         <QuestAdvancer>k__BackingField: {fileID: 0}
         <ChildPosition>k__BackingField: {fileID: 0}
@@ -107,7 +237,31 @@ MonoBehaviour:
             m_Calls: []
         <OnDone>k__BackingField:
           m_PersistentCalls:
-            m_Calls: []
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+              m_MethodName: Play
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+              m_MethodName: Play
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
       <OnQuestStart>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
@@ -116,7 +270,19 @@ MonoBehaviour:
           m_Calls: []
       <OnAllQuestsDone>k__BackingField:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 0
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
     <TransitionQuest>k__BackingField:
       <Description>k__BackingField: Go to sleep in the storage room.
       <QuestAdvancer>k__BackingField: {fileID: 0}
@@ -151,6 +317,138 @@ MonoBehaviour:
         <OnDone>k__BackingField:
           m_PersistentCalls:
             m_Calls: []
+      <OnQuestStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnQuestDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnAllQuestsDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <TransitionQuest>k__BackingField:
+      <Description>k__BackingField: 
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <OnQuestStart>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnQuestDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnAllQuestsDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  <Day2>k__BackingField:
+    quests: []
+    <ChildQuestQueue>k__BackingField:
+      quests: []
+      <OnQuestStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnQuestDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnAllQuestsDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <TransitionQuest>k__BackingField:
+      <Description>k__BackingField: 
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <OnQuestStart>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnQuestDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnAllQuestsDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  <Night2>k__BackingField:
+    quests: []
+    <ChildQuestQueue>k__BackingField:
+      quests: []
+      <OnQuestStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnQuestDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnAllQuestsDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <TransitionQuest>k__BackingField:
+      <Description>k__BackingField: 
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <OnQuestStart>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnQuestDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnAllQuestsDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  <Day3>k__BackingField:
+    quests: []
+    <ChildQuestQueue>k__BackingField:
+      quests: []
+      <OnQuestStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnQuestDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnAllQuestsDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <TransitionQuest>k__BackingField:
+      <Description>k__BackingField: 
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    <OnQuestStart>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnQuestDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+    <OnAllQuestsDone>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  <Night3>k__BackingField:
+    quests: []
+    <ChildQuestQueue>k__BackingField:
+      quests: []
       <OnQuestStart>k__BackingField:
         m_PersistentCalls:
           m_Calls: []

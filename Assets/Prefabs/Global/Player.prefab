@@ -164,7 +164,7 @@ VFXRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 400
 --- !u!114 &8722685266681749901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e87ddd13212ed4bbc3637bde75c7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortingOrder: 100
+  sortingOrder: 400
   vfxRenderer: {fileID: 1171310126322675745}
   layer: 
 --- !u!1 &1360095130005552085
@@ -389,6 +389,8 @@ GameObject:
   - component: {fileID: 8136306846268032007}
   - component: {fileID: 100119880188624034}
   - component: {fileID: 1674576341813764567}
+  - component: {fileID: 696769085486982262}
+  - component: {fileID: 7289937586818178140}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -555,3 +557,37 @@ MonoBehaviour:
   targetCamera: {fileID: 0}
   activePriority: 20
   defaultPriority: 10
+--- !u!114 &696769085486982262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680609594394999634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2734b946320a0e54e83e8d2c432498de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 0}
+  activePriority: 20
+  defaultPriority: 10
+--- !u!114 &7289937586818178140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680609594394999634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c672a05bacbd294e8b3eed65a31e41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepEvent:
+    Guid:
+      Data1: 1718946682
+      Data2: 1327603263
+      Data3: 1629154734
+      Data4: 1986854258
+    Path: event:/FootstepsMC
