@@ -49,9 +49,9 @@ public class WerewolfController : Singleton<WerewolfController>
         visionTrigger.OnEnter.AddListener(VisionTrigger_OnEnter);
         catchTrigger.OnEnter.AddListener(CatchTrigger_OnEnter);
 
-        Debug.Assert(werewolfNight1Spawn != null);
-        Debug.Assert(werewolfNight2Spawn != null);
-        Debug.Assert(werewolfNight3Spawn != null);
+        Debug.Assert(werewolfNight1Spawn != null, "Werewolf spawn for first night not specified.");
+        Debug.Assert(werewolfNight2Spawn != null, "Werewolf spawn for second night not specified.");
+        Debug.Assert(werewolfNight3Spawn != null, "Werewolf spawn for third night not specified.");
 
         enabled = false;
     }

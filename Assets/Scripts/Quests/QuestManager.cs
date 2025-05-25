@@ -13,11 +13,23 @@ public class QuestManager : Singleton<QuestManager>
     private int currentDayNumber = 1;
     private bool isDay = true;
 
+    #region Quests for all days and nights
     [field: SerializeField]
     public Quests Day1 { get; private set; } = new();
 
     [field: SerializeField]
     public Quests Night1 { get; private set; } = new();
+    [field: SerializeField]
+    public Quests Day2 { get; private set; } = new();
+
+    [field: SerializeField]
+    public Quests Night2 { get; private set; } = new();
+    [field: SerializeField]
+    public Quests Day3 { get; private set; } = new();
+
+    [field: SerializeField]
+    public Quests Night3 { get; private set; } = new();
+    #endregion
 
     public Quests Current => questsMap[(currentDayNumber, isDay)];
 
@@ -55,6 +67,11 @@ public class QuestManager : Singleton<QuestManager>
         {
             { (1, true), Day1 },
             { (1, false), Night1 },
+            { (2, true), Day2 },
+            { (2, false), Night2 },
+            { (3, true), Day3 },
+            { (3, false), Night3 },
+            // TODO: game over
         };
     }
 
