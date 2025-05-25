@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Interactable))]
 public class ChildController : Singleton<ChildController>
 {
     [SerializeField]
-    private GameObject childSprite;
+    private GameObject humanForm;
 
     /// <summary>
     /// Spawn position of the child.
@@ -24,9 +23,9 @@ public class ChildController : Singleton<ChildController>
         GameManager.Instance.OnNightBegin.AddListener(GameManager_OnNightBegin);
     }
 
-    private void OnEnable() => childSprite.SetActive(true);
+    private void OnEnable() => humanForm.SetActive(true);
 
-    private void OnDisable() => childSprite.SetActive(false);
+    private void OnDisable() => humanForm.SetActive(false);
 
     private void GameManager_OnDayBegin()
     {

@@ -6,13 +6,16 @@ using UnityEngine.Events;
 public class WerewolfController : Singleton<WerewolfController>
 {
     [SerializeField]
-    private GameObject werewolfSprite;
+    private GameObject werewolfForm;
+    [SerializeField]
+    private PlayerTrigger visionTrigger;
+    [SerializeField]
+    private PlayerTrigger catchTrigger;
 
     private CharacterMovement characterMovement;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private PathFollow pathFollow;
-    private CircleCollider2D circleCollider;
 
     /// <summary>
     /// Occur when player is caught by the werewolf.
@@ -30,10 +33,14 @@ public class WerewolfController : Singleton<WerewolfController>
 
         characterMovement = GetComponent<CharacterMovement>();
         pathFollow = GetComponent<PathFollow>();
-        circleCollider = GetComponent<CircleCollider2D>();
 
-        animator = werewolfSprite.GetComponent<Animator>();
-        spriteRenderer = werewolfSprite.GetComponent<SpriteRenderer>();
+        animator = werewolfForm.GetComponent<Animator>();
+        spriteRenderer = werewolfForm.GetComponent<SpriteRenderer>();
+
+        Debug.Assert(visionTrigger != null);
+        Debug.Assert(catchTrigger != null);
+        visionTrigger.OnEnter.AddListener(VisionTrigger_OnEnter);
+        catchTrigger.OnEnter.AddListener(CatchTrigger_OnEnter);
 
         enabled = false;
     }
@@ -47,23 +54,13 @@ public class WerewolfController : Singleton<WerewolfController>
 
     private void OnEnable()
     {
-        werewolfSprite.SetActive(true);
-        circleCollider.enabled = true;
+        werewolfForm.SetActive(true);
     }
 
     private void OnDisable()
     {
-        werewolfSprite.SetActive(false);
-        circleCollider .enabled = false;
+        werewolfForm.SetActive(false);
         pathFollow.Target = null;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!enabled || !collision.TryGetComponent(out PlayerController player) || player.GodModeActive)
-            return;
-
-        OnPlayerCaught.Invoke();
     }
 
     private void WerewolfController_OnPlayerCaught()
@@ -80,5 +77,18 @@ public class WerewolfController : Singleton<WerewolfController>
     private void Instance_OnNightBegin()
     {
         enabled = true;
+    }
+
+    private void VisionTrigger_OnEnter()
+    {
+        pathFollow.Target = PlayerController.Instance.transform;
+    }
+
+    private void CatchTrigger_OnEnter()
+    {
+        if (PlayerController.Instance.GodModeActive)
+            return;
+
+        OnPlayerCaught.Invoke();
     }
 }
