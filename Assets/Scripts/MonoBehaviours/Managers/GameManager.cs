@@ -135,6 +135,9 @@ public class GameManager : Singleton<GameManager>
         DayNumber++;
 
         OnDayNightSwitch.Invoke();
+
+        if (DayNumber == 2)
+            WerewolfController.Instance.ScriptedCatch = false;
     }
 
     private void GameManager_OnNightBegin()
@@ -143,6 +146,9 @@ public class GameManager : Singleton<GameManager>
         nightTimeElapsed = 0.0f;
 
         OnDayNightSwitch.Invoke();
+
+        if (DayNumber == 1)
+            WerewolfController.Instance.ScriptedCatch = true;
     }
 
     private void Werewolf_OnPlayerCaught()

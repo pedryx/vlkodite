@@ -6,6 +6,25 @@ using UnityEngine.Events;
 [RequireComponent(typeof(PathFollow))]
 public class WerewolfController : Singleton<WerewolfController>
 {
+    /// <summary>
+    /// When enabled <see cref="ScriptedAccelaration"/> is applied to the werewolf. This ensures that the werewolf
+    /// catches the player during the scripted chase sequence.
+    /// </summary>
+    [SerializeField]
+    [Tooltip("When enabled, scripted acceleration is applied to the werewolf. This ensures that the werewolf " +
+        "catches the player during the scripted chase sequence.")]
+    private bool scriptedCatch = false;
+    private float standartSpeed;
+
+    // Following property is under scripted catch field, so its appear near each other in the inspector.
+
+    /// <summary>
+    /// Accelarattion of the werewolf when <see cref="ScriptedCatch"/> is enabled."/>
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Acceleration of the werewolf when ScriptedCatch is enabled.")]
+    public float ScriptedAccelaration { get; private set; } = 0.1f;
+
     [SerializeField]
     private GameObject werewolfForm;
     [SerializeField]
@@ -34,6 +53,23 @@ public class WerewolfController : Singleton<WerewolfController>
     /// </summary>
     [Tooltip("Occur when player is caught by the werewolf.")]
     public UnityEvent OnPlayerCaught = new();
+
+    /// <summary>
+    /// When enabled <see cref="ScriptedAccelaration"/> is applied to the werewolf. This ensures that the werewolf
+    /// catches the player during the scripted chase sequence.
+    /// </summary>
+    public bool ScriptedCatch
+    {
+        get => scriptedCatch;
+        set
+        {
+            scriptedCatch = value;
+            if (value)
+                standartSpeed = characterMovement.Speed;
+            else
+                characterMovement.Speed = standartSpeed;
+        }
+    }
 
     protected override void Awake()
     {
@@ -66,6 +102,9 @@ public class WerewolfController : Singleton<WerewolfController>
         if (!characterMovement.IsMoving())
             spriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
         animator.SetBool("IsMoving", !characterMovement.IsMoving());
+
+        if (ScriptedCatch)
+            characterMovement.Speed += ScriptedAccelaration * Time.deltaTime;
     }
 
     private void OnEnable()
