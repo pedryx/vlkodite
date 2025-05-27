@@ -61,6 +61,12 @@ public class QuestManager : Singleton<QuestManager>
     [Tooltip("Occur after new day/night starts and quests of that day/night are initialized.")]
     public UnityEvent OnQuestsInitialized { get; private set; } = new();
 
+    /// <summary>
+    /// Occur when a transition quest from any day or night is completed.
+    /// </summary>
+    [Tooltip("Occur when a transition quest from any day or night is completed.")]
+    public UnityEvent<QuestEventArgs> OnTransitionQuestDone { get; private set; } = new();
+
     public QuestManager()
     {
         questsMap = new Dictionary<(int, bool), Quests>()
@@ -93,6 +99,7 @@ public class QuestManager : Singleton<QuestManager>
         quests.OnQuestStart.AddListener(Quests_OnQuestStart);
         quests.OnQuestDone.AddListener(Quests_OnQuestDone);
         quests.OnAllQuestsDone.AddListener(Quests_OnAllQuestsDone);
+        quests.TransitionQuest.OnDone.AddListener(Quests_OnTransitionQuestDone);
         quests.Activate();
     }
 
@@ -101,6 +108,7 @@ public class QuestManager : Singleton<QuestManager>
         quests.OnQuestStart.RemoveListener(Quests_OnQuestStart);
         quests.OnQuestDone.RemoveListener(Quests_OnQuestDone);
         quests.OnAllQuestsDone.RemoveListener(Quests_OnAllQuestsDone);
+        quests.TransitionQuest.OnDone.RemoveListener(Quests_OnTransitionQuestDone);
         quests.Deactivate();
     }
 
@@ -135,6 +143,11 @@ public class QuestManager : Singleton<QuestManager>
     private void Quests_OnAllQuestsDone()
     {
         OnAllQuestsDone.Invoke();
+    }
+
+    private void Quests_OnTransitionQuestDone(QuestEventArgs e)
+    {
+        OnTransitionQuestDone.Invoke(e);
     }
 
     [Serializable]
