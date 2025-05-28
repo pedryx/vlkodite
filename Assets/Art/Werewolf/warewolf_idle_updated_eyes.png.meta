@@ -1,118 +1,118 @@
 fileFormatVersion: 2
-guid: 1785ad59abda88043a4edede288f8b5d
+guid: 054c37483fe26c24eac65a42611bf405
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4701532403081420210
-    second: warewolf_idle_updated_0
+      213: 6181566706172530970
+    second: warewolf_idle_updated_eyes_0
   - first:
-      213: 4871811727203595223
-    second: warewolf_idle_updated_1
+      213: -1103591464541519179
+    second: warewolf_idle_updated_eyes_1
   - first:
-      213: 3584419464404519289
-    second: warewolf_idle_updated_2
+      213: 3543478343248062055
+    second: warewolf_idle_updated_eyes_2
   - first:
-      213: 3403551696097330067
-    second: warewolf_idle_updated_3
+      213: 6249589403397996847
+    second: warewolf_idle_updated_eyes_3
   - first:
-      213: 23437445372536125
-    second: warewolf_idle_updated_4
+      213: -5088854892569870405
+    second: warewolf_idle_updated_eyes_4
   - first:
-      213: -367127424893260461
-    second: warewolf_idle_updated_5
+      213: 2390088868633342088
+    second: warewolf_idle_updated_eyes_5
   - first:
-      213: 6229157039231646596
-    second: warewolf_idle_updated_6
+      213: -2819632027447788064
+    second: warewolf_idle_updated_eyes_6
   - first:
-      213: 5213022669893578753
-    second: warewolf_idle_updated_7
+      213: -6912331980128207621
+    second: warewolf_idle_updated_eyes_7
   - first:
-      213: 6622640544500655297
-    second: warewolf_idle_updated_8
+      213: -1299941592474210837
+    second: warewolf_idle_updated_eyes_8
   - first:
-      213: 7223442895878225069
-    second: warewolf_idle_updated_9
+      213: 6702298743929960157
+    second: warewolf_idle_updated_eyes_9
   - first:
-      213: 4099830301023951148
-    second: warewolf_idle_updated_10
+      213: -5320014405314653824
+    second: warewolf_idle_updated_eyes_10
   - first:
-      213: -3045112977178057641
-    second: warewolf_idle_updated_11
+      213: -856432888636013974
+    second: warewolf_idle_updated_eyes_11
   - first:
-      213: -7192093021740554126
-    second: warewolf_idle_updated_12
+      213: -756131076470207114
+    second: warewolf_idle_updated_eyes_12
   - first:
-      213: -8168230377027426339
-    second: warewolf_idle_updated_13
+      213: -2439336047474774105
+    second: warewolf_idle_updated_eyes_13
   - first:
-      213: -7405368081280714342
-    second: warewolf_idle_updated_14
+      213: 4805013057313583803
+    second: warewolf_idle_updated_eyes_14
   - first:
-      213: 1871625568618841801
-    second: warewolf_idle_updated_15
+      213: 1909702287270117023
+    second: warewolf_idle_updated_eyes_15
   - first:
-      213: 4345283844041737879
-    second: warewolf_idle_updated_16
+      213: -4199562384064653673
+    second: warewolf_idle_updated_eyes_16
   - first:
-      213: -1979438390033499642
-    second: warewolf_idle_updated_17
+      213: -2075438286447690205
+    second: warewolf_idle_updated_eyes_17
   - first:
-      213: 7431841925121158552
-    second: warewolf_idle_updated_18
+      213: 8604120480178409108
+    second: warewolf_idle_updated_eyes_18
   - first:
-      213: -8038637532746946845
-    second: warewolf_idle_updated_19
+      213: -1268018649618146195
+    second: warewolf_idle_updated_eyes_19
   - first:
-      213: 3207858415228320592
-    second: warewolf_idle_updated_20
+      213: 1926531317233711121
+    second: warewolf_idle_updated_eyes_20
   - first:
-      213: 6413614065470857998
-    second: warewolf_idle_updated_21
+      213: 8289135689361929801
+    second: warewolf_idle_updated_eyes_21
   - first:
-      213: 2168480893345358852
-    second: warewolf_idle_updated_22
+      213: -3258862093505983162
+    second: warewolf_idle_updated_eyes_22
   - first:
-      213: -3196317854757443269
-    second: warewolf_idle_updated_23
+      213: 7231972604686714989
+    second: warewolf_idle_updated_eyes_23
   - first:
-      213: -1584473328898171904
-    second: warewolf_idle_updated_24
+      213: -5050174579286661885
+    second: warewolf_idle_updated_eyes_24
   - first:
-      213: 8408936765865998465
-    second: warewolf_idle_updated_25
+      213: -6424246985208949545
+    second: warewolf_idle_updated_eyes_25
   - first:
-      213: -4834625564282608137
-    second: warewolf_idle_updated_26
+      213: 9077186953505550910
+    second: warewolf_idle_updated_eyes_26
   - first:
-      213: -2237183091134438101
-    second: warewolf_idle_updated_27
+      213: 845444785819110227
+    second: warewolf_idle_updated_eyes_27
   - first:
-      213: -885601619452295266
-    second: warewolf_idle_updated_28
+      213: 1397946564533548080
+    second: warewolf_idle_updated_eyes_28
   - first:
-      213: 909679154596367478
-    second: warewolf_idle_updated_29
+      213: 70120670269391654
+    second: warewolf_idle_updated_eyes_29
   - first:
-      213: -4809537442947049537
-    second: warewolf_idle_updated_30
+      213: -4650332872284895022
+    second: warewolf_idle_updated_eyes_30
   - first:
-      213: 5958838649005280966
-    second: warewolf_idle_updated_31
+      213: 1612878133197865750
+    second: warewolf_idle_updated_eyes_31
   - first:
-      213: 3811398072232720516
-    second: warewolf_idle_updated_32
+      213: -6807413222109247910
+    second: warewolf_idle_updated_eyes_32
   - first:
-      213: 1409428454619756061
-    second: warewolf_idle_updated_33
+      213: -6302590591574938082
+    second: warewolf_idle_updated_eyes_33
   - first:
-      213: 1814979421648927698
-    second: warewolf_idle_updated_34
+      213: -6624900256530178196
+    second: warewolf_idle_updated_eyes_34
   - first:
-      213: 8011593000306741812
-    second: warewolf_idle_updated_35
+      213: -5872732041664563813
+    second: warewolf_idle_updated_eyes_35
   - first:
-      213: -4180045721911324186
-    second: warewolf_idle_updated_36
+      213: -2178689573761291749
+    second: warewolf_idle_updated_eyes_36
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -204,24 +204,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: warewolf_idle_updated_0
+      name: warewolf_idle_updated_eyes_0
       rect:
         serializedVersion: 2
         x: 0
@@ -236,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2bd18a19fc23f3140800000000000000
-      internalID: 4701532403081420210
+      spriteID: a119bccfa2659c550800000000000000
+      internalID: 6181566706172530970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_1
+      name: warewolf_idle_updated_eyes_1
       rect:
         serializedVersion: 2
         x: 96
@@ -258,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d37d8434f62c9340800000000000000
-      internalID: 4871811727203595223
+      spriteID: 5b289daf8614fa0f0800000000000000
+      internalID: -1103591464541519179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_2
+      name: warewolf_idle_updated_eyes_2
       rect:
         serializedVersion: 2
         x: 192
@@ -280,14 +267,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 979c3d5038a6eb130800000000000000
-      internalID: 3584419464404519289
+      spriteID: 766279e67c6fc2130800000000000000
+      internalID: 3543478343248062055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_3
+      name: warewolf_idle_updated_eyes_3
       rect:
         serializedVersion: 2
         x: 288
@@ -302,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3934f8c1c38db3f20800000000000000
-      internalID: 3403551696097330067
+      spriteID: f21459d53700bb650800000000000000
+      internalID: 6249589403397996847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_4
+      name: warewolf_idle_updated_eyes_4
       rect:
         serializedVersion: 2
         x: 0
@@ -324,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d356fdd7b34435000800000000000000
-      internalID: 23437445372536125
+      spriteID: bbf3dd6ef61c069b0800000000000000
+      internalID: -5088854892569870405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_5
+      name: warewolf_idle_updated_eyes_5
       rect:
         serializedVersion: 2
         x: 96
@@ -346,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35deeeb5d83b7eaf0800000000000000
-      internalID: -367127424893260461
+      spriteID: 880718ca92d4b2120800000000000000
+      internalID: 2390088868633342088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_6
+      name: warewolf_idle_updated_eyes_6
       rect:
         serializedVersion: 2
         x: 192
@@ -368,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48bb68dd259627650800000000000000
-      internalID: 6229157039231646596
+      spriteID: 0edf8ae2c97aed8d0800000000000000
+      internalID: -2819632027447788064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_7
+      name: warewolf_idle_updated_eyes_7
       rect:
         serializedVersion: 2
         x: 288
@@ -390,14 +377,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 100b01d9f70685840800000000000000
-      internalID: 5213022669893578753
+      spriteID: bfcb2eaefa67210a0800000000000000
+      internalID: -6912331980128207621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_8
+      name: warewolf_idle_updated_eyes_8
       rect:
         serializedVersion: 2
         x: 0
@@ -412,14 +399,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c4af0aac7858eb50800000000000000
-      internalID: 6622640544500655297
+      spriteID: beda1df420ea5fde0800000000000000
+      internalID: -1299941592474210837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_9
+      name: warewolf_idle_updated_eyes_9
       rect:
         serializedVersion: 2
         x: 96
@@ -434,14 +421,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dacf328da03de3460800000000000000
-      internalID: 7223442895878225069
+      spriteID: dd6fd728239530d50800000000000000
+      internalID: 6702298743929960157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_10
+      name: warewolf_idle_updated_eyes_10
       rect:
         serializedVersion: 2
         x: 192
@@ -456,36 +443,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c295aebdfe585e830800000000000000
-      internalID: 4099830301023951148
+      spriteID: 0815243c5138b26b0800000000000000
+      internalID: -5320014405314653824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_11
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 554
-        width: 96
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 754ae5681e59db5d0800000000000000
-      internalID: -3045112977178057641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: warewolf_idle_updated_12
+      name: warewolf_idle_updated_eyes_11
       rect:
         serializedVersion: 2
         x: 0
@@ -500,14 +465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 278a697808d803c90800000000000000
-      internalID: -7192093021740554126
+      spriteID: a6283ea43d65d14f0800000000000000
+      internalID: -856432888636013974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_13
+      name: warewolf_idle_updated_eyes_12
       rect:
         serializedVersion: 2
         x: 96
@@ -522,14 +487,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd7a9bdcfbd94ae80800000000000000
-      internalID: -8168230377027426339
+      spriteID: 67d0c57cacea185f0800000000000000
+      internalID: -756131076470207114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_14
+      name: warewolf_idle_updated_eyes_13
       rect:
         serializedVersion: 2
         x: 192
@@ -544,14 +509,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a993f3427f8da3990800000000000000
-      internalID: -7405368081280714342
+      spriteID: 7afe57af9ccb52ed0800000000000000
+      internalID: -2439336047474774105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_15
+      name: warewolf_idle_updated_eyes_14
       rect:
         serializedVersion: 2
         x: 288
@@ -566,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c68012d98959f910800000000000000
-      internalID: 1871625568618841801
+      spriteID: bb23a46eae5dea240800000000000000
+      internalID: 4805013057313583803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_16
+      name: warewolf_idle_updated_eyes_15
       rect:
         serializedVersion: 2
         x: 0
@@ -588,14 +553,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7960a5442ac8d4c30800000000000000
-      internalID: 4345283844041737879
+      spriteID: f9e7c7bbc10a08a10800000000000000
+      internalID: 1909702287270117023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_17
+      name: warewolf_idle_updated_eyes_16
       rect:
         serializedVersion: 2
         x: 96
@@ -610,14 +575,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60a3843954f9784e0800000000000000
-      internalID: -1979438390033499642
+      spriteID: 796dbbd034828b5c0800000000000000
+      internalID: -4199562384064653673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_18
+      name: warewolf_idle_updated_eyes_17
       rect:
         serializedVersion: 2
         x: 192
@@ -632,14 +597,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89da3b5fad4332760800000000000000
-      internalID: 7431841925121158552
+      spriteID: 32e3a07efdf8233e0800000000000000
+      internalID: -2075438286447690205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_19
+      name: warewolf_idle_updated_eyes_18
       rect:
         serializedVersion: 2
         x: 288
@@ -654,14 +619,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e6ee7621c5017090800000000000000
-      internalID: -8038637532746946845
+      spriteID: 49e82b97df9f76770800000000000000
+      internalID: 8604120480178409108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_20
+      name: warewolf_idle_updated_eyes_19
       rect:
         serializedVersion: 2
         x: 0
@@ -676,14 +641,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05b7e619b3a948c20800000000000000
-      internalID: 3207858415228320592
+      spriteID: d6c90f4a1c7176ee0800000000000000
+      internalID: -1268018649618146195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_21
+      name: warewolf_idle_updated_eyes_20
       rect:
         serializedVersion: 2
         x: 96
@@ -698,14 +663,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e03e6d2030cb10950800000000000000
-      internalID: 6413614065470857998
+      spriteID: 118716c960a6cba10800000000000000
+      internalID: 1926531317233711121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_22
+      name: warewolf_idle_updated_eyes_21
       rect:
         serializedVersion: 2
         x: 192
@@ -720,14 +685,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 404621622edf71e10800000000000000
-      internalID: 2168480893345358852
+      spriteID: 9463e63edfce80370800000000000000
+      internalID: 8289135689361929801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_23
+      name: warewolf_idle_updated_eyes_22
       rect:
         serializedVersion: 2
         x: 288
@@ -742,14 +707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b39a1fd88d564a3d0800000000000000
-      internalID: -3196317854757443269
+      spriteID: 64d0790313236c2d0800000000000000
+      internalID: -3258862093505983162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_24
+      name: warewolf_idle_updated_eyes_23
       rect:
         serializedVersion: 2
         x: 0
@@ -764,14 +729,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00c91faf6e1d20ae0800000000000000
-      internalID: -1584473328898171904
+      spriteID: d6845bf64c02d5460800000000000000
+      internalID: 7231972604686714989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_25
+      name: warewolf_idle_updated_eyes_24
       rect:
         serializedVersion: 2
         x: 96
@@ -786,14 +751,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1883a24af6b82b470800000000000000
-      internalID: 8408936765865998465
+      spriteID: 30529e32afc2ae9b0800000000000000
+      internalID: -5050174579286661885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_26
+      name: warewolf_idle_updated_eyes_25
       rect:
         serializedVersion: 2
         x: 192
@@ -808,14 +773,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f5a9ea0aa5f7ecb0800000000000000
-      internalID: -4834625564282608137
+      spriteID: 7d41f31776d78d6a0800000000000000
+      internalID: -6424246985208949545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_27
+      name: warewolf_idle_updated_eyes_26
       rect:
         serializedVersion: 2
         x: 288
@@ -830,14 +795,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b25eb6be4dde3f0e0800000000000000
-      internalID: -2237183091134438101
+      spriteID: e323283f075a8fd70800000000000000
+      internalID: 9077186953505550910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_28
+      name: warewolf_idle_updated_eyes_27
       rect:
         serializedVersion: 2
         x: 0
@@ -852,14 +817,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e97090ce406b5b3f0800000000000000
-      internalID: -885601619452295266
+      spriteID: 35b44f7ad8f9bbb00800000000000000
+      internalID: 845444785819110227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_29
+      name: warewolf_idle_updated_eyes_28
       rect:
         serializedVersion: 2
         x: 96
@@ -874,14 +839,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67c4b451f54df9c00800000000000000
-      internalID: 909679154596367478
+      spriteID: 034fff96ef0866310800000000000000
+      internalID: 1397946564533548080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_30
+      name: warewolf_idle_updated_eyes_29
       rect:
         serializedVersion: 2
         x: 192
@@ -896,14 +861,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb7533b7d27114db0800000000000000
-      internalID: -4809537442947049537
+      spriteID: 623c1dac06e19f000800000000000000
+      internalID: 70120670269391654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_31
+      name: warewolf_idle_updated_eyes_30
       rect:
         serializedVersion: 2
         x: 288
@@ -918,14 +883,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ce04d31e2c02b250800000000000000
-      internalID: 5958838649005280966
+      spriteID: 2d8032424e2b67fb0800000000000000
+      internalID: -4650332872284895022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_32
+      name: warewolf_idle_updated_eyes_31
       rect:
         serializedVersion: 2
         x: 0
@@ -940,14 +905,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4883a016a5ec4e430800000000000000
-      internalID: 3811398072232720516
+      spriteID: 6130143ed18126610800000000000000
+      internalID: 1612878133197865750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_33
+      name: warewolf_idle_updated_eyes_32
       rect:
         serializedVersion: 2
         x: 96
@@ -962,14 +927,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1630f546bb4f8310800000000000000
-      internalID: 1409428454619756061
+      spriteID: a5681e0edb53781a0800000000000000
+      internalID: -6807413222109247910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_34
+      name: warewolf_idle_updated_eyes_33
       rect:
         serializedVersion: 2
         x: 192
@@ -984,14 +949,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2db3706fa2a103910800000000000000
-      internalID: 1814979421648927698
+      spriteID: e1ee470ef33b888a0800000000000000
+      internalID: -6302590591574938082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_updated_35
+      name: warewolf_idle_updated_eyes_34
       rect:
         serializedVersion: 2
         x: 288
@@ -1006,8 +971,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4321a44f265ee2f60800000000000000
-      internalID: 8011593000306741812
+      spriteID: c6fdf112150af04a0800000000000000
+      internalID: -6624900256530178196
       vertices: []
       indices: 
       edges: []
@@ -1016,7 +981,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a35fb2fd43f8b814681f213b4e8283b5
+    spriteID: d084d8f922bed2444b24d4bff2593bda
     internalID: 0
     vertices: []
     indices: 
@@ -1026,42 +991,41 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      warewolf_idle_updated_0: 4701532403081420210
-      warewolf_idle_updated_1: 4871811727203595223
-      warewolf_idle_updated_10: 4099830301023951148
-      warewolf_idle_updated_11: -3045112977178057641
-      warewolf_idle_updated_12: -7192093021740554126
-      warewolf_idle_updated_13: -8168230377027426339
-      warewolf_idle_updated_14: -7405368081280714342
-      warewolf_idle_updated_15: 1871625568618841801
-      warewolf_idle_updated_16: 4345283844041737879
-      warewolf_idle_updated_17: -1979438390033499642
-      warewolf_idle_updated_18: 7431841925121158552
-      warewolf_idle_updated_19: -8038637532746946845
-      warewolf_idle_updated_2: 3584419464404519289
-      warewolf_idle_updated_20: 3207858415228320592
-      warewolf_idle_updated_21: 6413614065470857998
-      warewolf_idle_updated_22: 2168480893345358852
-      warewolf_idle_updated_23: -3196317854757443269
-      warewolf_idle_updated_24: -1584473328898171904
-      warewolf_idle_updated_25: 8408936765865998465
-      warewolf_idle_updated_26: -4834625564282608137
-      warewolf_idle_updated_27: -2237183091134438101
-      warewolf_idle_updated_28: -885601619452295266
-      warewolf_idle_updated_29: 909679154596367478
-      warewolf_idle_updated_3: 3403551696097330067
-      warewolf_idle_updated_30: -4809537442947049537
-      warewolf_idle_updated_31: 5958838649005280966
-      warewolf_idle_updated_32: 3811398072232720516
-      warewolf_idle_updated_33: 1409428454619756061
-      warewolf_idle_updated_34: 1814979421648927698
-      warewolf_idle_updated_35: 8011593000306741812
-      warewolf_idle_updated_4: 23437445372536125
-      warewolf_idle_updated_5: -367127424893260461
-      warewolf_idle_updated_6: 6229157039231646596
-      warewolf_idle_updated_7: 5213022669893578753
-      warewolf_idle_updated_8: 6622640544500655297
-      warewolf_idle_updated_9: 7223442895878225069
+      warewolf_idle_updated_eyes_0: 6181566706172530970
+      warewolf_idle_updated_eyes_1: -1103591464541519179
+      warewolf_idle_updated_eyes_10: -5320014405314653824
+      warewolf_idle_updated_eyes_11: -856432888636013974
+      warewolf_idle_updated_eyes_12: -756131076470207114
+      warewolf_idle_updated_eyes_13: -2439336047474774105
+      warewolf_idle_updated_eyes_14: 4805013057313583803
+      warewolf_idle_updated_eyes_15: 1909702287270117023
+      warewolf_idle_updated_eyes_16: -4199562384064653673
+      warewolf_idle_updated_eyes_17: -2075438286447690205
+      warewolf_idle_updated_eyes_18: 8604120480178409108
+      warewolf_idle_updated_eyes_19: -1268018649618146195
+      warewolf_idle_updated_eyes_2: 3543478343248062055
+      warewolf_idle_updated_eyes_20: 1926531317233711121
+      warewolf_idle_updated_eyes_21: 8289135689361929801
+      warewolf_idle_updated_eyes_22: -3258862093505983162
+      warewolf_idle_updated_eyes_23: 7231972604686714989
+      warewolf_idle_updated_eyes_24: -5050174579286661885
+      warewolf_idle_updated_eyes_25: -6424246985208949545
+      warewolf_idle_updated_eyes_26: 9077186953505550910
+      warewolf_idle_updated_eyes_27: 845444785819110227
+      warewolf_idle_updated_eyes_28: 1397946564533548080
+      warewolf_idle_updated_eyes_29: 70120670269391654
+      warewolf_idle_updated_eyes_3: 6249589403397996847
+      warewolf_idle_updated_eyes_30: -4650332872284895022
+      warewolf_idle_updated_eyes_31: 1612878133197865750
+      warewolf_idle_updated_eyes_32: -6807413222109247910
+      warewolf_idle_updated_eyes_33: -6302590591574938082
+      warewolf_idle_updated_eyes_34: -6624900256530178196
+      warewolf_idle_updated_eyes_4: -5088854892569870405
+      warewolf_idle_updated_eyes_5: 2390088868633342088
+      warewolf_idle_updated_eyes_6: -2819632027447788064
+      warewolf_idle_updated_eyes_7: -6912331980128207621
+      warewolf_idle_updated_eyes_8: -1299941592474210837
+      warewolf_idle_updated_eyes_9: 6702298743929960157
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
