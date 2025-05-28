@@ -33,6 +33,13 @@ public class ItemGainCanvas : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (isVisible && Input.GetKeyDown(KeyCode.E))
+        {
+            HideCanvasImmediate();
+        }
+    }
 
 
     private void ShowCanvas()
@@ -63,7 +70,7 @@ public class ItemGainCanvas : MonoBehaviour
         }
 
         // Auto-hide after delay
-        float autoHideDelay = 5f; // Change this to how long you want it to stay visible
+        float autoHideDelay = 1.7f; // Change this to how long you want it to stay visible
         DOVirtual.DelayedCall(autoHideDelay, () =>
         {
             if (isVisible) HideCanvas();
@@ -96,5 +103,30 @@ public class ItemGainCanvas : MonoBehaviour
             }
         }
     }
+
+    private void HideCanvasImmediate()
+    {
+        float quickFade = 0.5f;
+
+        canvasGroup.DOKill();
+        transform.DOKill();
+
+        canvasGroup.DOFade(0f, quickFade);
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+        isVisible = false;
+
+        foreach (var cg in canvasesToHide)
+        {
+            if (cg != null)
+            {
+                cg.DOKill();
+                cg.DOFade(1f, quickFade);
+                cg.interactable = true;
+                cg.blocksRaycasts = true;
+            }
+        }
+    }
+
 
 }
