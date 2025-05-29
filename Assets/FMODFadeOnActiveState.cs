@@ -7,7 +7,7 @@ public class FMODFadeBeforeDeactivate : MonoBehaviour
 {
     [SerializeField] private StudioEventEmitter musicEmitter;
     [SerializeField] private GameObject objectToDeactivate;
-    [SerializeField] private GameObject cameraToDeactivate; // New: Optional Cinemachine camera
+    [SerializeField] private GameObject cameraToDeactivate; // Optional Cinemachine camera
     [SerializeField] private float fadedVolume = 0.2f;
     [SerializeField] private float fadeDuration = 1.0f;
 
@@ -15,6 +15,7 @@ public class FMODFadeBeforeDeactivate : MonoBehaviour
     [SerializeField] private EventReference activationSound;
 
     private EventInstance musicInstance;
+    private bool activationSoundPlayed = false;
 
     private void Start()
     {
@@ -35,9 +36,12 @@ public class FMODFadeBeforeDeactivate : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            // Play activation sound if assigned
-            if (!activationSound.IsNull)
+            // Play activation sound only once
+            if (!activationSoundPlayed && !activationSound.IsNull)
+            {
                 RuntimeManager.PlayOneShot(activationSound, transform.position);
+                activationSoundPlayed = true;
+            }
 
             TriggerFadeAndDeactivate();
         }
@@ -71,6 +75,6 @@ public class FMODFadeBeforeDeactivate : MonoBehaviour
             objectToDeactivate.SetActive(false);
 
         if (cameraToDeactivate != null)
-            cameraToDeactivate.SetActive(false); // Unity 6 Cinemachine-compatible
+            cameraToDeactivate.SetActive(false);
     }
 }
