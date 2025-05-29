@@ -5,10 +5,14 @@ using System.Collections;
 
 public class FMODFadeBeforeDeactivate : MonoBehaviour
 {
-    [SerializeField] private StudioEventEmitter musicEmitter; // The music emitter to fade
-    [SerializeField] private GameObject objectToDeactivate;   // The object you want to deactivate
+    [SerializeField] private StudioEventEmitter musicEmitter;
+    [SerializeField] private GameObject objectToDeactivate;
+    [SerializeField] private GameObject cameraToDeactivate; // New: Optional Cinemachine camera
     [SerializeField] private float fadedVolume = 0.2f;
     [SerializeField] private float fadeDuration = 1.0f;
+
+    [Header("Optional Trigger Sound")]
+    [SerializeField] private EventReference activationSound;
 
     private EventInstance musicInstance;
 
@@ -18,11 +22,8 @@ public class FMODFadeBeforeDeactivate : MonoBehaviour
         {
             musicInstance = musicEmitter.EventInstance;
 
-            // Optional: force play if not already playing
             if (!musicEmitter.IsPlaying())
-            {
                 musicEmitter.Play();
-            }
         }
         else
         {
@@ -30,9 +31,21 @@ public class FMODFadeBeforeDeactivate : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            // Play activation sound if assigned
+            if (!activationSound.IsNull)
+                RuntimeManager.PlayOneShot(activationSound, transform.position);
+
+            TriggerFadeAndDeactivate();
+        }
+    }
+
     public void TriggerFadeAndDeactivate()
     {
-        if (musicInstance.isValid() && objectToDeactivate != null)
+        if (musicInstance.isValid())
         {
             StopAllCoroutines();
             StartCoroutine(FadeOutThenDeactivate());
@@ -41,7 +54,6 @@ public class FMODFadeBeforeDeactivate : MonoBehaviour
 
     private IEnumerator FadeOutThenDeactivate()
     {
-        // Fade out
         musicInstance.getVolume(out float startVolume);
         float t = 0f;
 
@@ -55,7 +67,10 @@ public class FMODFadeBeforeDeactivate : MonoBehaviour
 
         musicInstance.setVolume(fadedVolume);
 
-        // Then deactivate the object
-        objectToDeactivate.SetActive(false);
+        if (objectToDeactivate != null)
+            objectToDeactivate.SetActive(false);
+
+        if (cameraToDeactivate != null)
+            cameraToDeactivate.SetActive(false); // Unity 6 Cinemachine-compatible
     }
 }
