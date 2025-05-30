@@ -145,7 +145,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -159,7 +159,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -183,7 +183,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -224,10 +224,10 @@ TextureImporter:
       name: warewolf_idle_updated_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 734
-        width: 45
-        height: 33
+        x: 0
+        y: 718
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,10 +246,10 @@ TextureImporter:
       name: warewolf_idle_updated_1
       rect:
         serializedVersion: 2
-        x: 124
-        y: 734
-        width: 44
-        height: 38
+        x: 96
+        y: 718
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: warewolf_idle_updated_2
       rect:
         serializedVersion: 2
-        x: 217
-        y: 734
-        width: 47
-        height: 44
+        x: 192
+        y: 718
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,10 +290,10 @@ TextureImporter:
       name: warewolf_idle_updated_3
       rect:
         serializedVersion: 2
-        x: 313
-        y: 734
-        width: 45
-        height: 45
+        x: 288
+        y: 718
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,10 +312,10 @@ TextureImporter:
       name: warewolf_idle_updated_4
       rect:
         serializedVersion: 2
-        x: 25
-        y: 654
-        width: 48
-        height: 44
+        x: 0
+        y: 636
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,10 +334,10 @@ TextureImporter:
       name: warewolf_idle_updated_5
       rect:
         serializedVersion: 2
-        x: 123
-        y: 654
-        width: 46
-        height: 44
+        x: 96
+        y: 636
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,10 +356,10 @@ TextureImporter:
       name: warewolf_idle_updated_6
       rect:
         serializedVersion: 2
-        x: 219
-        y: 654
-        width: 46
-        height: 44
+        x: 192
+        y: 636
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: warewolf_idle_updated_7
       rect:
         serializedVersion: 2
-        x: 315
-        y: 654
-        width: 46
-        height: 44
+        x: 288
+        y: 636
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,10 +400,10 @@ TextureImporter:
       name: warewolf_idle_updated_8
       rect:
         serializedVersion: 2
-        x: 27
-        y: 574
-        width: 45
-        height: 45
+        x: 0
+        y: 554
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -422,10 +422,10 @@ TextureImporter:
       name: warewolf_idle_updated_9
       rect:
         serializedVersion: 2
-        x: 122
-        y: 574
-        width: 44
-        height: 47
+        x: 96
+        y: 554
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,10 +444,10 @@ TextureImporter:
       name: warewolf_idle_updated_10
       rect:
         serializedVersion: 2
-        x: 218
-        y: 574
-        width: 44
-        height: 47
+        x: 192
+        y: 554
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,10 +466,10 @@ TextureImporter:
       name: warewolf_idle_updated_11
       rect:
         serializedVersion: 2
-        x: 314
-        y: 574
-        width: 44
-        height: 47
+        x: 288
+        y: 554
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,10 +488,10 @@ TextureImporter:
       name: warewolf_idle_updated_12
       rect:
         serializedVersion: 2
-        x: 26
-        y: 494
-        width: 44
-        height: 47
+        x: 0
+        y: 472
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -510,10 +510,10 @@ TextureImporter:
       name: warewolf_idle_updated_13
       rect:
         serializedVersion: 2
-        x: 122
-        y: 494
-        width: 44
-        height: 47
+        x: 96
+        y: 472
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -532,10 +532,10 @@ TextureImporter:
       name: warewolf_idle_updated_14
       rect:
         serializedVersion: 2
-        x: 218
-        y: 494
-        width: 44
-        height: 47
+        x: 192
+        y: 472
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -554,10 +554,10 @@ TextureImporter:
       name: warewolf_idle_updated_15
       rect:
         serializedVersion: 2
-        x: 314
-        y: 494
-        width: 44
-        height: 47
+        x: 288
+        y: 472
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -576,10 +576,10 @@ TextureImporter:
       name: warewolf_idle_updated_16
       rect:
         serializedVersion: 2
-        x: 26
-        y: 414
-        width: 44
-        height: 47
+        x: 0
+        y: 390
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,10 +598,10 @@ TextureImporter:
       name: warewolf_idle_updated_17
       rect:
         serializedVersion: 2
-        x: 122
-        y: 414
-        width: 44
-        height: 47
+        x: 96
+        y: 390
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -620,10 +620,10 @@ TextureImporter:
       name: warewolf_idle_updated_18
       rect:
         serializedVersion: 2
-        x: 218
-        y: 414
-        width: 44
-        height: 47
+        x: 192
+        y: 390
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -642,10 +642,10 @@ TextureImporter:
       name: warewolf_idle_updated_19
       rect:
         serializedVersion: 2
-        x: 314
-        y: 414
-        width: 44
-        height: 47
+        x: 288
+        y: 390
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,10 +664,10 @@ TextureImporter:
       name: warewolf_idle_updated_20
       rect:
         serializedVersion: 2
-        x: 26
-        y: 334
-        width: 44
-        height: 46
+        x: 0
+        y: 308
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -686,10 +686,10 @@ TextureImporter:
       name: warewolf_idle_updated_21
       rect:
         serializedVersion: 2
-        x: 123
-        y: 334
-        width: 45
-        height: 45
+        x: 96
+        y: 308
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -708,10 +708,10 @@ TextureImporter:
       name: warewolf_idle_updated_22
       rect:
         serializedVersion: 2
-        x: 219
-        y: 334
-        width: 46
-        height: 44
+        x: 192
+        y: 308
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,10 +730,10 @@ TextureImporter:
       name: warewolf_idle_updated_23
       rect:
         serializedVersion: 2
-        x: 315
-        y: 334
-        width: 46
-        height: 44
+        x: 288
+        y: 308
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -752,10 +752,10 @@ TextureImporter:
       name: warewolf_idle_updated_24
       rect:
         serializedVersion: 2
-        x: 27
-        y: 254
-        width: 46
-        height: 44
+        x: 0
+        y: 226
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -774,10 +774,10 @@ TextureImporter:
       name: warewolf_idle_updated_25
       rect:
         serializedVersion: 2
-        x: 123
-        y: 254
-        width: 46
-        height: 44
+        x: 96
+        y: 226
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -796,10 +796,10 @@ TextureImporter:
       name: warewolf_idle_updated_26
       rect:
         serializedVersion: 2
-        x: 219
-        y: 254
-        width: 46
-        height: 45
+        x: 192
+        y: 226
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -818,10 +818,10 @@ TextureImporter:
       name: warewolf_idle_updated_27
       rect:
         serializedVersion: 2
-        x: 315
-        y: 254
-        width: 46
-        height: 45
+        x: 288
+        y: 226
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -840,10 +840,10 @@ TextureImporter:
       name: warewolf_idle_updated_28
       rect:
         serializedVersion: 2
-        x: 27
-        y: 174
-        width: 46
-        height: 45
+        x: 0
+        y: 144
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -862,10 +862,10 @@ TextureImporter:
       name: warewolf_idle_updated_29
       rect:
         serializedVersion: 2
-        x: 123
-        y: 174
-        width: 46
-        height: 45
+        x: 96
+        y: 144
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -884,10 +884,10 @@ TextureImporter:
       name: warewolf_idle_updated_30
       rect:
         serializedVersion: 2
-        x: 219
-        y: 174
-        width: 46
-        height: 45
+        x: 192
+        y: 144
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -906,10 +906,10 @@ TextureImporter:
       name: warewolf_idle_updated_31
       rect:
         serializedVersion: 2
-        x: 315
-        y: 174
-        width: 46
-        height: 45
+        x: 288
+        y: 144
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -928,10 +928,10 @@ TextureImporter:
       name: warewolf_idle_updated_32
       rect:
         serializedVersion: 2
-        x: 27
-        y: 94
-        width: 46
-        height: 45
+        x: 0
+        y: 62
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -950,10 +950,10 @@ TextureImporter:
       name: warewolf_idle_updated_33
       rect:
         serializedVersion: 2
-        x: 121
-        y: 94
-        width: 45
-        height: 45
+        x: 96
+        y: 62
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -972,10 +972,10 @@ TextureImporter:
       name: warewolf_idle_updated_34
       rect:
         serializedVersion: 2
-        x: 217
-        y: 94
-        width: 47
-        height: 44
+        x: 192
+        y: 62
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -994,10 +994,10 @@ TextureImporter:
       name: warewolf_idle_updated_35
       rect:
         serializedVersion: 2
-        x: 316
-        y: 94
-        width: 44
-        height: 38
+        x: 288
+        y: 62
+        width: 96
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1012,33 +1012,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: warewolf_idle_updated_36
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 14
-        width: 45
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6e19590109e7df5c0800000000000000
-      internalID: -4180045721911324186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a35fb2fd43f8b814681f213b4e8283b5
     internalID: 0
     vertices: []
     indices: 
@@ -1078,7 +1056,6 @@ TextureImporter:
       warewolf_idle_updated_33: 1409428454619756061
       warewolf_idle_updated_34: 1814979421648927698
       warewolf_idle_updated_35: 8011593000306741812
-      warewolf_idle_updated_36: -4180045721911324186
       warewolf_idle_updated_4: 23437445372536125
       warewolf_idle_updated_5: -367127424893260461
       warewolf_idle_updated_6: 6229157039231646596

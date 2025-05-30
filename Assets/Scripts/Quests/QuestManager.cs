@@ -8,16 +8,28 @@ using UnityEngine.Events;
 public class QuestManager : Singleton<QuestManager>
 {
     private readonly Dictionary<(int, bool), Quests> questsMap;
-    private readonly (int, bool) lastTimeBlock = (2, true);
+    private readonly (int, bool) lastTimeBlock = (4, true);
 
     private int currentDayNumber = 1;
     private bool isDay = true;
 
+    #region Quests for all days and nights
     [field: SerializeField]
     public Quests Day1 { get; private set; } = new();
 
     [field: SerializeField]
     public Quests Night1 { get; private set; } = new();
+    [field: SerializeField]
+    public Quests Day2 { get; private set; } = new();
+
+    [field: SerializeField]
+    public Quests Night2 { get; private set; } = new();
+    [field: SerializeField]
+    public Quests Day3 { get; private set; } = new();
+
+    [field: SerializeField]
+    public Quests Night3 { get; private set; } = new();
+    #endregion
 
     public Quests Current => questsMap[(currentDayNumber, isDay)];
 
@@ -49,12 +61,23 @@ public class QuestManager : Singleton<QuestManager>
     [Tooltip("Occur after new day/night starts and quests of that day/night are initialized.")]
     public UnityEvent OnQuestsInitialized { get; private set; } = new();
 
+    /// <summary>
+    /// Occur when a transition quest from any day or night is completed.
+    /// </summary>
+    [Tooltip("Occur when a transition quest from any day or night is completed.")]
+    public UnityEvent<QuestEventArgs> OnTransitionQuestDone { get; private set; } = new();
+
     public QuestManager()
     {
         questsMap = new Dictionary<(int, bool), Quests>()
         {
             { (1, true), Day1 },
             { (1, false), Night1 },
+            { (2, true), Day2 },
+            { (2, false), Night2 },
+            { (3, true), Day3 },
+            { (3, false), Night3 },
+            // TODO: game over
         };
     }
 
@@ -76,6 +99,7 @@ public class QuestManager : Singleton<QuestManager>
         quests.OnQuestStart.AddListener(Quests_OnQuestStart);
         quests.OnQuestDone.AddListener(Quests_OnQuestDone);
         quests.OnAllQuestsDone.AddListener(Quests_OnAllQuestsDone);
+        quests.TransitionQuest.OnDone.AddListener(Quests_OnTransitionQuestDone);
         quests.Activate();
     }
 
@@ -84,6 +108,7 @@ public class QuestManager : Singleton<QuestManager>
         quests.OnQuestStart.RemoveListener(Quests_OnQuestStart);
         quests.OnQuestDone.RemoveListener(Quests_OnQuestDone);
         quests.OnAllQuestsDone.RemoveListener(Quests_OnAllQuestsDone);
+        quests.TransitionQuest.OnDone.RemoveListener(Quests_OnTransitionQuestDone);
         quests.Deactivate();
     }
 
@@ -118,6 +143,11 @@ public class QuestManager : Singleton<QuestManager>
     private void Quests_OnAllQuestsDone()
     {
         OnAllQuestsDone.Invoke();
+    }
+
+    private void Quests_OnTransitionQuestDone(QuestEventArgs e)
+    {
+        OnTransitionQuestDone.Invoke(e);
     }
 
     [Serializable]

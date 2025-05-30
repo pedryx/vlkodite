@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using FMODUnity;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class NightUIAppear : MonoBehaviour
@@ -7,12 +8,17 @@ public class NightUIAppear : MonoBehaviour
     [Header("Fade Settings")]
     [SerializeField] private float fadeDuration = 0.5f;
     [SerializeField] private float visibleTime = 2f;
+    [SerializeField] private float startDelay = 0f; // New delay before appearing
 
     [Header("Other Canvases To Hide")]
     [SerializeField] private CanvasGroup[] otherCanvases;
 
     private CanvasGroup canvasGroup;
     private Tween currentTween;
+
+    [Header("FMOD Event (Optional)")]
+    [SerializeField] private StudioEventEmitter fmodEmitter; // Optional FMOD sound to play with UI
+
 
     private void Awake()
     {
@@ -28,12 +34,18 @@ public class NightUIAppear : MonoBehaviour
 
     private void OnEnable()
     {
-        ShowUI(); // Automatically show when object becomes active
+        DOVirtual.DelayedCall(startDelay, ShowUI);
     }
 
     private void ShowUI()
     {
         currentTween?.Kill();
+
+        // Play FMOD sound if assigned
+        if (fmodEmitter != null)
+        {
+            fmodEmitter.Play();
+        }
 
         // Fade out other canvases
         foreach (CanvasGroup other in otherCanvases)
@@ -58,6 +70,7 @@ public class NightUIAppear : MonoBehaviour
                 Invoke(nameof(HideUI), visibleTime);
             });
     }
+
 
     private void HideUI()
     {

@@ -80,7 +80,7 @@ public class GameManager : Singleton<GameManager>
 
         OnDayBegin.AddListener(GameManager_OnDayBegin);
         OnNightBegin.AddListener(GameManager_OnNightBegin);
-        QuestManager.Instance.Current.TransitionQuest.OnDone.AddListener(DayEndQuest_OnDone);
+        QuestManager.Instance.OnTransitionQuestDone.AddListener(TransitionQuest_OnDone);
         WerewolfController.Instance.OnPlayerCaught.AddListener(Werewolf_OnPlayerCaught);
 
         PathFinder = new PathFinder(pathFinderBounds, pathFinderCellSize, pathFinderRadius);
@@ -88,7 +88,8 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        if (isDay)
+        // First day is not bounded by time.
+        if (isDay || DayNumber == 1)
             return;
 
         nightTimeElapsed += Time.deltaTime;
@@ -108,15 +109,11 @@ public class GameManager : Singleton<GameManager>
         PathFinder.DrawGizmos();
     }
 
-    public void ShowContextPrompt(string promptText) => contextPromptUI.Show(promptText);
-
-    public void HideContextPrompt() => contextPromptUI.Hide();
-
     /// <summary>
     /// Toggle between day and night.
     /// </summary>
     /// <returns>True if switched to day otherwise false.</returns>
-    public bool SwitchDayNight()
+    private bool SwitchDayNight()
     {
         isDay = !isDay;
 
@@ -128,12 +125,19 @@ public class GameManager : Singleton<GameManager>
         return isDay;
     }
 
+    public void ShowContextPrompt(string promptText) => contextPromptUI.Show(promptText);
+
+    public void HideContextPrompt() => contextPromptUI.Hide();
+
     private void GameManager_OnDayBegin()
     {
         Debug.Log("Day started.");
         DayNumber++;
 
         OnDayNightSwitch.Invoke();
+
+        if (DayNumber == 2)
+            WerewolfController.Instance.ScriptedCatch = false;
     }
 
     private void GameManager_OnNightBegin()
@@ -142,17 +146,25 @@ public class GameManager : Singleton<GameManager>
         nightTimeElapsed = 0.0f;
 
         OnDayNightSwitch.Invoke();
+
+        if (DayNumber == 1)
+            WerewolfController.Instance.ScriptedCatch = true;
     }
 
     private void Werewolf_OnPlayerCaught()
     {
-        isDay = true;
-        OnDayBegin.Invoke();
+        if (DayNumber == 1)
+        {
+            Debug.Assert(IsNight);
+            isDay = true;
+            OnDayBegin.Invoke();
+        }
+
+        // TODO: restart the night
     }
 
-    private void DayEndQuest_OnDone(QuestEventArgs e)
+    private void TransitionQuest_OnDone(QuestEventArgs e)
     {
-        isDay = false;
-        OnNightBegin.Invoke();
+        SwitchDayNight();
     }
 }

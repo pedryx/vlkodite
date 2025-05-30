@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b9b47cdb-c305-4426-8247-2dd22137c0dc}">
+		<property name="assetPath">
+			<value>608987__smstrahan__g.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.056</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5e149c61-505c-4f63-986e-d71134de9cc5}</destination>
+		</relationship>
+	</object>
+</objects>

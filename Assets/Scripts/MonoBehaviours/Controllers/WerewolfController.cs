@@ -1,24 +1,75 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterMovement))]
 [RequireComponent(typeof(PathFollow))]
 public class WerewolfController : Singleton<WerewolfController>
 {
+    /// <summary>
+    /// When enabled <see cref="ScriptedAccelaration"/> is applied to the werewolf. This ensures that the werewolf
+    /// catches the player during the scripted chase sequence.
+    /// </summary>
     [SerializeField]
-    private GameObject werewolfSprite;
+    [Tooltip("When enabled, scripted acceleration is applied to the werewolf. This ensures that the werewolf " +
+        "catches the player during the scripted chase sequence.")]
+    private bool scriptedCatch = false;
+    private float standartSpeed;
+
+    // Following property is under scripted catch field, so its appear near each other in the inspector.
+
+    /// <summary>
+    /// Accelarattion of the werewolf when <see cref="ScriptedCatch"/> is enabled."/>
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Acceleration of the werewolf when ScriptedCatch is enabled.")]
+    public float ScriptedAccelaration { get; private set; } = 0.1f;
+
+    [SerializeField]
+    private GameObject werewolfForm;
+    [SerializeField]
+    private PlayerTrigger visionTrigger;
+    [SerializeField]
+    private PlayerTrigger catchTrigger;
+    [SerializeField]
+    private Transform werewolfNight1Spawn;
+    [SerializeField]
+    private Transform werewolfNight2Spawn;
+    [SerializeField]
+    private Transform werewolfNight3Spawn;
 
     private CharacterMovement characterMovement;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private PathFollow pathFollow;
-    private CircleCollider2D circleCollider;
+
+    /// <summary>
+    /// Determine if player entered werewolf's vision trigger during current night.
+    /// </summary>
+    private bool visionTriggered = false;
 
     /// <summary>
     /// Occur when player is caught by the werewolf.
     /// </summary>
     [Tooltip("Occur when player is caught by the werewolf.")]
     public UnityEvent OnPlayerCaught = new();
+
+    /// <summary>
+    /// When enabled <see cref="ScriptedAccelaration"/> is applied to the werewolf. This ensures that the werewolf
+    /// catches the player during the scripted chase sequence.
+    /// </summary>
+    public bool ScriptedCatch
+    {
+        get => scriptedCatch;
+        set
+        {
+            scriptedCatch = value;
+            if (value)
+                standartSpeed = characterMovement.Speed;
+            else
+                characterMovement.Speed = standartSpeed;
+        }
+    }
 
     protected override void Awake()
     {
@@ -30,10 +81,18 @@ public class WerewolfController : Singleton<WerewolfController>
 
         characterMovement = GetComponent<CharacterMovement>();
         pathFollow = GetComponent<PathFollow>();
-        circleCollider = GetComponent<CircleCollider2D>();
 
-        animator = werewolfSprite.GetComponent<Animator>();
-        spriteRenderer = werewolfSprite.GetComponent<SpriteRenderer>();
+        animator = werewolfForm.GetComponent<Animator>();
+        spriteRenderer = werewolfForm.GetComponent<SpriteRenderer>();
+
+        Debug.Assert(visionTrigger != null);
+        Debug.Assert(catchTrigger != null);
+        visionTrigger.OnEnter.AddListener(VisionTrigger_OnEnter);
+        catchTrigger.OnEnter.AddListener(CatchTrigger_OnEnter);
+
+        Debug.Assert(werewolfNight1Spawn != null, "Werewolf spawn for first night not specified.");
+        Debug.Assert(werewolfNight2Spawn != null, "Werewolf spawn for second night not specified.");
+        Debug.Assert(werewolfNight3Spawn != null, "Werewolf spawn for third night not specified.");
 
         enabled = false;
     }
@@ -43,27 +102,30 @@ public class WerewolfController : Singleton<WerewolfController>
         if (!characterMovement.IsMoving())
             spriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
         animator.SetBool("IsMoving", !characterMovement.IsMoving());
+
+        if (ScriptedCatch)
+            characterMovement.Speed += ScriptedAccelaration * Time.deltaTime;
     }
 
     private void OnEnable()
     {
-        werewolfSprite.SetActive(true);
-        circleCollider.enabled = true;
+        werewolfForm.SetActive(true);
+        transform.localPosition = GameManager.Instance.DayNumber switch
+        {
+            1 => werewolfNight1Spawn.position,
+            2 => werewolfNight2Spawn.position,
+            3 => werewolfNight3Spawn.position,
+            _ => throw new InvalidOperationException(
+                $"Spawn position for day {GameManager.Instance.DayNumber} not specified"
+            ),
+        };
+        visionTriggered = false;
     }
 
     private void OnDisable()
     {
-        werewolfSprite.SetActive(false);
-        circleCollider .enabled = false;
+        werewolfForm.SetActive(false);
         pathFollow.Target = null;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!enabled || !collision.TryGetComponent(out PlayerController player) || player.GodModeActive)
-            return;
-
-        OnPlayerCaught.Invoke();
     }
 
     private void WerewolfController_OnPlayerCaught()
@@ -80,5 +142,24 @@ public class WerewolfController : Singleton<WerewolfController>
     private void Instance_OnNightBegin()
     {
         enabled = true;
+    }
+
+    private void VisionTrigger_OnEnter()
+    {
+        if (visionTriggered)
+            return;
+
+        pathFollow.Target = PlayerController.Instance.transform;
+        QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
+        visionTriggered = true;
+    }
+
+    private void CatchTrigger_OnEnter()
+    {
+        if (PlayerController.Instance.GodModeActive)
+            return;
+
+        QuestManager.Instance.Current.TransitionQuest.Complete();
+        OnPlayerCaught.Invoke();
     }
 }
