@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: b867b3336654f6f449134c92bdf3aea1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1100850060772101992
+    second: sebastian-Sheet_0
+  - first:
+      213: 7459721287850055734
+    second: sebastian-Sheet_1
+  - first:
+      213: -2804049944645044482
+    second: sebastian-Sheet_2
+  - first:
+      213: 3510270959127669007
+    second: sebastian-Sheet_3
+  - first:
+      213: -3436108139531189073
+    second: sebastian-Sheet_4
+  - first:
+      213: -1402061868307859605
+    second: sebastian-Sheet_5
+  - first:
+      213: 6273115940027075356
+    second: sebastian-Sheet_6
+  - first:
+      213: 432748304065682654
+    second: sebastian-Sheet_7
+  - first:
+      213: 1434973626631732163
+    second: sebastian-Sheet_8
+  - first:
+      213: 2371566927622820669
+    second: sebastian-Sheet_9
+  - first:
+      213: 7489148214764360909
+    second: sebastian-Sheet_10
+  - first:
+      213: -176734837685285425
+    second: sebastian-Sheet_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sebastian-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 128
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89036b8c3bef8b0f0800000000000000
+      internalID: -1100850060772101992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 128
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638d8bdecf0468760800000000000000
+      internalID: 7459721287850055734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 128
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef67afc8e630619d0800000000000000
+      internalID: -2804049944645044482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 128
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f09ac20d6dcf6b030800000000000000
+      internalID: 3510270959127669007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 64
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa44a653add7050d0800000000000000
+      internalID: -3436108139531189073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 64
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67b362c820ea8ce0800000000000000
+      internalID: -1402061868307859605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 64
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b872806b59e0750800000000000000
+      internalID: 6273115940027075356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 64
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcdcfc2a4e610600800000000000000
+      internalID: 432748304065682654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb307d19ec0ae310800000000000000
+      internalID: 1434973626631732163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33d50a3e8f79e020800000000000000
+      internalID: 2371566927622820669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 0
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4d7434f9ccee760800000000000000
+      internalID: 7489148214764360909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 0
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd055cf99c1c8df0800000000000000
+      internalID: -176734837685285425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sebastian-Sheet_0: -1100850060772101992
+      sebastian-Sheet_1: 7459721287850055734
+      sebastian-Sheet_10: 7489148214764360909
+      sebastian-Sheet_11: -176734837685285425
+      sebastian-Sheet_2: -2804049944645044482
+      sebastian-Sheet_3: 3510270959127669007
+      sebastian-Sheet_4: -3436108139531189073
+      sebastian-Sheet_5: -1402061868307859605
+      sebastian-Sheet_6: 6273115940027075356
+      sebastian-Sheet_7: 432748304065682654
+      sebastian-Sheet_8: 1434973626631732163
+      sebastian-Sheet_9: 2371566927622820669
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
