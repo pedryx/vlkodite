@@ -17734,7 +17734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day2>k__BackingField.quests.Array.data[0].<Description>k__BackingField
-      value: Run away from the mansion
+      value: <color=yellow>Run away</color=yellow> from the mansion
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day2>k__BackingField.quests.Array.data[1].<Description>k__BackingField
@@ -17878,27 +17878,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[1].<Description>k__BackingField
-      value: Comfort Sebastian
+      value: 'Comfort <color=yellow>Sebastian</color=yellow> '
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<Description>k__BackingField
-      value: Clean up the pawprints
+      value: 'Clean up <color=yellow>the pawprints</color=yellow> '
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[3].<Description>k__BackingField
-      value: Put fallen books back to the library (1)
+      value: Put fallen books back to <color=yellow> the library (1)</color=yellow>
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[4].<Description>k__BackingField
-      value: Put fallen books back to the library (2)
+      value: Put fallen books back to <color=yellow> the library (2)</color=yellow>
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[5].<Description>k__BackingField
-      value: Put fallen books back to the library (3)
+      value: Put fallen books back to <color=yellow> the library (3)</color=yellow>
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[6].<Description>k__BackingField
-      value: Check in with Sebastian
+      value: Check in with<color=yellow> Sebastian</color=yellow>
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day3>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[0].<Description>k__BackingField
@@ -18022,23 +18022,24 @@ PrefabInstance:
       objectReference: {fileID: 2838147339248065662}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night1>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[0].<Description>k__BackingField
-      value: Go check on Sebastian
+      value: 'Go check on <color=yellow>Sebastian</color=yellow> '
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night1>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[1].<Description>k__BackingField
-      value: Go investigate the sound
+      value: 'Go investigate <color=yellow>the noise</color=yellow> '
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[0].<Description>k__BackingField
-      value: Find Sebastian
+      value: Find <color=yellow>Sebastian</color=yellow> Sebastian
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[1].<Description>k__BackingField
-      value: Find the music disc
+      value: Find the <color=yellow>music disc </color=yellow>to make the werewolf
+        sleep
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<Description>k__BackingField
-      value: Play the lullaby through the gramophone
+      value: Play the lullaby through <color=yellow>the gramophone</color=yellow>
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night1>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[0].<QuestAdvancer>k__BackingField
