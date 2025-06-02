@@ -2,6 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using FMODUnity;
 
+
 public class LetterReveal : MonoBehaviour
 {
     [SerializeField] private string playerTag = "Player";
@@ -14,6 +15,9 @@ public class LetterReveal : MonoBehaviour
 
     [Header("Other UI to hide when showing the letter")]
     [SerializeField] private CanvasGroup[] canvasesToHide;
+
+    [SerializeField] private PlayOnceSound letterFirstTimeSound;
+
 
     private bool isPlayerNearby = false;
     private bool isLetterVisible = false;
@@ -65,6 +69,8 @@ public class LetterReveal : MonoBehaviour
                 cg.blocksRaycasts = false;
             }
         }
+      
+
     }
 
     private void HideLetter()

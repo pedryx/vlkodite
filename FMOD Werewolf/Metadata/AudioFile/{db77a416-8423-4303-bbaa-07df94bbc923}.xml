@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{db77a416-8423-4303-bbaa-07df94bbc923}">
+		<property name="assetPath">
+			<value>vibes&amp;pay3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.3506575963718817</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5e149c61-505c-4f63-986e-d71134de9cc5}</destination>
+		</relationship>
+	</object>
+</objects>
