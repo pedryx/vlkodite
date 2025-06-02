@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9078c464-d74e-4e71-bfc2-0ef5f81e8516}">
+		<property name="assetPath">
+			<value>591079__orlandorizo__car-rolling-on-asphalt.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>88.856125000000006</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5e149c61-505c-4f63-986e-d71134de9cc5}</destination>
+		</relationship>
+	</object>
+</objects>
