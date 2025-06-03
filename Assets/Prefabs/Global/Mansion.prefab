@@ -4092,7 +4092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &1995545548601324114
@@ -9105,7 +9104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &6519446327579594155
@@ -9433,7 +9431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &7641911818098933936
@@ -11918,7 +11915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &2622243078729245567
@@ -15977,7 +15973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &536597577036090702
@@ -16209,7 +16204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &8995529470581392019
@@ -24627,7 +24621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &7801311272143341272
@@ -25173,7 +25166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &232981327267265109
@@ -29153,7 +29145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &7330855383909796598
@@ -40740,7 +40731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &714503404010937293
@@ -49072,7 +49062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &8091743143166745728
@@ -63609,7 +63598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &4026619545100087180
@@ -67959,7 +67947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &539426501869405499
@@ -68845,7 +68832,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &7482835117925264048
@@ -71623,7 +71609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &8030654300127363087
@@ -72212,7 +72197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &166691716620428183
@@ -73689,7 +73673,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &287066060700038967
@@ -81160,7 +81143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &4974071378552519207
@@ -81310,7 +81292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &4823821101158661283
@@ -81625,7 +81606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &3395790282082729329
@@ -82156,7 +82136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &1919752293259988447
@@ -82424,7 +82403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &362232061511811107
@@ -92001,7 +91979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &4260792119656888846
@@ -96909,7 +96886,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.5
   targetAlpha: 0
 --- !u!61 &4658200850440779992
@@ -99188,7 +99164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.36
   targetAlpha: 0
 --- !u!61 &2051255766671787392
@@ -99341,7 +99316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab698640e1e232749ac1f3cd4d5f93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerTag: Player
   fadeDuration: 0.36
   targetAlpha: 0
 --- !u!61 &4926666432404495488
@@ -100001,7 +99975,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2522419567089427858}
+    m_TransformParent: {fileID: 8437472850099151832}
     m_Modifications:
     - target: {fileID: -948285828414356963, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
       propertyPath: promptMessage
@@ -100069,15 +100043,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2114242991272407687, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.7315
+      value: 4.652199
       objectReference: {fileID: 0}
     - target: {fileID: 2114242991272407687, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -36.684875
+      value: -36.3591
       objectReference: {fileID: 0}
     - target: {fileID: 2114242991272407687, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.29993567
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2114242991272407687, guid: f63b70fc46dd08b47828678cd1d71d18, type: 3}
       propertyPath: m_LocalRotation.w
@@ -100568,6 +100542,9 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 2222926355576209373, guid: b740e810a018dc842811e391b585dcbc, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1718807173234774821, guid: b740e810a018dc842811e391b585dcbc, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 4715938315116446403}
     - targetCorrespondingSourceObject: {fileID: 5297478636540599062, guid: b740e810a018dc842811e391b585dcbc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5110964129060190777}
@@ -100583,9 +100560,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 202955132063990488, guid: b740e810a018dc842811e391b585dcbc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2505306018624292851}
-    - targetCorrespondingSourceObject: {fileID: 4741426078352463215, guid: b740e810a018dc842811e391b585dcbc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4715938315116446403}
     - targetCorrespondingSourceObject: {fileID: 4741426078352463215, guid: b740e810a018dc842811e391b585dcbc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5253962583922849573}
