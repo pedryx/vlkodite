@@ -100,35 +100,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: werewolf_run_eyes_0
+      name: RunSideEyes_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 158
+        y: 160
         width: 96
-        height: 82
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 14392293d69203420800000000000000
-      internalID: 2607629733334258497
+      spriteID: dda998e62f9924349a9b8382e149ba34
+      internalID: 1636407472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: werewolf_run_eyes_1
+      name: RunSideEyes_1
       rect:
         serializedVersion: 2
         x: 96
-        y: 158
+        y: 160
         width: 96
-        height: 82
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b0244afbb2b6594eb56fa0cc8e79d90
-      internalID: -1580675526
+      spriteID: a92afa630dc0a8348b5f3ee5bd7b0bb5
+      internalID: -1265368351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: werewolf_run_eyes_2
+      name: RunSideEyes_2
       rect:
         serializedVersion: 2
         x: 192
-        y: 158
+        y: 160
         width: 96
-        height: 82
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baf75f06f7231174cb798fd221f31fcd
-      internalID: 2139526318
+      spriteID: ac8dc057a73c53742bd589b8d1250c6b
+      internalID: 89960319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: werewolf_run_eyes_3
+      name: RunSideEyes_3
       rect:
         serializedVersion: 2
         x: 288
-        y: 158
+        y: 160
         width: 96
-        height: 82
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 310d2655d60bdad4795a066c5c22bef2
-      internalID: 1489291076
+      spriteID: 0f80d86b988e2204d86bd06a8b6cf4f8
+      internalID: 31671280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: werewolf_run_eyes_4
+      name: RunSideEyes_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 76
+        y: 80
         width: 96
-        height: 82
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5278810348bdf7e4e806ed7bb6939412
-      internalID: 444785672
+      spriteID: 45d00b857eacae14c9d41979544511ca
+      internalID: -1084934822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: werewolf_run_eyes_5
+      name: RunSideEyes_5
       rect:
         serializedVersion: 2
         x: 96
-        y: 76
+        y: 80
         width: 96
-        height: 82
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8a25fecb7ca317499c664ce187297f2
-      internalID: -46107763
+      spriteID: 39c586cef74914b4485cb1a8b1b8d105
+      internalID: 1945501799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: werewolf_run_eyes_6
+      name: RunSideEyes_6
       rect:
         serializedVersion: 2
         x: 192
-        y: 76
+        y: 80
         width: 96
-        height: 82
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37ec076a5218ad44dbeabb92fcba0b4c
-      internalID: 523045956
+      spriteID: 33695f7454cc93c4a8855da3a284cb01
+      internalID: 1052054538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: werewolf_run_eyes_7
+      name: RunSideEyes_7
       rect:
         serializedVersion: 2
         x: 288
-        y: 76
+        y: 80
         width: 96
-        height: 82
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,8 +269,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17bad20b8354a4b4caefbfc47ced4ba6
-      internalID: -1676165170
+      spriteID: 6a323b9785a1dac49833bc9d76054c41
+      internalID: -1616504020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunSideEyes_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122f5e7a07ebea146b7aef60dec174e9
+      internalID: -702418642
       vertices: []
       indices: 
       edges: []
@@ -289,14 +311,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      werewolf_run_eyes_0: 2607629733334258497
-      werewolf_run_eyes_1: -1580675526
-      werewolf_run_eyes_2: 2139526318
-      werewolf_run_eyes_3: 1489291076
-      werewolf_run_eyes_4: 444785672
-      werewolf_run_eyes_5: -46107763
-      werewolf_run_eyes_6: 523045956
-      werewolf_run_eyes_7: -1676165170
+      RunSideEyes_0: 1636407472
+      RunSideEyes_1: -1265368351
+      RunSideEyes_2: 89960319
+      RunSideEyes_3: 31671280
+      RunSideEyes_4: -1084934822
+      RunSideEyes_5: 1945501799
+      RunSideEyes_6: 1052054538
+      RunSideEyes_7: -1616504020
+      RunSideEyes_8: -702418642
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

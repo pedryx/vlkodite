@@ -45,9 +45,16 @@ public class WerewolfController : Singleton<WerewolfController>
     [SerializeField]
     private Transform werewolfNight3Spawn;
 
+    [SerializeField]
+    private Animator werewolfAnimator;
+    [SerializeField]
+    private Animator eyesAnimator;
+    [SerializeField]
+    private SpriteRenderer werewolfSpriteRenderer;
+    [SerializeField]
+    private SpriteRenderer eyesSpriteRenderer;
+
     private CharacterMovement characterMovement;
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
     private PathFollow pathFollow;
     private WerewolfAnimationEvents werewolfAnimationEvents;
 
@@ -90,9 +97,6 @@ public class WerewolfController : Singleton<WerewolfController>
         characterMovement = GetComponent<CharacterMovement>();
         pathFollow = GetComponent<PathFollow>();
 
-        animator = werewolfForm.GetComponent<Animator>();
-        spriteRenderer = werewolfForm.GetComponent<SpriteRenderer>();
-
         Debug.Assert(visionTrigger != null);
         Debug.Assert(catchTrigger != null);
         visionTrigger.OnEnter.AddListener(VisionTrigger_OnEnter);
@@ -114,8 +118,12 @@ public class WerewolfController : Singleton<WerewolfController>
     private void Update()
     {
         if (!characterMovement.IsMoving())
-            spriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
-        animator.SetBool("IsMoving", !characterMovement.IsMoving());
+        {
+            werewolfSpriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
+            eyesSpriteRenderer.flipX = werewolfSpriteRenderer.flipX;
+        }
+        werewolfAnimator.SetBool("IsMoving", !characterMovement.IsMoving());
+        eyesAnimator.SetBool("IsMoving", !characterMovement.IsMoving());
 
         if (ScriptedCatch)
             characterMovement.Speed += ScriptedAccelaration * Time.deltaTime;
@@ -183,7 +191,8 @@ public class WerewolfController : Singleton<WerewolfController>
         if (PlayerController.Instance.GodModeActive)
             return;
 
-        animator.SetBool("IsGrabing", true);
+        werewolfAnimator.SetBool("IsGrabing", true);
+        eyesAnimator.SetBool("IsGrabing", true);
         speed = characterMovement.Speed;
         characterMovement.Speed = 0;
     }
@@ -201,7 +210,8 @@ public class WerewolfController : Singleton<WerewolfController>
 
     private void WerewolfAnimationEvents_AfterLastFrame()
     {
-        animator.SetBool("IsGrabing", false);
+        werewolfAnimator.SetBool("IsGrabing", false);
+        eyesAnimator.SetBool("IsGrabing", false);
         characterMovement.Speed = speed;
 
         Debug.Log("werewolf grab end");
