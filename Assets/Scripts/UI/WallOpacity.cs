@@ -3,7 +3,6 @@ using DG.Tweening;
 
 public class WallFadeDOTween : MonoBehaviour
 {
-    public string triggerTag = "Player";
     public float fadeDuration = 0.5f;
     public float targetAlpha = 0f;
 
@@ -25,11 +24,11 @@ public class WallFadeDOTween : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(triggerTag))
+        if (IsRelevantTag(other.tag))
         {
             playerInsideCount++;
 
-            if (playerInsideCount == 1) // Only fade if this is the first trigger
+            if (playerInsideCount == 1)
             {
                 foreach (var r in renderers)
                 {
@@ -42,18 +41,23 @@ public class WallFadeDOTween : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag(triggerTag))
+        if (IsRelevantTag(other.tag))
         {
             playerInsideCount--;
 
             if (playerInsideCount <= 0)
             {
-                playerInsideCount = 0; // Clamp to zero
+                playerInsideCount = 0; // Clamp
                 for (int i = 0; i < renderers.Length; i++)
                 {
                     renderers[i].DOFade(originalAlphas[i], fadeDuration);
                 }
             }
         }
+    }
+
+    private bool IsRelevantTag(string tag)
+    {
+        return tag == "Player" || tag == "Child";
     }
 }
