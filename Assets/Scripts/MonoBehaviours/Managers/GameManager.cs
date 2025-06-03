@@ -70,9 +70,27 @@ public class GameManager : Singleton<GameManager>
 
     public PathFinder PathFinder { get; private set; }
 
+    // Following events should be properties, but we can't change that now because they have a lot events linked on
+    // them now.
+
     public UnityEvent OnDayBegin = new();
     public UnityEvent OnNightBegin = new();
     public UnityEvent OnDayNightSwitch = new();
+
+    // Following events are redundant, but they allow more comfortable usage from the inspector.
+
+    [field: SerializeField]
+    public UnityEvent OnFirstDayBegin { get; private set; } = new();
+    [field: SerializeField]
+    public UnityEvent OnSecondDayBegin { get; private set; } = new();
+    [field: SerializeField]
+    public UnityEvent OnThirdDayBegin { get; private set; } = new();
+    [field: SerializeField]
+    public UnityEvent OnFirstNightBegin { get; private set; } = new();
+    [field: SerializeField]
+    public UnityEvent OnSecondNightBegin { get; private set; } = new();
+    [field: SerializeField]
+    public UnityEvent OnThirdNightBegin { get; private set; } = new();
 
     protected override void Awake()
     {
@@ -136,8 +154,19 @@ public class GameManager : Singleton<GameManager>
 
         OnDayNightSwitch.Invoke();
 
-        if (DayNumber == 2)
-            WerewolfController.Instance.ScriptedCatch = false;
+        switch(DayNumber)
+        {
+            case 1:
+                OnFirstDayBegin.Invoke();
+                break;
+            case 2:
+                WerewolfController.Instance.ScriptedCatch = false;
+                OnSecondDayBegin.Invoke();
+                break;
+            case 3:
+                OnThirdDayBegin.Invoke();
+                break;
+        }
     }
 
     private void GameManager_OnNightBegin()
@@ -147,8 +176,21 @@ public class GameManager : Singleton<GameManager>
 
         OnDayNightSwitch.Invoke();
 
-        if (DayNumber == 1)
-            WerewolfController.Instance.ScriptedCatch = true;
+        switch (DayNumber)
+        {
+            case 1:
+                WerewolfController.Instance.ScriptedCatch = true;
+                OnFirstNightBegin.Invoke();
+                break;
+            case 2:
+                WerewolfController.Instance.ScriptedCatch = false;
+                OnSecondNightBegin.Invoke();
+                break;
+            case 3:
+                OnThirdNightBegin.Invoke();
+                break;
+        }
+
     }
 
     private void Werewolf_OnPlayerCaught()
