@@ -169,9 +169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: That could take my mind off things for a while
+  fullText: ^That^ could take my mind off things for a while
   delayBetweenChars: 0.05
-  hesitationDelay: 0.7
+  hesitationDelay: 0.5
   fadeDuration: 0.6
   playOnStart: 1
   hesitationMarker: 94
@@ -310,7 +310,7 @@ MonoBehaviour:
       Data2: 1268067130
       Data3: 1437460395
       Data4: 1688342940
-    Path: event:/CarAmbient
+    Path: event:/Intro
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
@@ -337,6 +337,316 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &554546530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554546531}
+  - component: {fileID: 554546534}
+  - component: {fileID: 554546533}
+  - component: {fileID: 554546532}
+  m_Layer: 5
+  m_Name: Text1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &554546531
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554546530}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 7.551501}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1910810450}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 152.48224, y: -445.28253}
+  m_SizeDelta: {x: 1545.728, y: 142.672}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &554546532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554546530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: ^...and^ living alone doesn't lift the spirits
+  delayBetweenChars: 0.05
+  hesitationDelay: 0.58
+  fadeDuration: 0.6
+  playOnStart: 1
+  hesitationMarker: 94
+--- !u!114 &554546533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554546530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: ...and living alone doesn't lift the spirits
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
+  m_sharedMaterial: {fileID: -7541938288903417560, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 55.27
+  m_fontSizeBase: 55.27
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &554546534
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554546530}
+  m_CullTransparentMesh: 1
+--- !u!1 &987607346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 987607347}
+  - component: {fileID: 987607350}
+  - component: {fileID: 987607349}
+  - component: {fileID: 987607348}
+  m_Layer: 5
+  m_Name: Text1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &987607347
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987607346}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 7.551501}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1910810450}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 152.48224, y: -445.28253}
+  m_SizeDelta: {x: 1545.728, y: 142.672}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &987607348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987607346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: ..but im feeling hopeful
+  delayBetweenChars: 0.05
+  hesitationDelay: 0.7
+  fadeDuration: 0.6
+  playOnStart: 1
+  hesitationMarker: 94
+--- !u!114 &987607349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987607346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: ..but im feeling hopeful
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
+  m_sharedMaterial: {fileID: -7541938288903417560, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 55.27
+  m_fontSizeBase: 55.27
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &987607350
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987607346}
+  m_CullTransparentMesh: 1
 --- !u!1 &1200765645
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,9 +1246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: It's well payed ^and seems easy enough^
+  fullText: Well paid... ^and seems easy enough^
   delayBetweenChars: 0.05
-  hesitationDelay: 0.75
+  hesitationDelay: 1.03
   fadeDuration: 0.6
   playOnStart: 1
   hesitationMarker: 94
@@ -962,7 +1272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: It's well payed and seems easy enough
+  m_text: Well paid... and seems easy enough
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
   m_sharedMaterial: {fileID: -7541938288903417560, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
@@ -1091,7 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: the money is getting tight ^...but im feeling hopeful^
+  fullText: The money is getting tight...
   delayBetweenChars: 0.05
   hesitationDelay: 0.7
   fadeDuration: 0.6
@@ -1117,7 +1427,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The money is getting tight ...but im feeling hopeful
+  m_text: The money is getting tight...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
   m_sharedMaterial: {fileID: -7541938288903417560, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
@@ -1246,8 +1556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: Ugh... ^I hate driving^
-  delayBetweenChars: 0.05
+  fullText: ^Ugh...^  I hate driving
+  delayBetweenChars: 0.11
   hesitationDelay: 1.14
   fadeDuration: 0.6
   playOnStart: 1
@@ -1383,6 +1693,8 @@ Transform:
   m_Children:
   - {fileID: 1781634148}
   - {fileID: 1755909632}
+  - {fileID: 554546531}
+  - {fileID: 987607347}
   - {fileID: 1245639965}
   - {fileID: 1703877461}
   - {fileID: 2005478199}
@@ -1403,15 +1715,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequence:
   - textObject: {fileID: 1781634147}
-    duration: 5
+    duration: 5.5
   - textObject: {fileID: 1755909631}
-    duration: 5
+    duration: 2
+  - textObject: {fileID: 554546530}
+    duration: 5.7
+  - textObject: {fileID: 987607346}
+    duration: 2
   - textObject: {fileID: 1245639964}
     duration: 2.5
   - textObject: {fileID: 1703877460}
-    duration: 4
+    duration: 4.7
   - textObject: {fileID: 2005478198}
-    duration: 4
+    duration: 5
   - textObject: {fileID: 530594011}
     duration: 5
   stepSound:
@@ -1476,7 +1792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: Just taking care of a house and some kid
+  fullText: ^Just^ taking care of a house and some kid
   delayBetweenChars: 0.05
   hesitationDelay: 0.7
   fadeDuration: 0.6

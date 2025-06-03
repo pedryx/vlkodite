@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: Werewolf and all
+  fullText: Werewolf and all.
   delayBetweenChars: 0.05
   hesitationDelay: 0.7
   fadeDuration: 0.6
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Werewolf and all
+  m_text: Werewolf and all.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
   m_sharedMaterial: {fileID: -7541938288903417560, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
@@ -931,9 +931,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: Sebastian is a good kid
+  fullText: ^Sebastian^ is a good kid
   delayBetweenChars: 0.05
-  hesitationDelay: 0.7
+  hesitationDelay: 0.5
   fadeDuration: 0.6
   playOnStart: 1
   hesitationMarker: 94
@@ -1515,7 +1515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: just unfortunate circumstances
+  fullText: just caught in unfortunate circumstances
   delayBetweenChars: 0.05
   hesitationDelay: 0.75
   fadeDuration: 0.6
@@ -1541,7 +1541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: just unfortunate circumstances
+  m_text: just caught in unfortunate circumstances
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
   m_sharedMaterial: {fileID: -7541938288903417560, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
@@ -1670,9 +1670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: but what can I say.
+  fullText: ^but^ what can I say.
   delayBetweenChars: 0.05
-  hesitationDelay: 0.7
+  hesitationDelay: 0.4
   fadeDuration: 0.6
   playOnStart: 1
   hesitationMarker: 94
@@ -1696,7 +1696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: but what can I say
+  m_text: but... what can I say
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
   m_sharedMaterial: {fileID: -7541938288903417560, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
@@ -1825,7 +1825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: 'Last thing I would expect is an outcome like this, '
+  fullText: The last thing I expected was an outcome like this-
   delayBetweenChars: 0.05
   hesitationDelay: 1.14
   fadeDuration: 0.6
@@ -1851,7 +1851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Last thing I would expect is an outcome like this, '
+  m_text: The last thing I expected was an outcome like this-
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
   m_sharedMaterial: {fileID: -7541938288903417560, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequence:
   - textObject: {fileID: 970705957}
-    duration: 3
+    duration: 2
   - textObject: {fileID: 1781634147}
     duration: 5
   - textObject: {fileID: 1755909631}
@@ -1995,7 +1995,7 @@ MonoBehaviour:
   - textObject: {fileID: 1703877460}
     duration: 4
   - textObject: {fileID: 2005478198}
-    duration: 4
+    duration: 5
   - textObject: {fileID: 530594011}
     duration: 2
   - textObject: {fileID: 1244926689}
@@ -2064,7 +2064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11463979211ddc43923ea55f0822570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: I want him to have an enviroment where he can grow up being himself
+  fullText: I want him to have a place where he can grow up being himself
   delayBetweenChars: 0.05
   hesitationDelay: 0.7
   fadeDuration: 0.6
@@ -2090,7 +2090,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I want him to have an enviroment where he can grow up being himself
+  m_text: I want him to have a place where he can grow up being himself
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}
   m_sharedMaterial: {fileID: -7541938288903417560, guid: 2312faa38bc246a41957d7b25485b55b, type: 2}

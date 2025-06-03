@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{35734e25-2b3a-4b95-abe7-ad559c11a264}">
 		<property name="name">
-			<value>CarAmbient</value>
+			<value>Intro</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -39,7 +39,7 @@
 	</object>
 	<object class="MasterTrack" id="{b1a90a86-6d66-42d5-b708-bb8e8d1871ef}">
 		<relationship name="modules">
-			<destination>{dcb17960-f553-445a-8feb-0f67c7b9ca00}</destination>
+			<destination>{54f09ec2-8f35-46e5-a061-38b4e13507cc}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{88cf5829-b466-427c-81ac-45c7398bedc5}</destination>
@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{455dac0a-3e7a-44ec-8e6e-447e78a09d25}" />
 	<object class="Timeline" id="{b90b5bf6-2770-41ad-aff9-0bb195a8e178}">
 		<relationship name="modules">
-			<destination>{dcb17960-f553-445a-8feb-0f67c7b9ca00}</destination>
+			<destination>{54f09ec2-8f35-46e5-a061-38b4e13507cc}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{88cf5829-b466-427c-81ac-45c7398bedc5}">
@@ -74,12 +74,12 @@
 			<destination>{0a9b2ec4-0dd2-44c2-a6ed-5584bff46884}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{dcb17960-f553-445a-8feb-0f67c7b9ca00}">
+	<object class="SingleSound" id="{54f09ec2-8f35-46e5-a061-38b4e13507cc}">
 		<property name="length">
-			<value>88.856125000000006</value>
+			<value>36.99863945578231</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{9078c464-d74e-4e71-bfc2-0ef5f81e8516}</destination>
+			<destination>{5e7153c6-bba0-4390-8ba3-2e19089c3fee}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{f334b191-3e13-474a-801a-4b7a54072842}">
