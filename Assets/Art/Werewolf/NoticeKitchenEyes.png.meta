@@ -1,61 +1,10 @@
 fileFormatVersion: 2
-guid: aa3530308b4b14348bee82445c393747
+guid: c8d914359dbcd2946ac224fc973dc3a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 271307541048364812
-    second: warewolf_event_0
-  - first:
-      213: -4114306672028302101
-    second: warewolf_event_1
-  - first:
-      213: -1804497136503145930
-    second: warewolf_event_2
-  - first:
-      213: 4234190251989505278
-    second: warewolf_event_3
-  - first:
-      213: 7158750678270056444
-    second: warewolf_event_4
-  - first:
-      213: 2084151939192311359
-    second: warewolf_event_5
-  - first:
-      213: 7538508189025185055
-    second: warewolf_event_6
-  - first:
-      213: 243604364332994890
-    second: warewolf_event_7
-  - first:
-      213: -3957980589652547343
-    second: warewolf_event_8
-  - first:
-      213: -365533910277519413
-    second: warewolf_event_9
-  - first:
-      213: -170365811630919396
-    second: warewolf_event_10
-  - first:
-      213: -2235037200201566971
-    second: warewolf_event_11
-  - first:
-      213: 1655291107432997079
-    second: warewolf_event_12
-  - first:
-      213: -3922319667829359054
-    second: warewolf_event_13
-  - first:
-      213: 7669392082910483927
-    second: warewolf_event_14
-  - first:
-      213: 5936222411564770637
-    second: warewolf_event_15
-  - first:
-      213: -4088104280430078501
-    second: warewolf_event_16
-  - first:
-      213: -3041206843785501618
-    second: warewolf_event_17
+      213: 2658531740011831370
+    second: EventEyest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,414 +96,401 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: warewolf_event_0
+      name: NoticeKitchenEyes_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 333
-        width: 48
-        height: 38
+        x: 0
+        y: 320
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c0f821965c0e3c300800000000000000
-      internalID: 271307541048364812
+      spriteID: 0780bcdca15668f439e2f85691158e4f
+      internalID: -1105673756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_1
+      name: NoticeKitchenEyes_1
       rect:
         serializedVersion: 2
-        x: 117
-        y: 333
-        width: 48
-        height: 38
+        x: 96
+        y: 320
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: be4cbbc51eb07e6c0800000000000000
-      internalID: -4114306672028302101
+      spriteID: dbe88698aa75ede4297f01760b0e1a86
+      internalID: -2023262863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_2
+      name: NoticeKitchenEyes_2
       rect:
         serializedVersion: 2
-        x: 214
-        y: 333
-        width: 47
-        height: 38
+        x: 192
+        y: 320
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 63a358c3a6325f6e0800000000000000
-      internalID: -1804497136503145930
+      spriteID: 49015ab8d469a5b4fa37c38b1c3a1ed3
+      internalID: -823987565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_3
+      name: NoticeKitchenEyes_3
       rect:
         serializedVersion: 2
-        x: 311
-        y: 333
-        width: 46
-        height: 39
+        x: 288
+        y: 320
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ef49149b99dd2ca30800000000000000
-      internalID: 4234190251989505278
+      spriteID: a4fdb1da2d699bf4380004c1b4b7c1e4
+      internalID: 768243964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_4
+      name: NoticeKitchenEyes_4
       rect:
         serializedVersion: 2
-        x: 23
-        y: 253
-        width: 46
-        height: 41
+        x: 0
+        y: 240
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cf79fdd20ddf85360800000000000000
-      internalID: 7158750678270056444
+      spriteID: ecd19966fa0a04246bcc6d5a5c75ace4
+      internalID: 940578002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_5
+      name: NoticeKitchenEyes_5
       rect:
         serializedVersion: 2
-        x: 119
-        y: 253
-        width: 46
-        height: 43
+        x: 96
+        y: 240
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f3ecf7975256cec10800000000000000
-      internalID: 2084151939192311359
+      spriteID: b971ff1ad28af724a8647f6fb1d4e098
+      internalID: 1361460571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_6
+      name: NoticeKitchenEyes_6
       rect:
         serializedVersion: 2
-        x: 218
-        y: 253
-        width: 41
-        height: 44
+        x: 192
+        y: 240
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f1d2837d1492e9860800000000000000
-      internalID: 7538508189025185055
+      spriteID: 26181eb9974bcb44eaee5959b5a0cfd3
+      internalID: 904482606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_7
+      name: NoticeKitchenEyes_7
       rect:
         serializedVersion: 2
-        x: 315
-        y: 253
-        width: 40
-        height: 47
+        x: 288
+        y: 240
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a419dc1f0e4716300800000000000000
-      internalID: 243604364332994890
+      spriteID: 8f20d55b863a3a54d99b2eab8d880ca4
+      internalID: 1450075281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_8
+      name: NoticeKitchenEyes_8
       rect:
         serializedVersion: 2
-        x: 27
-        y: 173
-        width: 39
-        height: 47
+        x: 0
+        y: 160
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1f86eddbf9d6219c0800000000000000
-      internalID: -3957980589652547343
+      spriteID: 5d1ac6e52f29efd46aeaf7abd71fdebf
+      internalID: 1609325584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_9
+      name: NoticeKitchenEyes_9
       rect:
         serializedVersion: 2
-        x: 124
-        y: 173
-        width: 38
-        height: 48
+        x: 96
+        y: 160
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bc78c8468dc5deaf0800000000000000
-      internalID: -365533910277519413
+      spriteID: b0e45bc2fd1b81647841a80be589d9e7
+      internalID: -1001046027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_10
+      name: NoticeKitchenEyes_10
       rect:
         serializedVersion: 2
-        x: 221
-        y: 173
-        width: 36
-        height: 47
+        x: 192
+        y: 160
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c113edb623db2adf0800000000000000
-      internalID: -170365811630919396
+      spriteID: 7a40e118190d8eb40b83b1c29b73ba1b
+      internalID: -1774874605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_11
+      name: NoticeKitchenEyes_11
       rect:
         serializedVersion: 2
-        x: 317
-        y: 173
-        width: 36
-        height: 47
+        x: 288
+        y: 160
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 505b336128d8bf0e0800000000000000
-      internalID: -2235037200201566971
+      spriteID: 242410625e373b14b8ed4fab4b9ee518
+      internalID: -91266068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_12
+      name: NoticeKitchenEyes_12
       rect:
         serializedVersion: 2
-        x: 37
-        y: 94
-        width: 30
-        height: 45
+        x: 0
+        y: 80
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7d0286afd76c8f610800000000000000
-      internalID: 1655291107432997079
+      spriteID: 39d26256a158b4243a1719e2b0e49fc2
+      internalID: 225442857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_13
+      name: NoticeKitchenEyes_13
       rect:
         serializedVersion: 2
-        x: 130
-        y: 95
-        width: 40
-        height: 29
+        x: 96
+        y: 80
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 23eb08f1b0f1199c0800000000000000
-      internalID: -3922319667829359054
+      spriteID: 034049646f151be4cba1523efda3d2e7
+      internalID: 1705181717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_14
+      name: NoticeKitchenEyes_14
       rect:
         serializedVersion: 2
-        x: 223
-        y: 94
-        width: 44
-        height: 29
+        x: 192
+        y: 80
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7d5921917772f6a60800000000000000
-      internalID: 7669392082910483927
+      spriteID: 7144b22ca25a96c47a032b9bd36bc5e5
+      internalID: 396539807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_15
+      name: NoticeKitchenEyes_15
       rect:
         serializedVersion: 2
-        x: 318
-        y: 94
-        width: 45
-        height: 30
+        x: 288
+        y: 80
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d45e705f4d2b16250800000000000000
-      internalID: 5936222411564770637
+      spriteID: e4867bb61b31cf344b8eb3d78bcfe24d
+      internalID: 672826587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_16
+      name: NoticeKitchenEyes_16
       rect:
         serializedVersion: 2
-        x: 30
-        y: 14
-        width: 45
-        height: 31
+        x: 0
+        y: 0
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bd5163011d22447c0800000000000000
-      internalID: -4088104280430078501
+      spriteID: 12b845b049ade8a4d917f318208d93f0
+      internalID: -576918246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_event_17
+      name: NoticeKitchenEyes_17
       rect:
         serializedVersion: 2
-        x: 126
-        y: 14
-        width: 45
-        height: 33
+        x: 96
+        y: 0
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e44ada31d767bc5d0800000000000000
-      internalID: -3041206843785501618
+      spriteID: 27a582b54320f0148935b96323416056
+      internalID: -1906212524
       vertices: []
       indices: 
       edges: []
@@ -563,7 +499,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f687310fed77f6b4798132fefad1ab33
     internalID: 0
     vertices: []
     indices: 
@@ -573,24 +509,26 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      warewolf_event_0: 271307541048364812
-      warewolf_event_1: -4114306672028302101
-      warewolf_event_10: -170365811630919396
-      warewolf_event_11: -2235037200201566971
-      warewolf_event_12: 1655291107432997079
-      warewolf_event_13: -3922319667829359054
-      warewolf_event_14: 7669392082910483927
-      warewolf_event_15: 5936222411564770637
-      warewolf_event_16: -4088104280430078501
-      warewolf_event_17: -3041206843785501618
-      warewolf_event_2: -1804497136503145930
-      warewolf_event_3: 4234190251989505278
-      warewolf_event_4: 7158750678270056444
-      warewolf_event_5: 2084151939192311359
-      warewolf_event_6: 7538508189025185055
-      warewolf_event_7: 243604364332994890
-      warewolf_event_8: -3957980589652547343
-      warewolf_event_9: -365533910277519413
+      NoticeKitchenEyes_0: -1105673756
+      NoticeKitchenEyes_1: -2023262863
+      NoticeKitchenEyes_10: -1774874605
+      NoticeKitchenEyes_11: -91266068
+      NoticeKitchenEyes_12: 225442857
+      NoticeKitchenEyes_13: 1705181717
+      NoticeKitchenEyes_14: 396539807
+      NoticeKitchenEyes_15: 672826587
+      NoticeKitchenEyes_16: -576918246
+      NoticeKitchenEyes_17: -1906212524
+      NoticeKitchenEyes_18: 74177483
+      NoticeKitchenEyes_19: 1946114708
+      NoticeKitchenEyes_2: -823987565
+      NoticeKitchenEyes_3: 768243964
+      NoticeKitchenEyes_4: 940578002
+      NoticeKitchenEyes_5: 1361460571
+      NoticeKitchenEyes_6: 904482606
+      NoticeKitchenEyes_7: 1450075281
+      NoticeKitchenEyes_8: 1609325584
+      NoticeKitchenEyes_9: -1001046027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

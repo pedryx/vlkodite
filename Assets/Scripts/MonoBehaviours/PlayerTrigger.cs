@@ -6,7 +6,9 @@ public class PlayerTrigger : MonoBehaviour
 {
     private Collider2D trigger;
 
+    [field: SerializeField]
     public UnityEvent OnEnter { get; private set; } = new();
+    [field: SerializeField]
     public UnityEvent OnExit { get; private set; } = new();
 
     private void Awake()

@@ -43,7 +43,7 @@ public class ChildController : Singleton<ChildController>
 
     private void Update()
     {
-        bool isMoving = !movement.IsMoving();
+        bool isMoving = !movement.IsNotMoving();
         animator.SetBool("isMoving", isMoving);
 
         // Flip child based on X movement

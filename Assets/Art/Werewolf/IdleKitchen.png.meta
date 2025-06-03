@@ -170,441 +170,441 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_0
+      name: IdleKitchen_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 333
-        width: 48
-        height: 39
+        x: 0
+        y: 320
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6e4c179594ba72a20800000000000000
-      internalID: 3037584805206279398
+      spriteID: c3547094a4b89b34a947b6e21a4b7be9
+      internalID: -660447067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_1
+      name: IdleKitchen_1
       rect:
         serializedVersion: 2
-        x: 117
-        y: 333
-        width: 48
-        height: 38
+        x: 96
+        y: 320
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4ba20afef94194490800000000000000
-      internalID: -7761649805643732300
+      spriteID: 1e41104ac603c08409b67855726d0da0
+      internalID: 1983667294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_2
+      name: IdleKitchen_2
       rect:
         serializedVersion: 2
-        x: 213
-        y: 333
-        width: 47
-        height: 38
+        x: 192
+        y: 320
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 082bcbb5c58ff32d0800000000000000
-      internalID: -3296643326652140928
+      spriteID: c89fa287a6296284893e44731553f353
+      internalID: 78483071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_3
+      name: IdleKitchen_3
       rect:
         serializedVersion: 2
-        x: 310
-        y: 333
-        width: 46
-        height: 40
+        x: 288
+        y: 320
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 653dab7f221313290800000000000000
-      internalID: -7912489044058385578
+      spriteID: 643348249732daa4d9bc5487d2250fdf
+      internalID: 74809011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_4
+      name: IdleKitchen_4
       rect:
         serializedVersion: 2
-        x: 22
-        y: 253
-        width: 46
-        height: 41
+        x: 0
+        y: 240
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 81e443b8b32c67660800000000000000
-      internalID: 7383302200114826776
+      spriteID: a36f98c4b709cad41980d2008ed10f1f
+      internalID: 534544764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_5
+      name: IdleKitchen_5
       rect:
         serializedVersion: 2
-        x: 118
-        y: 253
-        width: 46
-        height: 37
+        x: 96
+        y: 240
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c0c2870692cb226f0800000000000000
-      internalID: -710798905272947700
+      spriteID: abdda9d1ce63f0149996b482acf3721e
+      internalID: -541094823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_6
+      name: IdleKitchen_6
       rect:
         serializedVersion: 2
-        x: 214
-        y: 253
-        width: 46
-        height: 36
+        x: 192
+        y: 240
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8a73e7fc5f7dd9100800000000000000
-      internalID: 116486616129615784
+      spriteID: 30832a74f53ed0f418d6639039c9ae57
+      internalID: 1570336854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_7
+      name: IdleKitchen_7
       rect:
         serializedVersion: 2
-        x: 310
-        y: 253
-        width: 46
-        height: 37
+        x: 288
+        y: 240
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 19677b23fb9017320800000000000000
-      internalID: 2553833180490069649
+      spriteID: 47fbaf95b3a2f2748b6e11594eaead1f
+      internalID: 1643034123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_8
+      name: IdleKitchen_8
       rect:
         serializedVersion: 2
-        x: 22
-        y: 173
-        width: 46
-        height: 38
+        x: 0
+        y: 160
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eb30a523d4e092590800000000000000
-      internalID: -7698606363293121602
+      spriteID: 9aab6d1bd96f14e4fb2b6ec08b22ba3e
+      internalID: 812309075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_9
+      name: IdleKitchen_9
       rect:
         serializedVersion: 2
-        x: 118
-        y: 173
-        width: 46
-        height: 38
+        x: 96
+        y: 160
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8db843f2e96518460800000000000000
-      internalID: 7242164913185262552
+      spriteID: 368c8d773cb8cb347886e825b79c51b7
+      internalID: -768239956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_10
+      name: IdleKitchen_10
       rect:
         serializedVersion: 2
-        x: 213
-        y: 173
-        width: 47
-        height: 38
+        x: 192
+        y: 160
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 43a648f7e741b1c10800000000000000
-      internalID: 2025234990970989108
+      spriteID: 6886ed990c0d59947b35ba7809acbbb6
+      internalID: 1769325085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_11
+      name: IdleKitchen_11
       rect:
         serializedVersion: 2
-        x: 309
-        y: 173
-        width: 47
-        height: 38
+        x: 288
+        y: 160
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a2d5502f3932770b0800000000000000
-      internalID: -5731072882478064342
+      spriteID: 492bc5ac36a4b49418fad4ab62214e5f
+      internalID: -1882850732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_12
+      name: IdleKitchen_12
       rect:
         serializedVersion: 2
-        x: 21
-        y: 93
-        width: 47
-        height: 39
+        x: 0
+        y: 80
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 19a27f3d9e3b57760800000000000000
-      internalID: 7455062575046666897
+      spriteID: 597f840ffd3c6f1498514b976637f6b6
+      internalID: 2062045973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_13
+      name: IdleKitchen_13
       rect:
         serializedVersion: 2
-        x: 117
-        y: 93
-        width: 47
-        height: 41
+        x: 96
+        y: 80
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cbf3f8467fcffbf00800000000000000
-      internalID: 1134903770594885564
+      spriteID: 620f09ac1f4d64b4fbdd9c27a83f4012
+      internalID: -1241257418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_14
+      name: IdleKitchen_14
       rect:
         serializedVersion: 2
-        x: 213
-        y: 93
-        width: 48
-        height: 41
+        x: 192
+        y: 80
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4a05787fae46f3e50800000000000000
-      internalID: 6791257723435962532
+      spriteID: ab4d6a5533e496648932dda46d55354c
+      internalID: 1080275207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_15
+      name: IdleKitchen_15
       rect:
         serializedVersion: 2
-        x: 309
-        y: 93
-        width: 48
-        height: 40
+        x: 288
+        y: 80
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ee06934d18b26cae0800000000000000
-      internalID: -1529487186834398994
+      spriteID: e472b3476fe40b644b6c9121d222aec9
+      internalID: -1261844471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_16
+      name: IdleKitchen_16
       rect:
         serializedVersion: 2
-        x: 21
-        y: 13
-        width: 48
-        height: 39
+        x: 0
+        y: 0
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4a569c7ada86a37a0800000000000000
-      internalID: -6396685225672743516
+      spriteID: 97b0a6d981e805843bb2bccc2094a02f
+      internalID: 2135775392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_17
+      name: IdleKitchen_17
       rect:
         serializedVersion: 2
-        x: 117
-        y: 13
-        width: 48
-        height: 41
+        x: 96
+        y: 0
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c2ce91019b15311f0800000000000000
-      internalID: -1075426030730482644
+      spriteID: 907fe9d7867ebb84e808fe06f3dbf828
+      internalID: 1058050100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_18
+      name: IdleKitchen_18
       rect:
         serializedVersion: 2
-        x: 213
-        y: 13
-        width: 48
-        height: 41
+        x: 192
+        y: 0
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fd7ce5d861a7bb250800000000000000
-      internalID: 5961492769034651615
+      spriteID: 8dede767572ee08489e7e836fa149e55
+      internalID: 1251670098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warewolf_idle_kitchen_19
+      name: IdleKitchen_19
       rect:
         serializedVersion: 2
-        x: 309
-        y: 13
-        width: 48
-        height: 40
+        x: 288
+        y: 0
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 240856e83be22cd60800000000000000
-      internalID: 7908935244339052610
+      spriteID: 628183bfa223ed544af3f209e7d5e298
+      internalID: -1575038610
       vertices: []
       indices: 
       edges: []
@@ -613,7 +613,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a1faadec40fb7ff4b94d1c473f8f3b91
     internalID: 0
     vertices: []
     indices: 
@@ -623,26 +623,26 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      warewolf_idle_kitchen_0: 3037584805206279398
-      warewolf_idle_kitchen_1: -7761649805643732300
-      warewolf_idle_kitchen_10: 2025234990970989108
-      warewolf_idle_kitchen_11: -5731072882478064342
-      warewolf_idle_kitchen_12: 7455062575046666897
-      warewolf_idle_kitchen_13: 1134903770594885564
-      warewolf_idle_kitchen_14: 6791257723435962532
-      warewolf_idle_kitchen_15: -1529487186834398994
-      warewolf_idle_kitchen_16: -6396685225672743516
-      warewolf_idle_kitchen_17: -1075426030730482644
-      warewolf_idle_kitchen_18: 5961492769034651615
-      warewolf_idle_kitchen_19: 7908935244339052610
-      warewolf_idle_kitchen_2: -3296643326652140928
-      warewolf_idle_kitchen_3: -7912489044058385578
-      warewolf_idle_kitchen_4: 7383302200114826776
-      warewolf_idle_kitchen_5: -710798905272947700
-      warewolf_idle_kitchen_6: 116486616129615784
-      warewolf_idle_kitchen_7: 2553833180490069649
-      warewolf_idle_kitchen_8: -7698606363293121602
-      warewolf_idle_kitchen_9: 7242164913185262552
+      IdleKitchen_0: -660447067
+      IdleKitchen_1: 1983667294
+      IdleKitchen_10: 1769325085
+      IdleKitchen_11: -1882850732
+      IdleKitchen_12: 2062045973
+      IdleKitchen_13: -1241257418
+      IdleKitchen_14: 1080275207
+      IdleKitchen_15: -1261844471
+      IdleKitchen_16: 2135775392
+      IdleKitchen_17: 1058050100
+      IdleKitchen_18: 1251670098
+      IdleKitchen_19: -1575038610
+      IdleKitchen_2: 78483071
+      IdleKitchen_3: 74809011
+      IdleKitchen_4: 534544764
+      IdleKitchen_5: -541094823
+      IdleKitchen_6: 1570336854
+      IdleKitchen_7: 1643034123
+      IdleKitchen_8: 812309075
+      IdleKitchen_9: -768239956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
