@@ -15,6 +15,11 @@ public class WerewolfController : Singleton<WerewolfController>
         "catches the player during the scripted chase sequence.")]
     private bool scriptedCatch = false;
     private float standartSpeed;
+    /// <summary>
+    /// Determine if player is inside catch trigger.
+    /// </summary>
+    private bool playerInCatchTrigger = false;
+    private float speed;
 
     // Following property is under scripted catch field, so its appear near each other in the inspector.
 
@@ -32,6 +37,8 @@ public class WerewolfController : Singleton<WerewolfController>
     [SerializeField]
     private PlayerTrigger catchTrigger;
     [SerializeField]
+    private PlayerTrigger grabStartTrigger;
+    [SerializeField]
     private Transform werewolfNight1Spawn;
     [SerializeField]
     private Transform werewolfNight2Spawn;
@@ -42,6 +49,7 @@ public class WerewolfController : Singleton<WerewolfController>
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private PathFollow pathFollow;
+    private WerewolfAnimationEvents werewolfAnimationEvents;
 
     /// <summary>
     /// Determine if player entered werewolf's vision trigger during current night.
@@ -88,7 +96,13 @@ public class WerewolfController : Singleton<WerewolfController>
         Debug.Assert(visionTrigger != null);
         Debug.Assert(catchTrigger != null);
         visionTrigger.OnEnter.AddListener(VisionTrigger_OnEnter);
+
+        grabStartTrigger.OnEnter.AddListener(GrabStartTrigger_OnEnter);
         catchTrigger.OnEnter.AddListener(CatchTrigger_OnEnter);
+        catchTrigger.OnExit.AddListener(CatchTrigger_OnExit);
+        werewolfAnimationEvents = werewolfForm.GetComponent<WerewolfAnimationEvents>();
+        werewolfAnimationEvents.InCatchFrame.AddListener(WerewolfAnimationEvents_InCatchFrame);
+        werewolfAnimationEvents.AfterLastFrame.AddListener(WerewolfAnimationEvents_AfterLastFrame);
 
         Debug.Assert(werewolfNight1Spawn != null, "Werewolf spawn for first night not specified.");
         Debug.Assert(werewolfNight2Spawn != null, "Werewolf spawn for second night not specified.");
@@ -156,10 +170,40 @@ public class WerewolfController : Singleton<WerewolfController>
 
     private void CatchTrigger_OnEnter()
     {
+        playerInCatchTrigger = true;
+    }
+
+    private void CatchTrigger_OnExit()
+    {
+        playerInCatchTrigger = false;
+    }
+
+    private void GrabStartTrigger_OnEnter()
+    {
         if (PlayerController.Instance.GodModeActive)
+            return;
+
+        animator.SetBool("IsGrabing", true);
+        speed = characterMovement.Speed;
+        characterMovement.Speed = 0;
+    }
+
+    private void WerewolfAnimationEvents_InCatchFrame()
+    {
+        if (!playerInCatchTrigger)
             return;
 
         QuestManager.Instance.Current.TransitionQuest.Complete();
         OnPlayerCaught.Invoke();
+
+        Debug.Log("player got catch");
+    }
+
+    private void WerewolfAnimationEvents_AfterLastFrame()
+    {
+        animator.SetBool("IsGrabing", false);
+        characterMovement.Speed = speed;
+
+        Debug.Log("werewolf grab end");
     }
 }

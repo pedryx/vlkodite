@@ -1059,7 +1059,45 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      transform_event_0: -6695366785426197310
+      transform_event_1: 7677750911566657663
+      transform_event_10: 7080680274006978209
+      transform_event_11: -7225769504870723236
+      transform_event_12: 7231389343172915442
+      transform_event_13: -4782991425934619316
+      transform_event_14: 1647980226933465614
+      transform_event_15: 625893486032825286
+      transform_event_16: 8652947374458186950
+      transform_event_17: 7150393659549918875
+      transform_event_18: -3587191329865217526
+      transform_event_19: -7032552704080043860
+      transform_event_2: 2056705228934987993
+      transform_event_20: -7189338548267243896
+      transform_event_21: 3435559143477690637
+      transform_event_22: 6639538346276288641
+      transform_event_23: 6338447107414013793
+      transform_event_24: 2391203271925843626
+      transform_event_25: 2572945395228736270
+      transform_event_26: -4378921457348332
+      transform_event_27: -6208586657565158729
+      transform_event_28: -8994469610340636024
+      transform_event_29: 7202482730838521296
+      transform_event_3: 3364602857078561456
+      transform_event_30: 5942097019632120993
+      transform_event_31: 2263222635910518103
+      transform_event_32: -4499617702281619995
+      transform_event_33: 3141647436776512545
+      transform_event_34: 7972047774832564593
+      transform_event_35: -6512879244610659084
+      transform_event_36: 2001269902445044523
+      transform_event_37: 2738554794581175329
+      transform_event_4: -2394754165503099843
+      transform_event_5: 8008485121844297563
+      transform_event_6: 4465845669280194524
+      transform_event_7: 5872675306702308354
+      transform_event_8: -1831520262696088616
+      transform_event_9: 2418248465796640673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

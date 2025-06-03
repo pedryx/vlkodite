@@ -7,6 +7,7 @@ public class PlayerTrigger : MonoBehaviour
     private Collider2D trigger;
 
     public UnityEvent OnEnter { get; private set; } = new();
+    public UnityEvent OnExit { get; private set; } = new();
 
     private void Awake()
     {
@@ -20,5 +21,13 @@ public class PlayerTrigger : MonoBehaviour
             return;
 
         OnEnter.Invoke();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (!enabled || collision.GetComponent<PlayerController>() == null)
+            return;
+
+        OnExit.Invoke();
     }
 }
