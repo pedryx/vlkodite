@@ -78,6 +78,13 @@ public class WerewolfController : Singleton<WerewolfController>
     public UnityEvent OnPlayerCaught = new();
 
     /// <summary>
+    /// Occur when werewolf completes his reverse transformation.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Occur when werewolf completes his reverse transformation.")]
+    public UnityEvent OnReverseTransformDone { get; private set; }
+
+    /// <summary>
     /// When enabled <see cref="ScriptedAccelaration"/> is applied to the werewolf. This ensures that the werewolf
     /// catches the player during the scripted chase sequence.
     /// </summary>
@@ -92,6 +99,18 @@ public class WerewolfController : Singleton<WerewolfController>
             else
                 characterMovement.Speed = standartSpeed;
         }
+    }
+
+    /// <summary>
+    /// Start reverse transformation of the werewolf. This starts playing the animation in which werewolf transform
+    /// back into his human form. You can detect end of this animation by <see cref="OnReverseTransformDone"/> event.
+    /// </summary>
+    [Tooltip("Start reverse transformation of the werewolf. This starts playing the animation in which werewolf " +
+        "transform back into his human form. You can detect end of this animation by OnReverseTransformDone event.")]
+    public void PlayReverseTransformEvent()
+    {
+        werewolfAnimator.Play("ReverseTransformEvent");
+        eyesAnimator.Play("ReverseTransformEvent");
     }
 
     protected override void Awake()
@@ -117,6 +136,7 @@ public class WerewolfController : Singleton<WerewolfController>
         werewolfAnimationEvents.OnLastCatchFrame.AddListener(WerewolfAnimationEvents_AfterLastFrame);
         werewolfAnimationEvents.OnLastKitchenNoticeFrame.AddListener(WerewolfAnimationEvents_OnLastKitchenNoticeFrame);
         werewolfAnimationEvents.OnLastKitchenIdleFrame.AddListener(WerewolfAnimationEvents_OnLastKitchenIdleFrame);
+        werewolfAnimationEvents.OnReverseTransformDone.AddListener(() => OnReverseTransformDone.Invoke());
 
         Debug.Assert(werewolfNight1Spawn != null, "Werewolf spawn for first night not specified.");
         Debug.Assert(werewolfNight2Spawn != null, "Werewolf spawn for second night not specified.");

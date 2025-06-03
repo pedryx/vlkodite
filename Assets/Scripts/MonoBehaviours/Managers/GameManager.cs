@@ -131,7 +131,7 @@ public class GameManager : Singleton<GameManager>
     /// Toggle between day and night.
     /// </summary>
     /// <returns>True if switched to day otherwise false.</returns>
-    private bool SwitchDayNight()
+    public bool SwitchDayNight()
     {
         isDay = !isDay;
 
