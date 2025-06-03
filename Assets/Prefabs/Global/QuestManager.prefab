@@ -886,9 +886,29 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   <Night3>k__BackingField:
-    quests: []
+    quests:
+    - <Description>k__BackingField: smt
+      <QuestAdvancer>k__BackingField: {fileID: 0}
+      <ChildPosition>k__BackingField: {fileID: 0}
+      <Teleport>k__BackingField: 0
+      <OnStart>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+      <OnDone>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
     <ChildQuestQueue>k__BackingField:
-      quests: []
+      quests:
+      - <Description>k__BackingField: smt
+        <QuestAdvancer>k__BackingField: {fileID: 0}
+        <ChildPosition>k__BackingField: {fileID: 0}
+        <Teleport>k__BackingField: 0
+        <OnStart>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+        <OnDone>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
       <OnQuestStart>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
