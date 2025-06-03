@@ -1379,23 +1379,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8702002168668625706, guid: 65d244a76c33f3648860c265561e5359, type: 3}
   m_PrefabInstance: {fileID: 3138147647551272297}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &371750578 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7898981271446209014, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
-  m_PrefabInstance: {fileID: 1658711384725847471}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &371750582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371750578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51e9792d37eb5c542ac36fc02a357c0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &395446803
 GameObject:
   m_ObjectHideFlags: 0
@@ -5602,10 +5585,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5250728339540812038, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 6622640544500655297, guid: 1785ad59abda88043a4edede288f8b5d, type: 3}
     - target: {fileID: 5552522844428334777, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: player
       value: 
@@ -5622,10 +5601,6 @@ PrefabInstance:
       propertyPath: werewolfNight3Spawn
       value: 
       objectReference: {fileID: 762487369}
-    - target: {fileID: 6388926322860623256, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7208781993731178455, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_Name
       value: Child
@@ -5633,10 +5608,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7898981271446209014, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 371750582}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
 --- !u!1 &2036462596549579603 stripped
 GameObject:
