@@ -20,6 +20,14 @@ public class WerewolfController : Singleton<WerewolfController>
     /// </summary>
     private bool playerInCatchTrigger = false;
     private float speed;
+    private bool forceMoveAfterKitchenScene = false;
+    /// <summary>
+    /// How many times will kitchen animation be repeated when werewolf notices player.
+    /// </summary>
+    [SerializeField]
+    [Tooltip("How many times will kitchen animation be repeated when werewolf notices player.")]
+    private int noticeKitchenIdleRepeat = 1;
+    private int noticeKitchenIdleRepeatCounter = 0;
 
     // Following property is under scripted catch field, so its appear near each other in the inspector.
 
@@ -105,8 +113,10 @@ public class WerewolfController : Singleton<WerewolfController>
         catchTrigger.OnEnter.AddListener(CatchTrigger_OnEnter);
         catchTrigger.OnExit.AddListener(CatchTrigger_OnExit);
         werewolfAnimationEvents = werewolfForm.GetComponent<WerewolfAnimationEvents>();
-        werewolfAnimationEvents.InCatchFrame.AddListener(WerewolfAnimationEvents_InCatchFrame);
-        werewolfAnimationEvents.AfterLastFrame.AddListener(WerewolfAnimationEvents_AfterLastFrame);
+        werewolfAnimationEvents.OnCatchTriggerFrame.AddListener(WerewolfAnimationEvents_InCatchFrame);
+        werewolfAnimationEvents.OnLastCatchFrame.AddListener(WerewolfAnimationEvents_AfterLastFrame);
+        werewolfAnimationEvents.OnLastKitchenNoticeFrame.AddListener(WerewolfAnimationEvents_OnLastKitchenNoticeFrame);
+        werewolfAnimationEvents.OnLastKitchenIdleFrame.AddListener(WerewolfAnimationEvents_OnLastKitchenIdleFrame);
 
         Debug.Assert(werewolfNight1Spawn != null, "Werewolf spawn for first night not specified.");
         Debug.Assert(werewolfNight2Spawn != null, "Werewolf spawn for second night not specified.");
@@ -117,13 +127,14 @@ public class WerewolfController : Singleton<WerewolfController>
 
     private void Update()
     {
-        if (!characterMovement.IsMoving())
+        if (!characterMovement.IsNotMoving())
         {
             werewolfSpriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
             eyesSpriteRenderer.flipX = werewolfSpriteRenderer.flipX;
+            forceMoveAfterKitchenScene = false;
         }
-        werewolfAnimator.SetBool("IsMoving", !characterMovement.IsMoving());
-        eyesAnimator.SetBool("IsMoving", !characterMovement.IsMoving());
+        werewolfAnimator.SetBool("IsMoving", !characterMovement.IsNotMoving() || forceMoveAfterKitchenScene);
+        eyesAnimator.SetBool("IsMoving", !characterMovement.IsNotMoving() || forceMoveAfterKitchenScene);
 
         if (ScriptedCatch)
             characterMovement.Speed += ScriptedAccelaration * Time.deltaTime;
@@ -142,6 +153,12 @@ public class WerewolfController : Singleton<WerewolfController>
             ),
         };
         visionTriggered = false;
+
+        if (GameManager.Instance.DayNumber == 1)
+        {
+            werewolfAnimator.Play("IdleKitchen", -1, 0.0f);
+            eyesAnimator.Play("IdleKitchenEyes", -1, 0.0f);
+        }
     }
 
     private void OnDisable()
@@ -164,16 +181,6 @@ public class WerewolfController : Singleton<WerewolfController>
     private void Instance_OnNightBegin()
     {
         enabled = true;
-    }
-
-    private void VisionTrigger_OnEnter()
-    {
-        if (visionTriggered)
-            return;
-
-        pathFollow.Target = PlayerController.Instance.transform;
-        QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
-        visionTriggered = true;
     }
 
     private void CatchTrigger_OnEnter()
@@ -215,5 +222,35 @@ public class WerewolfController : Singleton<WerewolfController>
         characterMovement.Speed = speed;
 
         Debug.Log("werewolf grab end");
+    }
+
+    private void VisionTrigger_OnEnter()
+    {
+        if (visionTriggered)
+            return;
+        visionTriggered = true;
+    }
+
+    private void WerewolfAnimationEvents_OnLastKitchenIdleFrame()
+    {
+        if (!visionTriggered)
+            return;
+
+        if (noticeKitchenIdleRepeatCounter == noticeKitchenIdleRepeat)
+        {
+            werewolfAnimator.Play("NoticeKitchen", -1, 0.0f);
+            eyesAnimator.Play("NoticeKitchenEyes", -1, 0.0f);
+        }
+
+        noticeKitchenIdleRepeatCounter++;
+    }
+
+    private void WerewolfAnimationEvents_OnLastKitchenNoticeFrame()
+    {
+        werewolfAnimator.Play("RunSide", -1, 0.0f);
+        eyesAnimator.Play("RunSide", -1, 0.0f);
+        pathFollow.Target = PlayerController.Instance.transform;
+        QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
+        forceMoveAfterKitchenScene = true;
     }
 }

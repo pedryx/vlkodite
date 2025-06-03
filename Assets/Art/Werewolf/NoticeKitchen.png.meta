@@ -1,10 +1,61 @@
 fileFormatVersion: 2
-guid: 0248dff5f3aebe64083b327fbf22d496
+guid: aa3530308b4b14348bee82445c393747
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4113797047571594480
-    second: IdleKitchenEyes_0
+      213: 271307541048364812
+    second: warewolf_event_0
+  - first:
+      213: -4114306672028302101
+    second: warewolf_event_1
+  - first:
+      213: -1804497136503145930
+    second: warewolf_event_2
+  - first:
+      213: 4234190251989505278
+    second: warewolf_event_3
+  - first:
+      213: 7158750678270056444
+    second: warewolf_event_4
+  - first:
+      213: 2084151939192311359
+    second: warewolf_event_5
+  - first:
+      213: 7538508189025185055
+    second: warewolf_event_6
+  - first:
+      213: 243604364332994890
+    second: warewolf_event_7
+  - first:
+      213: -3957980589652547343
+    second: warewolf_event_8
+  - first:
+      213: -365533910277519413
+    second: warewolf_event_9
+  - first:
+      213: -170365811630919396
+    second: warewolf_event_10
+  - first:
+      213: -2235037200201566971
+    second: warewolf_event_11
+  - first:
+      213: 1655291107432997079
+    second: warewolf_event_12
+  - first:
+      213: -3922319667829359054
+    second: warewolf_event_13
+  - first:
+      213: 7669392082910483927
+    second: warewolf_event_14
+  - first:
+      213: 5936222411564770637
+    second: warewolf_event_15
+  - first:
+      213: -4088104280430078501
+    second: warewolf_event_16
+  - first:
+      213: -3041206843785501618
+    second: warewolf_event_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,11 +147,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IdleKitchenEyes_0
+      name: NoticeKitchen_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,16 +177,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0fc3e827e94271930800000000000000
-      internalID: 4113797047571594480
+      spriteID: 8df08f8d701380a4481f6bb3d18fdbf4
+      internalID: 309717270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_1
+      name: NoticeKitchen_1
       rect:
         serializedVersion: 2
         x: 96
@@ -137,14 +201,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7225ee86c81138c439ae49c17a3aec8d
-      internalID: 1660348447
+      spriteID: 28a149a3780b66b46aa39ab2c1311cda
+      internalID: -434826417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_2
+      name: NoticeKitchen_2
       rect:
         serializedVersion: 2
         x: 192
@@ -159,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c6ce51574d7c2c4f84531c0de250b4b
-      internalID: -1074767535
+      spriteID: a161325faac2b4b44afd32af7998fc49
+      internalID: -1687847013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_3
+      name: NoticeKitchen_3
       rect:
         serializedVersion: 2
         x: 288
@@ -181,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c91f61567f7d014fb2b8cef41b29196
-      internalID: 912035376
+      spriteID: 92d1215e9f076404585d18394d5e832a
+      internalID: 1815392753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_4
+      name: NoticeKitchen_4
       rect:
         serializedVersion: 2
         x: 0
@@ -203,14 +267,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aef5b0ff5a20e54b8ba9bacfde28ec4
-      internalID: -1779947925
+      spriteID: 21be1e3a899a85b47b597697190db30d
+      internalID: -992515256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_5
+      name: NoticeKitchen_5
       rect:
         serializedVersion: 2
         x: 96
@@ -225,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eed6e0fe781f95448a76676368f605a2
-      internalID: 34370295
+      spriteID: 247f54d7dd914eb4dabfe92c5036ac98
+      internalID: -1079143301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_6
+      name: NoticeKitchen_6
       rect:
         serializedVersion: 2
         x: 192
@@ -247,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eafe44259d37904987de5b7a4fbcbf6
-      internalID: 323024205
+      spriteID: 212043ab760b14c489d2308ffe928d01
+      internalID: 1516380178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_7
+      name: NoticeKitchen_7
       rect:
         serializedVersion: 2
         x: 288
@@ -269,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89d35cacbd01703408574901fd1846b8
-      internalID: 1060557572
+      spriteID: 7674ffc0e7d78fc4e9fe387acdfb266d
+      internalID: -289814321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_8
+      name: NoticeKitchen_8
       rect:
         serializedVersion: 2
         x: 0
@@ -291,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9232ce2db702fc34f9cce2fe46ca4da0
-      internalID: -631511279
+      spriteID: 91449a36b2969cf4aa4964190c4ac5c3
+      internalID: 262269772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_9
+      name: NoticeKitchen_9
       rect:
         serializedVersion: 2
         x: 96
@@ -313,14 +377,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a830ebbe93082fc48bb902609ab3d58f
-      internalID: -758240206
+      spriteID: bf44fe3c4a0ebf94ca4cf0f4f496dff5
+      internalID: -659563368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_10
+      name: NoticeKitchen_10
       rect:
         serializedVersion: 2
         x: 192
@@ -335,14 +399,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b443761fc2680f498e2d80beb26029d
-      internalID: -1953971942
+      spriteID: 589887a431ec5704aac4c639422aef4c
+      internalID: -1074759516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_11
+      name: NoticeKitchen_11
       rect:
         serializedVersion: 2
         x: 288
@@ -357,14 +421,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d34a9589489fc441b5ae29c10e75ae0
-      internalID: 801929712
+      spriteID: 7a91e94bff6ba0741b8542ff195d63b7
+      internalID: -1697220400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_12
+      name: NoticeKitchen_12
       rect:
         serializedVersion: 2
         x: 0
@@ -379,14 +443,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 728ff5968304f1041beb46dcdbf1eaeb
-      internalID: -229946909
+      spriteID: 04b575513c19f394db8cedea0b8507db
+      internalID: -178149278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_13
+      name: NoticeKitchen_13
       rect:
         serializedVersion: 2
         x: 96
@@ -401,14 +465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3cd655e9df71de48ae68e7da7f215d4
-      internalID: 28242849
+      spriteID: ef64ff7f93012854498a5083467d413a
+      internalID: 310676863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_14
+      name: NoticeKitchen_14
       rect:
         serializedVersion: 2
         x: 192
@@ -423,14 +487,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65988b5b5d7d74c48885fa1a5fbed7d2
-      internalID: 1093617966
+      spriteID: 3700836d824484545bbab25559fefe3d
+      internalID: -547017189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_15
+      name: NoticeKitchen_15
       rect:
         serializedVersion: 2
         x: 288
@@ -445,14 +509,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37e8ab2a8a819c5469acc590b148d638
-      internalID: -568189363
+      spriteID: 5471493156f42eb4789977bed399fd5c
+      internalID: -1995976246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_16
+      name: NoticeKitchen_16
       rect:
         serializedVersion: 2
         x: 0
@@ -467,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fac720ce983a9014bb8ed016e87ce1f3
-      internalID: 1871096715
+      spriteID: b8df3b527f018084e81a944ed57ec819
+      internalID: -464404285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleKitchenEyes_17
+      name: NoticeKitchen_17
       rect:
         serializedVersion: 2
         x: 96
@@ -489,52 +553,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e5dc984cf239d74b8e8766ad0c7a4fb
-      internalID: -103967865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IdleKitchenEyes_18
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 96
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddb188a05caa49340a562534b362238a
-      internalID: 1063718343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IdleKitchenEyes_19
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 96
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ade9287a2dc27fc479b8eb21e9a0368b
-      internalID: -405162456
+      spriteID: cef375cef44f0df4c8aeb942befb6dad
+      internalID: -1647968460
       vertices: []
       indices: 
       edges: []
@@ -543,7 +563,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 31a0c1d6cf7f2664b9fb8b25d84ddead
+    spriteID: 1b5a21a95e09c6b40b873513f3200f0b
     internalID: 0
     vertices: []
     indices: 
@@ -553,26 +573,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IdleKitchenEyes_0: 4113797047571594480
-      IdleKitchenEyes_1: 1660348447
-      IdleKitchenEyes_10: -1953971942
-      IdleKitchenEyes_11: 801929712
-      IdleKitchenEyes_12: -229946909
-      IdleKitchenEyes_13: 28242849
-      IdleKitchenEyes_14: 1093617966
-      IdleKitchenEyes_15: -568189363
-      IdleKitchenEyes_16: 1871096715
-      IdleKitchenEyes_17: -103967865
-      IdleKitchenEyes_18: 1063718343
-      IdleKitchenEyes_19: -405162456
-      IdleKitchenEyes_2: -1074767535
-      IdleKitchenEyes_3: 912035376
-      IdleKitchenEyes_4: -1779947925
-      IdleKitchenEyes_5: 34370295
-      IdleKitchenEyes_6: 323024205
-      IdleKitchenEyes_7: 1060557572
-      IdleKitchenEyes_8: -631511279
-      IdleKitchenEyes_9: -758240206
+      NoticeKitchen_0: 309717270
+      NoticeKitchen_1: -434826417
+      NoticeKitchen_10: -1074759516
+      NoticeKitchen_11: -1697220400
+      NoticeKitchen_12: -178149278
+      NoticeKitchen_13: 310676863
+      NoticeKitchen_14: -547017189
+      NoticeKitchen_15: -1995976246
+      NoticeKitchen_16: -464404285
+      NoticeKitchen_17: -1647968460
+      NoticeKitchen_2: -1687847013
+      NoticeKitchen_3: 1815392753
+      NoticeKitchen_4: -992515256
+      NoticeKitchen_5: -1079143301
+      NoticeKitchen_6: 1516380178
+      NoticeKitchen_7: -289814321
+      NoticeKitchen_8: 262269772
+      NoticeKitchen_9: -659563368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5377,6 +5377,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2d65a82580826478602d14c0e5da50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <OnEnter>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnExit>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!70 &1726163331491994433
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6196,6 +6202,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2d65a82580826478602d14c0e5da50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <OnEnter>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnExit>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!70 &8834312956280399636
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -11593,7 +11605,6 @@ GameObject:
   - component: {fileID: 5059114204206008559}
   - component: {fileID: 2609656018381912536}
   - component: {fileID: 6797707250351409035}
-  - component: {fileID: 8482201977299685592}
   m_Layer: 0
   m_Name: VisionTrigger
   m_TagString: Untagged
@@ -11664,15 +11675,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2d65a82580826478602d14c0e5da50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8482201977299685592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8468042892798256072}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2d65a82580826478602d14c0e5da50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  <OnEnter>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnExit>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []

@@ -117,7 +117,7 @@ public class PlayerController : Singleton<PlayerController>
         }
 
         // update animation
-        if (!characterMovement.IsMoving())
+        if (!characterMovement.IsNotMoving())
         {
             Direction facingDirection = characterMovement.GetFacingDirection();
             Debug.Assert(facingDirection != Direction.None);
@@ -125,7 +125,7 @@ public class PlayerController : Singleton<PlayerController>
             spriteRenderer.flipX = facingDirection == Direction.Left;
             animator.SetFloat("Direction", (float)facingDirection);
         }
-        animator.SetBool("IsMoving", !characterMovement.IsMoving());
+        animator.SetBool("IsMoving", !characterMovement.IsNotMoving());
         animator.SetBool("IsRunning", IsRunning);
 
         // update interactions

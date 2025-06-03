@@ -21,7 +21,7 @@ public class FootstepSound : MonoBehaviour
 
     private void Update()
     {
-        bool shouldPlay = !characterMovement.IsMoving();
+        bool shouldPlay = !characterMovement.IsNotMoving();
 
         if (shouldPlay && !emitter.IsPlaying())
         {

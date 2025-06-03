@@ -10,7 +10,7 @@ public class CharacterMovement : MonoBehaviour
 	/// <summary>
 	/// Threshold below which is movement speed considered as zero.
 	/// </summary>
-	public const float ZeroSpeedThreshold = 1e-2f;
+	public const float ZeroSpeedThreshold = 1e-4f;
     /// <summary>
     /// Threshold below which is movement speed squared considered as zero.
     /// </summary>
@@ -63,7 +63,7 @@ public class CharacterMovement : MonoBehaviour
     /// <summary>
     /// Determine if velocity is zero.
     /// </summary>
-    public bool IsMoving()
+    public bool IsNotMoving()
     {
         return Velocity.sqrMagnitude < ZeroSpeedThresholdSquared;
     }
