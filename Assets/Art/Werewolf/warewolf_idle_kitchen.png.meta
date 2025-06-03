@@ -153,6 +153,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -609,7 +622,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      warewolf_idle_kitchen_0: 3037584805206279398
+      warewolf_idle_kitchen_1: -7761649805643732300
+      warewolf_idle_kitchen_10: 2025234990970989108
+      warewolf_idle_kitchen_11: -5731072882478064342
+      warewolf_idle_kitchen_12: 7455062575046666897
+      warewolf_idle_kitchen_13: 1134903770594885564
+      warewolf_idle_kitchen_14: 6791257723435962532
+      warewolf_idle_kitchen_15: -1529487186834398994
+      warewolf_idle_kitchen_16: -6396685225672743516
+      warewolf_idle_kitchen_17: -1075426030730482644
+      warewolf_idle_kitchen_18: 5961492769034651615
+      warewolf_idle_kitchen_19: 7908935244339052610
+      warewolf_idle_kitchen_2: -3296643326652140928
+      warewolf_idle_kitchen_3: -7912489044058385578
+      warewolf_idle_kitchen_4: 7383302200114826776
+      warewolf_idle_kitchen_5: -710798905272947700
+      warewolf_idle_kitchen_6: 116486616129615784
+      warewolf_idle_kitchen_7: 2553833180490069649
+      warewolf_idle_kitchen_8: -7698606363293121602
+      warewolf_idle_kitchen_9: 7242164913185262552
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

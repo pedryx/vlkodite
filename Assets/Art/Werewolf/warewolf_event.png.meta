@@ -147,6 +147,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -559,7 +572,25 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      warewolf_event_0: 271307541048364812
+      warewolf_event_1: -4114306672028302101
+      warewolf_event_10: -170365811630919396
+      warewolf_event_11: -2235037200201566971
+      warewolf_event_12: 1655291107432997079
+      warewolf_event_13: -3922319667829359054
+      warewolf_event_14: 7669392082910483927
+      warewolf_event_15: 5936222411564770637
+      warewolf_event_16: -4088104280430078501
+      warewolf_event_17: -3041206843785501618
+      warewolf_event_2: -1804497136503145930
+      warewolf_event_3: 4234190251989505278
+      warewolf_event_4: 7158750678270056444
+      warewolf_event_5: 2084151939192311359
+      warewolf_event_6: 7538508189025185055
+      warewolf_event_7: 243604364332994890
+      warewolf_event_8: -3957980589652547343
+      warewolf_event_9: -365533910277519413
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
