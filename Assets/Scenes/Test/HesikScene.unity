@@ -20734,6 +20734,14 @@ PrefabInstance:
       propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.w
       value: 0.60784316
       objectReference: {fileID: 0}
+    - target: {fileID: 9219900255829328553, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
+      propertyPath: <SprintSpeed>k__BackingField
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219900255829328553, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
+      propertyPath: <MaxSprintDuration>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -21274,7 +21282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7898981271446209014, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7980347990979614317, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: m_Color.b
