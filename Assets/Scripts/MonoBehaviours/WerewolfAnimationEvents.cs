@@ -13,6 +13,9 @@ public class WerewolfAnimationEvents : MonoBehaviour
     public UnityEvent OnLastKitchenNoticeFrame { get; private set; } = new();
     [SerializeField]
     public UnityEvent OnReverseTransformDone { get; private set; } = new();
+    [SerializeField]
+    public UnityEvent OnLastTransformFrame { get; private set; } = new();
+
 
     private void Animator_OnCatchTriggerFrame()
     {
@@ -34,8 +37,8 @@ public class WerewolfAnimationEvents : MonoBehaviour
         OnLastKitchenNoticeFrame.Invoke();
     }
 
-    private void Animator_ReverseTransformDone()
+    private void Animator_OnLastTransformFrame()
     {
-        OnReverseTransformDone.Invoke();
+        OnLastTransformFrame.Invoke();
     }
 }
