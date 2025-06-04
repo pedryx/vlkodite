@@ -65,6 +65,7 @@ public class PathFollow : MonoBehaviour
         {
             elapsed = 0.0f;
             FindNewPathAsync();
+            characterMovement.MoveTo(Target.position);
             return;
         }
 
