@@ -70,7 +70,7 @@ public class ItemGainCanvas : MonoBehaviour
         }
 
         // Auto-hide after delay
-        float autoHideDelay = 1.7f; // Change this to how long you want it to stay visible
+        float autoHideDelay = 3f; // Change this to how long you want it to stay visible
         DOVirtual.DelayedCall(autoHideDelay, () =>
         {
             if (isVisible) HideCanvas();
