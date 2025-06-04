@@ -6,8 +6,9 @@ public class ScreenFader : MonoBehaviour
 {
     [Header("Fade Settings")]
     [SerializeField] private CanvasGroup blackOverlay;
-    [SerializeField] private float fadeDuration = 1f;
+    [SerializeField] private float fadeToBlackDuration = 1f;
     [SerializeField] private float blackScreenDuration = 1f;
+    [SerializeField] private float fadeFromBlackDuration = 1f;
 
     [Header("Audio")]
     [SerializeField] private EventReference sleepSound;
@@ -39,9 +40,9 @@ public class ScreenFader : MonoBehaviour
 
         Sequence fadeSequence = DOTween.Sequence();
 
-        fadeSequence.Append(blackOverlay.DOFade(1f, fadeDuration))
+        fadeSequence.Append(blackOverlay.DOFade(1f, fadeToBlackDuration))
                     .AppendInterval(blackScreenDuration)
-                    .Append(blackOverlay.DOFade(0f, fadeDuration))
+                    .Append(blackOverlay.DOFade(0f, fadeFromBlackDuration))
                     .OnComplete(() =>
                     {
                         if (characterMovement != null)
@@ -54,11 +55,11 @@ public class ScreenFader : MonoBehaviour
     public void FadeToBlack()
     {
         RuntimeManager.PlayOneShot(sleepSound);
-        blackOverlay.DOFade(1f, fadeDuration);
+        blackOverlay.DOFade(1f, fadeToBlackDuration);
     }
 
     public void FadeFromBlack()
     {
-        blackOverlay.DOFade(0f, fadeDuration);
+        blackOverlay.DOFade(0f, fadeFromBlackDuration);
     }
 }

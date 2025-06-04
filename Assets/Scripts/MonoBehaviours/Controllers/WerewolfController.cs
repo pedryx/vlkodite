@@ -1,6 +1,9 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
+using FMODUnity;
+using FMOD.Studio;
+
 
 [RequireComponent(typeof(CharacterMovement))]
 [RequireComponent(typeof(PathFollow))]
@@ -61,6 +64,16 @@ public class WerewolfController : Singleton<WerewolfController>
     private SpriteRenderer werewolfSpriteRenderer;
     [SerializeField]
     private SpriteRenderer eyesSpriteRenderer;
+
+    [SerializeField]
+    private EventReference kitchenNoticeEvent;
+   
+    [SerializeField]
+    private GameObject kitchenNoticeObjectA;
+
+    [SerializeField]
+    private GameObject kitchenNoticeObjectB;
+
 
     private CharacterMovement characterMovement;
     private PathFollow pathFollow;
@@ -267,10 +280,23 @@ public class WerewolfController : Singleton<WerewolfController>
 
     private void WerewolfAnimationEvents_OnLastKitchenNoticeFrame()
     {
+        // Play the FMOD sound
+        RuntimeManager.PlayOneShot(kitchenNoticeEvent);
+
+        // Disable both GameObjects if assigned
+        if (kitchenNoticeObjectA != null)
+            kitchenNoticeObjectA.SetActive(false);
+
+        if (kitchenNoticeObjectB != null)
+            kitchenNoticeObjectB.SetActive(false);
+
+        // Continue werewolf behavior
         werewolfAnimator.Play("RunSide", -1, 0.0f);
         eyesAnimator.Play("RunSide", -1, 0.0f);
         pathFollow.Target = PlayerController.Instance.transform;
         QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
         forceMoveAfterKitchenScene = true;
     }
+
+
 }
