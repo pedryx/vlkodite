@@ -250,8 +250,6 @@ public class WerewolfController : Singleton<WerewolfController>
 
         QuestManager.Instance.Current.TransitionQuest.Complete();
         OnPlayerCaught.Invoke();
-
-        Debug.Log("player got catch");
     }
 
     private void WerewolfAnimationEvents_OnLastCatchFrame()
@@ -259,8 +257,6 @@ public class WerewolfController : Singleton<WerewolfController>
         werewolfAnimator.SetBool("IsGrabing", false);
         eyesAnimator.SetBool("IsGrabing", false);
         characterMovement.Speed = speed;
-
-        Debug.Log("werewolf grab end");
     }
 
     private void VisionTrigger_OnEnter()
@@ -306,7 +302,8 @@ public class WerewolfController : Singleton<WerewolfController>
         werewolfAnimator.Play("RunSide", -1, 0.0f);
         eyesAnimator.Play("RunSide", -1, 0.0f);
         pathFollow.Target = PlayerController.Instance.transform;
-        QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
+        while (!QuestManager.Instance.Current.ChildQuestQueue.AreAllQuestsDone)
+            QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
         forceMove = true;
     }
 
