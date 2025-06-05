@@ -77,7 +77,6 @@ public class WerewolfController : Singleton<WerewolfController>
 
     private CharacterMovement characterMovement;
     private PathFollow pathFollow;
-    private WerewolfAnimationEvents werewolfAnimationEvents;
 
     /// <summary>
     /// Determine if player entered werewolf's vision trigger during current night.
@@ -115,6 +114,13 @@ public class WerewolfController : Singleton<WerewolfController>
     }
 
     /// <summary>
+    /// Occur when werewolf starts chasing the player.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Occur when werewolf starts chasing the player.")]
+    public UnityEvent OnChaseStart { get; private set; } = new();
+
+    /// <summary>
     /// Start reverse transformation of the werewolf. This starts playing the animation in which werewolf transform
     /// back into his human form. You can detect end of this animation by <see cref="OnReverseTransformDone"/> event.
     /// </summary>
@@ -130,9 +136,10 @@ public class WerewolfController : Singleton<WerewolfController>
     {
         base.Awake();
 
-        GameManager.Instance.OnDayBegin.AddListener(Instance_OnDayBegin);
-        GameManager.Instance.OnNightBegin.AddListener(Instance_OnNightBegin);
-        OnPlayerCaught.AddListener(WerewolfController_OnPlayerCaught);
+        GameManager.Instance.OnDayBegin.AddListener(GameManager_OnDayBegin);
+        GameManager.Instance.OnNightBegin.AddListener(GameManager_OnNightBegin);
+        OnPlayerCaught.AddListener(() => Debug.Log("Player get caught by the werewolf."));
+        OnChaseStart.AddListener(() => Debug.Log("Werewolf started chasing the player."));
 
         characterMovement = GetComponent<CharacterMovement>();
         pathFollow = GetComponent<PathFollow>();
@@ -142,15 +149,16 @@ public class WerewolfController : Singleton<WerewolfController>
         visionTrigger.OnEnter.AddListener(VisionTrigger_OnEnter);
 
         grabStartTrigger.OnEnter.AddListener(GrabStartTrigger_OnEnter);
-        catchTrigger.OnEnter.AddListener(CatchTrigger_OnEnter);
-        catchTrigger.OnExit.AddListener(CatchTrigger_OnExit);
-        werewolfAnimationEvents = werewolfForm.GetComponent<WerewolfAnimationEvents>();
-        werewolfAnimationEvents.OnCatchTriggerFrame.AddListener(WerewolfAnimationEvents_InCatchFrame);
-        werewolfAnimationEvents.OnLastCatchFrame.AddListener(WerewolfAnimationEvents_OnLastCatchFrame);
-        werewolfAnimationEvents.OnLastKitchenNoticeFrame.AddListener(WerewolfAnimationEvents_OnLastKitchenNoticeFrame);
-        werewolfAnimationEvents.OnLastKitchenIdleFrame.AddListener(WerewolfAnimationEvents_OnLastKitchenIdleFrame);
-        werewolfAnimationEvents.OnReverseTransformDone.AddListener(() => OnReverseTransformDone.Invoke());
-        werewolfAnimationEvents.OnLastTransformFrame.AddListener(WerewolfAnimationEvents_OnTransformDone);
+        catchTrigger.OnEnter.AddListener(() => playerInCatchTrigger = true);
+        catchTrigger.OnExit.AddListener(() => playerInCatchTrigger = false);
+
+        var animations = werewolfForm.GetComponent<WerewolfAnimationEvents>();
+        animations.OnCatchTriggerFrame.AddListener(Animations_InCatchFrame);
+        animations.OnLastCatchFrame.AddListener(Animations_OnLastCatchFrame);
+        animations.OnLastKitchenNoticeFrame.AddListener(Animations_OnLastKitchenNoticeFrame);
+        animations.OnLastKitchenIdleFrame.AddListener(Animations_OnLastKitchenIdleFrame);
+        animations.OnReverseTransformDone.AddListener(() => OnReverseTransformDone.Invoke());
+        animations.OnLastTransformFrame.AddListener(Animations_OnTransformDone);
 
         Debug.Assert(werewolfNight1Spawn != null, "Werewolf spawn for first night not specified.");
         Debug.Assert(werewolfNight2Spawn != null, "Werewolf spawn for second night not specified.");
@@ -170,7 +178,7 @@ public class WerewolfController : Singleton<WerewolfController>
         werewolfAnimator.SetBool("IsMoving", !characterMovement.IsNotMoving() || forceMove);
         eyesAnimator.SetBool("IsMoving", !characterMovement.IsNotMoving() || forceMove);
 
-        if (ScriptedCatch)
+        if (ScriptedCatch && pathFollow.Target != null)
             characterMovement.Speed += ScriptedAccelaration * Time.deltaTime;
     }
 
@@ -206,30 +214,15 @@ public class WerewolfController : Singleton<WerewolfController>
         pathFollow.Target = null;
     }
 
-    private void WerewolfController_OnPlayerCaught()
-    {
-        Debug.Log("Player caught");
-    }
-
-    private void Instance_OnDayBegin()
+    private void GameManager_OnDayBegin()
     {
         characterMovement.Move(Vector2.zero);
         enabled = false;
     }
 
-    private void Instance_OnNightBegin()
+    private void GameManager_OnNightBegin()
     {
         enabled = true;
-    }
-
-    private void CatchTrigger_OnEnter()
-    {
-        playerInCatchTrigger = true;
-    }
-
-    private void CatchTrigger_OnExit()
-    {
-        playerInCatchTrigger = false;
     }
 
     private void GrabStartTrigger_OnEnter()
@@ -243,7 +236,7 @@ public class WerewolfController : Singleton<WerewolfController>
         characterMovement.Speed = 0;
     }
 
-    private void WerewolfAnimationEvents_InCatchFrame()
+    private void Animations_InCatchFrame()
     {
         if (!playerInCatchTrigger)
             return;
@@ -252,7 +245,7 @@ public class WerewolfController : Singleton<WerewolfController>
         OnPlayerCaught.Invoke();
     }
 
-    private void WerewolfAnimationEvents_OnLastCatchFrame()
+    private void Animations_OnLastCatchFrame()
     {
         werewolfAnimator.SetBool("IsGrabing", false);
         eyesAnimator.SetBool("IsGrabing", false);
@@ -272,7 +265,7 @@ public class WerewolfController : Singleton<WerewolfController>
         }
     }
 
-    private void WerewolfAnimationEvents_OnLastKitchenIdleFrame()
+    private void Animations_OnLastKitchenIdleFrame()
     {
         if (!visionTriggered)
             return;
@@ -286,7 +279,7 @@ public class WerewolfController : Singleton<WerewolfController>
         noticeKitchenIdleRepeatCounter++;
     }
 
-    private void WerewolfAnimationEvents_OnLastKitchenNoticeFrame()
+    private void Animations_OnLastKitchenNoticeFrame()
     {
         // Play the FMOD sound
         RuntimeManager.PlayOneShot(kitchenNoticeEvent);
@@ -305,14 +298,16 @@ public class WerewolfController : Singleton<WerewolfController>
         while (!QuestManager.Instance.Current.ChildQuestQueue.AreAllQuestsDone)
             QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
         forceMove = true;
+        OnChaseStart.Invoke();
     }
 
-    private void WerewolfAnimationEvents_OnTransformDone()
+    private void Animations_OnTransformDone()
     {
         werewolfAnimator.Play("RunSide", -1, 0.0f);
         eyesAnimator.Play("RunSide", -1, 0.0f);
         pathFollow.Target = PlayerController.Instance.transform;
         QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
         forceMove = true;
+        OnChaseStart.Invoke();
     }
 }
