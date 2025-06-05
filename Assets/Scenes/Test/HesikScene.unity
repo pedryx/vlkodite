@@ -27170,7 +27170,7 @@ PrefabInstance:
     - target: {fileID: 6288659076910429651, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: werewolfNight3Spawn
       value: 
-      objectReference: {fileID: 762487369}
+      objectReference: {fileID: 3737778276499577136}
     - target: {fileID: 6288659076910429651, guid: 85e69043af232fe4abf790592b3642cd, type: 3}
       propertyPath: kitchenNoticeObjectA
       value: 
@@ -28674,6 +28674,11 @@ Transform:
 --- !u!4 &3737778276499577135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3454950436163460056, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
+  m_PrefabInstance: {fileID: 3737778276499577133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3737778276499577136 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6765694425378073836, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
   m_PrefabInstance: {fileID: 3737778276499577133}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4261233200813675456
