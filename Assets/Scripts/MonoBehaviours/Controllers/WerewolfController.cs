@@ -9,38 +9,8 @@ using FMOD.Studio;
 [RequireComponent(typeof(PathFollow))]
 public class WerewolfController : Singleton<WerewolfController>
 {
-    /// <summary>
-    /// When enabled <see cref="ScriptedAccelaration"/> is applied to the werewolf. This ensures that the werewolf
-    /// catches the player during the scripted chase sequence.
-    /// </summary>
-    [SerializeField]
-    [Tooltip("When enabled, scripted acceleration is applied to the werewolf. This ensures that the werewolf " +
-        "catches the player during the scripted chase sequence.")]
-    private bool scriptedCatch = false;
-    private float standartSpeed;
-    /// <summary>
-    /// Determine if player is inside catch trigger.
-    /// </summary>
-    private bool playerInCatchTrigger = false;
-    private float speed;
-    private bool forceMove = false;
-    /// <summary>
-    /// How many times will kitchen animation be repeated when werewolf notices player.
-    /// </summary>
-    [SerializeField]
-    [Tooltip("How many times will kitchen animation be repeated when werewolf notices player.")]
-    private int noticeKitchenIdleRepeat = 1;
-    private int noticeKitchenIdleRepeatCounter = 0;
-
-    // Following property is under scripted catch field, so its appear near each other in the inspector.
-
-    /// <summary>
-    /// Accelarattion of the werewolf when <see cref="ScriptedCatch"/> is enabled."/>
-    /// </summary>
-    [field: SerializeField]
-    [Tooltip("Acceleration of the werewolf when ScriptedCatch is enabled.")]
-    public float ScriptedAccelaration { get; private set; } = 0.1f;
-
+    #region Components
+    [Header("Components")]
     [SerializeField]
     private GameObject werewolfForm;
     [SerializeField]
@@ -50,13 +20,6 @@ public class WerewolfController : Singleton<WerewolfController>
     [SerializeField]
     private PlayerTrigger grabStartTrigger;
     [SerializeField]
-    private Transform werewolfNight1Spawn;
-    [SerializeField]
-    private Transform werewolfNight2Spawn;
-    [SerializeField]
-    private Transform werewolfNight3Spawn;
-
-    [SerializeField]
     private Animator werewolfAnimator;
     [SerializeField]
     private Animator eyesAnimator;
@@ -65,36 +28,28 @@ public class WerewolfController : Singleton<WerewolfController>
     [SerializeField]
     private SpriteRenderer eyesSpriteRenderer;
 
-    [SerializeField]
-    private EventReference kitchenNoticeEvent;
-   
-    [SerializeField]
-    private GameObject kitchenNoticeObjectA;
-
-    [SerializeField]
-    private GameObject kitchenNoticeObjectB;
-
-
     private CharacterMovement characterMovement;
     private PathFollow pathFollow;
-
+    #endregion
+    #region Scripted catch mechanic
     /// <summary>
-    /// Determine if player entered werewolf's vision trigger during current night.
+    /// When enabled <see cref="ScriptedAccelaration"/> is applied to the werewolf. This ensures that the werewolf
+    /// catches the player during the scripted chase sequence.
     /// </summary>
-    private bool visionTriggered = false;
+    [Header("Scripted catch mechanic")]
+    [SerializeField]
+    [Tooltip("When enabled, scripted acceleration is applied to the werewolf. This ensures that the werewolf " +
+        "catches the player during the scripted chase sequence.")]
+    private bool scriptedCatch = false;
+
+    // Following property is under scripted catch field, so its appear near each other in the inspector.
 
     /// <summary>
-    /// Occur when player is caught by the werewolf.
-    /// </summary>
-    [Tooltip("Occur when player is caught by the werewolf.")]
-    public UnityEvent OnPlayerCaught = new();
-
-    /// <summary>
-    /// Occur when werewolf completes his reverse transformation.
+    /// Accelarattion of the werewolf when <see cref="ScriptedCatch"/> is enabled."/>
     /// </summary>
     [field: SerializeField]
-    [Tooltip("Occur when werewolf completes his reverse transformation.")]
-    public UnityEvent OnReverseTransformDone { get; private set; }
+    [Tooltip("Acceleration of the werewolf when ScriptedCatch is enabled.")]
+    public float ScriptedAccelaration { get; private set; } = 0.1f;
 
     /// <summary>
     /// When enabled <see cref="ScriptedAccelaration"/> is applied to the werewolf. This ensures that the werewolf
@@ -112,6 +67,49 @@ public class WerewolfController : Singleton<WerewolfController>
                 characterMovement.Speed = standartSpeed;
         }
     }
+    #endregion
+    #region Kitchen encounter
+    /// <summary>
+    /// How many times will kitchen animation be repeated when werewolf notices player.
+    /// </summary>
+    [Header("Kiten encounter")]
+    [SerializeField]
+    [Tooltip("How many times will kitchen animation be repeated when werewolf notices player.")]
+    private int noticeKitchenIdleRepeat = 1;
+    /// <summary>
+    /// How mant times did kitchen idle animation was repeated.
+    /// </summary>
+    private int noticeKitchenIdleRepeatCounter = 0;
+    [SerializeField]
+    private EventReference kitchenNoticeEvent;
+    [SerializeField]
+    private GameObject kitchenNoticeObjectA;
+    [SerializeField]
+    private GameObject kitchenNoticeObjectB;
+    #endregion
+    #region Night spawns
+    [Header("Night spawns")]
+    [SerializeField]
+    private Transform werewolfNight1Spawn;
+    [SerializeField]
+    private Transform werewolfNight2Spawn;
+    [SerializeField]
+    private Transform werewolfNight3Spawn;
+    #endregion
+    #region Events
+    /// <summary>
+    /// Occur when player is caught by the werewolf.
+    /// </summary>
+    [Header("Events")]
+    [Tooltip("Occur when player is caught by the werewolf.")]
+    public UnityEvent OnPlayerCaught = new();
+
+    /// <summary>
+    /// Occur when werewolf completes his reverse transformation.
+    /// </summary>
+    [field: SerializeField]
+    [Tooltip("Occur when werewolf completes his reverse transformation.")]
+    public UnityEvent OnReverseTransformDone { get; private set; }
 
     /// <summary>
     /// Occur when werewolf starts chasing the player.
@@ -119,18 +117,24 @@ public class WerewolfController : Singleton<WerewolfController>
     [field: SerializeField]
     [Tooltip("Occur when werewolf starts chasing the player.")]
     public UnityEvent OnChaseStart { get; private set; } = new();
+    #endregion
 
     /// <summary>
-    /// Start reverse transformation of the werewolf. This starts playing the animation in which werewolf transform
-    /// back into his human form. You can detect end of this animation by <see cref="OnReverseTransformDone"/> event.
+    /// Standart werewolf speed. This is used to restore the speed when werewolf speed needs to be temporary changed.
     /// </summary>
-    [Tooltip("Start reverse transformation of the werewolf. This starts playing the animation in which werewolf " +
-        "transform back into his human form. You can detect end of this animation by OnReverseTransformDone event.")]
-    public void PlayReverseTransformEvent()
-    {
-        werewolfAnimator.Play("ReverseTransformEvent");
-        eyesAnimator.Play("ReverseTransformEvent");
-    }
+    private float standartSpeed;
+    /// <summary>
+    /// Determine if player is inside catch trigger.
+    /// </summary>
+    private bool IsplayerInCatchTrigger = false;
+    /// <summary>
+    /// Determine if move animation should be forced even if werewolf is not moving.
+    /// </summary>
+    private bool forceMoveAnimation = false;
+    /// <summary>
+    /// Determine if player entered werewolf's vision trigger during current night.
+    /// </summary>
+    private bool hasSeenPlayer = false;
 
     protected override void Awake()
     {
@@ -149,15 +153,14 @@ public class WerewolfController : Singleton<WerewolfController>
         visionTrigger.OnEnter.AddListener(VisionTrigger_OnEnter);
 
         grabStartTrigger.OnEnter.AddListener(GrabStartTrigger_OnEnter);
-        catchTrigger.OnEnter.AddListener(() => playerInCatchTrigger = true);
-        catchTrigger.OnExit.AddListener(() => playerInCatchTrigger = false);
+        catchTrigger.OnEnter.AddListener(() => IsplayerInCatchTrigger = true);
+        catchTrigger.OnExit.AddListener(() => IsplayerInCatchTrigger = false);
 
         var animations = werewolfForm.GetComponent<WerewolfAnimationEvents>();
         animations.OnCatchTriggerFrame.AddListener(Animations_InCatchFrame);
         animations.OnLastCatchFrame.AddListener(Animations_OnLastCatchFrame);
         animations.OnLastKitchenNoticeFrame.AddListener(Animations_OnLastKitchenNoticeFrame);
         animations.OnLastKitchenIdleFrame.AddListener(Animations_OnLastKitchenIdleFrame);
-        animations.OnReverseTransformDone.AddListener(() => OnReverseTransformDone.Invoke());
         animations.OnLastTransformFrame.AddListener(Animations_OnTransformDone);
 
         Debug.Assert(werewolfNight1Spawn != null, "Werewolf spawn for first night not specified.");
@@ -173,10 +176,10 @@ public class WerewolfController : Singleton<WerewolfController>
         {
             werewolfSpriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
             eyesSpriteRenderer.flipX = werewolfSpriteRenderer.flipX;
-            forceMove = false;
+            forceMoveAnimation = false;
         }
-        werewolfAnimator.SetBool("IsMoving", !characterMovement.IsNotMoving() || forceMove);
-        eyesAnimator.SetBool("IsMoving", !characterMovement.IsNotMoving() || forceMove);
+        werewolfAnimator.SetBool("IsMoving", !characterMovement.IsNotMoving() || forceMoveAnimation);
+        eyesAnimator.SetBool("IsMoving", !characterMovement.IsNotMoving() || forceMoveAnimation);
 
         if (ScriptedCatch && pathFollow.Target != null)
             characterMovement.Speed += ScriptedAccelaration * Time.deltaTime;
@@ -194,7 +197,7 @@ public class WerewolfController : Singleton<WerewolfController>
                 $"Spawn position for day {GameManager.Instance.DayNumber} not specified"
             ),
         };
-        visionTriggered = false;
+        hasSeenPlayer = false;
 
         if (GameManager.Instance.DayNumber == 1)
         {
@@ -225,6 +228,7 @@ public class WerewolfController : Singleton<WerewolfController>
         enabled = true;
     }
 
+    #region Grab mechanic
     private void GrabStartTrigger_OnEnter()
     {
         if (PlayerController.Instance.GodModeActive)
@@ -232,13 +236,13 @@ public class WerewolfController : Singleton<WerewolfController>
 
         werewolfAnimator.SetBool("IsGrabing", true);
         eyesAnimator.SetBool("IsGrabing", true);
-        speed = characterMovement.Speed;
+        standartSpeed = characterMovement.Speed;
         characterMovement.Speed = 0;
     }
 
     private void Animations_InCatchFrame()
     {
-        if (!playerInCatchTrigger)
+        if (!IsplayerInCatchTrigger)
             return;
 
         QuestManager.Instance.Current.TransitionQuest.Complete();
@@ -249,14 +253,15 @@ public class WerewolfController : Singleton<WerewolfController>
     {
         werewolfAnimator.SetBool("IsGrabing", false);
         eyesAnimator.SetBool("IsGrabing", false);
-        characterMovement.Speed = speed;
+        characterMovement.Speed = standartSpeed;
     }
+    #endregion
 
     private void VisionTrigger_OnEnter()
     {
-        if (visionTriggered)
+        if (hasSeenPlayer)
             return;
-        visionTriggered = true;
+        hasSeenPlayer = true;
 
         if (GameManager.Instance.DayNumber == 2)
         {
@@ -265,9 +270,10 @@ public class WerewolfController : Singleton<WerewolfController>
         }
     }
 
+    #region Kitchen encounter
     private void Animations_OnLastKitchenIdleFrame()
     {
-        if (!visionTriggered)
+        if (!hasSeenPlayer)
             return;
 
         if (noticeKitchenIdleRepeatCounter == noticeKitchenIdleRepeat)
@@ -297,9 +303,10 @@ public class WerewolfController : Singleton<WerewolfController>
         pathFollow.Target = PlayerController.Instance.transform;
         while (!QuestManager.Instance.Current.ChildQuestQueue.AreAllQuestsDone)
             QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
-        forceMove = true;
+        forceMoveAnimation = true;
         OnChaseStart.Invoke();
     }
+    #endregion
 
     private void Animations_OnTransformDone()
     {
@@ -307,7 +314,7 @@ public class WerewolfController : Singleton<WerewolfController>
         eyesAnimator.Play("RunSide", -1, 0.0f);
         pathFollow.Target = PlayerController.Instance.transform;
         QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
-        forceMove = true;
+        forceMoveAnimation = true;
         OnChaseStart.Invoke();
     }
 }
