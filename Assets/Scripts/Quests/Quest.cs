@@ -66,8 +66,8 @@ public class Quest
 
     public void Complete()
     {
-        Debug.Assert(IsStarted);
-        Debug.Assert(!IsCompleted);
+        Debug.Assert(IsStarted, "Quest is not started.");
+        Debug.Assert(!IsCompleted, "Quest is already completed.");
 
         IsCompleted = true;
         if (GameManager.Instance.IsDay)

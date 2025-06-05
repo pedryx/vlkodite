@@ -42,6 +42,11 @@ public class QuestQueue
     /// </summary>
     public bool AreAllQuestsDone => questQueueIndex >= quests.Count;
 
+    /// <summary>
+    /// Index of the current quest in the queue.
+    /// </summary>
+    public int QuestIndex => questQueueIndex;
+
     public void Start()
     {
         foreach (var quest in quests)
