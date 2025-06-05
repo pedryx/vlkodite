@@ -139,7 +139,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -153,7 +153,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -177,7 +177,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -218,10 +218,10 @@ TextureImporter:
       name: Hug_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 398
-        width: 53
-        height: 39
+        x: 0
+        y: 384
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,20 +240,20 @@ TextureImporter:
       name: Hug_1
       rect:
         serializedVersion: 2
-        x: 162
-        y: 398
-        width: 53
-        height: 39
+        x: 112
+        y: 384
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6448b62b26cb7bf70800000000000000
-      internalID: 9203031495641105478
+      spriteID: 62f2e45e1ac98f643b062506e40c6d5e
+      internalID: 1068844350
       vertices: []
       indices: 
       edges: []
@@ -262,20 +262,20 @@ TextureImporter:
       name: Hug_2
       rect:
         serializedVersion: 2
-        x: 275
-        y: 398
-        width: 52
-        height: 39
+        x: 224
+        y: 384
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 05743cb718ab1a950800000000000000
-      internalID: 6458648405915944784
+      spriteID: 4a5ccd3b1a4dd16469485d69ce13851c
+      internalID: 71550039
       vertices: []
       indices: 
       edges: []
@@ -284,20 +284,20 @@ TextureImporter:
       name: Hug_3
       rect:
         serializedVersion: 2
-        x: 388
-        y: 398
-        width: 51
-        height: 39
+        x: 336
+        y: 384
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9fc43e68d9dec2400800000000000000
-      internalID: 300876535955672313
+      spriteID: d309ca8247d05304489ec161f124d1bb
+      internalID: -711154378
       vertices: []
       indices: 
       edges: []
@@ -306,20 +306,20 @@ TextureImporter:
       name: Hug_4
       rect:
         serializedVersion: 2
-        x: 500
-        y: 398
-        width: 51
-        height: 39
+        x: 448
+        y: 384
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4f743ee0d019208b0800000000000000
-      internalID: -5187424335507011596
+      spriteID: 5e59c1c775bb1334f8ad17597ab5d5ff
+      internalID: -1496552038
       vertices: []
       indices: 
       edges: []
@@ -328,20 +328,20 @@ TextureImporter:
       name: Hug_5
       rect:
         serializedVersion: 2
-        x: 52
-        y: 334
-        width: 51
-        height: 36
+        x: 0
+        y: 320
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 18160665edf4a5ad0800000000000000
-      internalID: -2712768009186811519
+      spriteID: e9521ef9b85e11c4cb19b41f74013217
+      internalID: 634228950
       vertices: []
       indices: 
       edges: []
@@ -350,20 +350,20 @@ TextureImporter:
       name: Hug_6
       rect:
         serializedVersion: 2
-        x: 164
-        y: 334
-        width: 51
-        height: 35
+        x: 112
+        y: 320
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bd2f4e11e7ba5d720800000000000000
-      internalID: 2870388895473005275
+      spriteID: 1375597673e6377499b181d805869094
+      internalID: 358718927
       vertices: []
       indices: 
       edges: []
@@ -372,20 +372,20 @@ TextureImporter:
       name: Hug_7
       rect:
         serializedVersion: 2
-        x: 276
-        y: 334
-        width: 51
-        height: 35
+        x: 224
+        y: 320
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cfa0d9c7e8955b7e0800000000000000
-      internalID: -1750394411652674820
+      spriteID: 924bc7289f3a25046aba9fc61581fb91
+      internalID: -2143504829
       vertices: []
       indices: 
       edges: []
@@ -394,20 +394,20 @@ TextureImporter:
       name: Hug_8
       rect:
         serializedVersion: 2
-        x: 388
-        y: 334
-        width: 51
-        height: 35
+        x: 336
+        y: 320
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 335acb9b00882f480800000000000000
-      internalID: -8866875179641559757
+      spriteID: 9cfb385a8dc70d842bfe2344bccc4d66
+      internalID: -1067719372
       vertices: []
       indices: 
       edges: []
@@ -416,20 +416,20 @@ TextureImporter:
       name: Hug_9
       rect:
         serializedVersion: 2
-        x: 500
-        y: 334
-        width: 51
-        height: 34
+        x: 448
+        y: 320
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b6763be5fad69d860800000000000000
-      internalID: 7555190449866237803
+      spriteID: 374c5fac021a3a8449d35ea42875883d
+      internalID: -1178185327
       vertices: []
       indices: 
       edges: []
@@ -438,20 +438,20 @@ TextureImporter:
       name: Hug_10
       rect:
         serializedVersion: 2
-        x: 52
-        y: 270
-        width: 50
-        height: 34
+        x: 0
+        y: 256
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 79c31523a8ddf5760800000000000000
-      internalID: 7448915894313499799
+      spriteID: 19ac21313f2606d459ec1808b40c0245
+      internalID: 1341170476
       vertices: []
       indices: 
       edges: []
@@ -460,20 +460,20 @@ TextureImporter:
       name: Hug_11
       rect:
         serializedVersion: 2
-        x: 164
-        y: 270
-        width: 50
-        height: 34
+        x: 112
+        y: 256
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 33788d70eb09b7290800000000000000
-      internalID: -7891554776186845389
+      spriteID: 3e307f38df7f1504dab8c93c2563c024
+      internalID: 518012481
       vertices: []
       indices: 
       edges: []
@@ -482,20 +482,20 @@ TextureImporter:
       name: Hug_12
       rect:
         serializedVersion: 2
-        x: 276
-        y: 270
-        width: 51
-        height: 34
+        x: 224
+        y: 256
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 43a2bcbde27e73370800000000000000
-      internalID: 8302358626522835508
+      spriteID: aadc4ae9f77424a45b74256b092bad61
+      internalID: 718008844
       vertices: []
       indices: 
       edges: []
@@ -504,20 +504,20 @@ TextureImporter:
       name: Hug_13
       rect:
         serializedVersion: 2
-        x: 388
-        y: 270
-        width: 51
-        height: 34
+        x: 336
+        y: 256
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 36f756722c1320b50800000000000000
-      internalID: 6557858717359243107
+      spriteID: 159c7e7c7424b3d47a38488918976b27
+      internalID: 1169579056
       vertices: []
       indices: 
       edges: []
@@ -526,20 +526,20 @@ TextureImporter:
       name: Hug_14
       rect:
         serializedVersion: 2
-        x: 500
-        y: 270
-        width: 51
-        height: 34
+        x: 448
+        y: 256
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f7cb19fb5fff08530800000000000000
-      internalID: 3855362711975214207
+      spriteID: 728049dde2344e149baf639948791c26
+      internalID: 2138538700
       vertices: []
       indices: 
       edges: []
@@ -548,20 +548,20 @@ TextureImporter:
       name: Hug_15
       rect:
         serializedVersion: 2
-        x: 52
-        y: 206
-        width: 51
-        height: 34
+        x: 0
+        y: 192
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c1739a68330764f00800000000000000
-      internalID: 1100690525543544604
+      spriteID: 37eb019af3d09434c96836b445534ea2
+      internalID: 458529168
       vertices: []
       indices: 
       edges: []
@@ -570,20 +570,20 @@ TextureImporter:
       name: Hug_16
       rect:
         serializedVersion: 2
-        x: 164
-        y: 206
-        width: 51
-        height: 34
+        x: 112
+        y: 192
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 723935249347aa190800000000000000
-      internalID: -7950414402894458073
+      spriteID: 121812629fc667d498ca0639eee2c17c
+      internalID: 298209671
       vertices: []
       indices: 
       edges: []
@@ -592,20 +592,20 @@ TextureImporter:
       name: Hug_17
       rect:
         serializedVersion: 2
-        x: 276
-        y: 206
-        width: 50
-        height: 34
+        x: 224
+        y: 192
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f399483de1fc13550800000000000000
-      internalID: 6138915498387347775
+      spriteID: 28397d8e37a2ecd44a87d0f481937bba
+      internalID: 75740581
       vertices: []
       indices: 
       edges: []
@@ -614,20 +614,20 @@ TextureImporter:
       name: Hug_18
       rect:
         serializedVersion: 2
-        x: 388
-        y: 206
-        width: 50
-        height: 34
+        x: 336
+        y: 192
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb1ce6eecc5aa6f90800000000000000
-      internalID: -6959567974555532865
+      spriteID: 7a03d9eeaca837546ad64bcf681b94ca
+      internalID: -519671143
       vertices: []
       indices: 
       edges: []
@@ -636,20 +636,20 @@ TextureImporter:
       name: Hug_19
       rect:
         serializedVersion: 2
-        x: 500
-        y: 206
-        width: 51
-        height: 35
+        x: 448
+        y: 192
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6cc19743f6ae91940800000000000000
-      internalID: 5267499002529127622
+      spriteID: 9e76ee62dd9a83e4bbc93d04f297c3cb
+      internalID: -1946959208
       vertices: []
       indices: 
       edges: []
@@ -658,20 +658,20 @@ TextureImporter:
       name: Hug_20
       rect:
         serializedVersion: 2
-        x: 52
-        y: 142
-        width: 51
-        height: 35
+        x: 0
+        y: 128
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9c8621634ae0615d0800000000000000
-      internalID: -3092267995698665271
+      spriteID: d29db9e251f0b94499d09eae8dca9e9e
+      internalID: -1527899287
       vertices: []
       indices: 
       edges: []
@@ -680,20 +680,20 @@ TextureImporter:
       name: Hug_21
       rect:
         serializedVersion: 2
-        x: 164
-        y: 142
-        width: 51
-        height: 35
+        x: 112
+        y: 128
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c23070551db00f100800000000000000
-      internalID: 139624582151078700
+      spriteID: cbb604ea26cc7e74fa1b7e28da122c56
+      internalID: 577916232
       vertices: []
       indices: 
       edges: []
@@ -702,20 +702,20 @@ TextureImporter:
       name: Hug_22
       rect:
         serializedVersion: 2
-        x: 276
-        y: 142
-        width: 51
-        height: 35
+        x: 224
+        y: 128
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 97b9e51619d8e80b0800000000000000
-      internalID: -5724482420797957255
+      spriteID: 8cadfe0d7bef8f4488e62cda75a3ac03
+      internalID: 986218888
       vertices: []
       indices: 
       edges: []
@@ -724,20 +724,20 @@ TextureImporter:
       name: Hug_23
       rect:
         serializedVersion: 2
-        x: 388
-        y: 142
-        width: 50
-        height: 35
+        x: 336
+        y: 128
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cbb5bb21f409ce270800000000000000
-      internalID: 8281152484118584252
+      spriteID: 37f3eb52251c2aa4fa814adc519087d5
+      internalID: -1260087165
       vertices: []
       indices: 
       edges: []
@@ -746,20 +746,20 @@ TextureImporter:
       name: Hug_24
       rect:
         serializedVersion: 2
-        x: 500
-        y: 142
-        width: 50
-        height: 35
+        x: 448
+        y: 128
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 17fb466c2e6233800800000000000000
-      internalID: 590858731548622705
+      spriteID: 8ec242e0164b1d84d9acfcac641f17e5
+      internalID: 1066885294
       vertices: []
       indices: 
       edges: []
@@ -768,20 +768,20 @@ TextureImporter:
       name: Hug_25
       rect:
         serializedVersion: 2
-        x: 52
-        y: 78
-        width: 51
-        height: 35
+        x: 0
+        y: 64
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4d52a45cfd6a34010800000000000000
-      internalID: 1171963808064349652
+      spriteID: 30b913b674273fb4caa1b3b79fbe07b6
+      internalID: -1145135707
       vertices: []
       indices: 
       edges: []
@@ -790,20 +790,20 @@ TextureImporter:
       name: Hug_26
       rect:
         serializedVersion: 2
-        x: 164
-        y: 78
-        width: 51
-        height: 35
+        x: 112
+        y: 64
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d972ffbbf6c1e4870800000000000000
-      internalID: 8668897598955792285
+      spriteID: cadce5ce3d957534fb7dcacf88c64674
+      internalID: 201415268
       vertices: []
       indices: 
       edges: []
@@ -812,20 +812,20 @@ TextureImporter:
       name: Hug_27
       rect:
         serializedVersion: 2
-        x: 276
-        y: 78
-        width: 50
-        height: 35
+        x: 224
+        y: 64
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4d6154d846a2a2050800000000000000
-      internalID: 5776476083411293908
+      spriteID: 5342e7092d7c85f49b2ba8d7531f4158
+      internalID: 1512990867
       vertices: []
       indices: 
       edges: []
@@ -834,20 +834,20 @@ TextureImporter:
       name: Hug_28
       rect:
         serializedVersion: 2
-        x: 388
-        y: 78
-        width: 50
-        height: 34
+        x: 336
+        y: 64
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 522b90586e3d55040800000000000000
-      internalID: 4635844378475737637
+      spriteID: bcbd6e9061c8edb408bf17c3adc94249
+      internalID: 1681294619
       vertices: []
       indices: 
       edges: []
@@ -856,20 +856,20 @@ TextureImporter:
       name: Hug_29
       rect:
         serializedVersion: 2
-        x: 500
-        y: 78
-        width: 51
-        height: 34
+        x: 448
+        y: 64
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1e322cdecbbf40080800000000000000
-      internalID: -9221969348086586399
+      spriteID: e5c081010ca5d2c4fa1ce9e0902dd94b
+      internalID: -687800348
       vertices: []
       indices: 
       edges: []
@@ -878,20 +878,20 @@ TextureImporter:
       name: Hug_30
       rect:
         serializedVersion: 2
-        x: 52
-        y: 14
-        width: 51
-        height: 34
+        x: 0
+        y: 0
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bf05134d76cbccb90800000000000000
-      internalID: -7220188948454092549
+      spriteID: e3e11f8200a8c32489f85b05d7cbdd66
+      internalID: -964057213
       vertices: []
       indices: 
       edges: []
@@ -900,20 +900,20 @@ TextureImporter:
       name: Hug_31
       rect:
         serializedVersion: 2
-        x: 164
-        y: 14
-        width: 51
-        height: 34
+        x: 112
+        y: 0
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1a3fc58f3ce719d60800000000000000
-      internalID: 7895231001907753889
+      spriteID: 62f7bf2a1e3201d43af8d73c94d9cdaa
+      internalID: 10954793
       vertices: []
       indices: 
       edges: []
@@ -922,20 +922,20 @@ TextureImporter:
       name: Hug_32
       rect:
         serializedVersion: 2
-        x: 276
-        y: 14
-        width: 51
-        height: 34
+        x: 224
+        y: 0
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 158d754edc9b0c6a0800000000000000
-      internalID: -6430935973934671791
+      spriteID: 94c821f0918cc87419e52f71caf235e1
+      internalID: 314950885
       vertices: []
       indices: 
       edges: []
@@ -944,20 +944,20 @@ TextureImporter:
       name: Hug_33
       rect:
         serializedVersion: 2
-        x: 388
-        y: 14
-        width: 51
-        height: 35
+        x: 336
+        y: 0
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4f10132b616f8a130800000000000000
-      internalID: 3578380481285128692
+      spriteID: 806f9ec46ff229240b5eb66bc7112c4f
+      internalID: 1815945282
       vertices: []
       indices: 
       edges: []
@@ -966,20 +966,20 @@ TextureImporter:
       name: Hug_34
       rect:
         serializedVersion: 2
-        x: 500
-        y: 14
-        width: 51
-        height: 35
+        x: 448
+        y: 0
+        width: 112
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 23fd10f4c82e7ef60800000000000000
-      internalID: 8063662750078983986
+      spriteID: 4096d19b24944684f9d80562f4fa62a8
+      internalID: 1752985634
       vertices: []
       indices: 
       edges: []
@@ -988,7 +988,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b7145aae6dbdf624982fbe940d8ecc45
     internalID: 0
     vertices: []
     indices: 
@@ -999,40 +999,40 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Hug_0: -609617916992556400
-      Hug_1: 9203031495641105478
-      Hug_10: 7448915894313499799
-      Hug_11: -7891554776186845389
-      Hug_12: 8302358626522835508
-      Hug_13: 6557858717359243107
-      Hug_14: 3855362711975214207
-      Hug_15: 1100690525543544604
-      Hug_16: -7950414402894458073
-      Hug_17: 6138915498387347775
-      Hug_18: -6959567974555532865
-      Hug_19: 5267499002529127622
-      Hug_2: 6458648405915944784
-      Hug_20: -3092267995698665271
-      Hug_21: 139624582151078700
-      Hug_22: -5724482420797957255
-      Hug_23: 8281152484118584252
-      Hug_24: 590858731548622705
-      Hug_25: 1171963808064349652
-      Hug_26: 8668897598955792285
-      Hug_27: 5776476083411293908
-      Hug_28: 4635844378475737637
-      Hug_29: -9221969348086586399
-      Hug_3: 300876535955672313
-      Hug_30: -7220188948454092549
-      Hug_31: 7895231001907753889
-      Hug_32: -6430935973934671791
-      Hug_33: 3578380481285128692
-      Hug_34: 8063662750078983986
-      Hug_4: -5187424335507011596
-      Hug_5: -2712768009186811519
-      Hug_6: 2870388895473005275
-      Hug_7: -1750394411652674820
-      Hug_8: -8866875179641559757
-      Hug_9: 7555190449866237803
+      Hug_1: 1068844350
+      Hug_10: 1341170476
+      Hug_11: 518012481
+      Hug_12: 718008844
+      Hug_13: 1169579056
+      Hug_14: 2138538700
+      Hug_15: 458529168
+      Hug_16: 298209671
+      Hug_17: 75740581
+      Hug_18: -519671143
+      Hug_19: -1946959208
+      Hug_2: 71550039
+      Hug_20: -1527899287
+      Hug_21: 577916232
+      Hug_22: 986218888
+      Hug_23: -1260087165
+      Hug_24: 1066885294
+      Hug_25: -1145135707
+      Hug_26: 201415268
+      Hug_27: 1512990867
+      Hug_28: 1681294619
+      Hug_29: -687800348
+      Hug_3: -711154378
+      Hug_30: -964057213
+      Hug_31: 10954793
+      Hug_32: 314950885
+      Hug_33: 1815945282
+      Hug_34: 1752985634
+      Hug_4: -1496552038
+      Hug_5: 634228950
+      Hug_6: 358718927
+      Hug_7: -2143504829
+      Hug_8: -1067719372
+      Hug_9: -1178185327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
