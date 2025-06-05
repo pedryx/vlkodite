@@ -1901,6 +1901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyID: Key2
+  objectToActivate: {fileID: 0}
 --- !u!114 &558397380 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3705863901477405985, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
@@ -4256,6 +4257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyID: Key
+  objectToActivate: {fileID: 0}
 --- !u!4 &1740881356
 Transform:
   m_ObjectHideFlags: 0
@@ -6203,14 +6205,6 @@ PrefabInstance:
       propertyPath: contextPromptUI
       value: 
       objectReference: {fileID: 9037851036085790552}
-    - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
-      propertyPath: pathFinderCellSize
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
-      propertyPath: <ShowPathFindingGrid>k__BackingField
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
       propertyPath: OnDayBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -538,7 +538,7 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
     <TransitionQuest>k__BackingField:
-      <Description>k__BackingField: 
+      <Description>k__BackingField: Survive
       <QuestAdvancer>k__BackingField: {fileID: 0}
       <ChildPosition>k__BackingField: {fileID: 0}
       <Teleport>k__BackingField: 0

@@ -37,6 +37,11 @@ public class QuestQueue
     [Tooltip("Occur when last quest in quest queue is finished.")]
     public UnityEvent<QuestQueueEventArgs> OnAllQuestsDone { get; private set; } = new();
 
+    /// <summary>
+    /// Determine if all quests in queue are done.
+    /// </summary>
+    public bool AreAllQuestsDone => questQueueIndex >= quests.Count;
+
     public void Start()
     {
         foreach (var quest in quests)

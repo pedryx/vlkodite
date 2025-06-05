@@ -3,19 +3,13 @@ using UnityEngine.Events;
 
 public class WerewolfAnimationEvents : MonoBehaviour
 {
-    [SerializeField]
+    #region Catch mechanic
+    [Header("Catch mechanic")]
+    [field: SerializeField]
     public UnityEvent OnCatchTriggerFrame { get; private set; } = new();
-    [SerializeField]
-    public UnityEvent OnLastCatchFrame { get; private set; } = new();
-    [SerializeField]
-    public UnityEvent OnLastKitchenIdleFrame { get; private set; } = new();
-    [SerializeField]
-    public UnityEvent OnLastKitchenNoticeFrame { get; private set; } = new();
-    [SerializeField]
-    public UnityEvent OnReverseTransformDone { get; private set; } = new();
-    [SerializeField]
-    public UnityEvent OnLastTransformFrame { get; private set; } = new();
 
+    [field: SerializeField]
+    public UnityEvent OnLastCatchFrame { get; private set; } = new();
 
     private void Animator_OnCatchTriggerFrame()
     {
@@ -26,6 +20,14 @@ public class WerewolfAnimationEvents : MonoBehaviour
     {
         OnLastCatchFrame.Invoke();
     }
+    #endregion
+    #region Kitchen encounter
+    [Header("Kitchen encounter")]
+    [field: SerializeField]
+    public UnityEvent OnLastKitchenIdleFrame { get; private set; } = new();
+
+    [field: SerializeField]
+    public UnityEvent OnLastKitchenNoticeFrame { get; private set; } = new();
 
     private void Animator_OnLastKitchenIdleFrame()
     {
@@ -36,9 +38,15 @@ public class WerewolfAnimationEvents : MonoBehaviour
     {
         OnLastKitchenNoticeFrame.Invoke();
     }
+    #endregion
+    #region Night 2 transform
+    [Header("Night 2 transform")]
+    [field: SerializeField]
+    public UnityEvent OnLastTransformFrame { get; private set; } = new();
 
     private void Animator_OnLastTransformFrame()
     {
         OnLastTransformFrame.Invoke();
     }
+    #endregion
 }
