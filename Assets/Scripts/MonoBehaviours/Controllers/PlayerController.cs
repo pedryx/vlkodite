@@ -86,6 +86,7 @@ public class PlayerController : Singleton<PlayerController>
         spawnPosition = transform.position;
         WerewolfController.Instance.OnPlayerCaught.AddListener(Werewolf_OnPlayerCaught);
         GameManager.Instance.OnNightBegin.AddListener(GameManager_OnNightBegin);
+        GameManager.Instance.OnThirdDayBegin.AddListener(() => transform.localPosition = nightSpawnPosition);
 
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
