@@ -10308,8 +10308,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
-  activePriority: 20
-  defaultPriority: 10
 --- !u!114 &696769085486982262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10323,8 +10321,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
-  activePriority: 20
-  defaultPriority: 10
 --- !u!114 &7289937586818178140
 MonoBehaviour:
   m_ObjectHideFlags: 0

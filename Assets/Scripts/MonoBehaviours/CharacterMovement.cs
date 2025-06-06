@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FMOD.Studio;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class CharacterMovement : MonoBehaviour

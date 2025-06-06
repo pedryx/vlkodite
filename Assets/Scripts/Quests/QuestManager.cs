@@ -262,12 +262,22 @@ public class QuestManager : Singleton<QuestManager>
             quest.Start();
         }
 
-        private void GameManager_OnDayBegin()
+        public void Restart()
         {
-            ChildQuestQueue.Reset();
+            questNotDoneCounter = 0;
+            ChildQuestQueue.Restart();
             foreach (var quest in quests)
             {
-                quest.Reset();
+                quest.Restart();
+            }
+        }
+
+        private void GameManager_OnDayBegin()
+        {
+            ChildQuestQueue.Restart();
+            foreach (var quest in quests)
+            {
+                quest.Restart();
             }
 
             questNotDoneCounter = 0;

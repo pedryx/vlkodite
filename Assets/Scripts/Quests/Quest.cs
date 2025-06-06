@@ -66,8 +66,8 @@ public class Quest
 
     public void Complete()
     {
-        Debug.Assert(IsStarted, "Quest is not started.");
-        Debug.Assert(!IsCompleted, "Quest is already completed.");
+        Debug.Assert(IsStarted, $"Quest is not started. - \"{Description}\"");
+        Debug.Assert(!IsCompleted, $"Quest is already completed. - \"{Description}\"");
 
         IsCompleted = true;
         if (GameManager.Instance.IsDay)
@@ -75,7 +75,7 @@ public class Quest
         OnDone.Invoke(new QuestEventArgs(this));
     }
 
-    public void Reset()
+    public void Restart()
     {
         IsStarted = false;
         IsCompleted = false;

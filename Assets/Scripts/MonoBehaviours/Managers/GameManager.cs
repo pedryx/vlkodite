@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using System.Security;
+using Unity.Cinemachine;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +10,15 @@ public class GameManager : Singleton<GameManager>
     [Header("UI")]
     [SerializeField]
     private TextPromptUI contextPromptUI;
+    [SerializeField]
+    private QuestLogController questLogController;
+    [SerializeField]
+    private CinemachineCamera playerCamera;
+    [SerializeField]
+    private GameObject chaseAudio1;
+    [SerializeField]
+    private GameObject chaseAudio2;
+
     /// <summary>
     /// Bounds of the path finding grid.
     /// </summary>
@@ -31,10 +43,6 @@ public class GameManager : Singleton<GameManager>
     /// Determine if day is active.
     /// </summary>
     private bool isDay = true;
-    /// <summary>
-    /// Time elapsed since start of the night.
-    /// </summary>
-    private float nightTimeElapsed = 0.0f;
 
     /// <summary>
     /// Determine if the path finding grid should be visualized.
@@ -93,9 +101,13 @@ public class GameManager : Singleton<GameManager>
         OnDayBegin.AddListener(GameManager_OnDayBegin);
         OnNightBegin.AddListener(GameManager_OnNightBegin);
         QuestManager.Instance.OnTransitionQuestDone.AddListener(TransitionQuest_OnDone);
-        WerewolfController.Instance.OnPlayerCaught.AddListener(Werewolf_OnPlayerCaught);
 
         PathFinder = new PathFinder(pathFinderBounds, pathFinderCellSize, pathFinderRadius);
+
+        Debug.Assert(questLogController != null, "Quest log is not assigned.");
+        Debug.Assert(playerCamera != null, "Player camera is not assigned.");
+        Debug.Assert(chaseAudio1 != null, "Chase audio 1 is not assigned.");
+        Debug.Assert(chaseAudio2 != null, "Chase audio 2 is not assigned.");
     }
 
     private void OnDrawGizmos()
@@ -104,6 +116,27 @@ public class GameManager : Singleton<GameManager>
             return;
 
         PathFinder.DrawGizmos();
+    }
+
+    public void RestartNight()
+    {
+        Debug.Assert(IsNight);
+
+        questLogController.Restart();
+        QuestManager.Instance.Current.Restart();
+
+        WerewolfController.Instance.enabled = false;
+        PlayerController.Instance.Respawn();
+
+        var cameras = FindObjectsByType<CinemachineCamera>(FindObjectsSortMode.None);
+        foreach (var camera in cameras)
+            camera.Priority = CameraZoneSwitcher.defaultPriority;
+        playerCamera.Priority = CameraZoneSwitcher.activePriority;
+
+        chaseAudio1.SetActive(false);
+        chaseAudio2.SetActive(false);
+
+        OnNightBegin.Invoke();
     }
 
     /// <summary>
@@ -122,14 +155,14 @@ public class GameManager : Singleton<GameManager>
         return isDay;
     }
 
-    public void ShowContextPrompt(string promptText) => contextPromptUI.Show(promptText);
+    public void ShowContextPrompt(string promptText)
+        => contextPromptUI.Show(promptText);
 
-    public void HideContextPrompt() => contextPromptUI.Hide();
+    public void HideContextPrompt()
+        => contextPromptUI.Hide();
 
     public void SwitchScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
+        => SceneManager.LoadScene(sceneName);
 
     private void GameManager_OnDayBegin()
     {
@@ -156,8 +189,6 @@ public class GameManager : Singleton<GameManager>
     private void GameManager_OnNightBegin()
     {
         Debug.Log("Night started.");
-        nightTimeElapsed = 0.0f;
-
         OnDayNightSwitch.Invoke();
 
         switch (DayNumber)
@@ -177,20 +208,6 @@ public class GameManager : Singleton<GameManager>
 
     }
 
-    private void Werewolf_OnPlayerCaught()
-    {
-        if (DayNumber == 1)
-        {
-            Debug.Assert(IsNight);
-            isDay = true;
-            OnDayBegin.Invoke();
-        }
-
-        // TODO: restart the night
-    }
-
     private void TransitionQuest_OnDone(QuestEventArgs e)
-    {
-        SwitchDayNight();
-    }
+        => SwitchDayNight();
 }

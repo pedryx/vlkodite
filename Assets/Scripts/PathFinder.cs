@@ -215,7 +215,7 @@ public class PathFinder
 
         if (!pathFound)
         {
-            Debug.LogError("No valid path exists between the specified points.");
+            Debug.LogWarning("No valid path exists between the specified points.");
             return null;
         }
 

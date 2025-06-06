@@ -4,8 +4,8 @@ using Unity.Cinemachine;
 public class CameraZoneSwitcher : MonoBehaviour
 {
     public CinemachineCamera targetCamera;
-    public int activePriority = 20;
-    public int defaultPriority = 10;
+    public const int activePriority = 20;
+    public const int defaultPriority = 10;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

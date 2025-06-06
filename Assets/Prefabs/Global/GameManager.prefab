@@ -45,6 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contextPromptUI: {fileID: 0}
+  questLogController: {fileID: 0}
+  playerCamera: {fileID: 0}
+  chaseAudio1: {fileID: 0}
+  chaseAudio2: {fileID: 0}
   pathFinderBounds:
     serializedVersion: 2
     x: -50

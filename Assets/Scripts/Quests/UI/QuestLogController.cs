@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+
+using UnityEngine;
 
 public class QuestLogController : MonoBehaviour
 {
+    private readonly List<GameObject> questPanels = new();
+
     private int questPanelCount = 0;
     [SerializeField]
     private GameObject questPanelPrefab;
@@ -38,6 +42,7 @@ public class QuestLogController : MonoBehaviour
 
         questPanel.Init(quest);
         questPanel.OnQuestFullyDone.AddListener(QuestPanel_OnQuestFullyDone);
+        questPanels.Add(questPanel.gameObject);
     }
 
     private void CreateQuestPanel(QuestQueue questQueue)
@@ -50,6 +55,15 @@ public class QuestLogController : MonoBehaviour
 
         questPanel.Init(questQueue);
         questPanel.OnQuestFullyDone.AddListener(QuestPanel_OnQuestFullyDone);
+        questPanels.Add(questPanel.gameObject);
+    }
+
+    public void Restart()
+    {
+        foreach (var questPanel in questPanels)
+            Destroy(questPanel);
+        questPanels.Clear();
+        questPanelCount = 0;
     }
 
     private void QuestPanel_OnQuestFullyDone(QuestPanelEventArgs e)

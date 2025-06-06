@@ -56,7 +56,7 @@ public class PathFollow : MonoBehaviour
 
         if (IsTargetVisible())
         {
-            characterMovement.MoveTo(Target.position);
+            MoveTo(Target.position);
             path = null;
             return;
         }
@@ -65,7 +65,7 @@ public class PathFollow : MonoBehaviour
         {
             elapsed = 0.0f;
             FindNewPathAsync();
-            characterMovement.MoveTo(Target.position);
+            MoveTo(Target.position);
             return;
         }
 
@@ -79,7 +79,7 @@ public class PathFollow : MonoBehaviour
         while (pathIndex < path.Count && (path[pathIndex] - (Vector2)transform.localPosition).sqrMagnitude < 1e-2)
             pathIndex++;
         if (pathIndex < path.Count)
-            characterMovement.MoveTo(path[pathIndex]);
+            MoveTo(path[pathIndex]);
     }
 
     private void OnDrawGizmos()
@@ -93,6 +93,17 @@ public class PathFollow : MonoBehaviour
         for (int i = 0; i < path.Count - 1; i++)
         {
             Gizmos.DrawLine(path[i].Extend(-2.0f), path[i + 1].Extend(-2.0f));
+        }
+    }
+
+    private void MoveTo(Vector2 direction)
+    {
+        characterMovement.MoveTo(direction);
+
+        if (characterMovement.Speed == 0.0f)
+        {
+            Debug.Assert(gameObject.GetComponent<WerewolfController>() != null);
+            characterMovement.Speed = WerewolfController.Instance.StandartSpeed;
         }
     }
 

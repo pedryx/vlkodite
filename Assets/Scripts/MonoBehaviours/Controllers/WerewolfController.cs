@@ -62,9 +62,9 @@ public class WerewolfController : Singleton<WerewolfController>
         {
             scriptedCatch = value;
             if (value)
-                standartSpeed = characterMovement.Speed;
+                StandartSpeed = characterMovement.Speed;
             else
-                characterMovement.Speed = standartSpeed;
+                characterMovement.Speed = StandartSpeed;
         }
     }
     #endregion
@@ -122,7 +122,7 @@ public class WerewolfController : Singleton<WerewolfController>
     /// <summary>
     /// Standart werewolf speed. This is used to restore the speed when werewolf speed needs to be temporary changed.
     /// </summary>
-    private float standartSpeed;
+    public float StandartSpeed { get; set; } = 0.0f;
     /// <summary>
     /// Determine if player is inside catch trigger.
     /// </summary>
@@ -167,6 +167,7 @@ public class WerewolfController : Singleton<WerewolfController>
         Debug.Assert(werewolfNight2Spawn != null, "Werewolf spawn for second night not specified.");
         Debug.Assert(werewolfNight3Spawn != null, "Werewolf spawn for third night not specified.");
 
+        StandartSpeed = characterMovement.Speed;
         enabled = false;
     }
 
@@ -244,7 +245,6 @@ public class WerewolfController : Singleton<WerewolfController>
 
         werewolfAnimator.SetBool("IsGrabing", true);
         eyesAnimator.SetBool("IsGrabing", true);
-        standartSpeed = characterMovement.Speed;
         characterMovement.Speed = 0;
     }
 
@@ -253,15 +253,22 @@ public class WerewolfController : Singleton<WerewolfController>
         if (!IsplayerInCatchTrigger)
             return;
 
-        QuestManager.Instance.Current.TransitionQuest.Complete();
-        OnPlayerCaught.Invoke();
+        if (GameManager.Instance.DayNumber == 2)
+        {
+            GameManager.Instance.RestartNight();
+        }
+        else
+        {
+            QuestManager.Instance.Current.TransitionQuest.Complete();
+            OnPlayerCaught.Invoke();
+        }
     }
 
     private void Animations_OnLastCatchFrame()
     {
         werewolfAnimator.SetBool("IsGrabing", false);
         eyesAnimator.SetBool("IsGrabing", false);
-        characterMovement.Speed = standartSpeed;
+        characterMovement.Speed = StandartSpeed;
     }
     #endregion
 
@@ -321,7 +328,7 @@ public class WerewolfController : Singleton<WerewolfController>
         werewolfAnimator.Play("RunSide", -1, 0.0f);
         eyesAnimator.Play("RunSide", -1, 0.0f);
         pathFollow.Target = PlayerController.Instance.transform;
-        QuestManager.Instance.Current.ChildQuestQueue.ActiveQuest.Complete();
+        QuestManager.Instance.Current.ChildQuestQueue.Quests[0].Complete();
         forceMoveAnimation = true;
         OnChaseStart.Invoke();
     }

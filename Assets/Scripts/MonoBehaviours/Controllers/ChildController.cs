@@ -11,34 +11,13 @@ public class ChildController : Singleton<ChildController>
     private CharacterMovement movement;
     private Vector3 spawnPosition;
 
-    private void Awake()
+    protected override void Awake()
     {
         movement = GetComponent<CharacterMovement>();
         spawnPosition = transform.position;
 
         GameManager.Instance.OnDayBegin.AddListener(GameManager_OnDayBegin);
         GameManager.Instance.OnNightBegin.AddListener(GameManager_OnNightBegin);
-    }
-
-    private void OnEnable()
-    {
-        humanForm.SetActive(true);
-    }
-
-    private void OnDisable()
-    {
-        humanForm.SetActive(false);
-    }
-
-    private void GameManager_OnDayBegin()
-    {
-        transform.position = spawnPosition;
-        enabled = true;
-    }
-
-    private void GameManager_OnNightBegin()
-    {
-        enabled = false;
     }
 
     private void Update()
@@ -60,5 +39,26 @@ public class ChildController : Singleton<ChildController>
         {
             cameraToDisableWhileMoving.enabled = !isMoving;
         }
+    }
+
+    private void OnEnable()
+    {
+        humanForm.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        humanForm.SetActive(false);
+    }
+
+    private void GameManager_OnDayBegin()
+    {
+        transform.position = spawnPosition;
+        enabled = true;
+    }
+
+    private void GameManager_OnNightBegin()
+    {
+        enabled = false;
     }
 }

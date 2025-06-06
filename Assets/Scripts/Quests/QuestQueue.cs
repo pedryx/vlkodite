@@ -58,12 +58,12 @@ public class QuestQueue
         ActiveQuest.Start();
     }
 
-    public void Reset()
+    public void Restart()
     {
         questQueueIndex = 0;
         foreach (var quest in quests)
         {
-            quest.Reset();
+            quest.Restart();
         }
     }
 
@@ -75,7 +75,12 @@ public class QuestQueue
     private void Quest_OnDone(QuestEventArgs e)
     {
         Debug.Assert(questQueueIndex < quests.Count);
-        Debug.Assert(e.Quest == ActiveQuest);
+
+        if (e.Quest != ActiveQuest)
+        {
+            Debug.LogWarning("Finishing in-active quest, skipping.");
+            return;
+        }
 
         OnQuestDone.Invoke(new QuestQueueEventArgs(this, e.Quest));
 

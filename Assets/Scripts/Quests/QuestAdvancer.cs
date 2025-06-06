@@ -45,8 +45,9 @@ public class QuestAdvancer : MonoBehaviour
         if (e.Quest.QuestAdvancer != this)
             return;
         
-        Debug.Assert(e.Quest == quest);
-
         interactable.InteractionEnabled = false;
+
+        if (e.Quest != quest)
+            Debug.LogWarning("Quest on quest advancer differs from quest in event params.");
     }
 }
