@@ -174,8 +174,12 @@ public class WerewolfController : Singleton<WerewolfController>
     {
         if (!characterMovement.IsNotMoving())
         {
-            werewolfSpriteRenderer.flipX = characterMovement.GetFacingDirection() == Direction.Left;
-            eyesSpriteRenderer.flipX = werewolfSpriteRenderer.flipX;
+            bool isFacingLeft = characterMovement.GetFacingDirection() == Direction.Left;
+
+            Vector3 scale = transform.localScale;
+            scale.x = (isFacingLeft ? -1.0f : 1.0f) * Mathf.Abs(scale.x);
+            transform.localScale = scale;
+
             forceMoveAnimation = false;
         }
         werewolfAnimator.SetBool("IsMoving", !characterMovement.IsNotMoving() || forceMoveAnimation);
