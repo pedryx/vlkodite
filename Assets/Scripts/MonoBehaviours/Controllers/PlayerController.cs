@@ -28,6 +28,10 @@ public class PlayerController : Singleton<PlayerController>
     private Vector3 spawnPosition;
     private float characterSpeed;
     private float sprintAccumulator = 0.0f;
+    /// <summary>
+    /// Determine if player has main door key.
+    /// </summary>
+    private bool hasKey = false;
 
     /// <summary>
     /// Maximum movement speed of player in pixels per second during super-speed mode.
@@ -165,10 +169,11 @@ public class PlayerController : Singleton<PlayerController>
     public bool IsNear(Interactable interactable)
         => interactableTargets.Contains(interactable);
 
+    public void PickupKey()
+        => hasKey = true;
+    
     private void Werewolf_OnPlayerCaught()
-    {
-        transform.localPosition = spawnPosition;
-    }
+        => transform.localPosition = spawnPosition;
 
     #region Debug events
     private void ToggleDebug_Performed(InputAction.CallbackContext context)

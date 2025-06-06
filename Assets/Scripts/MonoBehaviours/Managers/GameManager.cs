@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -146,6 +147,11 @@ public class GameManager : Singleton<GameManager>
     public void ShowContextPrompt(string promptText) => contextPromptUI.Show(promptText);
 
     public void HideContextPrompt() => contextPromptUI.Hide();
+
+    public void SwitchScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 
     private void GameManager_OnDayBegin()
     {

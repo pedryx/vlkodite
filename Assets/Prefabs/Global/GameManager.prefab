@@ -54,7 +54,7 @@ MonoBehaviour:
   pathFinderCellSize: 0.1
   pathFinderRadius: 0.1
   <ShowPathFindingGrid>k__BackingField: 0
-  <ShowPathFindingPatches>k__BackingField: 0
+  <ShowPathFindingPatches>k__BackingField: 1
   <NightDuration>k__BackingField: 60
   OnDayBegin:
     m_PersistentCalls:
