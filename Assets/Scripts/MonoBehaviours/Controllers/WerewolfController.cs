@@ -209,6 +209,10 @@ public class WerewolfController : Singleton<WerewolfController>
             werewolfAnimator.Play("TransformMiddle", -1, 0.0f);
             eyesAnimator.Play("NoEyes", -1, 0.0f);
         }
+        if (GameManager.Instance.DayNumber == 3)
+        {
+            enabled = false;
+        }
     }
 
     private void OnDisable()

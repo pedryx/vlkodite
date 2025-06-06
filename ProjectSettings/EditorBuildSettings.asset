@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test/PedryxScene.unity
     guid: 860968cb9887cfb4292ff2e5d7155328
+  - enabled: 1
+    path: Assets/Scenes/Cinematics/Beginning.unity
+    guid: b90376fde14a7fb4284be7e7223e89b6
+  - enabled: 1
+    path: Assets/Scenes/Cinematics/Epilog1.unity
+    guid: 3131a53c2ea3b1347b1b8df91d04c95f
+  - enabled: 1
+    path: Assets/Scenes/Cinematics/Epilog2.unity
+    guid: 7dd2ed147a67e8e468ca99b0b297c33b
+  - enabled: 1
+    path: Assets/Scenes/Cinematics/Menu.unity
+    guid: 2fe4645dbcd2f1643bbe7621adf2c837
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
