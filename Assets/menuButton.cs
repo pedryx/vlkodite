@@ -1,20 +1,26 @@
+using DG.Tweening;
+using FMODUnity;
 using TMPro;
 using UnityEngine;
-using DG.Tweening;
-using UnityEngine.EventSystems;
 using UnityEngine.Events;
-using FMODUnity;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class SpookyMenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    [SerializeField] private TMP_Text buttonText;
-    [SerializeField] private Color normalColor = Color.white;
-    [SerializeField] private Color hoverColor = new Color32(160, 0, 0, 255);
+    [SerializeField]
+    private TMP_Text buttonText;
+    [SerializeField]
+    private Color normalColor = Color.white;
+    [SerializeField]
+    private Color hoverColor = new Color32(160, 0, 0, 255);
 
     [Header("Audio")]
-    [SerializeField] private EventReference clickSound; // FMOD event
+    [SerializeField]
+    private EventReference clickSound; // FMOD event
 
-    public UnityEvent onClickAction;
+    [field: SerializeField]
+    public UnityEvent OnClick { get; private set; } = new();
 
     private void Start()
     {
@@ -39,12 +45,12 @@ public class SpookyMenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExi
             RuntimeManager.PlayOneShot(clickSound);
         }
 
-        Sequence s = DOTween.Sequence();
-        s.Append(buttonText.DOColor(Color.white, 0.1f))
-         .Append(buttonText.DOColor(hoverColor, 0.1f))
-         .OnComplete(() =>
-         {
-             onClickAction?.Invoke();
-         });
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(buttonText.DOColor(Color.white, 0.1f))
+            .Append(buttonText.DOColor(hoverColor, 0.1f))
+            .OnComplete(() => OnClick.Invoke());
     }
+
+    public void SwitchScene(string sceneName)
+        => SceneManager.LoadScene(sceneName);
 }

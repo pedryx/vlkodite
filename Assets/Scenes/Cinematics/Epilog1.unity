@@ -2012,7 +2012,7 @@ MonoBehaviour:
   playOnStart: 1
   loop: 0
   loadNextScene: 1
-  nextSceneName: 
+  nextSceneName: Menu
   delayBeforeSceneLoad: 4
 --- !u!1 &2005478198
 GameObject:
