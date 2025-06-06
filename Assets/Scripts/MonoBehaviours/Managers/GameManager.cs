@@ -50,14 +50,6 @@ public class GameManager : Singleton<GameManager>
     public bool ShowPathFindingPatches { get; set; } = false;
 
     /// <summary>
-    /// Night duration in seconds.
-    /// </summary>
-    [Header("Day/Night cycle")]
-    [field: SerializeField]
-    [Tooltip("Night duration in seconds.")]
-    public float NightDuration { get; private set; } = 5.0f * 60.0f;
-
-    /// <summary>
     /// Determine if day is active.
     /// </summary>
     public bool IsDay => isDay;
@@ -80,6 +72,7 @@ public class GameManager : Singleton<GameManager>
 
     // Following events are redundant, but they allow more comfortable usage from the inspector.
 
+    [Header("Day/Night cycle")]
     [field: SerializeField]
     public UnityEvent OnFirstDayBegin { get; private set; } = new();
     [field: SerializeField]
@@ -103,21 +96,6 @@ public class GameManager : Singleton<GameManager>
         WerewolfController.Instance.OnPlayerCaught.AddListener(Werewolf_OnPlayerCaught);
 
         PathFinder = new PathFinder(pathFinderBounds, pathFinderCellSize, pathFinderRadius);
-    }
-
-    private void Update()
-    {
-        // First day is not bounded by time.
-        if (isDay || DayNumber == 1)
-            return;
-
-        nightTimeElapsed += Time.deltaTime;
-
-        if (nightTimeElapsed >= NightDuration)
-        {
-            isDay = true;
-            OnDayBegin?.Invoke();
-        }
     }
 
     private void OnDrawGizmos()
