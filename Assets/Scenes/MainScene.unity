@@ -384,7 +384,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3879518030108696523, guid: 896ca45d621081b4398e4f2a8267c106, type: 3}
   m_PrefabInstance: {fileID: 5436381004169626210}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1292887026}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f323c039365e15141b4749105561e8ce, type: 3}
@@ -457,6 +457,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1355998833705247935, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
   m_PrefabInstance: {fileID: 3737778276499577133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1292887026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2592026073439029326, guid: 896ca45d621081b4398e4f2a8267c106, type: 3}
+  m_PrefabInstance: {fileID: 5436381004169626210}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1367427672 stripped
 Transform:
@@ -1208,6 +1213,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 626385437}
     - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
+      propertyPath: <OnThirdNightBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
       propertyPath: <OnThirdDayBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1044340700}
@@ -1227,6 +1236,10 @@ PrefabInstance:
       propertyPath: <OnThirdDayBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 708724891}
+    - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
+      propertyPath: <OnThirdNightBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
       propertyPath: <OnSecondDayBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1280,6 +1293,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 426923369}
     - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
+      propertyPath: <OnThirdNightBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1292887026}
+    - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
       propertyPath: <OnSecondNightBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 221847163}
@@ -1300,8 +1317,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1044340700}
     - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
-      propertyPath: <OnThirdDayBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
+      propertyPath: <OnThirdNightBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
+      propertyPath: <OnThirdNightBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
+      propertyPath: <OnThirdNightBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
+      propertyPath: <OnThirdNightBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
+      propertyPath: <OnThirdNightBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
