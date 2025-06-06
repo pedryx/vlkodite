@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Cinematics/Beginning.unity
+    path: Assets/Scenes/Beginning.unity
     guid: b90376fde14a7fb4284be7e7223e89b6
   - enabled: 1
-    path: Assets/Scenes/Cinematics/Epilog1.unity
+    path: Assets/Scenes/Epilog1.unity
     guid: 3131a53c2ea3b1347b1b8df91d04c95f
   - enabled: 1
-    path: Assets/Scenes/Cinematics/Epilog2.unity
+    path: Assets/Scenes/Epilog2.unity
     guid: 7dd2ed147a67e8e468ca99b0b297c33b
   - enabled: 1
-    path: Assets/Scenes/Cinematics/Menu.unity
+    path: Assets/Scenes/Menu.unity
     guid: 2fe4645dbcd2f1643bbe7621adf2c837
   - enabled: 1
     path: Assets/Scenes/MainScene.unity

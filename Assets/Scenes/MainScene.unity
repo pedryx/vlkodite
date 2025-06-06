@@ -1299,6 +1299,10 @@ PrefabInstance:
       propertyPath: <OnSecondNightBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 1044340700}
+    - target: {fileID: 6633232489583000378, guid: 77c53277f40409642b665f78fcd6466c, type: 3}
+      propertyPath: <OnThirdDayBegin>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
