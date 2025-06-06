@@ -135,7 +135,8 @@ public class PathFollow : MonoBehaviour
         {
             // Pathfinding is running on different thread so game object's position is now past the first part point.
             pathIndex = 1;
-            currentTargetPosition = Target.position;
+            if (Target != null)
+                currentTargetPosition = Target.position;
             isPathfinding = false;
         }
     }
