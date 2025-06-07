@@ -2134,10 +2134,6 @@ PrefabInstance:
       propertyPath: musicEmitter
       value: 
       objectReference: {fileID: 1966714647}
-    - target: {fileID: 2867912577458557483, guid: 896ca45d621081b4398e4f2a8267c106, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2995433642595537863, guid: 896ca45d621081b4398e4f2a8267c106, type: 3}
       propertyPath: musicEmitter
       value: 
