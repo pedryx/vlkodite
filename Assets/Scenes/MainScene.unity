@@ -973,6 +973,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1532820238}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
+      propertyPath: <Day2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[5].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1131294291}
+    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[6].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2022686157}

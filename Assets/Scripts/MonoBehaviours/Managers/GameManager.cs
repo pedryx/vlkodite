@@ -118,6 +118,9 @@ public class GameManager : Singleton<GameManager>
         PathFinder.DrawGizmos();
     }
 
+    public void RecreatePathfindingGrid()
+        => PathFinder.RecreateGrid();
+
     public void RestartNight()
     {
         Debug.Assert(IsNight);
