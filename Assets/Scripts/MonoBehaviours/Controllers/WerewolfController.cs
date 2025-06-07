@@ -75,7 +75,7 @@ public class WerewolfController : Singleton<WerewolfController>
     [Header("Kiten encounter")]
     [SerializeField]
     [Tooltip("How many times will kitchen animation be repeated when werewolf notices player.")]
-    private int noticeKitchenIdleRepeat = 1;
+    private int noticeKitchenIdleRepeats = 1;
     /// <summary>
     /// How mant times did kitchen idle animation was repeated.
     /// </summary>
@@ -118,6 +118,19 @@ public class WerewolfController : Singleton<WerewolfController>
     [Tooltip("Occur when werewolf starts chasing the player.")]
     public UnityEvent OnChaseStart { get; private set; } = new();
     #endregion
+    #region Transform night 2
+    /// <summary>
+    /// How many times will transform middle animation be repeated when werewolf notices player.
+    /// </summary>
+    [Header("Transform night 2")]
+    [SerializeField]
+    [Tooltip("How many times will transform middle animation be repeated when werewolf notices player.")]
+    private int TransformMiddleRepeats = 1;
+    /// <summary>
+    /// How mant times did transform middle animation was repeated.
+    /// </summary>
+    private int TransformMiddleRepeatCounter = 0;
+    #endregion
 
     /// <summary>
     /// Standart werewolf speed. This is used to restore the speed when werewolf speed needs to be temporary changed.
@@ -156,12 +169,15 @@ public class WerewolfController : Singleton<WerewolfController>
         catchTrigger.OnEnter.AddListener(() => IsplayerInCatchTrigger = true);
         catchTrigger.OnExit.AddListener(() => IsplayerInCatchTrigger = false);
 
+        #region animations
         var animations = werewolfForm.GetComponent<WerewolfAnimationEvents>();
         animations.OnCatchTriggerFrame.AddListener(Animations_InCatchFrame);
         animations.OnLastCatchFrame.AddListener(Animations_OnLastCatchFrame);
         animations.OnLastKitchenNoticeFrame.AddListener(Animations_OnLastKitchenNoticeFrame);
         animations.OnLastKitchenIdleFrame.AddListener(Animations_OnLastKitchenIdleFrame);
+        animations.OnLastTransformMiddleFrame.AddListener(Animations_OnLastTransformMiddleFrame);
         animations.OnLastTransformFrame.AddListener(Animations_OnTransformDone);
+        #endregion
 
         Debug.Assert(werewolfNight1Spawn != null, "Werewolf spawn for first night not specified.");
         Debug.Assert(werewolfNight2Spawn != null, "Werewolf spawn for second night not specified.");
@@ -291,7 +307,7 @@ public class WerewolfController : Singleton<WerewolfController>
         if (!hasSeenPlayer)
             return;
 
-        if (noticeKitchenIdleRepeatCounter == noticeKitchenIdleRepeat)
+        if (noticeKitchenIdleRepeatCounter == noticeKitchenIdleRepeats)
         {
             werewolfAnimator.Play("NoticeKitchen", -1, 0.0f);
             eyesAnimator.Play("NoticeKitchenEyes", -1, 0.0f);
@@ -322,6 +338,20 @@ public class WerewolfController : Singleton<WerewolfController>
         OnChaseStart.Invoke();
     }
     #endregion
+    #region Transform night 2
+    private void Animations_OnLastTransformMiddleFrame()
+    {
+        if (!hasSeenPlayer)
+            return;
+
+        if (TransformMiddleRepeatCounter == TransformMiddleRepeats)
+        {
+            werewolfAnimator.Play("TransformEvent", -1, 0.0f);
+            eyesAnimator.Play("TransformEventEyes", -1, 0.0f);
+            TransformMiddleRepeatCounter = 0;
+        }
+        TransformMiddleRepeatCounter++;
+    }
 
     private void Animations_OnTransformDone()
     {
@@ -332,4 +362,5 @@ public class WerewolfController : Singleton<WerewolfController>
         forceMoveAnimation = true;
         OnChaseStart.Invoke();
     }
+    #endregion
 }
