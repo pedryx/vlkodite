@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using FMODUnity;
+using UnityEngine.Events;
 
 public class TextSequencer : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class TextSequencer : MonoBehaviour
     [SerializeField] private bool loadNextScene = false;
     [SerializeField] private string nextSceneName;
     [SerializeField] private float delayBeforeSceneLoad = 2f;
+
+    [Header("Events")]
+    [field: SerializeField]
+    public UnityEvent OnFinish { get; private set; } = new();
 
     private Coroutine sequenceRoutine;
     private bool skipRequested = false;
@@ -78,6 +83,8 @@ public class TextSequencer : MonoBehaviour
 
                 block.textObject.SetActive(false);
             }
+
+            OnFinish.Invoke();
 
             if (loadNextScene && !loop)
             {

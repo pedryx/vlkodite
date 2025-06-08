@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using FMOD.Studio;
+using System.Collections;
 
 [RequireComponent(typeof(CharacterMovement))]
 [RequireComponent(typeof(CapsuleCollider2D))]
@@ -162,6 +163,11 @@ public class PlayerController : Singleton<PlayerController>
             interactable.OnInteractionDisabled.Invoke(interactable);
     }
 
+    public void PlayAwake()
+    {
+        StartCoroutine(PlayAwakeCoroutine());
+    }
+
     /// <summary>
     /// Determine if player is currently near the interactiible game object.
     /// </summary>
@@ -173,6 +179,12 @@ public class PlayerController : Singleton<PlayerController>
     /// </summary>
     public void Respawn()
         => transform.localPosition = nightSpawnPosition;
+
+    private IEnumerator PlayAwakeCoroutine()
+    {
+        yield return new WaitForSeconds(4.0f);
+        animator.Play("AwakeDay2");
+    }
 
     private void Werewolf_OnPlayerCaught()
         => transform.localPosition = spawnPosition;

@@ -160,7 +160,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 192
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -180,9 +180,9 @@ TextureImporter:
       name: awake_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 72
         y: 192
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -202,9 +202,9 @@ TextureImporter:
       name: awake_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 192
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -224,9 +224,9 @@ TextureImporter:
       name: awake_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 216
         y: 192
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -248,7 +248,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 128
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -268,9 +268,9 @@ TextureImporter:
       name: awake_5
       rect:
         serializedVersion: 2
-        x: 64
+        x: 72
         y: 128
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -290,9 +290,9 @@ TextureImporter:
       name: awake_6
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 128
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -312,9 +312,9 @@ TextureImporter:
       name: awake_7
       rect:
         serializedVersion: 2
-        x: 192
+        x: 216
         y: 128
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -336,7 +336,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -356,9 +356,9 @@ TextureImporter:
       name: awake_9
       rect:
         serializedVersion: 2
-        x: 64
+        x: 72
         y: 64
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -378,9 +378,9 @@ TextureImporter:
       name: awake_10
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 64
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -400,9 +400,9 @@ TextureImporter:
       name: awake_11
       rect:
         serializedVersion: 2
-        x: 192
+        x: 216
         y: 64
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -424,7 +424,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -444,9 +444,9 @@ TextureImporter:
       name: awake_13
       rect:
         serializedVersion: 2
-        x: 64
+        x: 72
         y: 0
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -466,9 +466,9 @@ TextureImporter:
       name: awake_14
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 0
-        width: 64
+        width: 72
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
