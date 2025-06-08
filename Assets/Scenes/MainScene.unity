@@ -730,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 435368662}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night2>k__BackingField.<TransitionQuest>k__BackingField.<Description>k__BackingField
-      value: Watch werewolf fall asleep.
+      value: ' '
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day1>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[0].<QuestAdvancer>k__BackingField
@@ -1013,6 +1013,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
+      propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Day1>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[7].<OnStart>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1377110365}
@@ -1041,6 +1045,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1693720748}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
+      propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1693720748}
+    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -1050,6 +1058,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
+      propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
@@ -1065,6 +1077,10 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
+      propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
@@ -1074,6 +1090,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
+      propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
@@ -1090,6 +1110,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
       propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198771488392635787, guid: 8954ec0fd40121c41b7d876f6ac20f07, type: 3}
+      propertyPath: <Night2>k__BackingField.<ChildQuestQueue>k__BackingField.quests.Array.data[2].<OnDone>k__BackingField.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1509,17 +1533,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5077013181661773200, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: <Speed>k__BackingField
-      value: 4.3
-      objectReference: {fileID: 0}
     - target: {fileID: 5680609594394999634, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 9219900255829328553, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
-      propertyPath: <SprintSpeed>k__BackingField
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

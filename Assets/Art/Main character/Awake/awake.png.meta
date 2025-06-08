@@ -159,8 +159,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
-        width: 72
+        y: 320
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -180,9 +180,9 @@ TextureImporter:
       name: awake_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 192
-        width: 72
+        x: 112
+        y: 320
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -202,9 +202,9 @@ TextureImporter:
       name: awake_2
       rect:
         serializedVersion: 2
-        x: 144
-        y: 192
-        width: 72
+        x: 224
+        y: 320
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -224,9 +224,9 @@ TextureImporter:
       name: awake_3
       rect:
         serializedVersion: 2
-        x: 216
-        y: 192
-        width: 72
+        x: 336
+        y: 320
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -246,9 +246,9 @@ TextureImporter:
       name: awake_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 72
+        x: 448
+        y: 320
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -268,9 +268,9 @@ TextureImporter:
       name: awake_5
       rect:
         serializedVersion: 2
-        x: 72
-        y: 128
-        width: 72
+        x: 0
+        y: 256
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -290,9 +290,9 @@ TextureImporter:
       name: awake_6
       rect:
         serializedVersion: 2
-        x: 144
-        y: 128
-        width: 72
+        x: 112
+        y: 256
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -312,9 +312,9 @@ TextureImporter:
       name: awake_7
       rect:
         serializedVersion: 2
-        x: 216
-        y: 128
-        width: 72
+        x: 224
+        y: 256
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -334,9 +334,9 @@ TextureImporter:
       name: awake_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 72
+        x: 336
+        y: 256
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -356,9 +356,9 @@ TextureImporter:
       name: awake_9
       rect:
         serializedVersion: 2
-        x: 72
-        y: 64
-        width: 72
+        x: 448
+        y: 256
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -378,9 +378,9 @@ TextureImporter:
       name: awake_10
       rect:
         serializedVersion: 2
-        x: 144
-        y: 64
-        width: 72
+        x: 0
+        y: 192
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -400,9 +400,9 @@ TextureImporter:
       name: awake_11
       rect:
         serializedVersion: 2
-        x: 216
-        y: 64
-        width: 72
+        x: 112
+        y: 192
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -422,9 +422,9 @@ TextureImporter:
       name: awake_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 72
+        x: 224
+        y: 192
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -444,9 +444,9 @@ TextureImporter:
       name: awake_13
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
-        width: 72
+        x: 336
+        y: 192
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -466,9 +466,9 @@ TextureImporter:
       name: awake_14
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
-        width: 72
+        x: 448
+        y: 192
+        width: 112
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -480,6 +480,270 @@ TextureImporter:
       bones: []
       spriteID: 9fd6c813d59298540800000000000000
       internalID: 5010581540666371577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79aedee704c2a534a9391de621fbeea3
+      internalID: 1813965923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_16
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737e2383034aaf84da8b52361fda809b
+      internalID: 903381019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_17
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1060f7e6ebd5cf645ab2738795a24bba
+      internalID: -310389677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_18
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 128
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2cacfe3044c3d74d9a75b256f01bb6c
+      internalID: -2143659458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_19
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24f4614fd1d75c43b686ddda8768481
+      internalID: -1817785043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43cab8b04ac5a9844b9184aa531a688a
+      internalID: -1388991215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_21
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db93e66926efa25478c6171b5eec0fbf
+      internalID: -1220345283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_22
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc7d38bbaeaa7b40bf14b6336c00a59
+      internalID: 868728820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_23
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 64
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677cd50a7cd4912409715ceeb8c7f830
+      internalID: 588303994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_24
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b552fd106daa048aaf0e1ef2f141d7
+      internalID: -770103832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3adb25832631d34cacebf771e46d315
+      internalID: 298748828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awake_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdfe87236cf27b4daef04d999e2a532
+      internalID: 1966397389
       vertices: []
       indices: 
       edges: []
@@ -505,7 +769,19 @@ TextureImporter:
       awake_12: 2956309848689015616
       awake_13: 8233171958127601910
       awake_14: 5010581540666371577
+      awake_15: 1813965923
+      awake_16: 903381019
+      awake_17: -310389677
+      awake_18: -2143659458
+      awake_19: -1817785043
       awake_2: -5960748630005818703
+      awake_20: -1388991215
+      awake_21: -1220345283
+      awake_22: 868728820
+      awake_23: 588303994
+      awake_24: -770103832
+      awake_25: 298748828
+      awake_26: 1966397389
       awake_3: 4580178464373243053
       awake_4: 792655819849832678
       awake_5: 4656255444391928454

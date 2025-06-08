@@ -142,6 +142,11 @@ public class GameManager : Singleton<GameManager>
         OnNightBegin.Invoke();
     }
 
+    public void FinishTransitionQuest()
+    {
+        QuestManager.Instance.Current.TransitionQuest.Complete();
+    }
+
     /// <summary>
     /// Toggle between day and night.
     /// </summary>
