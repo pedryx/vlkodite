@@ -6439,7 +6439,7 @@ MonoBehaviour:
   eyesSpriteRenderer: {fileID: 5669907342970862124}
   scriptedCatch: 0
   <ScriptedAccelaration>k__BackingField: 1
-  noticeKitchenIdleRepeat: 1
+  noticeKitchenIdleRepeats: 1
   kitchenNoticeEvent:
     Guid:
       Data1: 0
@@ -6533,6 +6533,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  TransformMiddleRepeats: 0
 --- !u!114 &9024984115457391896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6903,6 +6904,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   <OnLastKitchenNoticeFrame>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnLastTransformMiddleFrame>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
   <OnLastTransformFrame>k__BackingField:

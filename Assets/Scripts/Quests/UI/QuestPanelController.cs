@@ -58,6 +58,8 @@ public class QuestPanelController : MonoBehaviour
     private void SetQuest(Quest quest)
     {
         textMeshPro.text = quest.Description;
+        if (quest.Description == "")
+            Destroy(gameObject);
 
         fadeInProgress = true;
         canvasGroup.DOFade(1.0f, Duration).OnComplete(() =>

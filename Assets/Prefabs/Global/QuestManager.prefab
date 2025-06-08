@@ -913,6 +913,77 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 1
               m_CallState: 2
+      - <Description>k__BackingField: Play the lullaby through <color=yellow>the
+          gramophone</color=yellow>
+        <QuestAdvancer>k__BackingField: {fileID: 0}
+        <ChildPosition>k__BackingField: {fileID: 0}
+        <Teleport>k__BackingField: 0
+        <OnStart>k__BackingField:
+          m_PersistentCalls:
+            m_Calls: []
+        <OnDone>k__BackingField:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
+              m_MethodName: set_Speed
+              m_Mode: 4
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+              m_MethodName: FinishTransitionQuest
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
       <OnQuestStart>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
@@ -923,7 +994,7 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
     <TransitionQuest>k__BackingField:
-      <Description>k__BackingField: Play the lullaby through <color=yellow>the gramophone</color=yellow>
+      <Description>k__BackingField: 
       <QuestAdvancer>k__BackingField: {fileID: 0}
       <ChildPosition>k__BackingField: {fileID: 0}
       <Teleport>k__BackingField: 0
@@ -935,7 +1006,7 @@ MonoBehaviour:
           m_Calls:
           - m_Target: {fileID: 0}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
+            m_MethodName: 
             m_Mode: 6
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
@@ -947,7 +1018,7 @@ MonoBehaviour:
             m_CallState: 2
           - m_Target: {fileID: 0}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
+            m_MethodName: 
             m_Mode: 6
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
@@ -959,7 +1030,7 @@ MonoBehaviour:
             m_CallState: 2
           - m_Target: {fileID: 0}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
+            m_MethodName: 
             m_Mode: 6
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
@@ -1012,7 +1083,7 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
     <TransitionQuest>k__BackingField:
-      <Description>k__BackingField: Go to sleel (storage room)
+      <Description>k__BackingField: Go to sleep (storage room)
       <QuestAdvancer>k__BackingField: {fileID: 0}
       <ChildPosition>k__BackingField: {fileID: 0}
       <Teleport>k__BackingField: 0

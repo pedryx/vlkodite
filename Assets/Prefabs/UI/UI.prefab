@@ -2137,6 +2137,9 @@ MonoBehaviour:
   loadNextScene: 0
   nextSceneName: 
   delayBeforeSceneLoad: 2
+  <OnFinish>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &628503831720587328
 GameObject:
   m_ObjectHideFlags: 0

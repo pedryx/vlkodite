@@ -74,8 +74,11 @@ public class QuestQueue
 
     private void Quest_OnDone(QuestEventArgs e)
     {
-        Debug.Assert(questQueueIndex < quests.Count);
-
+        if (questQueueIndex >= quests.Count)
+        {
+            Debug.LogWarning("Quest queue index is out of bounds, skipping.");
+            return;
+        }
         if (e.Quest != ActiveQuest)
         {
             Debug.LogWarning("Finishing in-active quest, skipping.");

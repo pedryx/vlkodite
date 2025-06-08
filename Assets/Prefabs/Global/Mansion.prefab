@@ -67408,7 +67408,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 2}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 0.6875, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -110529,7 +110529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6256224539167617166
 Transform:
   m_ObjectHideFlags: 0
@@ -114082,6 +114082,7 @@ MonoBehaviour:
       Data3: 1194989966
       Data4: 1075706422
     Path: event:/ClairDeLune
+  emitterToFadeOut: {fileID: 0}
   fadeDuration: 2.23
   player: {fileID: 0}
   controlZone: {fileID: 3749918262515342527}

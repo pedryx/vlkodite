@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System.Collections;
 using System.Security;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -144,6 +145,12 @@ public class GameManager : Singleton<GameManager>
 
     public void FinishTransitionQuest()
     {
+        StartCoroutine(FinishTransitionQuestCoroutine());
+    }
+
+    private IEnumerator FinishTransitionQuestCoroutine()
+    {
+        yield return new WaitForSeconds(2.0f);
         QuestManager.Instance.Current.TransitionQuest.Complete();
     }
 
