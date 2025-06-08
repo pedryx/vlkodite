@@ -25,9 +25,9 @@ public class MusicTriggerZone : MonoBehaviour
 
     private void Start()
     {
-        musicAInstance = RuntimeManager.CreateInstance(musicEvent);
-        musicAInstance.setVolume(0f);
-        musicAInstance.start();  // Start silent
+        //musicAInstance = RuntimeManager.CreateInstance(musicEvent);
+        //musicAInstance.setVolume(0f);
+        //musicAInstance.start();  // Start silent
     }
 
     private void Update()
