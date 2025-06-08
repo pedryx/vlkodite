@@ -10180,8 +10180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <SuperMovementSpeed>k__BackingField: 40
   <SprintSpeed>k__BackingField: 8
-  <MaxSprintDuration>k__BackingField: 3
-  <SprintCooldown>k__BackingField: 2
 --- !u!114 &5077013181661773200
 MonoBehaviour:
   m_ObjectHideFlags: 0

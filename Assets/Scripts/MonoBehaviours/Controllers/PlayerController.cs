@@ -28,7 +28,6 @@ public class PlayerController : Singleton<PlayerController>
     private bool debugMode = false;
     private Vector3 spawnPosition;
     private float characterSpeed;
-    private float sprintAccumulator = 0.0f;
     private Vector3 nightSpawnPosition;
 
     /// <summary>
@@ -46,20 +45,6 @@ public class PlayerController : Singleton<PlayerController>
     public float SprintSpeed { get; private set; } = 12.0f;
 
     /// <summary>
-    /// How long can player maximally sprint in seconds.
-    /// </summary>
-    [field: SerializeField]
-    [Tooltip("How long can player maximally sprint in seconds.")]
-    public float MaxSprintDuration { get; private set; } = 3.0f;
-
-    /// <summary>
-    /// How long has player to wait before he can sprint again, if he just stopped sprinting.
-    /// </summary>
-    [field: SerializeField]
-    [Tooltip("How long has player to wait before he can sprint again, if he just stopped sprinting.")]
-    public float SprintCooldown { get; private set; } = 3.0f;
-
-    /// <summary>
     /// Determine if god mode is active.
     /// </summary>
     public bool GodModeActive { get; private set; } = false;
@@ -72,7 +57,6 @@ public class PlayerController : Singleton<PlayerController>
 
         characterMovement = GetComponent<CharacterMovement>();
         characterSpeed = characterMovement.Speed;
-        sprintAccumulator = SprintCooldown;
 
         input = new GameInputActions();
         input.Player.Enable();
@@ -98,26 +82,15 @@ public class PlayerController : Singleton<PlayerController>
     {
         // update movement
         characterMovement.Move(input.Player.Move.ReadValue<Vector2>());
-        if (input.Debug.SuperSpeed.WasPressedThisFrame())
-            characterMovement.Speed = SuperMovementSpeed;
-        if (input.Debug.SuperSpeed.WasReleasedThisFrame())
-            characterMovement.Speed = characterSpeed;
-        if (!GodModeActive)
+        if (!GodModeActive && input.Player.Sprint.WasPressedThisFrame())
         {
-            sprintAccumulator += Time.deltaTime;
-
-            if (!IsRunning && input.Player.Sprint.WasPressedThisFrame() && sprintAccumulator >= SprintCooldown)
-            {
-                characterMovement.Speed = SprintSpeed;
-                IsRunning = true;
-                sprintAccumulator = 0.0f;
-            }
-            if (IsRunning && (input.Player.Sprint.WasReleasedThisFrame() || sprintAccumulator >= MaxSprintDuration))
-            {
-                characterMovement.Speed = characterSpeed;
-                IsRunning = false;
-                sprintAccumulator = 0.0f;
-            }
+            characterMovement.Speed = SprintSpeed;
+            IsRunning = true;
+        }
+        if (input.Player.Sprint.WasReleasedThisFrame())
+        {
+            characterMovement.Speed = characterSpeed;
+            IsRunning = false;
         }
 
         // update animation
