@@ -2,9 +2,13 @@ using UnityEngine;
 using DG.Tweening;
 using FMODUnity;
 
-
 public class LetterReveal : MonoBehaviour
 {
+    public enum RevealMode { PressToOpen, AutoOnTrigger }
+
+    [Header("Reveal Mode")]
+    [SerializeField] private RevealMode revealMode = RevealMode.PressToOpen;
+
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private float fadeDuration = 0.3f;
     [SerializeField] private GameObject letterObject;
@@ -17,7 +21,6 @@ public class LetterReveal : MonoBehaviour
     [SerializeField] private CanvasGroup[] canvasesToHide;
 
     [SerializeField] private PlayOnceSound letterFirstTimeSound;
-
 
     private bool isPlayerNearby = false;
     private bool isLetterVisible = false;
@@ -37,12 +40,15 @@ public class LetterReveal : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerNearby && Input.GetKeyDown(KeyCode.E))
+        if (revealMode == RevealMode.PressToOpen)
         {
-            if (!isLetterVisible)
-                ShowLetter();
-            else
-                HideLetter();
+            if (isPlayerNearby && Input.GetKeyDown(KeyCode.E))
+            {
+                if (!isLetterVisible)
+                    ShowLetter();
+                else
+                    HideLetter();
+            }
         }
     }
 
@@ -69,8 +75,6 @@ public class LetterReveal : MonoBehaviour
                 cg.blocksRaycasts = false;
             }
         }
-      
-
     }
 
     private void HideLetter()
@@ -101,21 +105,25 @@ public class LetterReveal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(playerTag))
+        if (!other.CompareTag(playerTag)) return;
+
+        isPlayerNearby = true;
+
+        if (revealMode == RevealMode.AutoOnTrigger && !isLetterVisible)
         {
-            isPlayerNearby = true;
+            ShowLetter();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag(playerTag))
+        if (!other.CompareTag(playerTag)) return;
+
+        isPlayerNearby = false;
+
+        if (isLetterVisible)
         {
-            isPlayerNearby = false;
-            if (isLetterVisible)
-            {
-                HideLetter();
-            }
+            HideLetter();
         }
     }
 }
