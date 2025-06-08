@@ -4,30 +4,34 @@ using FMOD.Studio;
 
 public class MusicTriggerZone : MonoBehaviour
 {
-    [SerializeField] private EventReference musicEvent;
+    [SerializeField] private EventReference musicEvent;               // New music to play
+    [SerializeField] private StudioEventEmitter emitterToFadeOut;     // Existing music to fade
     [SerializeField] private float fadeDuration = 1.0f;
     [SerializeField] private GameObject player;
-    [SerializeField] private Collider2D controlZone; //  NEW: reference to the "E to toggle" zone
+    [SerializeField] private Collider2D controlZone;
 
-    private EventInstance musicInstance;
+    private EventInstance musicAInstance;
     private bool isPlayerInMusicZone = false;
     private bool isMusicOn = true;
-    private float fadeTimer = 0f;
-    private float targetVolume = 1f;
-    private float currentVolume = 0f;
+
+    private float fadeTimerA = 0f;
+    private float fadeTimerB = 0f;
+    private float targetVolumeA = 1f;
+    private float currentVolumeA = 0f;
+    private float targetVolumeB = 0f;
+    private float currentVolumeB = 1f;
+
     private bool isFading = false;
 
     private void Start()
     {
-        musicInstance = RuntimeManager.CreateInstance(musicEvent);
-        musicInstance.start();
-        musicInstance.setVolume(0f);
-        musicInstance.setPaused(true);
+        musicAInstance = RuntimeManager.CreateInstance(musicEvent);
+        musicAInstance.setVolume(0f);
+        musicAInstance.start();  // Start silent
     }
 
     private void Update()
     {
-        // Allow toggle only when player is inside controlZone
         if (IsPlayerInControlZone() && Input.GetKeyDown(KeyCode.E))
         {
             ToggleMusic();
@@ -35,12 +39,20 @@ public class MusicTriggerZone : MonoBehaviour
 
         if (isFading)
         {
-            fadeTimer += Time.deltaTime;
-            float t = Mathf.Clamp01(fadeTimer / fadeDuration);
-            float volume = Mathf.Lerp(currentVolume, targetVolume, t);
-            musicInstance.setVolume(volume);
+            fadeTimerA += Time.deltaTime;
+            fadeTimerB += Time.deltaTime;
 
-            if (t >= 1f)
+            float tA = Mathf.Clamp01(fadeTimerA / fadeDuration);
+            float tB = Mathf.Clamp01(fadeTimerB / fadeDuration);
+
+            float volumeA = Mathf.Lerp(currentVolumeA, targetVolumeA, tA);
+            float volumeB = Mathf.Lerp(currentVolumeB, targetVolumeB, tB);
+
+            musicAInstance.setVolume(volumeA);
+            if (emitterToFadeOut != null)
+                emitterToFadeOut.EventInstance.setVolume(volumeB);
+
+            if (tA >= 1f && tB >= 1f)
                 isFading = false;
         }
     }
@@ -53,8 +65,7 @@ public class MusicTriggerZone : MonoBehaviour
 
             if (isMusicOn)
             {
-                FadeTo(1f);
-                musicInstance.setPaused(false);
+                FadeTo(1f, 0f); // Fade in A, fade out B
             }
         }
     }
@@ -64,14 +75,9 @@ public class MusicTriggerZone : MonoBehaviour
         if (other.gameObject == player && isPlayerInMusicZone)
         {
             isPlayerInMusicZone = false;
-            FadeTo(0f);
-            Invoke(nameof(PauseMusic), fadeDuration);
-        }
-    }
 
-    private bool IsPlayerInControlZone()
-    {
-        return controlZone != null && controlZone.bounds.Intersects(player.GetComponent<Collider2D>().bounds);
+            FadeTo(0f, 1f); // Fade out A, fade in B
+        }
     }
 
     private void ToggleMusic()
@@ -82,46 +88,36 @@ public class MusicTriggerZone : MonoBehaviour
         {
             if (isPlayerInMusicZone)
             {
-                FadeTo(1f);
-                musicInstance.setPaused(false);
+                FadeTo(1f, 0f);
             }
         }
         else
         {
-            FadeTo(0f);
-            Invoke(nameof(PauseMusic), fadeDuration);
+            FadeTo(0f, 1f);
         }
     }
 
-    private void FadeTo(float volume)
+    private void FadeTo(float volumeA, float volumeB)
     {
-        currentVolume = GetCurrentVolume();
-        targetVolume = volume;
-        fadeTimer = 0f;
+        musicAInstance.getVolume(out currentVolumeA);
+        if (emitterToFadeOut != null)
+            emitterToFadeOut.EventInstance.getVolume(out currentVolumeB);
+
+        targetVolumeA = volumeA;
+        targetVolumeB = volumeB;
+
+        fadeTimerA = 0f;
+        fadeTimerB = 0f;
         isFading = true;
-
-        if (volume == 1f)
-        {
-            CancelInvoke(nameof(PauseMusic));
-        }
     }
 
-    private void PauseMusic()
+    private bool IsPlayerInControlZone()
     {
-        if (!isPlayerInMusicZone || !isMusicOn)
-        {
-            musicInstance.setPaused(true);
-        }
-    }
-
-    private float GetCurrentVolume()
-    {
-        musicInstance.getVolume(out float vol);
-        return vol;
+        return controlZone != null && controlZone.bounds.Intersects(player.GetComponent<Collider2D>().bounds);
     }
 
     private void OnDestroy()
     {
-        musicInstance.release();
+        musicAInstance.release();
     }
 }
