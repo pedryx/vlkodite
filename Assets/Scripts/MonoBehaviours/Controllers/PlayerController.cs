@@ -103,7 +103,7 @@ public class PlayerController : Singleton<PlayerController>
             animator.SetFloat("Direction", (float)facingDirection);
         }
         animator.SetBool("IsMoving", !characterMovement.IsNotMoving());
-        animator.SetBool("IsRunning", IsRunning);
+        animator.SetBool("IsRunning", IsRunning && !characterMovement.IsNotMoving());
 
         // update interactions
         // We are making shallow copy, because from interactibles from the interactableTargets could be erased during
