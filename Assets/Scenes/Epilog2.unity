@@ -1900,6 +1900,9 @@ MonoBehaviour:
   loadNextScene: 1
   nextSceneName: Menu
   delayBeforeSceneLoad: 4
+  <OnFinish>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2005478198
 GameObject:
   m_ObjectHideFlags: 0
