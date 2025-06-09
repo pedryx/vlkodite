@@ -4121,6 +4121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562a8b26aba205940ae307be17c195cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  revealMode: 0
   playerTag: Player
   fadeDuration: 0.3
   letterObject: {fileID: 9196662260578709136}
