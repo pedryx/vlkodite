@@ -2012,8 +2012,11 @@ MonoBehaviour:
   playOnStart: 1
   loop: 0
   loadNextScene: 1
-  nextSceneName: Menu
+  nextSceneName: Credits
   delayBeforeSceneLoad: 4
+  <OnFinish>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2005478198
 GameObject:
   m_ObjectHideFlags: 0
