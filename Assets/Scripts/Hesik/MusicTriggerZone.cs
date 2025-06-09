@@ -4,8 +4,8 @@ using FMOD.Studio;
 
 public class MusicTriggerZone : MonoBehaviour
 {
-    [SerializeField] private EventReference musicEvent;               // New music to play
-    [SerializeField] private StudioEventEmitter emitterToFadeOut;     // Existing music to fade
+    [SerializeField] private EventReference musicEvent;               // New music to play (handled by this script)
+    [SerializeField] private StudioEventEmitter emitterToFadeOut;     // Existing music to fade out (another GameObject)
     [SerializeField] private float fadeDuration = 1.0f;
     [SerializeField] private GameObject player;
     [SerializeField] private Collider2D controlZone;
@@ -25,9 +25,16 @@ public class MusicTriggerZone : MonoBehaviour
 
     private void Start()
     {
-        //musicAInstance = RuntimeManager.CreateInstance(musicEvent);
-        //musicAInstance.setVolume(0f);
-        //musicAInstance.start();  // Start silent
+        // Start music A (this script)
+        musicAInstance = RuntimeManager.CreateInstance(musicEvent);
+        musicAInstance.setVolume(0f); // Start silent
+        musicAInstance.start();
+
+        // Start music B (the external emitter), if not already playing
+        if (emitterToFadeOut != null && !emitterToFadeOut.IsPlaying())
+        {
+            emitterToFadeOut.Play();
+        }
     }
 
     private void Update()
@@ -75,7 +82,6 @@ public class MusicTriggerZone : MonoBehaviour
         if (other.gameObject == player && isPlayerInMusicZone)
         {
             isPlayerInMusicZone = false;
-
             FadeTo(0f, 1f); // Fade out A, fade in B
         }
     }
@@ -84,12 +90,9 @@ public class MusicTriggerZone : MonoBehaviour
     {
         isMusicOn = !isMusicOn;
 
-        if (isMusicOn)
+        if (isMusicOn && isPlayerInMusicZone)
         {
-            if (isPlayerInMusicZone)
-            {
-                FadeTo(1f, 0f);
-            }
+            FadeTo(1f, 0f);
         }
         else
         {
