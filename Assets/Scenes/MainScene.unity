@@ -1634,6 +1634,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0be30737bab34b47ae320e472ecd192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &252410643919130437 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6390811792343885039, guid: 1e35958fef66ccd499f1ba8562b72470, type: 3}
+  m_PrefabInstance: {fileID: 252410643919130435}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &961155931812090463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2248,6 +2253,38 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 7324725114072406194}
+    - target: {fileID: 7206180011151158448, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206180011151158448, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206180011151158448, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 252410643919130437}
+    - target: {fileID: 7206180011151158448, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206180011151158448, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206180011151158448, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206180011151158448, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Cooking
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206180011151158448, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7413857958775328640, guid: b0805dfa90a29654ab9456ae2c63f826, type: 3}
       propertyPath: player
       value: 
