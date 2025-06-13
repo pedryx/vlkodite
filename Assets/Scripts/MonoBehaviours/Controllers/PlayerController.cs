@@ -1,10 +1,8 @@
-using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
-using FMOD.Studio;
-using System.Collections;
 
 [RequireComponent(typeof(CharacterMovement))]
 [RequireComponent(typeof(CapsuleCollider2D))]
@@ -112,9 +110,15 @@ public class PlayerController : Singleton<PlayerController>
         foreach (var interactible in currentInteractibleTargets)
         {
             if (interactible.IsContinuous && input.Player.Interact.IsPressed())
+            {
+                animator.Play("Interact", -1, 0.0f);
                 interactible.Interact();
+            }
             else if (!interactible.IsContinuous && input.Player.Interact.WasPressedThisFrame())
+            {
+                animator.Play("Interact", -1, 0.0f);
                 interactible.Interact();
+            }
         }
     }
 
@@ -137,9 +141,7 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     public void PlayAwake()
-    {
-        StartCoroutine(PlayAwakeCoroutine());
-    }
+        => StartCoroutine(PlayAwakeCoroutine());
 
     /// <summary>
     /// Determine if player is currently near the interactiible game object.

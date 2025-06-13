@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 96fb52334076a0840bb7522a79757b13
+guid: 20e7f80ec8b5a8244b51d22d6d36d09e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5741901460306589019
-    second: Interact_down_0
+      213: 4088092839212300838
+    second: Interact_side_0
   - first:
-      213: -8987329758939743385
-    second: Interact_down_1
+      213: 7345627902982098821
+    second: Interact_side_1
   - first:
-      213: 7007175353740845115
-    second: Interact_down_2
+      213: -1783025300381096500
+    second: Interact_side_2
   - first:
-      213: 5874137940484559448
-    second: Interact_down_3
+      213: 527494198938111088
+    second: Interact_side_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Interact_down_0
+      name: Interact_side_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 15
-        width: 14
-        height: 39
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b55fedcc4f45faf40800000000000000
-      internalID: 5741901460306589019
+      spriteID: 62a311217c2dbb830800000000000000
+      internalID: 4088092839212300838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interact_down_1
+      name: Interact_side_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 15
-        width: 13
-        height: 39
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76b791f7337964380800000000000000
-      internalID: -8987329758939743385
+      spriteID: 58f0271b8a9e0f560800000000000000
+      internalID: 7345627902982098821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interact_down_2
+      name: Interact_side_2
       rect:
         serializedVersion: 2
-        x: 155
-        y: 15
-        width: 12
-        height: 37
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b30689ecbdc7e3160800000000000000
-      internalID: 7007175353740845115
+      spriteID: cc52049afeb6147e0800000000000000
+      internalID: -1783025300381096500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interact_down_3
+      name: Interact_side_3
       rect:
         serializedVersion: 2
-        x: 218
-        y: 15
-        width: 13
-        height: 38
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8521a389551258150800000000000000
-      internalID: 5874137940484559448
+      spriteID: 07c09ccdd29025700800000000000000
+      internalID: 527494198938111088
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0a698175bcbf09c44b905c8f82f0ae63
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Interact_down_0: 5741901460306589019
-      Interact_down_1: -8987329758939743385
-      Interact_down_2: 7007175353740845115
-      Interact_down_3: 5874137940484559448
+      Interact_side_0: 4088092839212300838
+      Interact_side_1: 7345627902982098821
+      Interact_side_2: -1783025300381096500
+      Interact_side_3: 527494198938111088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
