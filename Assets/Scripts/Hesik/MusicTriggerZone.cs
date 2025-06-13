@@ -26,9 +26,12 @@ public class MusicTriggerZone : MonoBehaviour
     private void Start()
     {
         // Start music A (this script)
-        musicAInstance = RuntimeManager.CreateInstance(musicEvent);
-        musicAInstance.setVolume(0f); // Start silent
-        musicAInstance.start();
+        if (!musicEvent.IsNull)
+        {
+            musicAInstance = RuntimeManager.CreateInstance(musicEvent);
+            musicAInstance.setVolume(0f); // Start silent
+            musicAInstance.start();
+        }
 
         // Start music B (the external emitter), if not already playing
         if (emitterToFadeOut != null && !emitterToFadeOut.IsPlaying())

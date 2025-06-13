@@ -30,7 +30,8 @@ public class ScreenFader : MonoBehaviour
 
     public void FadeToBlackAndBack()
     {
-        RuntimeManager.PlayOneShot(sleepSound);
+        if (!sleepSound.IsNull)
+            RuntimeManager.PlayOneShot(sleepSound);
 
         if (characterMovement != null)
         {
